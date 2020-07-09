@@ -1,0 +1,277 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+
+%%%%%% To use hyperlinks, including the formula ones
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+%%%%%% Make paragraphs start with no indentation and leave spaces between paragraphs
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+%%%%%% Math stuff
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+
+%%%%%% Mis Codigos
+
+% TODO notes package
+\usepackage{xargs}                  % Use more than one optional parameter in a new command
+\usepackage[pdftex,dvipsnames]{xcolor}
+\input{tools/todoCode}
+
+% Colored text and boxes with my color conventions for highlighting
+\usepackage[dvipsnames]{xcolor}
+\input{tools/colorCode}
+
+% Math symbols
+\usepackage{xparse}
+\input{tools/common_math_symbols}
+
+% Physics symbols (vectors, units)
+\usepackage{tikz}
+\input{tools/physics_macros}
+
+% Theorem environments
+\input{tools/theorem_definitions}
+
+%%%%%%
+\title{Patil - Thesis Summary\\Connes Spectral Distance on NCG spaces}
+\author{Sebastian Camilo Puerto}
+\date{June 2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+TODO: Landau problem -> NCG
+
+TODO: noncommutative quantum mechanical modesl for SGI, Coulomb problem, spherical potential well
+
+NCQM: can e given a (weak) position measurement
+
+Best example of NCSpace in physics: phase space in quantum mechanics -> von Neumann studied it -> von Neumann algebras
+
+Connes generalized to setting of NC C* algebras, PROVIDING A DIFFERENTIAL STRUCTURE ON THEM.
+\textbf{The main inspirate for NCG was QM}/
+
+\textbf{In NG, the focus is focused from the points (of phase space) to the algebra of observables}. Pure states of the algebra are close to the notion of points (TODO: these are be vectors in a Hilbert state, right?... I guess that, because in the C setting pure states are points, I THINK, the equivalent notion is transported to NC, but it so happens that there we have a theory of the states: GNS). SO, the notion that is closer to that of point is that of algebra state.
+
+TODO; are pure states of a C* algebra always vectors of the GNS space?
+
+What has been done:
+
+Connes distance between pure states in moyal and FUzzy have been calculated.
+
+\textbf{In 15, a general algorithm was developed to calculatte Connes distance btween (infinitesimally separated / perp?) states offfff a NC space IN THE SETUP of hilbert-Schmidt operator formulatioooooon ofNCQMM} Key: \rtext{Hilbert=Schmidt operator formulation OF NCQM}. This algorithm was later modified/correted.
+
+Subsequenntly, tge Connes distance between infinitesimally separated coherent states.
+
+Using the modified algorithm, the calculation was hard.
+
+But, in 11 an alternative approach is developed to calculate distanec between coherent states of the Moyal plane.
+
+So, using this alternative approach adopted from 11, \textbf{Xonnes distance between finitely separated coherent and discrete states in Moyal and FUzzy were calculated}.
+
+\textbf{A corrected general method to find Connees distance is presented in the Conclusions} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{High Level Summary}
+
+    \begin{itemize}
+
+    \item Noncommutative Quantum Mechanics
+    
+        \begin{itemize}
+            
+        \item It is a model in which an intermediate Noncommutative ``configuration'' space appears: a space of representation of some desired ``coordinate functions''(observables) $x_i$ conmutation relations "$\mathcal H_c$.
+        
+            \begin{itemize}
+                
+            \item This will be close, but not equal, to the Hilbert space considered for the studied spectral triples.
+                
+            \end{itemize}
+        
+        \item \textbf{(Generalized) Coherent vectors of $\mathcal H_c$}, whose density matrices $\rho_z = |z\langle \rangle z| : \mathcal H_c \to \mathcal H_c$ can be reformulated as \emph{states} of the algebra $\mathcal A = \mathcal H_q \subset \mathcal B(\mathcal H_c) \cong \mathcal H \otimes \mathcal H^*$ of Hilbert-Schmidt operators, \textbf{allow us to think again of ``points of the noncommutative space'': the states of $\mathcal A = \mathcal H_q$ that they induce, called \lbtext{coherent states}}.
+        
+        \item It is a model in which we can make sense to ``position measurements'' in a weak sense, because we have something similar to the Spectral Theorem.
+        
+        \item Constructions for Moyal plane
+        
+            \begin{itemize}
+            
+            \item Hilbert spaces, 
+            
+            \item Representation of Heisenbert algebra in $\mathcal H_q$. 
+            
+            \item Statement: \rtext{\lbtext{Physical states} of a system are represented by normalized vectors in $\mathcal H_q$}. (instead of $\mathcal H_c$).
+            
+            \item \lbtext{Coherent states}: elements of $\mathcal H_q$, $|z)$; density matrices $|z) = |z\rangle \langle z|$, where $|z\langle \in \mathcal H_c$ are \textbf{coherent vectors in $\mathcal H_c$} (eigenvector of destruction operator such that $\delta x_1 \delta x_2 = \frac{\hbar}{2}$) $|z\langle = e^{-\overline{z} b + z b^\dagger}|0\rangle$
+            
+            \item Positive operators $\pi_z: \mathcal H_q \to \mathcal H_q$ ``provide a POVM'' for position measurement
+            
+            \item \rtext{The probability of finding a particle in a ``state'' represented by the density matrix $\rho: \mathcal H_q \to \mathcal H_q$ (e.g. the ``pure state'' $|\psi)(\psi|$), at $z = (x_1, x_2)$} is $p(x_1, x_2) = tr_q(\pi_z \rho)$, e.g. $p(x_1, x_2) = (\psi|\pi_z|\psi)$.
+                
+            \end{itemize}
+        
+        \item Constructions for Fuzzy Spheres
+        
+            \begin{itemize}
+                
+            \item $\mathcal H_c = span\set{|n, n_3\rangle}$, $\mathcal H_q = span\set{|n, n_3\rangle \langle n, n_3|}$. Decomposition where components labeled by $n$, where $\mathcal H_c^n$ is the $n$th irrep of $su(2)$.
+            
+            \item Coherent states: \lbtext{Perelomov coherent states (maybe I will call them ``vectors'' instead of states)}: elements of the action of group $X = SU(2)/U(1)$ on the state $|n, n_3\langle$. Given by $|z\langle = \cdots \in H^n_c$, as discussed in [21]. The label $z = -tan(\frac{\theta}{2})e^{-i \phi}$
+                
+            \end{itemize}
+        
+        \item We will see how \rtext{there is a one-to-one correspondence between the points in the NC space and the coherent state labeled by $z = (x_1, x_2) \in \CC$}. Therefore \rtext{defining a distance on the set of coherent states will mean investigating the geometry of the underlying noncommutative space}. (\dbtext{TODO}: in what general setting do these coherent states exist, i.e. in which ``noncommutative spaces'' do they exist and when can I say they represent the points of the NC space?)
+        
+        \item To do the spectral distance calculations and even to apply the proposed algorithm:
+        
+            \begin{itemize}
+                
+            \item The coherent states are important, at least in the sense that they are $1$ of the $2$ families of examples that we have,
+            
+            \item And this interpretation is usefull to \textbf{say that we calculated the distance between ``points of the noncommutative configuration spaces''}, because, due to the POVM that they induce, we can think of (weakly) measuring position... something like that
+            
+            \item But, to do the calculations per se they are not necessary, as the first 2 elements of the proposed Spectral Triples $(\mathcal A = \mathcal H_q, \mathcal H = \mathcal H_c \otimes \CC^2, D)$ coincide with the usual spectral triples of the noncommutative spaces behind, at least in the case of the Moyal Plane and the Fuzzy Sphere.
+            
+            \item The representation of the Hilbert algebra on $\mathcal H_q$ does NOT seem to be used anywhere... in the calculations never, but perhaps in finding the POVM?
+            
+            \item The POVM is also never used to calculate the spectral distance, only to interpret the distance between coherent states as distance between ``points'' of the NC space. 
+            
+            \end{itemize}
+            
+        \end{itemize}
+    
+    \item Noncommutative Geometry
+    
+        \begin{itemize}
+        
+        \item Basic definitions like $C^*$ algebra, state
+        
+        \item Equivalenec between (the set of characters of) commutivative $C^*$ algebras and locally compact T2 spaces.
+        
+        \item Algebraic definition of a connection: A connection on a module
+        
+        \item Serre-swan theorem: equivalence between finitely generated projective $C^\infty(M)$-modules AND vector bundles on $M$.
+        
+        \item Universal first-order calculus over $\mathcal A$: apparently a way to talk about vector fields on the algebra and to do calculus on it.
+        
+        \item Canonical spectral triple: $M$ compact, spin manifold. Proof of the validity of Connes' distance formula.
+        
+        \item \rtext{``Construct spectral triples in order to provide a geometric structure to the configuration space'', i.e. classical Hilbert space: calculate Connes distance between states on $\mathcal A = \mathcal H_q$}
+        
+        \item A spectral triple on the Moyal plane
+        
+            \begin{itemize}
+                
+            \item Constructed in [15] (them)
+            
+            \item Related to spectral triple of [28]: isospectral deformation of the canonical spectral triple on Euclidean space $\RR^2$. In [11,10] this one is used and the distance between coherent states is calculated.
+            
+            \item The 1st property of the Dirac op proven, the 2nd one is not done, and instead we are refeerd to the prove for the other spectral triple in [28]
+                
+            \end{itemize}
+            
+        \item Spectral triple on the Fuzzy spheres
+        
+            \begin{itemize}
+                
+            \item Constructed in [25] and reviewed in [16], deformed from the canonical triple of $S^2$
+            
+            \item In [27] a similar spectral triple proposed, and distance between coherent states calculated and its relation to commutative $S^2$ analyzed.
+            
+            \item The 2 properties necessary for the operator to be Dirac are carefully proven (short).
+            
+            \end{itemize}
+        
+        \item To do the spectral distance calculations and even to apply the proposed algorithm
+        
+            \begin{itemize}
+            
+            \item Basic definitions like $C^*$ algebra, state, operator norm... perhaps missing the definition of normal state
+            
+            \item The definition of a Spectral Triple and of the Connes Distance Function, is used.
+            
+            \item The proofs that the proposed Dirac operators on the Moyal plane and the Fuzzy spheres are indeed Dirac operators.
+            
+            \item Translation invariance of Connes formula?
+            
+            \item Arguably: the quickly mentioned properties of a Dirac operator due to its defining properties: 
+            
+                \begin{itemize}
+                    
+                \item Its spectrum is real and discrete.
+                
+                \item The eigenspaces are finite dimensional
+                
+                \item The eigenvalues follow a growth property that imply that there is no accumulation point other than at infinity, i.e. $lim_{n \to \infty} \lambda_n = \infty$.
+                
+                \item [19] (Don't know if it is a general result) The supremum element belongs to the hermitian elements of $\mathcal A$
+                    
+                \end{itemize}
+            
+            \end{itemize}
+            
+            \item NEVER do we use the differential calculus here defined $(\Omega^1 \mathcal A \subset \mathcal A \otimes \mathcal A, d)$. NEVER used the, supposedly important, property of projective modules of admiting ``universal'' connections.
+        
+        \end{itemize}
+    
+    \item Connes Distance on Moyal Plane and Fuzzy Sphere
+    
+        \begin{itemize}
+            
+        \item We study the distance between some sets of states of the algebra $\mathcal A = \mathcal H_q$ that correspond to ``physical states''(as defined above: normalized elements of $\mathcal A = \mathcal H_q$) since they are normal states: they come from density matrices $\rho: \mathcal H_c \to \mathcal H_c$, but this density matrices ARE normalized elements of $\mathcal H_q = \mathcal A$.
+        
+        \item General strategy:
+        
+            \begin{itemize}
+                
+            \item Find tight upperbound for the distance (recall that the Connes distance is a supremum over $a \in B$)
+            
+            \item Construct/find/show it works: supremum element $a_s \in \mathcal A$ for which the upper bound is achieved / Find a sequence of elements $a_n \in B \subset \mathcal A$ such that their inner part of Connes formula accumulates in the limit. And prove that it is in $B$.
+            
+            \item Use translation invariance of Connes formula.
+            
+            \item For the discrete set of states: first find using this algorithm the \lbtext{infinitesimal distances} i.e. distance between states with adjacent labels $n$ and $n+1$. Then apply again the algorithm for other states/ ``finitely'' separated states.
+                
+            \end{itemize}
+            
+        \end{itemize}
+    
+    \end{itemize}
+
+
+%\input{1-Intro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{2-NCQM}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{3-NCG}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{4-Distance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{5-Conclusions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
