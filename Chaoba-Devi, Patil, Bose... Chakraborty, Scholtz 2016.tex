@@ -1,0 +1,297 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+
+%%%%%% To use hyperlinks, including the formula ones
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+%%%%%% Make paragraphs start with no indentation and leave spaces between paragraphs
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+%%%%%% Math stuff
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+
+%%%%%% Mis Codigos
+
+% TODO notes package
+\usepackage{xargs}                  % Use more than one optional parameter in a new command
+\usepackage[pdftex,dvipsnames]{xcolor}
+\input{tools/todoCode}
+
+% Colored text and boxes with my color conventions for highlighting
+\usepackage[dvipsnames]{xcolor}
+\input{tools/colorCode}
+
+% Math symbols
+\usepackage{xparse}
+\input{tools/common_math_symbols}
+
+% Physics symbols (vectors, units)
+\usepackage{tikz}
+\input{tools/physics_macros}
+
+% Theorem environments
+\input{tools/theorem_definitions}
+
+%%%%%%
+\title{Fiore Pisacane 2018: Fuzzy circle and new fuzzy sphere through confining potentials and energy cutoffs}
+\author{Sebastian Camilo Puerto}
+\date{July 2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{High Level Summary}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Very Important Facts}
+
+    \begin{itemize}
+    
+    \item The important part of a Noncommutative Quantum Mechanical system is $\mathcal H_q$:
+    
+        \begin{itemize}
+            
+        \item The pure \emph{physical states} are elements $|\psi) \in \mathcal H_q$
+        
+        \item Normal states are density matrices on here, like $|\psi)(\psi| \in \mathcal B(\mathcal H_q)$
+        
+        \item ``Algebra states'' are states of $\mathcal A = \mathcal H_q$ as algebra, so we are thinking of this, I think, as the NC space.
+        
+        \item The weak version that we have of the Spectral theorem applies to this space, i.e. \rtext{we can do weak measurements of the position of the (pure) states on $\mathcal H_q$}.
+        
+        \item After all, it is \rtext{this space that is a (unitary) representation of the (noncommutative version of the) Heisenberg algebra}.
+        
+        \item BUT In this paper they say at some point that we are ``calculating the distance in $\mathcal H_c$'' (pg. 5)
+        
+        \item BUT $\mathcal H_q = \mathcal H_c \otimes \mathcal H_c^*$ and ``the quantum state with maximal localization'' is $|z) := |z\langle\rangle z|$, which \dbtext{can be interpreted as a pure physical state in $\mathcal H_q$ but also the density matrix representation of a pure state in $\mathcal H_c$}; furthermore, \dbtext{I understand that the vectors that saturate Heisenberg's relations are the $|z\rangle$'s, I don't know what properties the states $|z)$, if what makes them localized states is ``only'' the PO operators $\pi_z$ associated to them}.
+        
+        \end{itemize}
+    
+    \item \rtext{The probability of finding, for the system described by the density matrix $\Omega \in \mathcal B(\mathcal H_q)$, the outcome of position measurement $z = (x_1, x_2)$ is given by the Positive Operator /\emph{``unnormalized projection''} $\pi_z \in \mathcal B(\mathcal H_q)$ by the formula
+    \begin{align}
+        P(x_1, x_2) = (\psi|\pi_z|\psi) & \text{if } \Omega = |\psi)(\psi|
+        P(x_1, x_2) = tr_q(\pi_z \Omega)
+    \end{align}
+    }
+    
+        \begin{itemize}
+            
+        \item Recall that the Spectral theorem says that: for any self-adjoint operator, not just the (tuple of) position operators, we receive a Projection Valued Measure $E_A$: given an outcome/eigenvalue $\lambda$, $E_A(\lambda)$ is a projector to the eigenspace $\lambda$ of $A$, so that the probability of measuring the outcome $\lambda$ for the state \_\_\_\_ has probability:
+            \begin{align*}
+                \psi \in \mathcal H &&P(\lambda) = \langle \psi | E_A(\lambda) |\psi \rangle \\
+                \Omega \in \mathcal B(\mathcal H) &&P(\lambda) = tr(E_A(\lambda) \Omega)\\
+                \omega: \mathcal B(\mathcal H) \to \CC &&P(\lambda) = \omega(\cdots?)... \omega(A)?
+            \end{align*}
+            
+        \end{itemize}
+    
+    \item Associated to a Noncommutative Quantum System there is a natural spectral triple $(\mathcal A = \mathcal H_q, \mathcal H = \mathcal H_c)$.
+    
+    \item In the fuzzy sphere, the set of \dbtext{generalized coherent states of $SU(2)$} is \emph{topologically} isomorphic to the homogeneous space $SU(2)/U(1) \cong S^2$, but geometrically it reduces to $S^2$ only in the limit $n \to \infty$.
+    
+    \item They don't use the algorithm to compute the distances in the Moyal plane or the Fuzzy sphere for $n = 1/2$, they follow Martinetti2013, just like in the thesis of Patil. I think the algorithm they provide is used to calculate approximations for the fuzzy sphere $n = 1$.
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Important Facts}
+
+    \begin{itemize}
+
+    \item The Positive Operator Valued measure exists because $|z) \in \mathcal H_q$ provides an over-complete basis of $\mathcal H_q$, so there is a resolution of the identity $1_{q}$ as an integral which is the sum of the Positive operators $\pi_z$ which form a complete basis \dbtext{of where} and therefore provide a POVM.
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Memorize}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Doubts}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Detailed summary}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Notice}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Yet to understand}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction (pg. )}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Review of Hilbert-Schmidt operatorial formulation and the spectral triples for non-commutative spaces $\RR^2_*$ and $S^2_*$ (pg. 3)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Moyal Plane ($\RR^2_*$) (pg. 3)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fuzzy Sphere (pg. 4.5)}
+
+\subsubsection{Perelomov's $SU(2)$ coherent states (pg. 5)}%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Spectral Triple: Moyal Plane (pg. 5.5)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Spectral Triple: Fuzzy Sphere (pg. 6)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Spectral distances a la Connes (pg. 6.5)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Towards an algorithm to compute finite distances (pg. 7.5)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Distance between finitely separated coherent states in $\RR^2_*$ (pg. 9.75)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Infinitesimal distance and optimal element (pg. 12)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Connes distance between discrete ``harmonic oscillator'' states (pg. 15)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Distance between infintesimally separated discrete ``harmonic oscillator'' states $|n\rangle$ and $|n+1\rangle$ in the Moyal plane (pg. 15)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Distance between finitely separated discrete ``harmonic oscillator'' states $|n\rangle$ and $|m\rangle$ in the Moyal plane (pg. 16)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fuzzy Sphere (pg. 17)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Distance Between Discrete States (pg. 17)}
+
+\subsubsection{Infinitesimal Distance (pg. 17)}%%%%%%%%%%%%%%%%%
+
+\subsubsection{Finite Distance (pg. 18)}%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Upper bound of the distance between coherent states (pg. 19)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ball condition in the eigen-spinor basis (pg. 20)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Lower Bound for Infinitesimally Separated Coherent States (pg. 20.8)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The $n=1/2$ fuzzy sphere (pg. 21.5)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Analogy with $\CC P^1$ modle and mixed states (pg. 23.6)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The $n=1$ fuzzy sphere (pg. 24)}
+
+\subsubsection{Ball condition, general strategy to compute infinimum and general forms of $\Delta \rho$ (pg. 24)}%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{An improved but realistic estimate of spectral distance}%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Spectral distance using $\Delta \rho_{\perp}$}%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions (pg. 30)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Appendix (pg. 31)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dirac Operator in Moyal plane, its responde to $ISO(2)$ symmetry and a useful identity (pg. 31)}
+
+The Dirac operator on $\mathcal H = \mathcal H_c \otimes \CC^2$ used through the paper is constructed from the Dirac operator in $\mathcal H_q \otimes \CC^2$:
+\begin{align*}
+    \mathcal D:= \sigma_i \hat P^i,
+\end{align*}
+TODO understanding the elements of $\mathcal H_q \otimes \CC^2$ as test functions?\todo{No entiendo}
+
+There are many possible equivalent Dirac operators, and for instance I way we can say something like ``Connes distance, is invariant under rotation of the configuration space'' since we can use rotated position coordinates, which in turn gives us rotated $b$'s, which in turn generates a new Dirac operator such that the generated Lipschitz ball is the same, since $||[D, \pi(a)]||_{op}$ doesn't change.
+
+\begin{align*}
+    ||[\mathcal D, \pi(a)]||_{op} = \sqrt{\frac{2}{\theta}}||[b^\dagger, \pi(a)]||_{op} = \sqrt{\frac{2}{\theta}}||[b, \pi(a)]
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fuzzy Sphere (pg. 32)}
+
+\begin{align*}
+    \frac{1}{r}||[J_+, a]||_{op} &\leq ||[\mathcal D, \pi(a)]||_{op}\\
+    \frac{1}{r}||[J_-, a]||_{op} &\leq ||[\mathcal D, \pi(a)]||_{op}\\
+    \frac{1}{r}||[J_3, a]||_{op} &\leq ||[\mathcal D, \pi(a)]||_{op}
+\end{align*}
+
+For $a = a^\dagger \in B$, $||[D, \pi(a)]||_{op}$
+\begin{align}
+    ||[J_+, a]||_{op} &\leq r\\
+    ||[J_-, a]||_{op} & \leq r
+\end{align}
+
+\end{document}
