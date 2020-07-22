@@ -9,6 +9,26 @@
     urlcolor=blue,
 }
 
+%%%%%% Mis Codigos
+
+% TODO notes package
+\usepackage{xargs}                  % Use more than one optional parameter in a new command
+\usepackage[pdftex,dvipsnames]{xcolor}
+\input{tools/todoCode}
+
+% Colored text and boxes with my color conventions for highlighting
+\usepackage[dvipsnames]{xcolor}
+\input{tools/colorCode}
+
+% Math symbols
+\usepackage{xparse}
+\input{tools/common_math_symbols}
+
+% Physics symbols (vectors, units)
+\usepackage{tikz}
+\input{tools/physics_macros}
+
+
 \title{Understanding: NonComm Geo, Dirac Operator, spectral theorem, indexes of operators}
 \author{Sebastian Camilo Puerto}
 \date{May 2020}
@@ -53,9 +73,31 @@ Hilbert’s theory of integral equations, now more than one hundred years old, i
     
     \item Says that the Analytical Index of an elliptic operator (dimension of some space related to solution space) is equal to the Topological Index of the operator (related to integral of Todd class of the space and chern caracter of the operator).
     
-    \item The index problem is the following: compute the (analytical) index of $D$ using only the symbol $s$ and topological data derived from the manifold and the vector bundle.
+    \item \textbf{The index problem} is the following: compute the (analytical) index of $D$ using only the symbol $s$ and topological data derived from the manifold and the vector bundle.
     
     \item The first prove by Atiyah and Singer used K-theory
+    
+    \item Inspired Connes to define \textbf{Spectral Triples} $(\mathcal A, \mathcal H, \mathcal D)$:
+    
+        \begin{itemize}
+            
+        \item Canonical spectral triple: $(\mathcal A = C^\infty(M), \mathcal H = \Gamma(\Sigma M), \mathcal D)$
+        
+        \item ``Topological space'': encoded as the spectrum of the algebra.
+        
+        \item ``Metric information'': encoded in the absolute value of the Dirac operator
+        
+        \item Pairing with \rtext{$K$-theory}: \emph{Index Theorem} / Local Index Formula:
+        
+            \begin{itemize}
+            
+            \item Global / Analytic / Index side of the theorem
+            \item Local / Geometric / Chern class Integration(Dixmier trace, creo)
+            
+            \end{itemize}
+            
+        \end{itemize}
+    
 \end{itemize}
 
 
@@ -73,7 +115,7 @@ TODO: algebraic versions: integrality theorems: the class numbers are integers b
     \item \emph{Chern–Gauss–Bonnet theorem}: the Euler-Poincaré characteristic (a topological invariant defined as the alternating sum of the Betti numbers of a topological space) of a closed even-dimensional Riemannian manifold is equal to the integral of a certain polynomial (\textbf{the Euler (deRham cohomology) class}) of its curvature form. \[\chi(M) = \int_M \frac{1}{(2\pi)^n} Pf(\Omega)\]. Particular example: 4D: \[ \chi(M) = \frac{1}{32 \pi^2} \int_M (|Riem|^2 - 4|Ric|^2 + R^2) d\mu \]
     
         \begin{itemize}
-        \item The differential operator in question is $D = d + d^* : \bigoplus_n \bigwedge^{2n}T^*M \to \bigoplus_n \bigwedge^{2n+1}T^*M$.
+        \item \textbf{The differential operator in question is }$\rtext{D = d + d^*} : \bigoplus_n \bigwedge^{2n}T^*M \to \bigoplus_n \bigwedge^{2n+1}T^*M$.
         
         \item The topolocical index of $D$ is the Euler characteristic of the Hodge cohomology (comment about Hodge cohomology: ``The key observation is that, given a Riemannian metric on M, \emph{every cohomology class has a canonical representative, a differential form which vanishes under the Laplacian operator of the metric}. Such forms are called harmonic.'') of $M$
         
