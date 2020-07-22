@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\title{Understanding: NonComm Geo, Dirac Operator, spectral theorem, indexes of operators}
+\author{Sebastian Camilo Puerto}
+\date{May 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{A rapid tour through Noncommutative Geometry: from Integral Equations and the Spectral Theorem to Index Theorem and beyond - Nigel Higson}
+
+This talk was part of the conference on ``Bivariant K-theory in Geometry and Physics''
+
+
+\href{https://www.youtube.com/watch?v=t_f7I8N93kw}{Youtube} 1 hour video
+
+\subsection{Abstract}
+
+Hilbert’s theory of integral equations, now more than one hundred years old, is a famously successful amalgam of matrix algebra and analysis. One way to look at Alain Connes’ much newer noncommutative geometry is to see it as an evolution of the theory of integral equations that incorporates geometric ideas into Hilbert’s work, and I shall try to develop this perspective in my lecture. I will focus on just one construction, that of Connes’ tangent groupoid, but even so there will be opportunities to glimpse at Weyl’s asymptotic law, the Atiyah-Singer index theorem, and recent work of Bismut on orbital integrals and the hypoelliptic Laplacian with $v=0$.
+
+\subsection{TOC}
+
+1. Lead 00:00:00
+2. Hilbert's spectral theorem 00:00:08
+3. Integral operators as an algebra 00:09:06
+4. Principal symbol 00:19:53
+5. Two examples 00:29:29
+6. The continuous field of C*-algebras 00:37:48
+7. Elliptic operators 00:46:28
+8. Bismut's theory of the hypoelliptic Laplacian 00:53:24
+9. Questions from the audience 00:58:32
+
+
+\section{Atiyah-Singer Theorem}
+
+\subsection{Important statements}
+
+\begin{itemize}
+    
+    \item $D$ is an elliptic differential operator between vector bundles $E$ and $F$ over a compact manifold $X$.
+    
+    \item Relates local information about a manifold (a polynomial of its curvature) and global (homotopy invariant) information. (which information depends on what differential operator is chosen)
+    
+    \item Says that the Analytical Index of an elliptic operator (dimension of some space related to solution space) is equal to the Topological Index of the operator (related to integral of Todd class of the space and chern caracter of the operator).
+    
+    \item The index problem is the following: compute the (analytical) index of $D$ using only the symbol $s$ and topological data derived from the manifold and the vector bundle.
+    
+    \item The first prove by Atiyah and Singer used K-theory
+\end{itemize}
+
+
+
+
+TODO: algebraic versions: integrality theorems: the class numbers are integers because they can be interpreted as the dimension of certain spaces of holomorphic functions. Hizeburg proved similar integral theorems not simply in the context of algebraic geometry, obtaining integers... but it was not clear where they came from, what was behind this numbers... it was clear spinors were somehow involved because of a formula of Hizeburg... turns out they had to do something to do with indexes of elliptical operators.
+
+\subsection{Consequences}
+
+\begin{itemize}
+    \item The sum of the angles in a planar triangle is 180 degrees. Already one can see the connection between local and global geometry.
+    
+    \item \emph{Gauss-Bonnet theorem}: \[\int_M K dA = 2\pi \chi(M)\] where $K$ is the Gaussian curvature of $M$ (local information) and $\chi(M)$ is its Euler characteristic (global, homotopy invariant information).
+
+    \item \emph{Chern–Gauss–Bonnet theorem}: the Euler-Poincaré characteristic (a topological invariant defined as the alternating sum of the Betti numbers of a topological space) of a closed even-dimensional Riemannian manifold is equal to the integral of a certain polynomial (\textbf{the Euler (deRham cohomology) class}) of its curvature form. \[\chi(M) = \int_M \frac{1}{(2\pi)^n} Pf(\Omega)\]. Particular example: 4D: \[ \chi(M) = \frac{1}{32 \pi^2} \int_M (|Riem|^2 - 4|Ric|^2 + R^2) d\mu \]
+    
+        \begin{itemize}
+        \item The differential operator in question is $D = d + d^* : \bigoplus_n \bigwedge^{2n}T^*M \to \bigoplus_n \bigwedge^{2n+1}T^*M$.
+        
+        \item The topolocical index of $D$ is the Euler characteristic of the Hodge cohomology (comment about Hodge cohomology: ``The key observation is that, given a Riemannian metric on M, \emph{every cohomology class has a canonical representative, a differential form which vanishes under the Laplacian operator of the metric}. Such forms are called harmonic.'') of $M$
+        
+        \item The analytical index is the Euler class (deRham) of the manifold.
+        \end{itemize}
+    
+    \item Hirzebruch–Riemann–Roch theorem \url{https://en.wikipedia.org/wiki/Atiyah\%E2\%80\%93Singer_index_theorem#Hirzebruch\%E2\%80\%93Riemann\%E2\%80\%93Roch_theorem}
+    
+    \item $\hat A$ genus and Rochlin's theorem \url{https://en.wikipedia.org/wiki/Atiyah\%E2\%80\%93Singer_index_theorem#\%C3\%82_genus_and_Rochlin's_theorem}
+
+\end{itemize}
+
+
+
+\end{document}

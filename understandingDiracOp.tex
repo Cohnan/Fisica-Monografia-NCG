@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{slashed}
+
+\usepackage{hyperref}
+
+\title{Entendiendo Dirac relacionado a version operador de Metrica en variedad}
+\author{Sebastian Camilo Puerto}
+\date{May 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Dirac Operators and Spectral Geometry - V\'arilly 2006}
+
+\emph{Noncommutative geometry asks}: “What is the geometry of the Quantum World?”.
+
+\subsubsection*{Physical Arisal of Dirac Operator}
+
+Quantum field theory considers aggregates of “particles”, which are of two general species, “bosons” and “fermions”. These are described by solutions of (relativistic) wave equations:
+    \begin{itemize}
+        \item Bosons: Klein–Gordon equation, $(\square + m^2)\phi(x) = \rho_b(x)$ - “source term”;
+        \item Fermions: Dirac equation, $(i\slashed\partial - m)\psi(x) = \rho_f (x)$ - “source term”;
+    \end{itemize}
+
+where $\slashed\partial = \sum_\mu \gamma^\mu \partial/\partial_{x^\mu}$. In order that \emph{$\slashed \partial$ be ``a square root of $\square$}'' we need $\{ \gamma^\mu, \gamma^\nu \} = 2 \eta^{\mu \nu}$, so $\gamma^\mu$ must be matrices, and there are $4 \times 4$ matrices satisfying this (but there are many others).
+
+\subsubsection*{Algebraic version of metric: Dirac operator}
+
+Point-like measurements are often ruled out by quantum mechanics; thus we replace points
+$x \in M$ by coordinates $f \in C(M)$. \emph{The metric distance on a Riemannian manifold $(M, g)$ can be computed in two ways}:
+\begin{align*}
+    d_g(p, q) := & inf\{ length(\gamma : [0, 1] \to M) : \gamma(0) = p, \gamma(1) = q \} \\
+              = & sup\{ |f(p) - f(q)| : f \in C(M), ||\slashed D, f|| \leq 1 \}, \qquad \longleftarrow    
+\end{align*}
+
+where $\slashed D$ is a Dirac operator with positive-definite signature (i.e. all $( \gamma^\mu)^2 = 1$ if it exists, so \textbf{the Dirac operator specifies the metric}. $\slashed D$ is an (unbounded) operator on a Hilbert space $H = L^2(M, S)$ of “square-integrable spinors”, and $C^\infty(M)$ also acts on $H$ by multiplication
+operators with $||[\slashed D, f ]|| = ||grad\,f||_\infty$.
+
+\subsubsection*{Metric in NCG}
+
+Noncommutative geometry generalizes $(C^\infty (M), L^2(M, S), \slashed D)$ to a \textbf{spectral triple} of the form $(\mathcal A, H, D)$, where $\mathcal A$ is a “smooth” algebra acting on a Hilbert space $H$, $D$ is an (unbounded) selfadjoint operator on $H$, subject to certain conditions: in particular that $[D, a]$ be a bounded operator for each $a \in \mathcal A$. The tasks of the geometer are then:
+
+\begin{enumerate}
+    \item \textbf{To describe (metric) differential geometry in an operator language}.
+    \item \textit{To reconstruct (ordinary) geometry in the operator framework}.
+    \item To develop new geometries with noncommutative coordinate algebras.
+\end{enumerate}
+
+The long-term goal is to geometrize quantum physics at very high energy scales, but we
+are still a long way from there.
+
+\subsubsection*{TOC}
+
+The general program of these lectures is as follows.
+
+\begin{itemize}
+    \item The classical theory of spinors and Dirac operators in the Riemannian case.
+    \item The operational toolkit for noncommutative generalization.
+    \item Reconstruction: how to recover differential geometry from the operator framework.
+    \item Examples of spectral triples with noncommutative coordinate algebras.
+\end{itemize}
+
+Hola
+
+\end{document}
