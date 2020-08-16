@@ -1,0 +1,203 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+
+%%%%%% To use hyperlinks, including the formula ones
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+%%%%%% Make paragraphs start with no indentation and leave spaces between paragraphs
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+%%%%%% Math stuff
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+
+%%%%%% Mis Codigos
+
+% TODO notes package
+\usepackage{xargs}                  % Use more than one optional parameter in a new command
+\usepackage[pdftex,dvipsnames]{xcolor}
+\input{tools/todoCode}
+
+% Colored text and boxes with my color conventions for highlighting
+\usepackage[dvipsnames]{xcolor}
+\input{tools/colorCode}
+
+% Math symbols
+\usepackage{xparse}
+\input{tools/common_math_symbols}
+
+% Physics symbols (vectors, units)
+\usepackage{tikz}
+\input{tools/physics_macros}
+
+% Theorem environments
+\input{tools/theorem_definitions}
+
+%%%%%%
+\title{My Summary on the Fuzzy Sphere}
+\author{Sebastian Camilo Puerto}
+\date{August 2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{High Level Summary}
+
+    \begin{itemize}
+
+    \item The fuzzy spheres are a sequence $\set{\mathcal A_n}_{n \in 0, 1, \dots}$ of fnite dimensional $*$-algebras and $\mathfrak{U(su(2))}$-modules!
+    
+        \begin{itemize}
+            
+        \item i.e. they are NC spaces and they preserve the \dbtext{rotational symmetry} of $S^2$ (I think this means that ``the topology, metric and differential structure are preserved under the action of $SO(3)$'', i.e. by the induced diffeomorphisms, however in the NC spaces what that means has to be stated: 
+        
+            \begin{itemize}
+            
+            \item the \textbf{``topology''} is encoded in the algebra of functions,
+            
+            \item the ``differential structure'' is encoded in the Lie algebra of smooth global vector fields and their bracket in the commutative case which is in turn encoded in the Lie algebra of derivations of the algebra, \tiny{which also want to preserve the conjugation, i.e. $X(f*) = X(f)*$}
+            
+            \item Then, the \textbf{diffeomorphisms} are the automorphisms (of $*$-algebras) of the algebra that leave the set of derivations invariant, \tiny{which preserve the $*$}
+                
+            \end{itemize} 
+            
+        \item As algebras they are simply $M_n(\CC)$, and \dbtext{the action of the rotation group is given by...} (I think that it is given by the adjoint action $g^{-1}\cdot g$, induced by the irrep action on $\CC^{n} \cong v_j$)
+        
+        \end{itemize}
+    
+    \item We make the coordinate functions $x^1, \dots, x^3$ into elements of a $*$-algebra $A_n := \bigoplus_{l = 0, 1}^{n-1} V_l = \bigoplus_{l = 0, 1}^{n-1} \{\text{homogeneous polynomials of degree } l \text{ on the variables } x^1, x^2, x^3\}$ isomorphic to $(M_n(\CC), \frac{1}{n}||\cdot||_{H.S.} )$ having each $x^a$ be $
+    kappa J^a$ where $J_a$ is the rotation operator of spinors of spin $j = (n-1)/2$, with $r^2 = (n^2-1)\kappa^2 \rightarrow \kappa = \kappa(n) ~ r/n$. These $x^a$ are algebra generators of $\mathcal A_n = M_n(\CC)$, and they satisfy the commutation relations:
+    \begin{align}
+    [x_a, x_b] &= i \hbar C^c_{ab}x_c, &c_{abc} = \epsilon_{abc}/r   \\
+               &= 2i \kappa \epsilon_{abc} x_c\\
+               &= \frac{ir}{\sqrt{j(j+1)}} \epsilon_{abc}x_c
+    \end{align}
+    
+    
+    
+        \begin{itemize}
+        
+        \item The $V_l$, $l = 0, 1, \dots$ are the (complex) irreducible representations of $SO(3)$, i.e. the irreducible representations of $SU(2)$ of integer spin / of even maximal weight $\lambda = 2l$.
+        
+        \dbtext{The rotation group acts on $\mathcal A_n$ as (as the decomposition suggests?, i.e. for $g \in SO(3)$ coming from $g^{-1}\vec x$, i.e. $g\cdot f(\vec x) = f(g^{-1}\vec x)$} this would be precisely the same as the action of the rotation group on the commutative algebra)... and thus induces \dbtext{the action ... on $M_n(\CC)$} (if that is indeed the action of $g \in $ on $\mathcal A_n$, then $R_{g^{-1}}\hat x R_g$ is, I'm quite sure, the action in $M_n$, which, since the $\hat x$'s generate $M_n$, imply $R_{g^{-1}}\hat f R_g$ for any $f \in M_n$... \tiny{I think this is the case since $\vec x' = g^{-1}\vec x$ would now to to the spinor rotation operators in $\CC^n$ w.r.t to the axis $\vec x' = g^{-1} \vec x$ }, and these rotations act on the rotated spinor $\psi' = R_{g^{-1}}(\psi)$ as $x'\psi' = R_g^{-1}x\psi$ ).
+        
+        \item That definition of $\kappa$ means that \textbf{the metric relation $\delta_{ab}x^a x^b = r^2$ is still satisfied}, i.e. ``that we are within a sphere or radius $r$''.
+            
+        \end{itemize}
+    
+    \item They approximate $C^\infty(S^2)$ better with growing $n$, and in the limit they are the same. This approximation and limit are in the following sense:
+    
+        \begin{itemize}
+        
+        \item As a vector space respecting symmetry: Of course $C(S^2) \equiv \lim_{n \to \infty} A_n$, but that is only as modules, I THINK, i.e. as vector spaces respecting the action of the rotation group., but that is not enough.
+        
+        \item As a $*$-algebra, with the norm $\frac{1}{2\pi r^2 \int |\cdot|^2}$ in $C(S^2)$: ``in the limit $n \to \infty$ the \textit{algebra} $C(S^2)$ can be considered as (the image of) the diagonal matrices in $M_n$'': For large $n$, bounded functions will be the image of \lbtext{near-diagonal matrices}: matrices which ommute to within order $\hbar:= 2 \kappa r = \sqrt{j(j+1)}(2\kappa)^2 = \frac{r^2}{\sqrt{j(j+1)}}$
+        
+        \item This follows, in part, from the fact that ``the error'' for the isomorphism of modules $\phi_n : M_n \to \mathcal A_n$ to be an algebra isomorphism is given by:
+        
+        \[
+            \phi_n(fg) - \phi_n(f)\phi_n(g) ~ o(l/n)
+        \]
+            
+        \end{itemize}
+    
+    \item The algebra is though of as an algebra of operators, acting on wavefunctions: normalized spinors $\psi \in V_j \cong \CC^{n+1}$, with $j = (n-1)/2$!
+    
+    \item As \textbf{modules, vector spaces only I think}, $\mathcal A_n \equiv \bigoplus_{l = 0, 1, \dots}^{n-1} V_l$ OJO: as an algebra, it is supposed to be of operators, so it is not relevant that, as operators, it only acts on $V_j$. \textbf{Is this decomposition into irreducible representations of $\mathcal A_n$? i.e. is the action of the rotation group/algebra/$\mathfrak{U(su(2))}$ compatible with that decomposition} 
+    
+        \begin{itemize}
+            
+        \item $V_j$ can be seen either as $\CC^{2j+1}$
+            
+        \end{itemize}
+    
+    \item TH
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Very Important Facts}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Important Facts}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Memorize}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Doubts}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Detailed summary}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Notice}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Yet to understand}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Some Document}
+
+
+
+\end{document}
