@@ -41,6 +41,10 @@
 % Theorem environments
 \input{tools/theorem_definitions}
 
+%%%%%% Specific New Commands
+\newcommand{\alg}[1]{\ensuremath{\mathfrak{#1}}}
+\newcommand{\sut}{\ensuremath{\mathfrak{su}(2)}}
+
 %%%%%%
 \title{Metric Properties of the Fuzzy Sphere - D'Andrea, Lizzi, V\'arilly}
 \author{Sebastian Camilo Puerto}
@@ -57,20 +61,72 @@
 \tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{High Level Summary}
+\subsection{Perhaps Relevant to Build Dirac Operator in NEW Fuzzy Spheres}
 
     \begin{itemize}
 
-    \item 
+    \item Other $3$ spectral triples on the Fuzzy Sphere that begin with a chirality operator and then find an anticommuting self-adjoint Dirac-like operator with a plausible spectrum.
+    
+    \item How is the Dirac operator proposed here?: start from the $SU(2)$-equivariance and arrive at a neat \textbf{truncation of the classical spectrum}, paying the price of spectral assymetry.
     
     \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Very Important Facts}
+\subsection{High Level Summary}
 
     \begin{itemize}
 
-    \item 
+    \item Introduction: definition of the Fuzzy sphere and introduction of the $3$ notions that gives meaning to ``the Fuzzy Sphere converges to $S^2$'': as *-algebras, as representations of $SU(2)$ and as metric spaces.
+    
+    \item Background definitions: spectral triple definitions, distance, compact quantum metric space.
+    
+    \item Detailed construction and analysis of spectrum of the canonical Dirac operator on $S^2$ through the approach that will be replicated(?) for the Fuzzy Sphere.
+    
+    \item Construction of $2$ $SU(2)$ invariant spectral triples on $\mathcal A_N$, the eigenvalues of the Dirac operators, and proposition that shows that these $2$ triples generate the same metric on the state of states of $\mathcal A_N$.
+    
+    \item Quick overview of other $3$ spectral triples on the Fuzzy Sphere that begin with a chirality operator and then find an anticommuting self-adjoint Dirac-like operator with a plausible spectrum.
+    
+    \item Introduce a family of pairs of pure states in the state space $\mathcal S(\mathcal A_N)$: (Bloch) $SU(2)$-coherent states on $\mathcal A_N$: $\psi^N_{(\phi, \theta)}$
+    
+    \item $N = 1$ case: all pure state are coherent states and an explicit formula for the distance is found.
+    
+    \item Distance between basis vector states associated to $|j, m\rangle$ explicitly found for all $N$.
+    
+    \item An auxiliary distance $\rho_N$, which will be a lower bound for $d_N$ is introduced: distance along diagonal matrices of $\mathcal A_N$.
+    
+    \item The distance is $SU(2)$-invariant
+    
+    \item The distance between $2$ states associated to the same points $p, q \in S^2$ is non-decreasing with $N$.
+    
+    \item In general:
+    \begin{equation}
+        \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{geo}((\phi, \theta), (\phi', \theta'))
+    \end{equation} and, finally,
+    \begin{equation}
+        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})
+    \end{equation}
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Very Important Facts} % Everything written here is also written somewhere else
+
+    \begin{itemize}
+
+    \item Why Fuzzy Spaces?: To preserve the symmetries and keep the algebra finite dimensional.
+    
+    \item GOAL: The fuzzy sphere approximates the: \textbf{1. $U(\alg{su}(2))$-module (i.e. $\alg{su}(2)$ Lie algebra representation) 2. *-algebra 3. metric space} $\mathcal A(S^2) \cong L^2(S^2)$ of complex polynomials in $x_1, x_2, x_3$.
+    
+    \item The notion of convergence of this fuzzy space to $S^2$ must also involve metrics: $d_N$ in $\mathcal A_n$ and $d_{geo}$ in $S^2$: in this paper the points of $S^2$ are idetified with the corresponding (Block) coherent states of $\mathcal A_N$, and under this identification:
+    \begin{equation}
+        \lim_{N \to \infty} d_N(p, q) = d_{geo}(p, q)\quad \text{for all }p, q \in S^2
+    \end{equation}
+    
+    \item How is the Dirac operator proposed here?: start from the $SU(2)$-equivariance and arrive at a neat \textbf{truncation of the classical spectrum}, paying the price of spectral assymetry.
+    
+    \item The Bloch $SU(2)$-coherent states are for the group $SU(2)$ what the usual harmonic oscillator coherent states are for the Heisenberg group. In particular, they are minimum uncertainty states.
+    
+    \item How are the spectral triples obtained... analogous procedure to the one in commutative $S^2$? TODO
     
     \end{itemize}
 
@@ -132,48 +188,140 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction (pg. 1)}
 
+    \begin{itemize}
+        
+    \item Why Fuzzy Spaces?: To preserve the symmetries and keep the algebra finite dimensional.    
+    
+    \item GOAL: The fuzzy sphere approximates the: \textbf{1. $U(\alg{su}(2))$-module (i.e. $\alg{su}(2)$ Lie algebra representation) 2. *-algebra 3. metric space} $\mathcal A(S^2) \cong L^2(S^2)$ of complex polynomials in $x_1, x_2, x_3$.
+        
+    \item Definition of the $*$-algebra and $\alg{su(2)}$-representation $\mathcal A_N$. With respect to these $2$ properties, $\lim_{n \to \infty}$ of these spaces is indeed $\mathcal A(S^2)$, but the third property for real convergence is still missing.
+    
+        \begin{itemize}
+            
+        \item Parting from the decomposition of in irreps of $\alg{su}(2)$ of $\mathcal{A}(S^2)$ as $ = \bigoplus_{l =  0, 1, \dots}^\infty V_l$
+        
+            \begin{itemize}
+                
+            \item where $V_l$ is homogeneous polynomials of degree $l$
+                
+            \end{itemize}
+        
+        \item Introduce cut-off in the energy spectrum: keep only the first $N =: 2j$ representations: it works as a $\sut(2)$ representation but not as an algebra.
+        
+        \item To make it an algebra, pullback the algebra structure from the right of the following vector space isomorphism... actually, in this article the RHS is taken to BE the $\mathcal A_N$:
+        \begin{align}
+            \bigoplus_{l =  0, 1, \dots}^{2j} V_l \subset \mathcal{A}(S^2) &\to \mathcal A_N := M_{N+1}(\CC)\\
+            x_k &\mapsto \hat x_k := \frac{1}{\sqrt{j(j+1)}}\pi_j(J_k)
+        \end{align}
+        
+            \begin{itemize}
+                
+            \item $[J_i, J_k] = i \epsilon_{ijk} J_k$ are the standard real generators of $\sut$
+            
+            \item $\pi_j:\sut\text{ o }SU(2) \to M_{N+1}(\CC)$ is the irrep of spin $j \in \frac{\NN}{2}$
+                
+            \end{itemize}
+        
+        \item The *-algebra is made into a $\sut$ representation by pushing forward the representation of the above map, i.e. making it an isomorphism of representations of $\sut$ / $SU(2)$ TODO
+        
+            \begin{itemize}
+                
+            \item This action of $SU(2)$ is equivalent to the action of $U(\sut)$ given by:
+            
+            \end{itemize}
+        
+        \item The above definitions imply that $g_{ij}\hat x_i \hat x_j = 1 = \hat x_1^2 + \hat x_2^2 + \hat x_3^2$. This means, in particular, that:
+        
+        \begin{equation}
+            [\hat x_k, \hat x_l] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{klm}\hat x_m
+        \end{equation}
+        
+        \end{itemize}
+    
+    \item The notion of convergence of this fuzzy space to $S^2$ must also involve metrics: $d_N$ in $\mathcal A_n$ and $d_{geo}$ in $S^2$: in this paper the points of $S^2$ are idetified with the corresponding (Block) coherent states of $\mathcal A_N$, and under this identification:
+    \begin{equation}
+        \lim_{N \to \infty} d_N(p, q) = d_{geo}(p, q)\quad \text{for all }p, q \in S^2
+    \end{equation}    
+    
+    \end{itemize}
+    
+\subsection*{Definitions}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Preliminaries on noncommutative manifolds (pg. 3)}
 
+\begin{itemize}
+        
+    \item 
+        
+    \end{itemize}
+    
+\subsection*{Definitions}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dirac operators for the fuzzy sphere (pg. 4)}
+
+\begin{itemize}
+        
+    \item 
+        
+    \end{itemize}
+    
+\subsection*{Definitions}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{An abstract Dirac operator (pg. 4.5)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Dirac operator of $S^2$ (pg. 5.3)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dirac operators on the fuzzy sphere (pg. 5.6)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Comparisons with the literature (pg. 9)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spectral distance between coherent states (pg. 11)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{An abstract Dirac operator (pg. 4.5)}
+\subsection{The $N = 1$ case (pg. 12)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Dirac operator of $S^2$ (pg. 5.3)}
+\subsection{Distances between basis vectors (pg. 13)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Dirac operators on the fuzzy sphere (pg. 5.6)}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Comparisons with the literature (pg. 9)}
+\subsection{An auxiliary distance (pg. 14)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The $N = 1$ case (pg. 12)}
+\subsection{$SU(2)$-invariance of the distance (pg. 15)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Distances between basis vectors (pg. 13)}
+\subsection{Dependence on the dimension (pg. 15.5)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{An auxiliary distance (pg. 14)}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{$SU(2)$-invariance of the distance (pg. 15)}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Dependence on the dimension (pg. 15.5)}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Upper and lower bounds and the large $N$ limit (pg. 17-18)}
+\subsection{Upper and lower bounds and the large $N$ limit (pg. 17-18)}
 
 \end{document}
