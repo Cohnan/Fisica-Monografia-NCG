@@ -45,6 +45,7 @@
 \newcommand{\alg}[1]{\ensuremath{\mathfrak{#1}}}
 \newcommand{\sut}{\ensuremath{\mathfrak{su}(2)}}
 
+\usepackage{slashed}
 %%%%%%
 \title{Metric Properties of the Fuzzy Sphere - D'Andrea, Lizzi, V\'arilly}
 \author{Sebastian Camilo Puerto}
@@ -122,11 +123,32 @@
         \lim_{N \to \infty} d_N(p, q) = d_{geo}(p, q)\quad \text{for all }p, q \in S^2
     \end{equation}
     
-    \item How is the Dirac operator proposed here?: start from the $SU(2)$-equivariance and arrive at a neat \textbf{truncation of the classical spectrum}, paying the price of spectral assymetry.
+    \item How is the Dirac operator proposed here?: start from the $SU(2)$-equivariance and arrive at a neat \textbf{truncation of the classical spectrum}, paying the price of spectral asymmetry.
     
     \item The Bloch $SU(2)$-coherent states are for the group $SU(2)$ what the usual harmonic oscillator coherent states are for the Heisenberg group. In particular, they are minimum uncertainty states.
     
-    \item How are the spectral triples obtained... analogous procedure to the one in commutative $S^2$? TODO
+    \item How are the spectral triples obtained: somehow \rtext{find an \textbf{$SU(2)$-equivariant} operator on $\mathcal A_N$ whose spectrum is that of $\slashed D: L^2(S^2) \otimes \Sigma_2 \to \slashed D: L^2(S^2) \otimes \Sigma_2$}. The way this is done here is by truncating $L^2(S^2) \cong \sum_{l \in \NN}$ at $N = 2j$ and mappint its generators $Y_{lm}$ into the fuzzy spherical harmonic sphericals $\hat Y_{lm}$; this gives a Dirac operator $\mathcal D_N: \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ which is $SU(2)$-equivariant (and the esp. trip. is real, but not even).
+    
+        \begin{itemize}
+        
+            \item Use as starting point the view of $S^2$ as the symmetric space $S^3/S^1$ of the compact semisimple Lie group $S^3$.
+        
+                \begin{itemize}
+                    
+                \item The theory of this groups tells us that their canonical spectral triple can be seen to come from a purely algebraic element $\mathcal D \in U(\alg g) \otimes U(\alg g)$ which becomes at the end an operator on the sections of the spinor bundle through a couple of steps:
+                \begin{align}
+                    U(\alg g) \otimes U(\alg g) &\to& U(\alg g) \otimes Cl(\alg g, -Killing) &\to& \mathcal B(L^2(G, SG)) \\
+                    \mathcal D  &\mapsto& \mathcal D_S &\mapsto& \slashed D \\
+                    1 \otimes 1 + 2 \sum_{k = 1}^3 J_k \otimes J_k &\mapsto& 1 \otimes 1 + \sum_k J_k \otimes \sigma_k &\mapsto& \left( \bigoplus_{l\in \NN} \pi_l \right) \otimes \pi_{1/2}(\mathcal D)
+                \end{align}
+                
+                \end{itemize}
+            
+            \item A first spectral triple is simply taking $D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 = $ to be ``a term'' of $\slashed D$
+            
+            \item From it create a second spectral triple, which is real, which has $\mathcal D_N = (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D): \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ where $\mathcal A_N$ is seen as $V_J \otimes V_j^*$
+            
+        \end{itemize}
     
     \end{itemize}
 
