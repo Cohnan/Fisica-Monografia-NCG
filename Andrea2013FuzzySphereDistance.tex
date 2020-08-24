@@ -41,11 +41,14 @@
 % Theorem environments
 \input{tools/theorem_definitions}
 
+%%%%%% Small extra packages
+\usepackage[normalem]{ulem} % To strike-through text with the command \sout{}
+\usepackage{slashed} % To draw Dirac operators as \slashed{D}
+
 %%%%%% Specific New Commands
 \newcommand{\alg}[1]{\ensuremath{\mathfrak{#1}}}
 \newcommand{\sut}{\ensuremath{\mathfrak{su}(2)}}
 
-\usepackage{slashed}
 %%%%%%
 \title{Metric Properties of the Fuzzy Sphere - D'Andrea, Lizzi, V\'arilly}
 \author{Sebastian Camilo Puerto}
@@ -119,7 +122,15 @@
     \item \rtext{Why Fuzzy Spaces?}: To preserve the symmetries and keep the algebra finite dimensional.
     
     
-    \item \rtext{Why is $\mathcal A_N = M_{N+1}(\CC)$?}: what Madore did was actually defining $A_N := \bigoplus_{l = 0, 1, \dots}^N V_l$ where $V_j$ is the irrep. of $SO(3)$ of integer spin $2l$ (of homogeneous polynomials in $x_1, x_2, x_3$ of degree $l$), since this is a \rtext{truncation of the commutative algebra $L^2(S^2) \cong \bigoplus_{l\in \NN} V_l$ at $N = 2j$}, but this truncation is not an algebra; the algebra structure is, by some perhaps desirable properties, then imposed to be that of $M_{N+1}(\CC)$ which comes basically from changing the algebra generators $x_k \mapsto \hat x_k = \frac{1}{\sqrt{j(j+1)}}\pi_j(J_k)$ ($[J_i, J_j] = i \epsilon J_k$ generate $\sut$) (i.e. basically changing the $x_k$ by the rotation operator of spinors of spin $j$ w.r.t. this axis) (this, in turn, changes the vector spaces generators $Y_{lm}$ by some fuzzy spherical harmonics $\hat Y_{lm}$).
+    \item \rtext{Why is $\mathcal A_N = M_{N+1}(\CC)$?}: what Madore did was actually defining $A_N := \bigoplus_{l = 0, 1, \dots}^N V_l$ where $V_j$ is the irrep. of $SO(3)$ of integer spin $l$ (of homogeneous polynomials in $x_1, x_2, x_3$ of degree $l$), since this is a \rtext{truncation of the commutative algebra $L^2(S^2) \cong \bigoplus_{l\in \NN} V_l$ at $N = 2j$} compatible with the action of $SU(2)$, but this truncation is not an algebra; the algebra structure is then imposed to be that of $M_{N+1}(\CC)$, which comes from \rtext{changing the algebra generators $x_k \mapsto \hat x_k = \frac{1}{\sqrt{j(j+1)}}\pi_j(J_k) \in M_{N+1}(\CC)$ ($[J_i, J_j] = i\epsilon J_k$ generate $i\sut = sl(2, \CC)$, i.e. $J_k = \frac{\sigma_k}{2}$)} (i.e. basically changing the $x_k$ by the rotation operator of spinors of spin $j$ w.r.t. this axis); this, is equivalent to changing the vector spaces generators $Y_{lm}$ by some fuzzy spherical harmonics \rtext{$Y_{lm} \mapsto \hat Y_{lm} \in M_{N+1}(\CC)$}; the action of $SU(2)$ that \rtext{makes this map $A_N \to M_{N+1}(\CC)$ an equivalence of representations / $su(2)$-module / ``keep the $SU(2)$ symmetry''} is the adjoint action $Ad \pi_l : G \to End(M_{N+1}(\CC))$, $Ad \pi_l(g)(M) = \pi_l(g) M \pi^*_l(g)$... so might as well say that $\mathcal A_N = M_{N+1}(\CC)$ as a unital $C^*$-algebra AND as a representation of $su(2)$/a $U(su(2))$-module.
+    
+        \begin{itemize}
+            
+        \item The precise way We will understand in this paper is as $\mathcal A_N := End(V_j) = \mathcal B(\mathcal V_j)$, and $V_j = \CC^{N+1}$ where the canonical basis correspond to the angular momentum basis $e_m = \set{|j, m\rangle}_{m = -j, \dots, j}$ {\tiny OJO: $\CC^{N+1}$ is not understood as ``$e_m$ = how much of $z_1$ there is''}
+        
+        \item That ``the $SU(2)$ symmetry'' is kept can be deduced from the equations prior to 3.6, which tell us that $Y_{lm} \mapsto \hat Y_{lm}$, the basis of this algebra, is indeed equivariant.
+            
+        \end{itemize}
     
     \item \rtext{GOAL}: The fuzzy sphere approximates the: \textbf{1. $U(\alg{su}(2))$-module (i.e. $\alg{su}(2)$ Lie algebra representation) 2. *-algebra 3. metric space} $\mathcal A(S^2) \cong L^2(S^2)$ of complex polynomials in $x_1, x_2, x_3$.
     
@@ -132,7 +143,12 @@
     
     \item The Bloch $SU(2)$-\rtext{coherent states} are for the group $SU(2)$ what the usual harmonic oscillator coherent states are for the Heisenberg group. In particular, they are minimum uncertainty states.
     
-    \item \rtext{How are the spectral triples obtained?}: somehow \rtext{find an \textbf{$SU(2)$-equivariant} operator on $\mathcal A_N$ whose spectrum is that of $\slashed D: L^2(S^2) \otimes \Sigma_2 \to \slashed D: L^2(S^2) \otimes \Sigma_2$ \textbf{truncated} at $N = 2j$}. The way this is done here is by truncating $L^2(S^2) \cong \sum_{l \in \NN}$ at $N = 2j$ and mappint its generators \rtext{$Y_{lm}$ into the fuzzy spherical harmonic sphericals $\hat Y_{lm}$}; this gives a Dirac operator $\mathcal D_N: \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ which is $SU(2)$-equivariant (and the esp. trip. is real, but not even): \textbf{this, in turn, comes from creating an auxiliary spectral triple where the Dirac operator is ``a single term'' of $\slashed D$}: $\rtext{D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D)}: V_j \otimes \CC^2 \to V_j \otimes \CC^2$.
+    \item \rtext{What kind of spectral triple do we want?}: \rtext{find an ``\textbf{$SU(2)$-equivariant}'' espectral triple $\supset$ operator $D_N$ on $\mathcal A_N$ whose spectrum is that of $\slashed D: L^2(S^2) \otimes \Sigma_2 \to \slashed D: L^2(S^2) \otimes \Sigma_2$ \textbf{truncated} at $N = 2j$}. 
+    
+    \item \dbtext{Equivariance of a spectral triple} \rtext{ ~ ``isometries'' of the noncommutative manifold} $\Longleftrightarrow$ Hopf algebra: I THINK, TODO the action of the $SU(2)$ group / rotations is an isometry of the Fuzzy Sphere... I can be satisfied for now with a mediocre understanding of the definition of an \rtext{equivariant Dirac element $\mathcal D \in U(\alg g) \otimes U(\alg g)$}: it commutes with the range of the coproduct of $U(\alg g)$
+    
+    \item \rtext{How is the desired spectral triple obtained here?}: accompanying the truncation of the irrep decomposition $L^2(S^2) \cong \sum_{l \in \NN} V_l$ at $N = 2j$ %and mapping its generators \rtext{$Y_{lm}$ into the fuzzy spherical harmonic  $\hat Y_{lm}$} in an $su(2)$-equivariant way. 
+    , knowing that the commutative \rtext{$\slashed D$ comes from the purely algebraic \textit{Dirac element} $\mathcal D \in U(su(2)) \otimes U(su(2))$ which is ``$SU(2)$-equivariant''} {\tiny(it commutes with the coproduct of the Hopf algebra $U(\sut)$)},\rtext{truncate $\slashed D = \oplus_{l \in \NN} (\pi_l \otimes \pi_{1/2})(\mathcal D)$ at $N = 2j$} to define a new Dirac operator $\mathcal D_N: \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ which is ``$SU(2)$-equivariant'' (and the esp. trip. is real, but not even). This \textbf{can be seen to come from creating an auxiliary spectral triple where the Dirac operator is ``a single term'' of $\slashed D$}: $\rtext{D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D)}: V_j \otimes \CC^2 \to V_j \otimes \CC^2$, which turns out to induce precisely the same notion of distance.
     
         \begin{itemize}
         
@@ -154,8 +170,6 @@
             \item From it create a second spectral triple, which is real, which has $\mathcal D_N = (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D): \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ where $\mathcal A_N$ is seen as $V_J \otimes V_j^*$
             
         \end{itemize}
-    
-    \item Equivariance of the spectral triple under $SU(2)$: I THINK, TODO the action of the $SU(2)$ group / rotations is an isometry of the Fuzzy Sphere.
     
     \end{itemize}
 
