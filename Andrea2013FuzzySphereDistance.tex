@@ -75,6 +75,8 @@
     
     \item There is a full theory of equivariant Dirac operators in Riemannian geometry, where, for example there is the Schrodinger-Lichnerowics formula $D^2 = C_G + R/8$ where $C_G$ is the Casimir operator and $R$ is the scalar curvature.
     
+    \item In Andrea,Lizzi2014 there is a definition of \lbtext{truncated Dirac operator} in a very general setting. Applied to the Fuzzy sphere (~pg. 34) \textbf{\rtext{they obtain again the irreducible spectral triple!}} \rtext{(This seems like this will work readily for the Fuzzy Sphere of Fiore and Pisacane)} 
+    
     \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -124,7 +126,7 @@
     \item \rtext{Why Fuzzy Spaces?}: To preserve the symmetries and keep the algebra finite dimensional.
     
     
-    \item \rtext{Why is $\mathcal A_N = M_{N+1}(\CC)$?}: what Madore did was actually defining $A_N := \bigoplus_{l = 0, 1, \dots}^N V_l$ where $V_j$ is the irrep. of $SO(3)$ of integer spin $l$ (of homogeneous polynomials in $x_1, x_2, x_3$ of degree $l$), since this is a \rtext{truncation of the commutative algebra $L^2(S^2) \cong \bigoplus_{l\in \NN} V_l$ at $N = 2j$} compatible with the action of $SU(2)$, but this truncation is not an algebra; the algebra structure is then imposed to be that of $M_{N+1}(\CC)$, which comes from \rtext{changing the algebra generators $x_k \mapsto \hat x_k = \frac{1}{\sqrt{j(j+1)}}\pi_j(J_k) \in M_{N+1}(\CC)$ ($[J_i, J_j] = i\epsilon J_k$ generate $i\sut = sl(2, \CC)$, i.e. $J_k = \frac{\sigma_k}{2}$)} (i.e. basically changing the $x_k$ by the rotation operator of spinors of spin $j$ w.r.t. this axis); this, is equivalent to changing the vector spaces generators $Y_{lm}$ by some fuzzy spherical harmonics \rtext{$Y_{lm} \mapsto \hat Y_{lm} \in M_{N+1}(\CC)$}; the action of $SU(2)$ that \rtext{makes this map $A_N \to M_{N+1}(\CC)$ an equivalence of representations / $su(2)$-module / ``keep the $SU(2)$ symmetry''} is the adjoint action $Ad \pi_l : G \to End(M_{N+1}(\CC))$, $Ad \pi_l(g)(M) = \pi_l(g) M \pi^*_l(g)$... so might as well say that $\mathcal A_N = M_{N+1}(\CC)$ as a unital $C^*$-algebra AND as a representation of $su(2)$/a $U(su(2))$-module.
+    \item \rtext{Why is $\mathcal A_N = M_{N+1}(\CC)$?}: what Madore did was actually defining $A_N := \bigoplus_{l = 0, 1, \dots}^N V_l$ where $V_j$ is the irrep. of $SO(3)$ of integer spin $l$ (of homogeneous polynomials in $x_1, x_2, x_3$ of degree $l$), since this is a \rtext{truncation of the commutative algebra $L^2(S^2) \cong \bigoplus_{l\in \NN} V_l$ at $N = 2j$} compatible with the action of $SU(2)$, but this truncation is not an algebra; the algebra structure is then imposed to be that of $M_{N+1}(\CC)$, which comes from \rtext{changing the algebra generators $x_k \mapsto \hat x_k = \frac{1}{\sqrt{j(j+1)}}\pi_j(J_k) \in M_{N+1}(\CC)$ ($[J_i, J_j] = i\epsilon J_k$ generate $i\sut = sl(2, \CC)$, i.e. $J_k = \frac{\sigma_k}{2}$)} (i.e. basically changing the $x_k$ by the rotation operator of spinors of spin $j$ w.r.t. this axis); this, is equivalent to changing the vector spaces generators $Y_{lm}$ by some fuzzy spherical harmonics \rtext{$Y_{lm} \mapsto \hat Y_{lm} \in M_{N+1}(\CC)$}; the action of $SU(2)$ that \rtext{makes this map $A_N \to M_{N+1}(\CC)$ an equivalence of representations / $\sut$-module / ``keep the $SU(2)$ symmetry''} is the adjoint action $Ad \pi_l : G \to End(M_{N+1}(\CC))$, $Ad \pi_l(g)(M) = \pi_l(g) M \pi^*_l(g)$... so might as well say that $\mathcal A_N = M_{N+1}(\CC)$ as a unital $C^*$-algebra AND as a representation of $\sut$/a $U(\sut)$-module.
     
         \begin{itemize}
             
@@ -149,31 +151,59 @@
     
     \item \rtext{Equivariance of a spectral triple} \rtext{ ~ ``isometries'' of the noncommutative manifold} $\Longleftrightarrow$ Hopf algebra: this seems to be pretty, at least, that the operators $D_N$ and $a \in \mathcal A_N$ respect the $SU(2)$ action on the Hilbert space i.e. \rtext{the actions of $D_N$ and $\mathcal A_N$ on $\mathcal H_N$ commute with the action of $SU(2)$ / $\sut$}.
     
-    \item \rtext{How is the desired spectral triple obtained here?}: accompanying the truncation of the irrep decomposition $L^2(S^2) \cong \sum_{l \in \NN} V_l$ at $N = 2j$ %and mapping its generators \rtext{$Y_{lm}$ into the fuzzy spherical harmonic  $\hat Y_{lm}$} in an $su(2)$-equivariant way. 
-    , knowing that the commutative \rtext{$\slashed D$ comes from the purely algebraic \textit{Dirac element} $\mathcal D \in U(su(2)) \otimes U(su(2))$ which is ``$SU(2)$-equivariant''} {\tiny(it commutes with the coproduct of the Hopf algebra $U(\sut)$)},\rtext{truncate $\slashed D = \oplus_{l \in \NN} (\pi_l \otimes \pi_{1/2})(\mathcal D)$ at $N = 2j$} to define a new Dirac operator $\mathcal D_N: \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ which is ``$SU(2)$-equivariant'' (and the esp. trip. is real, but not even). This \textbf{can be seen to come from creating an auxiliary spectral triple where the Dirac operator is ``a single term'' of $\slashed D$}: $\rtext{D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D)}: V_j \otimes \CC^2 \to V_j \otimes \CC^2$, which turns out to induce precisely the same notion of distance.
+    \item \rtext{How is the desired spectral triple obtained here?}: accompanying the truncation of the irrep decomposition $L^2(S^2) \cong \sum_{l \in \NN} V_l$ at $N = 2j$ %and mapping its generators \rtext{$Y_{lm}$ into the fuzzy spherical harmonic  $\hat Y_{lm}$} in an $\sut$-equivariant way. 
+    , knowing that the commutative \rtext{$\slashed D$ comes from the purely algebraic \textit{Dirac element} $\mathcal D \in U(\sut) \otimes U(\sut)$ which is ``$SU(2)$-equivariant''} {\tiny(it commutes with the coproduct of the Hopf algebra $U(\sut)$)},\rtext{truncate $\slashed D = \oplus_{l \in \NN} (\pi_l \otimes \pi_{1/2})(\mathcal D)$ at $N = 2j$} to define a new Dirac operator $\mathcal D_N: \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ which is ``$SU(2)$-equivariant'' (and the esp. trip. is real, but not even). This \textbf{can be seen to come from creating an auxiliary spectral triple where the Dirac operator is ``a single term'' of $\slashed D$}: $\rtext{D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D)}: V_j \otimes \CC^2 \to V_j \otimes \CC^2$, which turns out to induce precisely the same notion of distance.
     
         \begin{itemize}
+            
+        \item Even after all that, \rtext{the Dirac operators we get are really simple} (there is an irrelevant factor of $2$ flying around)
         
-            \item Use as starting point the view of $S^2$ as the symmetric space $S^3/S^1$ of the compact semisimple Lie group $S^3$.
+        \item Recall that, given $(\phi, \theta) \in [0, 2\pi]\times [0, \pi]$ coordinates, the canonical Dirac operator is (e.g. Andrea2014)
+        \begin{equation}
+            D = \begin{pmatrix} \frac{1}{2} + \partial_H & \partial_F \\ \partial_E & \frac{1}{2} - \partial_H\end{pmatrix} = \partial_E \otimes \sigma_1 + \partial_F \otimes \sigma_2 + \partial_H \otimes \sigma_3
+        \end{equation}
+        where 
+            \begin{itemize}
+            
+            \item $\partial_H = -i \partial_\phi$ is the $\sut$ action of $J_3$ on $L^2(S^2)$ ($\mathcal H = L^2(S^2) \otimes \CC^2$),
+            
+            \item $\partial_E = e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right)$ is the $\sut$ action of $J_+$
+            
+            \item $\partial_F = -\partial_E = e^{-i\phi} \left( \partial_\theta - i cot\,\theta \partial_\phi \right)$ is the $\sut$ of $J_-$ on $L^2(S^2)$
+            
+            \end{itemize}  
         
-                \begin{itemize}
-                    
-                \item The theory of this groups tells us that their canonical spectral triple can be seen to come from a purely algebraic element $\mathcal D \in U(\alg g) \otimes U(\alg g)$ which becomes at the end an operator on the sections of the spinor bundle through a couple of steps:
-                \begin{align}
-                    U(\alg g) \otimes U(\alg g) &\to& U(\alg g) \otimes Cl(\alg g, -Killing) &\to& \mathcal B(L^2(G, SG)) \\
-                    \mathcal D  &\mapsto& \mathcal D_S &\mapsto& \slashed D \\
-                    \rtext{1 \otimes 1 + 2 \sum_{k = 1}^3 J_k \otimes J_k} &\mapsto& 1 \otimes 1 + \sum_k J_k \otimes \sigma_k &\mapsto& \left( \bigoplus_{l\in \NN} \pi_l \right) \otimes \pi_{1/2}(\mathcal D)
-                \end{align}
-                
-                \end{itemize}
+        \item The Dirac operator of the irreducible spectral triple is (eq. 4.1 Andrea 2013), which is also obtained in Andrea2014 by ``truncating'' ($P\slashed D P$ as defined there, related to a cutoff energy and to orthogonal projection operators)
+        \begin{equation}
+            D = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} = \pi_j(E) \otimes \sigma_1 + \pi_j(F) \otimes \sigma_2 + \pi_j(H) \otimes \sigma_3
+        \end{equation}
+        
+        where 
+            \begin{itemize}
             
-            \item A first spectral triple is simply taking $D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 = $ to be \textbf{``a term'' of $\slashed D$}.
+            \item $H = J_3$ and $\pi_j(H)$ is then the $\sut(2)$ action of $J_3$ on $V_j$ ($\mathcal H_N = V_j \otimes \CC^2$),
             
-            \item From it create a second spectral triple, which is real, which has $\mathcal D_N = (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D): \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ where $\mathcal A_N$ is seen as $V_J \otimes V_j^*$
+            \item $E = J_+$
             
+            \item $F = J_-$
+            
+            \end{itemize}  
+        
+        \item The Dirac operator of the full spectral triple is (eq. 3.6 Andrea 2013), which, remember is just the sum of the first $N$ integer irreducible Dirac operators, is 
+        \begin{equation}
+            D = \begin{pmatrix} 1 + \text{ad}\pi_j(H) & \text{ad}\pi_j(F) \\ \text{ad}\pi_j(E) & 1 - \text{ad}\pi_j(H)\end{pmatrix} = \text{ad}\pi_j(E) \otimes \sigma_1 + \text{ad}\pi_j(F) \otimes \sigma_2 + \text{ad}\pi_j(H) \otimes \sigma_3
+        \end{equation}
+        
+        where 
+            \begin{itemize}
+            
+            \item for example, $\text{ad}\pi_j(H)$ is the $\sut$ action of $J_3$ on $\mathcal A_N$ ($H_N = \mathcal A_N \otimes \CC^2$)
+            
+            \end{itemize}
+        
         \end{itemize}
     
-    \item In summary, what is $SU(2)/su(2)$-equivariant?:
+    \item In summary, what is $SU(2)/\sut$-equivariant?:
     
         \begin{itemize}
             
@@ -191,7 +221,7 @@
         
             \begin{itemize}
                 
-            \item Lemma 4.2: $su(2)$
+            \item Lemma 4.2: $\sut$
             
             \item $\psi^N_{(\phi, \theta)} \mapsto g_* \psi^N_{(\phi, \theta)} = \psi^N_{g(\phi, \theta)}$    
             
@@ -229,7 +259,7 @@
 
     \item The $\otimes \pi_{1/2}$ is a way to state that we will see what this is acting on as \textbf{an operator on bispinors}(or something similar, since it can't be exactly that as the found spectral triples are not even), e.g. $(\pi_j \otimes \pi_{1/2})(\mathcal D): \CC^{N+1}\otimes \CC^2 \to \CC^{N+1}\CC^2$, $\begin{pmatrix} \psi_1 \in \CC^{N+1} \\ \psi_2 \in \CC^{N+1} \end{pmatrix} \in \CC^{N+1}\otimes \Sigma_2$.
     
-    \item Why is the coproduct of a Hopf algebra involved in the $SU(2)$-equivariance of the Dirac operators? Let, for example $J_3 \in U(su(2))$, so it acts as an infinitesimal rotation in $V_{j_1}$ and $V_{j_2}$ as $\pi_{j_1}(V_{j_1})$ and $\pi_{j_2}(V_{j_2})$ respectively, and so the corresponding infinitesimal rotation on $V_{j_1}\otimes V_{j_2}$ is \rtext{$(\pi_{j_1} \otimes \pi_{j_1})\Delta(J_3)$}.
+    \item Why is the coproduct of a Hopf algebra involved in the $SU(2)$-equivariance of the Dirac operators? Let, for example $J_3 \in U(\sut)$, so it acts as an infinitesimal rotation in $V_{j_1}$ and $V_{j_2}$ as $\pi_{j_1}(V_{j_1})$ and $\pi_{j_2}(V_{j_2})$ respectively, and so the corresponding infinitesimal rotation on $V_{j_1}\otimes V_{j_2}$ is \rtext{$(\pi_{j_1} \otimes \pi_{j_1})\Delta(J_3)$}.
     
     \item \lbtext{Equivariance of the spectral triples}: from the proof of proposition 3.3 it seems to have $2$ parts: both the Dirac operator and the algebra respect the $SU(2)$ action on the Hilbert space.
     
@@ -240,6 +270,12 @@
         \end{itemize}
     
     \item \dbtext{These Bloch coherent states are for the group $SU(2)$ what the usual/canonical coherent states are for the Heisenberg group / Harmonic oscillator. In particular, they are minimum uncertainty states.}
+    
+        \begin{itemize}
+            
+        \item In Prajapat, Chakraborty, Scholtz 2014 there seems to be a nice definition/description? of the $SU(2)$-coherent states
+            
+        \end{itemize}
     
     \item Remember that in Madore it is proved that the notion equivalent to \textbf{diffeomorphisms} of the space is the adjoint action by elements of $SU(N)$ on $\mathcal A_N$, since they preserve the ``differential structure'': it is this what preserves the Lie algebra of derivations. In particular, $SU(2)$ indeed ``acts by diffeomorphisms'', which is what Madore calls ``they are NC spaces and they preserve the rotational symmetry of $S^2$''
     
@@ -261,7 +297,28 @@
 
     \begin{itemize}
 
-    \item 
+    \item More details on the way the spectral triples are obtained
+        
+        \begin{itemize}
+        
+        \item Use as starting point the view of $S^2$ as the symmetric space $S^3/S^1$ of the compact semisimple Lie group $S^3$.
+    
+            \begin{itemize}
+                
+            \item The theory of this groups tells us that their canonical spectral triple can be seen to come from a purely algebraic element $\mathcal D \in U(\alg g) \otimes U(\alg g)$ which becomes at the end an operator on the sections of the spinor bundle through a couple of steps:
+            \begin{align}
+                U(\alg g) \otimes U(\alg g) &\to& U(\alg g) \otimes Cl(\alg g, -Killing) &\to& \mathcal B(L^2(G, SG)) \\
+                \mathcal D  &\mapsto& \mathcal D_S &\mapsto& \slashed D \\
+                \rtext{1 \otimes 1 + 2 \sum_{k = 1}^3 J_k \otimes J_k} &\mapsto& 1 \otimes 1 + \sum_k J_k \otimes \sigma_k &\mapsto& \left( \bigoplus_{l\in \NN} \pi_l \right) \otimes \pi_{1/2}(\mathcal D)
+            \end{align}
+            
+            \end{itemize}
+        
+        \item A first spectral triple is simply taking $D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 = $ to be \textbf{``a term'' of $\slashed D$}.
+        
+        \item From it create a second spectral triple, which is real, which has $\mathcal D_N = (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D): \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ where $\mathcal A_N$ is seen as $V_J \otimes V_j^*$
+            
+        \end{itemize}
     
     \end{itemize}
 
@@ -285,7 +342,7 @@
     
     \item Why is it nice for Dirac triples to be real?
     
-    \item \sout{How is the equivariance of the metric spaces carried into the definition of the spectral triples? I don't see how these equivariance is something that determines the definition of the spectral triples, as it is claimed.} The Dirac operator in the commutative sphere is seen to arise from an $su(2)$-equivariant \textit{Dirac element} $\in U(\sut)\otimes U(\sut)$, as a sum over $\NN$ of things applied always to this algebraic element; the NC Dirac operators are chosen as truncation of that sum over $\NN$.
+    \item \sout{How is the equivariance of the metric spaces carried into the definition of the spectral triples? I don't see how these equivariance is something that determines the definition of the spectral triples, as it is claimed.} The Dirac operator in the commutative sphere is seen to arise from an $\sut$-equivariant \textit{Dirac element} $\in U(\sut)\otimes U(\sut)$, as a sum over $\NN$ of things applied always to this algebraic element; the NC Dirac operators are chosen as truncation of that sum over $\NN$.
     
     \item \dbtext{By construction} the action on the coherent states of $SU(2)$ $\psi^N_{(\phi, \theta)} \mapsto g_*\psi^N_{(\phi, \theta)}:(a \mapsto \psi^N_{(\phi, \theta)}(a^g))$ ``corresponds to the usual rotation action of $SU(2)$ on $S^2$'' which I understand to mean that this action is the same as the action $\psi^N_{(\phi, \theta)} \mapsto \psi^N_{g(\phi, \theta)}$
     
@@ -303,7 +360,7 @@
     
     \item GOAL: The fuzzy sphere approximates the: \textbf{1. $U(\alg{su}(2))$-module (i.e. $\alg{su}(2)$ Lie algebra representation) 2. *-algebra 3. metric space} $\mathcal A(S^2) \cong L^2(S^2)$ of complex polynomials in $x_1, x_2, x_3$.
         
-    \item Definition of the $*$-algebra and $\alg{su(2)}$-representation $\mathcal A_N$. With respect to these $2$ properties, $\lim_{n \to \infty}$ of these spaces is indeed $\mathcal A(S^2)$, but the third property for real convergence is still missing.
+    \item Definition of the $*$-algebra and $\alg{\sut}$-representation $\mathcal A_N$. With respect to these $2$ properties, $\lim_{n \to \infty}$ of these spaces is indeed $\mathcal A(S^2)$, but the third property for real convergence is still missing.
     
         \begin{itemize}
             
