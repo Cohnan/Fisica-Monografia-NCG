@@ -56,7 +56,7 @@
 
 \tableofcontents
 
-The covariance here has a different meaning to the one for the Madore Fuzzy sphere, since or at least a bigger meaning, since we are thinking of the algebras NOT only as noncommutative version of the space, but also as approximation of the algebra of observables of a quantum system, which is the NC $\mathcal B(S^d)$.
+The covariance here has a different meaning to the one for the Madore Fuzzy sphere, since or at least a bigger meaning, since we are thinking of the algebras NOT only as noncommutative version of the space, but also as approximation of the algebra of observables of a quantum system, which is the NC $\mathcal B(L^2(S^d))$.
     \begin{itemize}
         
     \item As a NC approximation of a space, the equivariance under a group means that: 
@@ -64,7 +64,7 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
         \begin{enumerate}
         
         \item The group acts by ``diffeomorphisms'', i.e. by $*$-algebra morphisms % C^*? normed & *-algebra?
-        that respects the derivations
+        that respect the derivations.
         
         \item The group acts by ``isometries'': the spectral triples are equivariant, i.e. the group action on the Hilbert space commutes with the actions of both the Dirac operator and the Algebra of the spectral triples.
         
@@ -72,15 +72,15 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
         
         \end{enumerate}
     
-    \item However, as ``approximations of QM is $S^d$'', i.e. as algebras of operators acting on wavefunctions $\in \mathcal B(S^d)$, they are equivariant in the sense of symmetries of a dynamical system: the group acts on the new observables, i.e. the algebras $\mathcal A_\Lambda$ as operators on $\mathcal B(\mathcal H_\Lambda)$, and the action of the group on $\mathcal H_\Lambda$ commutes with the action of the observables (specially $L^2$ and $L_z$). 
+    \item However, as ``approximations of QM is $S^d$'', i.e. as algebras of operators acting on wavefunctions $\in \mathcal B(L^2(S^d))$, they are equivariant in the sense of symmetries of a dynamical system: the group acts on the new observables, i.e. the algebras $\mathcal A_\Lambda$ as operators on $\mathcal B(\mathcal H_\Lambda)$, and the action of the group on $\mathcal H_\Lambda$ commutes with the action of the observables (specially $L^2$ and $L_z$). 
     
         \begin{itemize}
             
         \item Recall that in the Hamiltonian formalism of classical mechanics, a symmetry of the system is a group action that leaves invariant the observables $C^P(mathcal P) = \mathcal A$. Also recall that an observable is a constant of motion if its bracket with the Hamiltonian $H$ is 0. {\tiny In the lagrangian formalism a symmetry of the system is a group action that doesn't change the lagrangian}.
         
-        \item 
+        \item When the observables are operators, a group is a symmetry of the system if the group action and the observables commute: once the group action $A \mapsto A^g = g \circ A \circ g^{-1}$ on the observables is induced, this means that $A^g$ is ``the same'' as $A$, but on the ``rotated'' space $g\mathcal H$: \lbtext{the algebra of observables is $G$-equivariant/covariant} CREO.
             
-        \end{itemize}i.e. 
+        \end{itemize}
     
     \end{itemize}
 
@@ -98,7 +98,31 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
 
     \begin{itemize}
 
-    \item 
+    \item  We are thinking of the algebras NOT really as noncommutative version of the space, of $L^2(S^2)$, but also as approximation of the algebra of observables of a quantum system, which is the NC $\mathcal B(L^2(S^d))$.
+    
+        \begin{itemize}
+            
+        \item $\mathcal A_\Lambda \to \mathcal B(L^2(S^d))$
+        
+        \item $\mathcal C_\Lambda \subset \mathcal A_N \to \text{ and } \hookrightarrow C(S^d)$ space of polynomials on the coordinates $x^i$.
+        
+        \item Also, $\mathcal H_\Lambda \to \to \text{ and } \hookrightarrow L^2(S^d)$
+            
+        \end{itemize}
+    
+    \item The fuzzy sphere gives us a sequence of algebras which can all be though of as approximations of $\mathcal B(L^2(S^2))$. Each of these approximations can be seen to come from: if only energies below a certain cutoff value $\overline{E}_\Lambda$ are accessible for the wavefunctions, and for the accessible energies the potential is nearly harmonic near $r = 1$ and ``sufficiently'' steep THEN the accessible state space $\mathcal H_{\overline{E}}$ can be studied with the projected observables: $A \mapsto \overline{A} := P_{\overline E} A P_{\overline E}$; this, in particular, means that new commutation relations appear for the coordinate functions $\hat x^i$.
+    
+    \item The new dynamical system has $O(d)$ as a symmetry: at least it is ``true'' that the Hamiltonian is $O(d)$-covariant (which I'm defining to mean that the group action and $H$ commute) and that acting with this group on a vector state $\psi \in \mathcal H_\Lambda$ doesn't  take it outside $\mathcal H_\lambda$ nor changes its eigenvalues under $L^2$ and $L_z$ (wait... are there actual eigenvalues of these observables or just approximate ones?)
+    
+    \item The coordinates generate the whole algebra $\mathcal A_{\overline{E}}$.
+    
+    \item $\mathcal A_{\overline{E}}$ can be realized as the (\dbtext{sub?})algebra of operators of an irrep. $\pi_{\overline{E}}$ of $so(d+2)$. This means that $\mathcal H_{\overline{E}}$ can be though of as an irrep. of $so(d+2)$, which, in particular, means that $\mathcal H_{\overline{E}}$ is a reducible representation of $so(d+1)$, namely, $\mathcal H_{\overline{E}} \cong \bigoplus_{E \leq \overline{E}} V_l$ as representation space of $so(d+1)$.
+    
+    \item Embeddings and limits: a subalgebra $\mathcal C_\Lambda$ of $\mathcal A_{\Lambda}$ which has the $so(d+1)$-module decomposition $\bigoplus_{E \leq \overline{E}} V_l$ does approximate the commutative space.
+    
+    \item Basis of $\mathcal A_{\overline{E}}$
+    
+    \item $L_{ij}$ and $x^i$ tend to the angular momentum and coordinate functions of $S^d$. (Elements of $\mathcal C_\Lambda$?)
     
     \end{itemize}
 
