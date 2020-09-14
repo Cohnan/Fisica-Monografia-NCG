@@ -64,6 +64,8 @@
 
 \tableofcontents
 
+\rtext{\Huge \textbf{Summary}: Start from $SU(2)$-equivariance of the commutatative $\slashed D$ and $\mathcal H = L^2(S^2) \otimes \CC^2$ (and  their corresponding ``equivariant'' decompositions); the desired: ``truncated equivariant spectral triple'' comes from truncating the decompositions at $N = 2j$.}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Perhaps Relevant to Build Dirac Operator in NEW Fuzzy Spheres}
 
@@ -73,7 +75,7 @@
     
     \item How is the Dirac operator proposed here?: start from the $SU(2)$-equivariance and arrive at a neat \textbf{truncation of the classical spectrum} by replacing usual spherical harmonics by fuzzy spherical harmonics, paying the price of spectral assymetry in the spectrum.
     
-    \item There is a full theory of equivariant Dirac operators in Riemannian geometry, where, for example there is the Schrodinger-Lichnerowics formula $D^2 = C_G + R/8$ where $C_G$ is the Casimir operator and $R$ is the scalar curvature.
+    \item There is a full theory of \textbf{equivariant Dirac operators} in Riemannian geometry, where, for example there is the Schrodinger-Lichnerowics formula $D^2 = C_G + R/8$ where $C_G$ is the Casimir operator and $R$ is the scalar curvature.
     
     \item In Andrea,Lizzi2014 there is a definition of \lbtext{truncated Dirac operator} in a very general setting. Applied to the Fuzzy sphere (~pg. 34) \textbf{\rtext{they obtain again the irreducible spectral triple!}} \rtext{(This seems like this will work readily for the Fuzzy Sphere of Fiore and Pisacane)} 
     
@@ -88,7 +90,7 @@
     
     \item Background definitions: spectral triple definitions, distance, compact quantum metric space.
     
-    \item Detailed construction and analysis of spectrum of the canonical Dirac operator on $S^2$ through the approach that will be replicated(?) for the Fuzzy Sphere.
+    \item Detailed construction and analysis of spectrum of the canonical Dirac operator on $S^2$ through the approach that will be truncated for the Fuzzy Sphere.
     
     \item Construction of $2$ $SU(2)$ invariant spectral triples on $\mathcal A_N$, the eigenvalues of the Dirac operators, and proposition that shows that these $2$ triples generate the same metric on the state of states of $\mathcal A_N$.
     
@@ -121,35 +123,35 @@
 
     \begin{itemize}
     
-    \item \rtext{\Huge \textbf{Summary}: Start from $SU(2)$-equivariance (and  their corresponding ``equivariant'' decompositions) of the commutatative $\slashed D$ and $\mathcal H = L^2(S^2) \otimes \CC^2$; the desired: ``truncated equivariant spectral triple'' comes from truncating the decompositions at $N = 2j$.}
-    
-    \item \rtext{Why Fuzzy Spaces?}: To preserve the symmetries and keep the algebra finite dimensional.
-    
-    
-    \item \rtext{Why is $\mathcal A_N = M_{N+1}(\CC)$?}: what Madore did was actually defining $A_N := \bigoplus_{l = 0, 1, \dots}^N V_l$ where $V_j$ is the irrep. of $SO(3)$ of integer spin $l$ (of homogeneous polynomials in $x_1, x_2, x_3$ of degree $l$), since this is a \rtext{truncation of the commutative algebra $L^2(S^2) \cong \bigoplus_{l\in \NN} V_l$ at $N = 2j$} compatible with the action of $SU(2)$, but this truncation is not an algebra; the algebra structure is then imposed to be that of $M_{N+1}(\CC)$, which comes from \rtext{changing the algebra generators $x_k \mapsto \hat x_k = \frac{1}{\sqrt{j(j+1)}}\pi_j(J_k) \in M_{N+1}(\CC)$ ($[J_i, J_j] = i\epsilon J_k$ generate $i\sut = sl(2, \CC)$, i.e. $J_k = \frac{\sigma_k}{2}$)} (i.e. basically changing the $x_k$ by the rotation operator of spinors of spin $j$ w.r.t. this axis); this, is equivalent to changing the vector spaces generators $Y_{lm}$ by some fuzzy spherical harmonics \rtext{$Y_{lm} \mapsto \hat Y_{lm} \in M_{N+1}(\CC)$}; the action of $SU(2)$ that \rtext{makes this map $A_N \to M_{N+1}(\CC)$ an equivalence of representations / $\sut$-module / ``keep the $SU(2)$ symmetry''} is the adjoint action $Ad \pi_l : G \to End(M_{N+1}(\CC))$, $Ad \pi_l(g)(M) = \pi_l(g) M \pi^*_l(g)$... so might as well say that $\mathcal A_N = M_{N+1}(\CC)$ as a unital $C^*$-algebra AND as a representation of $\sut$/a $U(\sut)$-module.
+    \item \rtext{Why Fuzzy Spaces?}: To preserve the symmetries of the space and keep the algebra finite dimensional.
     
         \begin{itemize}
             
-        \item The precise way We will understand in this paper is as $\mathcal A_N := End(V_j) = \mathcal B(\mathcal V_j)$, and $V_j = \CC^{N+1}$ where the canonical basis correspond to the angular momentum basis $e_m = \set{|j, m\rangle}_{m = -j, \dots, j}$ {\tiny OJO: $\CC^{N+1}$ is not understood as ``$e_m$ = how much of $z_1$ there is''}
-        
-        \item That ``the $SU(2)$ symmetry'' is kept can be deduced from the equations prior to 3.6, which tell us that $Y_{lm} \mapsto \hat Y_{lm}$, the basis of this algebra, is indeed equivariant.
+        \item The symmetry of the space, at least the sense in which Madore uses the term, means that a group that acts by diffeomorphisms and isometries, also acts in an analogous sense in the NC spaces: diffeomorphisms being equated to automorphisms of the algebra that preserve the derivations, and preserving the metric.
             
         \end{itemize}
     
-    \item \rtext{GOAL}: The fuzzy sphere approximates the: \textbf{1. $U(\alg{su}(2))$-module (i.e. $\alg{su}(2)$ Lie algebra representation) 2. *-algebra 3. metric space} $\mathcal A(S^2) \cong L^2(S^2)$ of complex polynomials in $x_1, x_2, x_3$.
     
-    \item \rtext{The notion of convergence of this fuzzy space} to $S^2$ must also involve metrics: $d_N$ in $\mathcal A_n$ and $d_{geo}$ in $S^2$: in this paper the points of $S^2$ are idetified with the corresponding (Block) coherent states of $\mathcal A_N$, and under this identification:
+    \item \rtext{GOAL}: The fuzzy sphere approximates the commutative one in the following senses: \textbf{1. $U(\alg{su}(2))$-module (i.e. $\alg{su}(2)$ Lie algebra representation i.e. $SU(2)$-acts by ``diffeomorphisms'';\quad 2. $C^*$-algebra when acting on the $\mathcal H = $ spinor fields; \quad 3. ``metric space'', on which $SU(2)$ acts by isometries}. %$\mathcal A(S^2) \cong L^2(S^2)$ of complex polynomials in $x_1, x_2, x_3$.
+    
+    \item The Bloch $SU(2)$-\rtext{coherent states} are for the group $SU(2)$ what the usual harmonic oscillator coherent states are for the Heisenberg group. In particular, they are minimum uncertainty states. \rtext{They will be approximations of the ``commutative'' points of $S^2$}.
+    
+    \item \rtext{The notion of convergence of this fuzzy space to $S^2$ must also involve metrics}: $d_N$ in $\mathcal A_n$ and $d_{geo}$ in $S^2$: in this paper the points of $S^2$ are identified with the corresponding (Block) coherent states of $\mathcal A_N$, and under this identification:
     \begin{equation}
         \lim_{N \to \infty} d_N(p, q) = d_{geo}(p, q)\quad \text{for all }p, q \in S^2
     \end{equation}
     
+        \begin{itemize}
+        
+        \item A different sense in which we may says that the fuzzy sphere is an approximation as a metric space is by having the NC ``coordinate functions'' $x^i$ satisfy the Riemannian metric relation $r^2 = g_{\mu \nu} x^\mu x^\nu$. This is how Madore proposes the Fuzzy sphere.
+        
+        \end{itemize}
+    
     %\item \rtext{How is the Dirac operator proposed here?}: start from the $SU(2)$-equivariance and arrive at a neat \textbf{truncation of the classical spectrum}, paying the price of spectral asymmetry.
     
-    \item The Bloch $SU(2)$-\rtext{coherent states} are for the group $SU(2)$ what the usual harmonic oscillator coherent states are for the Heisenberg group. In particular, they are minimum uncertainty states.
+    \item \rtext{What kind of spectral triple do we want?: \textbf{``truncation of the commutative spectral triple''}}: \rtext{find an \textbf{$SU(2)$-equivariant} spectral triple $\supset$ operator $D_N$ on $\mathcal A_N$ whose spectrum is that of $\slashed D: L^2(S^2) \otimes \Sigma_2 \to \slashed D: L^2(S^2) \otimes \Sigma_2$ \textbf{truncated} at $N = 2j$}. $\sin \theta$
     
-    \item \rtext{What kind of spectral triple do we want?}: \rtext{find an ``\textbf{$SU(2)$-equivariant}'' spectral triple $\supset$ operator $D_N$ on $\mathcal A_N$ whose spectrum is that of $\slashed D: L^2(S^2) \otimes \Sigma_2 \to \slashed D: L^2(S^2) \otimes \Sigma_2$ \textbf{truncated} at $N = 2j$}: ``truncation of the spectral triple''. 
-    
-    \item \rtext{Equivariance of a spectral triple} \rtext{ ~ ``isometries'' of the noncommutative manifold} $\Longleftrightarrow$ Hopf algebra: this seems to be pretty, at least, that the operators $D_N$ and $a \in \mathcal A_N$ respect the $SU(2)$ action on the Hilbert space i.e. \rtext{the actions of $D_N$ and $\mathcal A_N$ on $\mathcal H_N$ commute with the action of $SU(2)$ / $\sut$}.
+    \item \rtext{Equivariance of a spectral triple} \rtext{ ~ ``isometries'' of the noncommutative manifold} $\Longleftrightarrow$ Hopf algebra: this seems to be, at least, that the operators $D_N$ and $a \in \mathcal A_N$ respect the $SU(2)$ action on the Hilbert space i.e. \rtext{the actions of $D_N$ and $\mathcal A_N$ on $\mathcal H_N$ commute with the action of $SU(2)$ / $\sut$}.
     
     \item \rtext{How is the desired spectral triple obtained here?}: accompanying the truncation of the irrep decomposition $L^2(S^2) \cong \sum_{l \in \NN} V_l$ at $N = 2j$ %and mapping its generators \rtext{$Y_{lm}$ into the fuzzy spherical harmonic  $\hat Y_{lm}$} in an $\sut$-equivariant way. 
     , knowing that the commutative \rtext{$\slashed D$ comes from the purely algebraic \textit{Dirac element} $\mathcal D \in U(\sut) \otimes U(\sut)$ which is ``$SU(2)$-equivariant''} {\tiny(it commutes with the coproduct of the Hopf algebra $U(\sut)$)},\rtext{truncate $\slashed D = \oplus_{l \in \NN} (\pi_l \otimes \pi_{1/2})(\mathcal D)$ at $N = 2j$} to define a new Dirac operator $\mathcal D_N: \mathcal A_N \otimes \CC^2 \to \mathcal A_N \otimes \CC^2$ which is ``$SU(2)$-equivariant'' (and the esp. trip. is real, but not even). This \textbf{can be seen to come from creating an auxiliary spectral triple where the Dirac operator is ``a single term'' of $\slashed D$}: $\rtext{D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D)}: V_j \otimes \CC^2 \to V_j \otimes \CC^2$, which turns out to induce precisely the same notion of distance.
@@ -200,6 +202,19 @@
             \item for example, $\text{ad}\pi_j(H)$ is the $\sut$ action of $J_3$ on $\mathcal A_N$ ($H_N = \mathcal A_N \otimes \CC^2$)
             
             \end{itemize}
+        
+        \end{itemize}
+    
+    \item \rtext{The Madore Fuzzy sphere is $SU(2)$-equivariant as a series of approximations of the commutative space $S^2$} in the following general senses (associating to it the spectral triples developed in this article):
+    
+        \begin{itemize}
+    
+        \item The group acts by ``diffeomorphisms'', i.e. by $*$-algebra morphisms % C^*? normed & *-algebra?
+        that respects the derivations
+        
+        \item The group acts by ``isometries'': the spectral triples are equivariant, i.e. the group action on the Hilbert space commutes with the actions of both the Dirac operator and the Algebra of the spectral triples.
+        
+        \item The ``NC approximations of the points'' of $S^2$ are equivariant: this interpretation appears since there are states of the approximating algebras that can be thought of as approximations of the points of the commutative space, and it turns out that these identifications are also $SU(2)$-equivariant.
         
         \end{itemize}
     
@@ -277,7 +292,7 @@
             
         \end{itemize}
     
-    \item Remember that in Madore it is proved that the notion equivalent to \textbf{diffeomorphisms} of the space is the adjoint action by elements of $SU(N)$ on $\mathcal A_N$, since they preserve the ``differential structure'': it is this what preserves the Lie algebra of derivations. In particular, $SU(2)$ indeed ``acts by diffeomorphisms'', which is what Madore calls ``they are NC spaces and they preserve the rotational symmetry of $S^2$''
+    \item Remember that in Madore it is proved that the notion equivalent to \textbf{diffeomorphisms} of the space is the adjoint action by elements of $SU(N)$ on $\mathcal A_N$, since they preserve the ``differential structure'': it is this what preserves the Lie algebra of derivations. In particular, $SU(2)$ indeed ``acts by diffeomorphisms'', which, \textbf{together with the preservation of the Riemannian metric, MAYBE} is what Madore calls ``they are NC spaces and they preserve the rotational symmetry of $S^2$''
     
     \item Madore says that these algebras are suppossed to be considered the algebra of observables of wavefunctions: normalized spinors $\in \CC^{N+1}$... this is extended with the notion of spectral triple
     
