@@ -41,6 +41,10 @@
 % Theorem environments
 \input{tools/theorem_definitions}
 
+
+%%%%%%%% Comandos adicionales
+\newcommand{\cut}[1]{\overline{#1}}
+
 %%%%%%
 \title{Fiore Pisacane 2018: Fuzzy circle and new fuzzy sphere through confining potentials and energy cutoffs}
 \author{Sebastian Camilo Puerto}
@@ -72,11 +76,14 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
         
         \end{enumerate}
     
-    \item However, as ``approximations of QM is $S^d$'', i.e. as algebras of operators acting on wavefunctions $\in \mathcal B(L^2(S^d))$, they are equivariant in the sense of symmetries of a dynamical system: the group acts on the new observables, i.e. the algebras $\mathcal A_\Lambda$ as operators on $\mathcal B(\mathcal H_\Lambda)$, and the action of the group on $\mathcal H_\Lambda$ commutes with the action of the observables (specially $L^2$ and $L_z$). 
+    \item However, as ``approximations of QM is $S^d$'', i.e. as algebras of operators acting on wavefunctions $\in \mathcal B(L^2(S^d))$, they are equivariant in the sense of symmetries of a dynamical system: \rtext{the group action and the Hamiltonian / time evolution operator commute}.
+    %the group acts on the new observables, i.e. the algebras $\mathcal A_\Lambda$ as operators on $\mathcal B(\mathcal H_\Lambda)$, and the action of the group on $\mathcal H_\Lambda$ commutes with the action of the observables (specially $L^2$ and $L_z$). 
     
         \begin{itemize}
             
-        \item Recall that in the Hamiltonian formalism of classical mechanics, a symmetry of the system is a group action that leaves invariant the observables $C^P(mathcal P) = \mathcal A$. Also recall that an observable is a constant of motion if its bracket with the Hamiltonian $H$ is 0. {\tiny In the lagrangian formalism a symmetry of the system is a group action that doesn't change the lagrangian}.
+        %\item Recall that in the Hamiltonian formalism of classical mechanics, a symmetry of the system is a group action that leaves invariant the observables $C^\infty (\mathcal P) = \mathcal A$ {\tiny A possible }. Also recall that an observable is a constant of motion if its bracket with the Hamiltonian $H$ is 0. {\tiny In the lagrangian formalism a symmetry of the system is a group action that doesn't change the lagrangian}.
+        
+        %\item Lagrangian, Noether theorem gives observable from group action that leaves invariant the Lagrangian.
         
         \item When the observables are operators, a group is a symmetry of the system if the group action and the observables commute: once the group action $A \mapsto A^g = g \circ A \circ g^{-1}$ on the observables is induced, this means that $A^g$ is ``the same'' as $A$, but on the ``rotated'' space $g\mathcal H$: \lbtext{the algebra of observables is $G$-equivariant/covariant} CREO.
             
@@ -110,17 +117,17 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
             
         \end{itemize}
     
-    \item The fuzzy sphere gives us a sequence of algebras which can all be though of as approximations of $\mathcal B(L^2(S^2))$. Each of these approximations can be seen to come from: if only energies below a certain cutoff value $\overline{E}_\Lambda$ are accessible for the wavefunctions, and for the accessible energies the potential is nearly harmonic near $r = 1$ and ``sufficiently'' steep THEN the accessible state space $\mathcal H_{\overline{E}}$ can be studied with the projected observables: $A \mapsto \overline{A} := P_{\overline E} A P_{\overline E}$; this, in particular, means that new commutation relations appear for the coordinate functions $\hat x^i$.
+    \item The fuzzy sphere gives us a sequence of algebras which can all be though of as approximations of $\mathcal B(L^2(S^2))$. Each of these approximations can be seen to come from: if only energies below a certain cutoff value $\cut{E}_\Lambda$ are accessible for the wavefunctions, and for the accessible energies the potential is nearly harmonic near $r = 1$ and ``sufficiently'' steep THEN the accessible state space $\mathcal H_{\cut{E}}$ can be studied with the projected observables: $A \mapsto \cut{A} := P_{\overline E} A P_{\overline E}$; this, in particular, means that new commutation relations appear for the coordinate functions $\hat x^i$.
     
     \item The new dynamical system has $O(d)$ as a symmetry: at least it is ``true'' that the Hamiltonian is $O(d)$-covariant (which I'm defining to mean that the group action and $H$ commute) and that acting with this group on a vector state $\psi \in \mathcal H_\Lambda$ doesn't  take it outside $\mathcal H_\lambda$ nor changes its eigenvalues under $L^2$ and $L_z$ (wait... are there actual eigenvalues of these observables or just approximate ones?)
     
-    \item The coordinates generate the whole algebra $\mathcal A_{\overline{E}}$.
+    \item The coordinates generate the whole algebra $\mathcal A_{\cut{E}}$.
     
-    \item $\mathcal A_{\overline{E}}$ can be realized as the (\dbtext{sub?})algebra of operators of an irrep. $\pi_{\overline{E}}$ of $so(d+2)$. This means that $\mathcal H_{\overline{E}}$ can be though of as an irrep. of $so(d+2)$, which, in particular, means that $\mathcal H_{\overline{E}}$ is a reducible representation of $so(d+1)$, namely, $\mathcal H_{\overline{E}} \cong \bigoplus_{E \leq \overline{E}} V_l$ as representation space of $so(d+1)$.
+    \item $\mathcal A_{\cut{E}}$ can be realized as the (\dbtext{sub?})algebra of operators of an irrep. $\pi_{\cut{E}}$ of $so(d+2)$. This means that $\mathcal H_{\cut{E}}$ can be though of as an irrep. of $so(d+2)$, which, in particular, means that $\mathcal H_{\cut{E}}$ is a reducible representation of $so(d+1)$, namely, $\mathcal H_{\cut{E}} \cong \bigoplus_{E \leq \cut{E}} V_l$ as representation space of $so(d+1)$.
     
-    \item Embeddings and limits: a subalgebra $\mathcal C_\Lambda$ of $\mathcal A_{\Lambda}$ which has the $so(d+1)$-module decomposition $\bigoplus_{E \leq \overline{E}} V_l$ does approximate the commutative space.
+    \item Embeddings and limits: a subalgebra $\mathcal C_\Lambda$ of $\mathcal A_{\Lambda}$ which has the $so(d+1)$-module decomposition $\bigoplus_{E \leq \cut{E}} V_l$ does approximate the commutative space.
     
-    \item Basis of $\mathcal A_{\overline{E}}$
+    \item Basis of $\mathcal A_{\cut{E}}$
     
     \item $L_{ij}$ and $x^i$ tend to the angular momentum and coordinate functions of $S^d$. (Elements of $\mathcal C_\Lambda$?)
     
@@ -185,8 +192,220 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
 \section{Introduction (pg. 1)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{High Level Summary}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Very Important Facts}
+
+    \begin{itemize}
+
+    \item Why does it make sense to have an energy cutoff? At least $2$ reasons:
+    
+        \begin{enumerate}
+            
+        \item We might add $\cut E$ as a point where higher energy physics is unkwnown.
+        
+        \item Where neither we nor the environment can bring a state to higher energies. This gives an effective description of the system. It \dbtext{leas to a lower (distance? ~)} bound in the accuracy with which our apparatus can measure observables, \dbtext{coming from a maximum transferable energy}.
+            
+        \end{enumerate}
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Important Facts}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Memorize}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Directly Relevant Doubts}
+
+    \begin{itemize}
+
+    \item\dbtext{ Do we need high energies to measure high energies / small distances?}
+    
+    \end{itemize}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Small Doubts}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Careful}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Detailed summary}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{General setting (pg. 5)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{High Level Summary}
+
+    \begin{itemize}
+
+    \item $H = - \frac{1}{2} \Delta + V(r)$ invariant under $O(D)$
+    
+    \item Introducing the cutoff, as the energy under which the potential has a harmonic behavior in the region $\nu_{\cut E} = \{r \st V(r) \leq \cut E\}$. This means that we ``have'' to change the observables, and in particular means we get a new Schrodinger equation.
+    
+    \item Alternative complete set of commutating operators $B = \{\partial_r, L_{ij}\}$. Globally defined outside $r = 0$, and redundant for $D \geq 3$.
+    
+    \item Eigenfunctions of $H$ as product of spherical harmonic (eigenfunction of $L^2$) and eigenfunction of radial equation $9$. This last equation, under the assumptions of a nice potential, can be approximated by a harmonic oscillator equation, since outside the region $\nu_{\cut E}$ $\psi$ is negligibly small.
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Very Important Facts}
+
+    \begin{itemize}
+
+    \item $[P_{\cut E}, H] = 0$. This is equivalent to saying that a state in $\mathcal H_{\cut E}$ doesn't evolve out of it.
+    
+    \item $[A, B] = 0$ means, between other things, that, if $v$ is an eigenvector of $A$ for the eigenvalue $\lambda$, then so is $B(v)$. Examples: $A, B = H, L_{ij}, P_{\cut E}, Q ``\in" O(D)$.
+    
+    \item $\cut H = H$
+    
+    \item We replace any Schrodinger equation $i \partial_t \psi = (H + H')\psi$ with a finite dimensional one within $\mathcal H_{\cut E}$, $i \partial_t \psi = \cut{H + H'}$... but I don't understand well what this means
+    
+    \item At leading order in \dbtext{what} the lowest eigenvalues of $H$ be considered those of the SHO approximation of equation $9$, multiplied by the $Y$ (eigenvectors of $L^2$ and a Cartan subalgebra elements).
+    
+    \item Eigenvalues of $L^2$ are $\{j(j+D-2)\}$ for $j \in \ZZ$.
+    
+    \item The energy of a quantum system can't increase. The energy of an energy eigenvector can't change.
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Important Facts}
+
+    \begin{itemize}
+
+    \item There are two conditions on the potential. They are what allow to approximate the time independent Schrodinger equation $9$ as a $1$-dimensional harmonic oscillator (2D: equation $10$, 3D: equation $36$)
+    
+        \begin{enumerate}
+        
+        \item For $r \to 0$, $V(r)$ stays bounded or grows at most as $\beta/r^2$ ($+c/r + d + er +\cdots$) ($\beta \geq 0$). {\tiny This allows equation $9$ to be solved}. Notice that the first condition, if valid in $r = 0$, means that this second condition is also satisfied.
+        
+        \item Equation $5$: \begin{align*}
+            V(r) \approx V_0 + 2k(r-1)^2 && \text{for $r$ such that $V(r) \leq  \cut E$}.
+        \end{align*} This condition, if the first one is already satisfied, means that \rtext{$\psi \longleftarrow \tilde f$ are neglibly small outside the shell $V(r) \leq \cut E$}, meaning that \rtext{at leading order \dbtext{in what?} the lowest eigenvalues $E$ are those of the $1$-dimensional harmonic oscillator approximation of $9$.} 
+        
+        \end{enumerate}
+    
+    \item By making $k$ and $\cut E$ diverge while having the region $\nu_{\cut E} = \{r \st V(r) \leq \cut E\}$ go to $\{r = 1\}$.
+    
+    \item $[H, L_{ij}] = 0$... if this is important, it may have to do with having a complete commuting set of observables for our systems, allowing a description of the vectors as lineara combination s of eigenvalues of these observables.
+    
+    \item $[P_{\cut E}, L_{ij}] = 0$ and so $[P_{\cut E}, L^2] = 0$
+    
+    \item $\Delta = \partial_r^2 + (D-1)\frac{1}{r}\partial_r - \frac{1}{r^2}L^2$, where $L^2 = L_{ij} L_{ij}/2$
+    
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Memorize}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Directly Relevant Doubts}
+
+    \begin{itemize}
+
+    \item $\cut A \in ??$
+    
+    \item Are the eigenvectors of the harmonic oscillator approximation of $9$ also eigenvectors of $L^2$? At least approximately? RTA: Yes, in an exact way; that is how equation $9$ is derived from equation $8$: by sayint that $\psi = \tilde f(r) Y(\phi, \dots)$
+    
+    \item What governs the time evolution of a state in $\mathcal H_{\cut E}$? Do we computationally need to change the Schrodinger equation, or is that replacement only a mathematical one (making explicit where the operators live)? I'm not sure if when the projection is done we are somehow systematically getting rid of some type of interaction terms; or if we are simply being mathematically rigorous and indicating that the new operators appearing in the Schrodinger equation are operators acting on $\mathcal H_{\cut E}$?
+    
+    \item Why is that complete set of commuting operators $B$ introduced?
+    
+        \begin{itemize}
+            
+        \item Is the redundancy of the $L_{ij}$ for higher dimensions relevant to us?
+            
+        \end{itemize}
+    
+    \item At leading order in what can the lowest eigenvalues of $H$ be considered rhose of the SHO approximation of equation $9$?
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Small Doubts}
+
+    \begin{itemize}
+
+    \item $[H, L_{ij}] = 0$
+    
+    \item Are the tangent vectors of $\RR^D$/ $S^d$ \textit{bounded} operators acting on $L^2(\RR^D)$ / $L^2(S^d)$?
+    
+    \item Are $x^i$, $\partial_i$, $H$ bounded operators on $L^2(\RR^D)$ / $L^2(S^d)$?
+    
+    \item The complete set of operators $B$ is introduced as an alternative to which one? $\{H, L^2, L_z\}$ in 3D?
+    
+    \item Eigenvectors of $L^2$, denoted by $Y$, are also eigenvectors of the elements of a Cartan subalgebra of $so(D)$.
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Careful}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Detailed summary}
+
+    \begin{itemize}
+
+    \item 
+    
+    \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
