@@ -283,11 +283,11 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
 
     \item $H = - \frac{1}{2} \Delta + V(r)$ invariant under $O(D)$
     
-    \item Introducing the cutoff, as the energy under which the potential has a harmonic behavior in the region $\nu_{\cut E} = \{r \st V(r) \leq \cut E\}$. This means that we ``have'' to change the observables, and in particular means we get a new Schrodinger equation.
+    \item Introducing the cutoff, as the energy under which the potential has a harmonic behavior in the region $\nu_{\cut E} = \{r \st V(r) \leq \cut E\}$. This means that we ``have'' to change/update the observables, and in particular means we get a new Schrodinger equation. This new observables will have new commutation relations.
     
     \item Alternative complete set of commutating operators $B = \{\partial_r, L_{ij}\}$. Globally defined outside $r = 0$, and redundant for $D \geq 3$.
     
-    \item Eigenfunctions of $H$ as product of spherical harmonic (eigenfunction of $L^2$) and eigenfunction of radial equation $9$. This last equation, under the assumptions of a nice potential, can be approximated by a harmonic oscillator equation, since outside the region $\nu_{\cut E}$ $\psi$ is negligibly small.
+    \item Eigenfunctions of $H$ as product of a spherical harmonic (eigenfunction of $L^2$) and an eigenfunction of radial equation $9$. This last equation, under the assumption of a nice potential, can be approximated by a harmonic oscillator equation, since outside the region $\nu_{\cut E}$ $\psi$ is negligibly small.
     
     \end{itemize}
 
@@ -310,6 +310,8 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
     
     \item The energy of a quantum system can't increase. The energy of an energy eigenvector can't change.
     
+    \item Standard quantum mechanics on the sphere $S^d$ are obtained by making $k$ and $\cut E$ diverge while having the region $\nu_{\cut E} = \{r \st V(r) \leq \cut E\}$ go to $\{r = 1\}$.
+    
     \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -317,7 +319,7 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
 
     \begin{itemize}
 
-    \item There are two conditions on the potential. They are what allow to approximate the time independent Schrodinger equation $9$ as a $1$-dimensional harmonic oscillator (2D: equation $10$, 3D: equation $36$)
+    \item There are two conditions on the potential. They are what allow us to approximate the time independent Schrodinger equation $9$ as a $1$-dimensional harmonic oscillator (2D: equation $10$, 3D: equation $36$)
     
         \begin{enumerate}
         
@@ -328,8 +330,6 @@ The covariance here has a different meaning to the one for the Madore Fuzzy sphe
         \end{align*} This condition, if the first one is already satisfied, means that \rtext{$\psi \longleftarrow \tilde f$ are neglibly small outside the shell $V(r) \leq \cut E$}, meaning that \rtext{at leading order \dbtext{in what?} the lowest eigenvalues $E$ are those of the $1$-dimensional harmonic oscillator approximation of $9$.} 
         
         \end{enumerate}
-    
-    \item By making $k$ and $\cut E$ diverge while having the region $\nu_{\cut E} = \{r \st V(r) \leq \cut E\}$ go to $\{r = 1\}$.
     
     \item $[H, L_{ij}] = 0$... if this is important, it may have to do with having a complete commuting set of observables for our systems, allowing a description of the vectors as lineara combination s of eigenvalues of these observables.
     
