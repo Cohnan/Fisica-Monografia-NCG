@@ -187,7 +187,7 @@
             
             \item $E = J_+$
             
-            \item $F = J_-$
+        \item $F = J_-$
             
             \end{itemize}  
         
@@ -250,7 +250,7 @@
     
     \item The two defined spectral triples induce the same notion of distance in $\mathcal A_N$.
     
-    \item \rtext{Points of the $(\phi, \theta) \in S^2$ sphere are approximated by coherent vectors $|\phi, \theta)_N \in V_J \Longleftrightarrow $ states of $\mathcal A_N$ $\psi^N_{\phi, \theta} \in \mathcal S(\mathcal A_N)$}. \rtext{This identification of points in $S^2$ with coherent states is $SU(2)$-equivariant}. (This does not seem to be saying that the points \textbf{of} the noncommutative space are these pure states, it seems to be more like these states are \textbf{noncommutative versions of the points of $S^2$}). This is supported by: 
+    \item \rtext{Points of the $(\phi, \theta) \in S^2$ sphere are approximated by coherent vectors $|\phi, \theta)_N = R_{(\phi, \theta)}|j, -j\rangle \in V_j \Longleftrightarrow $ states of $\mathcal A_N$ $\psi^N_{\phi, \theta} \in \mathcal S(\mathcal A_N)$}. \rtext{This identification of points in $S^2$ with coherent states is $SU(2)$-equivariant}. (This does not seem to be saying that the points \textbf{of} the noncommutative space are these pure states, it seems to be more like these states are \textbf{noncommutative versions of the points of $S^2$}). This is supported by: 
     
         \begin{itemize}
         
@@ -271,7 +271,17 @@
 \subsection{Important Facts}
 
     \begin{itemize}
-
+    
+    \item \rtext{Why is $\mathcal A_N = M_{N+1}(\CC)$?}: what Madore did was actually defining $A_N := \bigoplus_{l = 0, 1, \dots}^N V_l$ where $V_j$ is the irrep. of $SO(3)$ of integer spin $l$ (of homogeneous polynomials in $x_1, x_2, x_3$ of degree $l$), since this is a \rtext{truncation of the commutative algebra $L^2(S^2) \cong \bigoplus_{l\in \NN} V_l$ at $N = 2j$} compatible with the action of $SU(2)$, but this truncation is not an algebra; the algebra structure is then imposed to be that of $M_{N+1}(\CC)$, which comes from \rtext{changing the algebra generators $x_k \mapsto \hat x_k = \frac{1}{\sqrt{j(j+1)}}\pi_j(J_k) \in M_{N+1}(\CC)$ ($[J_i, J_j] = i\epsilon J_k$ generate $i\sut = sl(2, \CC)$, i.e. $J_k = \frac{\sigma_k}{2}$)} (i.e. basically changing the $x_k$ by the rotation operator of spinors of spin $j$ w.r.t. this axis); this, is equivalent to changing the vector spaces generators $Y_{lm}$ by some fuzzy spherical harmonics \rtext{$Y_{lm} \mapsto \hat Y_{lm} \in M_{N+1}(\CC)$}; the action of $SU(2)$ that \rtext{makes this map $A_N \to M_{N+1}(\CC)$ an equivalence of representations / $\sut$-module / ``keep the $SU(2)$ symmetry''} is the adjoint action $Ad \pi_l : G \to End(M_{N+1}(\CC))$, $Ad \pi_l(g)(M) = \pi_l(g) M \pi^*_l(g)$... so might as well say that $\mathcal A_N = M_{N+1}(\CC)$ as a unital $C^*$-algebra AND as a representation of $\sut$/a $U(\sut)$-module.
+    
+        \begin{itemize}
+            
+        \item The precise way We will understand in this paper is as $\mathcal A_N := End(V_j) = \mathcal B(\mathcal V_j)$, and $V_j = \CC^{N+1}$ where the canonical basis correspond to the angular momentum basis $e_m = \set{|j, m\rangle}_{m = -j, \dots, j}$ {\tiny OJO: $\CC^{N+1}$ is not understood as ``$e_m$ = how much of $z_1$ there is''}
+        
+        \item That ``the $SU(2)$ symmetry'' is kept can be deduced from the equations prior to 3.6, which tell us that $Y_{lm} \mapsto \hat Y_{lm}$, the basis of this algebra, is indeed equivariant.
+            
+        \end{itemize}
+        
     \item The $\otimes \pi_{1/2}$ is a way to state that we will see what this is acting on as \textbf{an operator on bispinors}(or something similar, since it can't be exactly that as the found spectral triples are not even), e.g. $(\pi_j \otimes \pi_{1/2})(\mathcal D): \CC^{N+1}\otimes \CC^2 \to \CC^{N+1}\CC^2$, $\begin{pmatrix} \psi_1 \in \CC^{N+1} \\ \psi_2 \in \CC^{N+1} \end{pmatrix} \in \CC^{N+1}\otimes \Sigma_2$.
     
     \item Why is the coproduct of a Hopf algebra involved in the $SU(2)$-equivariance of the Dirac operators? Let, for example $J_3 \in U(\sut)$, so it acts as an infinitesimal rotation in $V_{j_1}$ and $V_{j_2}$ as $\pi_{j_1}(V_{j_1})$ and $\pi_{j_2}(V_{j_2})$ respectively, and so the corresponding infinitesimal rotation on $V_{j_1}\otimes V_{j_2}$ is \rtext{$(\pi_{j_1} \otimes \pi_{j_1})\Delta(J_3)$}.

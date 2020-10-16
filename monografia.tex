@@ -1,0 +1,233 @@
+\documentclass[12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, english]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{bm} % For boldface greek letters
+\usepackage{hyperref} % Para poder tener hyperlinks
+\usepackage{enumerate}
+\usepackage{calligra} % Para dedicacion
+\usepackage[sorting=none]{biblatex}
+\addbibresource{library.bib}
+\usepackage{csquotes}
+
+
+%%%%%% Mis Codigos
+
+% TODO notes package
+\usepackage{xargs}                  % Use more than one optional parameter in a new command
+\usepackage[pdftex,dvipsnames]{xcolor}
+\input{tools/todoCode}
+
+% Colored text and boxes with my color conventions for highlighting
+\usepackage[dvipsnames]{xcolor}
+\input{tools/colorCode}
+
+% Math symbols
+\usepackage{xparse}
+\input{tools/common_math_symbols}
+
+% Physics symbols (vectors, units)
+\usepackage{tikz}
+\input{tools/physics_macros}
+
+% Theorem environments
+% \input{tools/theorem_definitions}
+
+\usepackage{tikz-cd} %To do Commutative Diagrams
+
+% Extras
+\newcommand{\linea}{\rule{10cm}{1mm}}
+\usepackage{ulem}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}} % To label Ch 0 equations as 0.1, 0.2, etc
+
+%%%%%%%
+\newenvironment{dedication}
+  {\clearpage           % we want a new page
+   \thispagestyle{empty}% no header and footer
+   \vspace*{\stretch{1}}% some space at the top 
+   \raggedleft          % flush to the right margin
+  }
+  {\par % end the paragraph
+   \vspace{\stretch{3}} % space at bottom is three times that at the top
+   \clearpage           % finish off the page
+  }
+
+%%%%%%%
+\graphicspath{ {images/} }
+
+%%%%%%%
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[example]{Definition}
+\newtheorem{theorem}[example]{Theorem}
+\newtheorem{proposition}[example]{Proposition}
+\newtheorem{lemma}[example]{Lemma}
+\newtheorem{corollary}[example]{Corollary}
+\newtheorem{notation}[example]{Notation}
+\newtheorem{remark}[example]{Remark}
+
+\usepackage{environ}
+
+\NewEnviron{eqnsplit}{%
+  \begin{equation}
+  \begin{split}
+    \BODY
+  \end{split}
+  \end{equation}
+}
+
+\NewEnviron{eqnsplit*}{%
+  \begin{equation*}
+  \begin{split}
+    \BODY
+  \end{split}
+  \end{equation*}
+}
+
+% Compile document without proofs
+\usepackage{comment}
+
+%\excludecomment{proof}
+%%%%%%%
+
+% \DeclareMathOperator{\HH}{\bb H}
+% \DeclareMathOperator{\FF}{\bb F}
+% \DeclareMathOperator{\diffeo}{\cong}
+% \DeclareMathOperator{\tr}{tr}
+
+% \DeclareMathOperator{\Diff}{\textit{Diff}}
+% \DeclareMathOperator{\Hom}{\textit{Hom}}
+% \DeclareMathOperator{\End}{\textit{End}}
+% \DeclareMathOperator{\Alt}{\textit{Alt}}
+% \DeclareMathOperator{\Sym}{\textit{Sym}}
+
+
+% \newcommand{\algeb}[1]{\mathfrak{#1}}
+% \newcommand{\alg}[1]{\mathfrak{#1}}
+% \newcommand{\oid}[1]{\ensuremath{\mathfrak{#1}}}
+% \newcommand{\ppal}[1]{\ensuremath{\mathcal{#1}}}
+
+% \newcommand{\sect}[1]{\ensuremath{\bm{#1}}} % Boldface that affects greek letters
+% \newcommand{\sectalg}[1]{\sect{\alg{#1}}}
+% \newcommand{\sectoid}[1]{\sect{\oid{#1}}}
+% \newcommand{\sectppal}[1]{\sect{\ppal{#1}}}
+
+% \newcommand{\cl}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+% \newcommand{\upsect}[1]{\overline{\sect{#1}}}
+% \newcommand{\up}[1]{\overline{#1}}
+% \newcommand{\downsect}[1]{\cl{\sect{#1}}}
+% \newcommand{\down}[1]{\cl{#1}}
+
+% \let\oldtilde\tilde
+% \renewcommand{\tilde}{\widetilde}
+% \newcommand{\stilde}[1]{\tilde{\sect{#1}}}
+
+\DeclareMathOperator{\comp}{\circ}
+
+%%%%%%%
+\allowdisplaybreaks
+\setlength{\parskip}{0.5em} % PARECE QUE NO ES USUAL DEJAR ESTE ESPACIO
+
+\interfootnotelinepenalty=10000
+
+\title 
+{
+	{New Fuzzy Spheres and their Metric Properties}\\
+	{\large Universidad de los Andes}\\
+	\vspace{1.5cm}
+	{\includegraphics[width = 0.6\textwidth]{logo.png}}	
+}
+\author{Sebastian Camilo Puerto Galindo\\[1cm]{\small Advised by: Prof. Andres Reyes-Lega Ph.D.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\pagenumbering{Roman}
+
+\maketitle
+
+\begin{dedication}
+{\LARGE\calligra Hola}
+\end{dedication}
+
+\begin{abstract}
+Hello
+\end{abstract}
+
+\begin{otherlanguage}{spanish}
+\begin{abstract}
+Hola
+\end{abstract}
+\end{otherlanguage}
+
+\newpage
+
+\chapter*{Acknowledgements}
+
+\section*{English}
+Hello
+\begin{otherlanguage}{spanish}
+\section*{Español}
+Hola
+\end{otherlanguage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Yet to Undertand}
+\input{chapters/porEntender} \label{chp:understand}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Final Remarks and Further Work}
+\input{chapters/remarks} \label{chp:remarks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{chapter}{-1}
+\chapter{Introduction}\label{chp:intro}
+\input{chapters/introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Some Spectral Triples on the Fuzzy Sphere}\label{chp:fuzzysphere}
+\input{chapters/FuzzySphere}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{The New Fuzzy Spheres of Fiore and Pisacane}\label{chp:NewFuzzy}
+\input{chapters/NewFuzzy}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Systems of Coherent States on the New Fuzzy Spheres}\label{chp:CHNew}
+\input{chapters/CoherentStates}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Spectral Triples on the New Fuzzy Spheres}\label{chp:NewDistance}
+\input{chapters/NewDistance}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+\end{document}

@@ -1,0 +1,176 @@
+\documentclass{beamer}
+
+%%% Packages
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{biblatex} \addbibresource{bibliografia.bib}
+
+%% Other Packages
+\usepackage[T1]{fontenc}
+\usepackage[normalem]{ulem} % For strikethrough with command \sout
+\usepackage{slashed} % For slashed in Dirac operator
+
+%%%%%% Theorem Environments
+\theoremstyle{definition}
+
+%\newtheorem{theorem}{Theorem}[section]  %numbered according to section environment, so in section to it restarts as 2.1 
+\newtheorem{proposition}{Proposition}[section]  %numbered according to section environment, so in section to it restarts as 2.1 
+%\newtheorem{lemma}[theorem]{section}     %numbering shared with theorem 
+%\newtheorem{corollary}{Corollary}[theorem]
+
+
+\theoremstyle{remark}
+
+\newtheorem*{remark}{Remark}
+
+%%%%% Color text
+%\usepackage[]{xcolor}
+
+\newcommand{\ytext}[1]{\textcolor{yellow}{#1}}
+\newcommand{\otext}[1]{\textcolor{orange}{#1}}
+\newcommand{\rtext}[1]{\textcolor{red}{#1}}
+\newcommand{\lbtext}[1]{\textcolor{cyan}{#1}}
+\newcommand{\dbtext}[1]{\textcolor{blue}{#1}}
+\newcommand{\ptext}[1]{\textcolor{Plum}{#1}}
+\newcommand{\lgtext}[1]{\textcolor{LimeGreen}{#1}}
+\newcommand{\dgtext}[1]{\textcolor{OliveGreen}{#1}}
+
+%%%%% Custom Commands
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\inv}{{-1}}
+\newcommand{\conj}[1]{\overline{#1}}
+
+\newcommand{\twov}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
+\newcommand{\threev}[3]{\begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}}
+
+\newcommand{\then}{\ensuremath{\longrightarrow}}
+\newcommand{\Then}{\ensuremath{\Longrightarrow}}
+\renewcommand{\iff}{\ensuremath{\longleftrightarrow}}
+\newcommand{\Iff}{\ensuremath{\Longleftrightarrow}}
+\newcommand{\suff}{\ensuremath{\longleftarrow}}
+\newcommand{\Suff}{\ensuremath{\Longleftarrow}}
+
+
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\newcommand{\bbra}{\langle\langle}
+\newcommand{\kket}{\rangle\rangle}
+
+
+\newcommand{\bb}[1]{\mathbb #1}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\TT}{\mathbb T}
+
+\newcommand{\defn}[1]{\lbtext{#1}}
+\newcommand{\Defn}[1]{\dbtext{#1}}
+
+\newcommand{\hcal}{\mathcal H}
+\newcommand{\acal}{\mathcal A}
+\newcommand{\cut}[1]{\overline{#1}}
+
+%%%%%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Darmstadt}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{beaver}%seagull} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+% Show number of slides at the bottom
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+%%%%%% Show TOC before a new Section
+\AtBeginSection[]
+{
+    \begin{frame}[noframenumbering]{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+% Show TOC before a new SubSection
+\AtBeginSubsection[]
+{
+    \begin{frame}[noframenumbering]{Table of Contents}
+        \tableofcontents[currentsection,currentsubsection]
+    \end{frame}
+}
+% Reduce size of TOC
+\AtBeginDocument{
+  %\addtocontents{toc}{\tiny}
+  %\addtocontents{subsection in toc}{\tiny}
+}
+
+%\setbeamerfont{subsection in toc}{size=\tiny}
+
+%%%%%% Make paragraphs start with no indentation and leave spaces between paragraphs
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+%%%%%% Document Information
+\title[l]{Spectral Distance on New Fuzzy Spheres}
+\author{Sebastian Puerto\\ Advised by: Prof. Andres Reyes-Lega Ph.D.}
+\institute{Universidad de los Andes}
+\date{October 2, 2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}[noframenumbering]
+  \titlepage
+\end{frame}
+
+\begin{frame}{Objective} % % % % % % % % % % % % % % % % % % %
+Understand the study of distances in noncommutative spaces through examples.
+
+Research the distance between states in the new fuzzy spheres introduced in \cite{Fiore2018}.
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+\begin{frame}[noframenumbering]{Outline}
+  \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters30/Background}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{chapters30/Madore}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters30/DAndrea}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters30/Fiore}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters30/Further}
+
+\printbibliography[title=References]
+
+\end{document}

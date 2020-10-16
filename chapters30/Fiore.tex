@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{New Fuzzy Spheres}
+
+\begin{frame}{General Setting} % % % % % % % % % % % % % % % % % % %
+    
+    - $H = - \frac{1}{2} \Delta + V(r)$ invariant under $O(D)$
+    
+    - Introducing the cutoff $\cut E$, as the energy where
+    \begin{align}
+        \label{eqn5}
+            V(r) \approx V_0 + 2k(r-1)^2 && \text{for $r$ such that $V(r) \leq  \cut E$}.
+    \end{align}
+    %in the region $\nu_{\cut E} = \{r \,|\, V(r) \leq \cut E\}$.
+    
+    - Eigenfunctions of $H$ as product of a spherical harmonic $Y(\phi, \dots)$ (eigenvector of $L^2$) and an e.v. of the radial equation 
+    \begin{align}
+        \label{eqn9}
+        \left[-\partial_r^2 - (D-1) \frac{1}{r} \partial_r + \frac{1}{r^2} j(j+D-2) + V(r)\right] \tilde f(r) = E \tilde f(r).
+    \end{align}
+    
+    - This last equation can be approximated by a harmonic oscillator equation, since outside the region $\{V(r) \leq \cut E\}$ $\psi$ is negligibly small.
+        
+    
+    
+    
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{2D}
+
+
+\begin{frame}{Construction of $\hcal_{\cut E}$} % % % % % % % % % % % % % % % % % % %
+    - Equation \eqref{eqn9} has the approximation, where $\rho := \ln r$
+    \begin{equation}
+        \label{harmonic2D}
+        \hat H f(\rho) = e_m f(\rho), \qquad
+        \hat H = - \partial_\rho^2 + k_m(\rho - \tilde \rho_m)^2,
+    \end{equation} $
+        k_m := 2(k - E'), \quad
+        E' := E - V_0, \quad
+        \tilde \rho_m := \frac{E'}{k_m}, \quad
+        e_m = \frac{E'^2}{k_m} + E' - m^2
+    $
+    - The solutions $f_{n,m}$ are known, $n \in \bb N, m \in \ZZ$ \then $e_{m, n}(k) = (2n+1)\sqrt{k_m}$ \then $E'_{m,n}(k)$ satisfies a quartic equation \then $E_{m,n}(k, V_0)$.
+    
+    - Fixing $V_0 = V_0(k)$ such that $E_{0, 0} = 0$ \then $V_0(k) = %-\sqrt{2k} + 2 - \frac{7}{2}\frac{1}{\sqrt{2k}} + o(1/k)$ and 
+    \sum_{n = -1}^\infty v_n \left( \sqrt{\frac{1}{k}} \right)^n$ \then
+    \begin{equation}
+        E_{n, m}(k) = m^2 + 2n\sqrt{2k} - 2n + o(1/\sqrt{k})
+    \end{equation}
+    
+\end{frame}
+
+\begin{frame}{Construction of $\hcal_{\cut E}$ (Cont.)}
+    - Choosing $\cut E < 2 \sqrt{2k} - 2$, the spectrum of $H$ is a truncation of $L^2$: \textbf{the radial oscillations are ``frozen''}: $\cut{\partial_r} = 0$.
+    \begin{multline*}
+        \psi_m(\rho, \phi) = f_{0, m}(\rho) e^{im\phi} = N_m e^{im\phi}exp{\left[ -\frac{(\rho - \tilde \rho_m)^2 \sqrt{k_m}}{2} \right]} \\\xrightarrow{k \to \infty} \delta(r-1)e^{i m \phi}
+    \end{multline*}
+    \begin{equation}
+        E = E_m(k) = m^2 + o(1/\sqrt{k})
+    \end{equation}
+    
+    - For $\Lambda := \lfloor \cut E \rfloor$, 
+    %\begin{align}
+        $\lbtext{\hcal_{\Lambda}}:= \lbtext{\hcal_{\cut E}} := span\{\psi_m\}_{|m| \leq 
+    \lfloor \cut E \rfloor} ,
+    \lbtext{\acal_\Lambda} := \mathcal B(\hcal_\Lambda)$
+    %\end{align}
+    
+    - %Since $H$ generates the time evolution, a
+    An element of $\hcal_\Lambda$ doesn't evolve out of $\hcal_\Lambda$.
+    
+    - Get a fuzzy space: e.g. choosing $k = \Lambda^2(\Lambda+1)^2$ %make $k$ diverge with $\Lambda$ while $\nu_{\cut E}$ goes to $\{r = 1\}$
+    
+    - This cutoff entails replacing every observable by $A \mapsto \cut A = P_{\cut E} A P_{\cut E}$% \dbtext{when?}
+\end{frame}
+
+\begin{frame}{Important Observables and their Commutation Relations} % % % % % % % % % % % % % % % % % % %
+    - Up to infinite, $1/k^{1/2}\dbtext{?}$ and $1/k^{3/2}$ orders, respectively
+    \begin{align}
+    \label{projObs2D}
+        \cut L \psi_m &= m \psi_m; & 
+        \cut H &= \cut L^2; & 
+        \cut x^\pm \psi_m = 
+            \begin{cases}
+                \frac{a}{\sqrt{2}} \sqrt{ 1 + \frac{m(m \pm 1)}{k} } \psi_{m \pm 1} & -\Lambda \leq \pm m \leq \Lambda - 1 \\
+                0 & \text{otherwise}
+            \end{cases}
+    \end{align}
+    - And so, up to terms of $1/k^{3/2}$
+    \begin{align}
+        \label{conmObs2D}
+        \cut{x^+}^\dagger &= \cut{x^-}; &
+        [\cut L, \cut{x^\pm}] &= \pm \cut{x^\pm}; &
+        [\cut{x^+}, \cut{x^-}] &= - \frac{\cut L}{k} + \left[1 + \frac{\Lambda(\Lambda+1)}{k}\right] (\tilde P_{\Lambda} - P_{-\Lambda}).
+    \end{align}
+     - If \eqref{projObs2D} are used exactly to define elements of $\mathcal B(\hcal_\Lambda) \equiv \acal_\Lambda$ then \eqref{conmObs2D} are also exact, and $\cut{x^\pm}$ generate $\acal_\Lambda$. % \cut{\partia_\pm} are now redundant... but I'm not sure why
+    
+\end{frame}
+
+\begin{frame}{Realization of $\acal_\Lambda$ through $Uso(3)$} % % % % % % % % % % % % % % % % % % %
+    - $O(2)$ acts on $\hcal_\Lambda \subset L^2(\RR^2)$, and so on $\acal_\Lambda$, since $[H, O(2)\cdot ] = 0$. $SU(N) \ni g$ is the group of $*$-automorphisms of $M_N(\CC) \cong \acal_\Lambda$ acting by $a \mapsto g a g^{-1}$; $O(2)$ is then a subgroup. %through the action induced in $\acal_\Lambda$ by its action on $\RR^2$.
+        \begin{itemize}
+            
+        \item Rotation $R_\theta$: $\cut{x^\pm} \mapsto e^{\pm i \theta} \cut{x ^\pm}; \cut L \mapsto \cut L \in \acal_\Lambda$.
+        
+        \item Reflection: $\cut{x^\pm} \cut{x^\mp}; \cut L \mapsto -\cut L$
+        
+        \end{itemize}
+    
+    - \textbf{We can consider $\acal_\Lambda \cong  M_N(\CC) = \pi_\Lambda(Uso(3))$ as a $*$-algebra and representations of $O(2)$}, where $\pi_\Lambda$ is the $N := 2 \Lambda + 1$ dimensional representation.
+    \begin{align}
+        \cut{x^\pm} &\longleftrightarrow f_\pm (J^0) J^\pm &
+        \cut L &\longleftrightarrow J^0
+    \end{align}
+    where $J^\pm, J^0$ is the Weyl-Cartan basis of $so(3)$, $f_\pm(s) = \frac{1}{\sqrt{2}} \sqrt{\frac{1 + s(s-1)/k}{\Lambda (\Lambda + 1) - s(s-1)}} = f_-(-s)$%: $[J^+, J^-] = J^0; [J^\pm, J^0] = \pm J^\pm$
+
+    - Rotation: by $\pi_\Lambda(e^{i \theta J_0})$; Reflection: by $\pi_\Lambda(e^{i\pi (J^+ + J^-)/\sqrt{2}})$
+\end{frame}
+
+\begin{frame}{Convergence} % % % % % % % % % % % % % % % % % % %
+
+    - $\psi_m$ as fuzzy analogues of $e^{i m \phi} \in \hcal$: $O(2)$-covariant embedding $\hcal_\Lambda \hookrightarrow \hcal = L^2(S^1)$, $\psi_m \mapsto e^{im\phi}$; \hfill \then $\hcal_\Lambda \to \hcal$ as $\Lambda \to \infty$ in the sense that $\forall \phi \in \hcal$, $\phi_\Lambda = \sum_{|m| \leq \Lambda} \phi_m e^{im\phi} \to \phi$ in the $L^2$-norm.
+    
+    - Induces, embedding $\acal_\Lambda \hookrightarrow \acal = \mathcal B(\hcal)$ and limit $\acal_\Lambda \to \acal$ as $\Lambda \to \infty$.
+    
+    - Fuzzy analogue of $B(S^1)$ of bounded functions on $S^1$ as subalgebra of $\mathcal B(\hcal)$: $C_\Lambda := \left\{ \sum_{h = -2\Lambda}^\Lambda f_h \eta^h \,|\, f_h \in \CC\right\}$ where $\eta^\pm  = \frac{\sqrt{2}}{a}x^\pm$ (so $\eta^\pm \to e^{\pm i \phi}$ as operators).
+    
+    Choosing $k(\Lambda) \geq 2 \Lambda(\Lambda + 1)(w\Lambda+1)^2$, then $B(S^1) \to \mathcal B(\hcal)$ due to the strong limits: $\hat f_\Lambda \to f\cdot$, $\hat{(fg)}_\Lambda \to fg\cdot $, $\hat f_\Lambda \hat g_\Lambda \to fg\cdot$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{3D}
+
+% \begin{frame}{Construction of $\hcal_{\cut E}$} % % % % % % % % % % % % % % % % % % %
+    
+% \end{frame}
+
+% \begin{frame}{Important Observables and their Commutation Relations} % % % % % % % % % % % % % % % % % % %
+
+% \end{frame}
+
+% \begin{frame}{Realization of $\acal_\Lambda$ through $Uso(3)$} % % % % % % % % % % % % % % % % % % %
+
+% Notice that the action on $\cut{x^\pm}$ is
+
+% This $C^*$-algebra isomorphism is $O(2)$-equivariant.
+
+% \end{frame}
+
+% \begin{frame}{Convergence} % % % % % % % % % % % % % % % % % % %
+
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Main Points} % % % % % % % % % % % % % % % % % % %
+% We are thinking of the algebras noncommutative version of $L^2(S^2)$, but as approximation of the algebra of observables of a quantum system%, which is the NC $\mathcal B(L^2(S^d))$.
+    
+%         \begin{itemize}
+            
+%         \item $\mathcal A_\Lambda \to \mathcal B(L^2(S^d))$
+        
+%         \item $\mathcal C_\Lambda \subset \mathcal A_N \to \text{ and } \hookrightarrow C(S^d)$ space of polynomials on the coordinates $x^i$.
+        
+%         \item Also, $\mathcal H_\Lambda \to \to \text{ and } \hookrightarrow L^2(S^d)$
+            
+%         \end{itemize}
+    
+%     Each of these approximations can be seen to come from: if only energies below a certain cutoff value $\cut{E}_\Lambda$ are accessible for the wavefunctions, and for the accessible energies the potential is nearly harmonic near $r = 1$ and ``sufficiently'' steep THEN the accessible state space $\mathcal H_{\cut{E}}$ can be studied with the projected observables: $A \mapsto \cut{A} := P_{\overline E} A P_{\overline E}$; this, in particular, means that new commutation relations appear for the coordinate functions $\hat x^i$.
+    
+%     The new dynamical system has $O(d)$ as a symmetry group: $O(d)$ acts on $\hcal_{\cut E}$ and the time evolution of these states is invariant under its action ($\cut H = H|_{\hcal _{\cut E}} = \cut H^{O(d)}$)
+    
+%     The coordinates generate the whole algebra $\mathcal A_{\cut{E}}$, and they have nontrivial commutation relations.
+    
+%     $\mathcal A_{\cut{E}}$ can be realized as the algebra of operators of an irrep. $\pi_{\cut{E}}$ of $so(d+2)$. This means that $\mathcal H_{\cut{E}}$ can be though of as an irrep. of $so(d+2)$, which, in particular, means that $\mathcal H_{\cut{E}}$ is a reducible representation of $so(d+1)$, namely, $\mathcal H_{\cut{E}} \cong \bigoplus_{E \leq \cut{E}} V_l$ as representation space of $so(d+1)$.
+    
+%     Embeddings and limits: a subalgebra $\mathcal C_\Lambda$ of $\mathcal A_{\Lambda}$ which has the $so(d+1)$-module decomposition $\bigoplus_{E \leq \cut{E}} V_l$ does approximate the commutative space.
+% \end{frame}
