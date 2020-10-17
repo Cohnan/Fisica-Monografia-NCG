@@ -1,3 +1,5 @@
+The $2$-sphere $S^2$ as a metric space is $SU(2)$-invariant. This invariance will be seen to give rise to a series decomposition of the canonical Dirac operator on $S^2$. We will see how truncating this $SU(2)$-decomposition of the Dirac operator will give rise to equivariant spectral triples on the fuzzy sphere which inherit some of the nice properties of the canonical spectral triple and which allow the convergence of the fuzzy sphere to $S^2$ also as a metric space, in a precise sense to make precise in section \ref{FSsec:convergence}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Canonical Spectral Triple of $S^2$}
@@ -20,7 +22,24 @@ $ are the actions of $J_3$, $J^\pm \in su(2)$ on $L^2(S^2)$ respectively. Its sp
 
 \linea
 
-The $2$ Dirac operators that we will introduce in the Fuzzy
+Although there are several ways to describe the canonical spectral triple on \todo{of/on?} $S^2$, the one that will be useful to use to define the spectral triples on the fuzzy sphere will be from understanding $S^2$ as \ptext{compact Riemannian symmetric\footnote{Symmetric space; U} space} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$.
+
+Let $G$ be a compact semisimple Lie group $G$ with Lie algebra $\alg g$, where the semisiplicity means that the Killing form $K: \alg g \times \alg g \to \alg g$ of $\alg g$ is negative definite, giving $G$ a natural Riemannian manifold structure. For such a manifold $G$, the Dirac operator can be seen to arise \ref{} from an algebraic element $\lbtext{\dcal D} \in U(\alg g)\times U(\alg g)$, where $\lbtext{U}(g)$ is \lbtext{the universal enveloping algebra} of the Lie algebra $\alg g$, i.e. the largest\todo{in what sense} \todo{complex?} unital, associative algebra containing $\alg g$ where the Lie bracket coincides with the commutator in $U(\alg g)$; it is important to remark that \otext{the representations of $\alg g$ are in a bijective correspondence with the modules over $U(\alg g)$}. In the explicit case where $G = SU(2)$,
+\begin{equation}
+    \dcal := 1 \otimes 1 + 2 \sum_{k = 1}^3 J_k \otimes J_k \in U(\sut) \otimes U(\sut)
+\end{equation}
+where $J_k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such that $[J_i, J_j] = i \epsilon_{ijk} J_k$ (i.e. $J_k = \frac{\sigma_k}{2}$). 
+
+Let $\pi_j: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ be the spin $j \in \frac{\NN}{2}$ representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J_3)(e_m) = m e_m$, where $\vec J^2$ is notation for $J_1^2 + J_2^2 + J_3^3 \in U(\sut)$.
+Now, to $\dcal \in U(\alg g) \otimes U(\alg g)$ corresponds an element $\dcal_S$ in the noncommutative Weil algebra\footnote{CCR algebra of $(\alg g, \omega?)$. } through the injection $\alg g \hookrightarrow Cl(g, -K)$\todo{not sure we want here the real algebra, and I even think we want instead the complex algebra since it is that one which acts on Fock space}\footnote{Clifford algebra}. It is known that, for a $3$ dimensional real vector space $V$ with positive definite metric with basis $\{v_k\}_{k = 1, \dots, 3}$, the real Clifford algebra $Cl(V, g) \cong gen{\sigma_k}_{k = 1, \dots, 3} = \gen{J_k}_{k = 1, \dots, 3} = M_2(\CC)$ and $\CC l(V) \cong M_2(\CC) \oplus M_2(\CC)$ under the identification $v_k \Longleftrightarrow \sigma_k \in M_2(\CC)$, meaning, for our explicit example, that the algebra $Cl(\sut, -K) = M_2(\CC)$ 
+\todo{there is an $i$ which I don't like when saying this last sentence}, and so the injection can be seen to be simply $\pi_{1/2} = Id_2$:
+\begin{equation}
+    \dcal_S := (id \otimes \pi_{1/2})(\dcal) = 1 \otimes 1 + \sum_{k = 1}^3 J_k \otimes \sigma_k = \begin{pmatrix} 1 + H & F \\ E & 1 - H \end{pmatrix} \in U(\sut\otimes M_2(\CC))
+\end{equation}
+where $H = J_3$, $E = J_1 + iJ_2$ and $F = E^* \in U(\sut)$
+
+
+Equivariance of $\dcal$: $U(\alg g)$ is a Hopf algebra\footnote{} with coproduct $\nabla: U(\alg g) \to U(\alg g) \times U(\alg g)$ such that $A \mapsto A \otimes 1 + 1 \otimes A$ for $A \in \alg g$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,4 +76,4 @@ The $2$ Dirac operators that we will introduce in the Fuzzy
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Convergence of fuzzy sphere to $S^2$}
+\section{Convergence of fuzzy sphere to $S^2$}\label{FSsec:convergence}
