@@ -28,10 +28,10 @@ $ are the actions of $J_3$, $J^\pm \in i\,su(2)$ on $L^2(S^2)$ respectively. Eig
 \begin{frame}{The Irreducible Spectral Triple} % % % % % % % % % % % % % % % % % % %
 A first spectral triple is simply taking 
 \begin{multline}
-    D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 \\= \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} = \pi_j(E) \otimes \sigma_1 + \pi_j(F) \otimes \sigma_2 + \pi_j(H) \otimes \sigma_3
+    \lbtext{D_N} := (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 \\= \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} = \pi_j(E) \otimes \sigma_1 + \pi_j(F) \otimes \sigma_2 + \pi_j(H) \otimes \sigma_3
 \end{multline} where $H = J_3$, $E = J_+$, $F = J_-$ are the actions of $J_3$, $J^\pm \in su(2)$ on $V_j$ respectively.
 
-- The spectral triple \rtext{$(\acal_N, H_N = V_j \otimes \CC^2, D_N)$}
+- The spectral triple \rtext{$(\acal_N, \lbtext{H_N} = V_j \otimes \CC^2, D_N)$}
     \begin{itemize}
         
     \item Is $SU(2)$-equivariant
@@ -44,9 +44,9 @@ A first spectral triple is simply taking
 \end{frame}
 
 \begin{frame}{The Full Spectral Triple} % % % % % % % % % % % % % % % % % % %
-\rtext{$(\acal_N, \hcal_N = \mathcal A_N \otimes \CC^2 \cong \bigoplus_{l =1}^N H_l, \mathcal D_N \equiv \bigoplus_{l =1}^N D_l)$}, where:
+\rtext{$(\acal_N, \lbtext{\hcal_N} := \mathcal A_N \otimes \CC^2 \cong \bigoplus_{l =1}^N H_l, \mathcal D_N \longleftrightarrow \bigoplus_{l =1}^N D_l)$}, where:
 \begin{multline}
-    \mathcal D_N = (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) = D = \begin{pmatrix} 1 + \text{ad}\pi_j(H) & \text{ad}\pi_j(F) \\ \text{ad}\pi_j(E) & 1 - \text{ad}\pi_j(H)\end{pmatrix} 
+    \lbtext{\mathcal D_N} := (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) = D = \begin{pmatrix} 1 + \text{ad}\pi_j(H) & \text{ad}\pi_j(F) \\ \text{ad}\pi_j(E) & 1 - \text{ad}\pi_j(H)\end{pmatrix} 
     %= \text{ad}\pi_j(E) \otimes \sigma_1 + \text{ad}\pi_j(F) \otimes \sigma_2 + \text{ad}\pi_j(H) \otimes \sigma_3
 \end{multline}
 where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\mathcal A_N$
@@ -65,7 +65,7 @@ where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\ma
 
 \textbf{It is a truncation of the canonical spectral triple}.
 
-- \textbf{Theorem}: the two spectral triples induce the same distance in the state space of $\acal_N$.
+- \rtext{\textbf{Theorem}}: the two spectral triples induce the same distance in the state space of $\acal_N$.
 \end{frame}
 
 \begin{frame}{(Bloch) $SU(2)$-coherent states on $\acal_N$} % % % % % % % % % % % % % % % % % % %
@@ -73,14 +73,14 @@ where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\ma
 
 %- \rtext{They will be considered fuzzy approximations of the points of $S^2$}.
 
-- Points of the $(\phi, \theta) \in S^2$ sphere are approximated by coherent vectors $|\phi, \theta)_N = R_{(\phi, \theta)}|j, -j\rangle \in V_J \Longleftrightarrow $ states of $\mathcal A_N = End(V_j)$ $\psi^N_{\phi, \theta} \in \mathcal S(\mathcal A_N)$. 
+- \rtext{Points of the $E(\phi, \theta) \in S^2$ sphere are approximated by coherent vectors} $\lbtext{|\phi, \theta)_N} := R_{(\phi, \theta)}|j, -j\rangle \in V_j \Longleftrightarrow $ states of $\mathcal A_N = End(V_j)$ $\lbtext{\psi^N_{\phi, \theta}} = (\phi, \theta| \cdot |\phi, \theta)_N \in \mathcal S(\mathcal A_N)$. 
 
-- This identification of points in $S^2$ with coherent states is $SU(2)$-equivariant and The distance between them is $SU(2)$-invariant.
+- This identification of points in $S^2$ with coherent states is $SU(2)$-equivariant \& the distance between them will be $SU(2)$-invariant.
 
 %What group used in Fiore?
 \end{frame}
 
-\begin{frame}{Distance between $SU(2)$-coherent states} % % % % % % % % % % % % % % % % % % %
+\begin{frame}{Distance between $SU(2)$-coherent states (1/2)} % % % % % % % % % % % % % % % % % % %
 - For $N = 1$: all pure states are coherent states and 
 \begin{equation}
     d_1(\hat p, \hat q) = \frac{1}{2}|\vec p - \vec q|_{\RR^3}
@@ -90,7 +90,7 @@ where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\ma
 \begin{equation}
     d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k)
 \end{equation}
-% \end{equation} and so, between the north and south poles
+%  and so, between the north and south poles
 % \begin{equation}
 %     d_N(\psi_{(0,0), \psi_{(0, \pi)}}) = \sum_{k = 1}^N \frac{1}{\sqrt{k(N-k+1)}}
 % \end{equation}
@@ -98,7 +98,7 @@ where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\ma
 - In general:
     The distance between increasing fuzzy approximations of $p, q \in S^2$ is non-decreasing with $N$ and
     \begin{equation}
-        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})
+        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(E(\phi, \theta), E(\phi', \theta'))
     \end{equation}
 \end{frame}
 
