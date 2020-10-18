@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Two $SU(2)$-equivariant distances/spectral triples on the Fuzzy Sphere}
+
+\begin{frame}{Canonical Spectral Triple of $S^2$} % % % % % % % % % % % % % % % % % % %
+Starting point \cite{DAndrea2013}: $S^2$ as the symmetric space $S^3/S^1$ of the compact semisimple Lie group $G = S^3$, $\mathfrak g = su(2)$.
+    
+- The canonical spectral triple, which is \textbf{$SU(2)$-equivariant} can be seen to come from a purely algebraic element $\mathcal D \in U(\mathfrak g) \otimes U(\mathfrak g)$:
+    \begin{align*}
+        U(\mathfrak g) \otimes U(\mathfrak g) &\to& U(\mathfrak g) \otimes Cl(\mathfrak g, -K) &\to& \mathcal B(L^2(G, SG)) \\
+        1 \otimes 1 + 2 \sum_{k = 1}^3 J_k \otimes J_k &\mapsto& 1 \otimes 1 + \sum_k J_k \otimes \sigma_k &\mapsto& \left( \bigoplus_{l\in \bb N} \pi_l \right) \otimes \pi_{1/2}(\mathcal D)
+    \end{align*}
+- So $\slashed D = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} = \partial_E \otimes \sigma_1 + \partial_F \otimes \sigma_2 + \partial_H \otimes \sigma_3$ where $\partial_H = -i \partial_\phi$, $\partial_E = e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right)$, $\partial_F = -\partial_E% = e^{-i\phi} \left( \partial_\theta - i cot\,\theta \partial_\phi \right)
+$ are the actions of $J_3$, $J^\pm \in su(2)$ on $L^2(S^2)$ respectively. Its spectrum is $\{\pm l\} = \ZZ$ with multiplicities $2l$.%: L^2(S^2) \otimes \CC^2 \to L^2(S^2) \otimes \CC^2 = \oplus_{l \in \bb N} (\pi_l \otimes \pi_{1/2})(\mathcal D)$
+\end{frame}
+
+\begin{frame}{The Irreducible Spectral Triple} % % % % % % % % % % % % % % % % % % %
+A first spectral triple is simply taking 
+\begin{multline}
+    D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 \\= \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} = \pi_j(E) \otimes \sigma_1 + \pi_j(F) \otimes \sigma_2 + \pi_j(H) \otimes \sigma_3
+\end{multline} where $H = J_3$, $E = J_+$, $F = J_-$ are the actions of $J_3$, $J^\pm \in su(2)$ on $V_j$ respectively.
+
+- The spectral triple $(\acal_N, H_N = V_j \otimes \CC^2, D_N)$
+    \begin{itemize}
+        
+    \item Is $SU(2)$-equivariant
+    
+    \item Has eigenvalues $j+1$ and $-j$ with multiplicities $2j+2$ and $2j$.
+        
+    \item Isn't compatible with a grading or a real structure.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Full Spectral Triple} % % % % % % % % % % % % % % % % % % %
+Spectral triple $(\acal_N, \hcal_N = \mathcal A_N \otimes \CC^2, \mathcal D_N)$, where:
+\begin{multline}
+    \mathcal D_N = (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) = D = \begin{pmatrix} 1 + \text{ad}\pi_j(H) & \text{ad}\pi_j(F) \\ \text{ad}\pi_j(E) & 1 - \text{ad}\pi_j(H)\end{pmatrix} 
+    %= \text{ad}\pi_j(E) \otimes \sigma_1 + \text{ad}\pi_j(F) \otimes \sigma_2 + \text{ad}\pi_j(H) \otimes \sigma_3
+\end{multline}
+where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\mathcal A_N$
+
+    \begin{itemize}
+    
+    \item It is a real spectral triple.
+    
+    \item It is $SU(2)$-equivariant
+    
+    \item Spectrum of $\mathcal D_N$ is the truncation of $\slashed D$ to $\{-N, \dots, N+1\}$.%The eigenvalues of $\mathcal D_N$ are $N+1$ with multiplicity $2N+2$, and $\pm l$ with multiplicity $2l$ for $l = 1, \dots, N$
+    
+    \item It is not compatible with a grading.
+    
+    \end{itemize}
+
+\textbf{It is a truncation of the canonical spectral triple}.
+
+- \textbf{Theorem}: the two spectral triples induce the same distance in the state space of $\acal_N$.
+\end{frame}
+
+\begin{frame}{(Bloch) $SU(2)$-coherent states on $\acal_N$} % % % % % % % % % % % % % % % % % % %
+- The Bloch/$SU(2)$-\rtext{coherent states} are for the group $SU(2)$ what the usual harmonic oscillator coherent states are for the Heisenberg group. In particular, they are minimum uncertainty states. 
+
+%- \rtext{They will be considered fuzzy approximations of the points of $S^2$}.
+
+- Points of the $(\phi, \theta) \in S^2$ sphere are approximated by coherent vectors $|\phi, \theta)_N = R_{(\phi, \theta)}|j, -j\rangle \in V_J \Longleftrightarrow $ states of $\mathcal A_N = End(V_j)$ $\psi^N_{\phi, \theta} \in \mathcal S(\mathcal A_N)$. 
+
+- This identification of points in $S^2$ with coherent states is $SU(2)$-equivariant and The distance between them is $SU(2)$-invariant.
+
+%What group used in Fiore?
+\end{frame}
+
+\begin{frame}{Distance between $SU(2)$-coherent states} % % % % % % % % % % % % % % % % % % %
+- For $N = 1$: all pure states are coherent states and 
+\begin{equation}
+    d_1(\hat p, \hat q) = \frac{1}{2}|\vec p - \vec q|_{\RR^3}
+\end{equation}
+
+- For any $N$, letting $\omega_m = |j, m\rangle \langle j, m|$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
+\begin{equation}
+    d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k)
+\end{equation}
+% \end{equation} and so, between the north and south poles
+% \begin{equation}
+%     d_N(\psi_{(0,0), \psi_{(0, \pi)}}) = \sum_{k = 1}^N \frac{1}{\sqrt{k(N-k+1)}}
+% \end{equation}
+
+- In general:
+    The distance between increasing fuzzy approximations of $p, q \in S^2$ is non-decreasing with $N$ and
+    \begin{equation}
+        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})
+    \end{equation}
+\end{frame}
+
+% \begin{frame}{$|j, m\ket$ Distances for all $N$} % % % % % % % % % % % % % % % % % % %
+
+% \end{frame}
+
+% \begin{frame}{General Study} % % % % % % % % % % % % % % % % % % %
+
+% Auxiliary distance: lower bound: distance along diagonal matrices of $\acal_N$
+
+% The distance is $SU(2)$-invariant
+
+% The distance between $2$ states associated to the points $p, q \in S^2$ is non-decreasing with $N$/
+
+% In general:
+%     \begin{equation}
+%         \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{geo}((\phi, \theta), (\phi', \theta'))
+%     \end{equation} and, finally,
+%     \begin{equation}
+%         \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})
+%     \end{equation}
+% \end{frame}
+
+% \begin{frame}{Main Points} % % % % % % % % % % % % % % % % % % %
+% Very similar procedure to calculate distances followed in Chakraborty Moyal Plane and Chakraborty Fuzzy Sphere.
+% \end{frame}
