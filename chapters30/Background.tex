@@ -3,11 +3,29 @@
 
 \begin{frame}{Noncommutative Geometry} % % % % % % % % % % % % % % % % % % %
     
-    \textbf{Unital Spectral Triple} $(\acal , \hcal, D)$: $\hcal$ is a complex separable Hilbert space; $\acal$ is a complex associative intolutive unital $C^*$-algebra with a faithful unital $*$-representation $\acal \hookrightarrow \mathcal B(\hcal)$; a self-adjoint (unbounded) operator $D: \hcal \to \hcal$ with compact resolvent, such that $[D, a] \in \mathcal B(\hcal)$ $\forall a \in \acal$.
+    \textbf{Unital Spectral Triple} $(\acal , \hcal, D)$: $\hcal$ is a complex separable Hilbert space; $\acal$ is a complex associative involutive unital $C^*$-algebra with a faithful unital $*$-representation $\acal \hookrightarrow \mathcal B(\hcal)$; a self-adjoint (unbounded) operator $D: \hcal \to \hcal$ with compact resolvent, such that $[D, a] \in \mathcal B(\hcal)$ $\forall a \in \acal$.
     
     \textbf{Canonical Spectral Triple}: Leg $(M, g)$ be an $n$-dimensional compact oriented Riemannian manifold which admits a spin structure% $(Spin_n \to Spin\,M \to M, \eta: Spin\,M \to SO\,M)$
-    , and let $\Sigma M$% = Spin\, M \times_\rho \Sigma_n$
-    be the associated spinor bundle. Then $(\acal = C^\infty(M), \hcal = L^2(M, \Sigma M), \slashed D = -i \gamma^\mu \nabla^\Sigma_\mu)$%, where $\Sigma_n$ is the $2^{\lfloor n/2 \rfloor}$-dim. fermionic Fock space.
+    , and let $\Sigma M$ % = Spin\, M \times_\rho \Sigma_n$
+    be the associated spinor bundle. Then $(\acal = C^\infty(M), \hcal = L^2(M, \Sigma M), \slashed D = -i \gamma^\mu \nabla^g_\mu)$%, where $\Sigma_n$ is the $2^{\lfloor n/2 \rfloor}$-dim. fermionic Fock space.
+    
+    - What is $[D, a]$?: $[\slashed D, f] = -i [(\partial_\mu f) \gamma_\mu] \psi = -i(df)\cdot$,
+    
+    - What is $||[D, a]||$?: $||[\slashed D, f]||^2 = sup_{x \in M} ||g_x^{-1}(df, d \cut f)||^2 =: ||grad(f) \in \Gamma(TM)||_\infty^2$,
+    
+    - usually $d(x, y) := inf\{length(\gamma): \gamma:[0,1] \to M; \gamma(0) = x, \gamma(1) = y\}$,
+    
+    - Good lower bound for $d_D(\hat x, \hat y)$: $f(y) - f(x) = \int_0^1 \frac{d}{dt}[f(\gamma(t))]dt = \int_0^1 df_{\gamma(t) (\dot \gamma(t))} = \int_0^1 g_{\gamma(t)}(grad(f), \dot \gamma) dt$,
+    $|f(x) - f(y)| \leq \int_0^1 |grad(f)| |\dot \gamma(t)| dt \leq ||grad(f)||_
+    \infty \, length(\gamma) = ||[\slashed D, f]|| length(\gamma)$ for all $\gamma$
+    Thus:
+    $d_D(\hat x, \hat y) = sup\{|f(x) - f(y)|: f \in C(M), ||[\slashed D, f]||\leq 1\} \leq inf \, length(\gamma) \equiv d(x, y)$,
+    
+    - Saturation of our lower bound: let $a_x \in C^(M)$, $a_x(y) := d(x, y)$, %its continuity is simply the triangle inequality
+    $||[\slashed D, a_x]|| = ||grad(a_x)||_\infty = 1$ and $|a_x(y) - a_x(x)| = |d(x,y)| = d(x,y)$ saturates the inequality, meaning that
+    \begin{equation}
+        
+    \end{equation}
     
     - \textbf{State of $C^*$-algebra} $\acal$ is an $\omega : \acal \to \CC$ linear, positive, of unit norm. \textbf{Pure}: can not be written as a convex combination of other states. Commutative: pure states $\Longleftrightarrow$ characters $\Longleftrightarrow$ points.
     
@@ -24,8 +42,8 @@
         % \item Why? To preserve the (continuous) symmetries of the space while keeping the algebra finite dimensional.
         % \end{itemize}
     
-    \textbf{Fuzzy Sphere} with this Dirac Spectral Triples  \cite{DAndrea2013} approximates $S^2$ as: \textbf{1.} $C^*$-algebra acting on the spinor fields $\hcal \cong L^2(S^2)\otimes \CC^2$; \textbf{2.} Representation of $SU(2)$; \textbf{3.}  Metric space on which $SU(2)$ acts by isometries.
+    \textbf{Fuzzy Sphere} with this Dirac Spectral Triples  \cite{DAndrea2013} approximates $S^2$ as: \textbf{1.} $C^*$-algebra $\mathcal A = C^\infty(S^2)$ acting on the spinor fields $\hcal \cong L^2(S^2)\otimes \CC^2$; \textbf{2.} Representation of $SU(2)$; \textbf{3.}  Metric space on which $SU(2)$ acts by isometries.
     
-    - For $N = 2j \in \bb N$, as $SU(2)$ representation $\lbtext{\acal_N}= \bigoplus_{l = 0}^N V_l \hookrightarrow$ $ \bigoplus_{l \in \bb N} V_l \cong L^2(S^2)$, where $V_l$ is the $2l+1$-dimensional irrep. of $SO(3)$ of homogeneous $l$-degree polynomials in $x^1, x^2, x^3$, with basis $\{Y^l_m\}_{|m| \leq l}$. As algebra: $\lbtext{\acal_N} = End(V_j)$ understanding $V_j= \CC^{N+1} =$ $ span\{|j, m\ket\}_{|m| \leq j}$ as irrep. of $SU(2)$; this follows from replacing $x^i \mapsto \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i)$ \then $[x^i, x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} x_k$.%. Under the adjoint action, it has the irrep. decomposition $\acal_N \cong x$, making it a truncation of $L^2(S)\otimes \CC^2 \cong $
+    - For $N = 2j \in \bb N$, as $SU(2)$ representation $\lbtext{\acal_N}= \bigoplus_{l = 0}^N V_l \hookrightarrow$ $ \bigoplus_{l \in \bb N} V_l \cong L^2(S^2)$, where $V_l$ is the spin $l$ representation of $SO(3)$: of homogeneous $l$-degree polynomials in $x^1, x^2, x^3$, with basis $\{Y^l_m\}_{|m| \leq l}$. As algebra: $\lbtext{\acal_N} = End(V_j)$, $2j+1 := N$ understanding $V_j= \CC^{N+1} =$ $ span\{|j, m\ket\}_{|m| \leq j}$ as irrep. of $SU(2)$; this follows from replacing $x^i \mapsto \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i)$ \then $[x^i, x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} x_k$.%. Under the adjoint action, it has the irrep. decomposition $\acal_N \cong x$, making it a truncation of $L^2(S)\otimes \CC^2 \cong $
     
 \end{frame}
