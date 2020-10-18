@@ -75,7 +75,7 @@ where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\ma
 
 - \rtext{Points of the $E(\phi, \theta) \in S^2$ sphere are approximated by coherent vectors} $\lbtext{|\phi, \theta)_N} := R_{(\phi, \theta)}|j, -j\rangle \in V_j \Longleftrightarrow $ states of $\mathcal A_N = End(V_j)$ $\lbtext{\psi^N_{\phi, \theta}} = (\phi, \theta| \cdot |\phi, \theta)_N \in \mathcal S(\mathcal A_N)$. 
 
-- This identification of points in $S^2$ with coherent states is $SU(2)$-equivariant \& the distance between them will be $SU(2)$-invariant.
+- This identification of points in $S^2$ with coherent states $\psi^N: \acal_N \to L^2(S^2)$ is $SU(2)$-equivariant \& the distance between them will be $SU(2)$-invariant.
 
 %What group used in Fiore?
 \end{frame}
@@ -86,6 +86,10 @@ where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\ma
     d_1(\hat p, \hat q) = \frac{1}{2}|\vec p - \vec q|_{\RR^3}
 \end{equation}
 
+\end{frame}
+
+\begin{frame}{$|j, m\ket$ Distances for all $N$} % % % % % % % % % % % % % % % % % % %
+
 - For any $N$, letting $\omega_m = |j, m\rangle \langle j, m|$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
 \begin{equation}
     d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k)
@@ -95,33 +99,28 @@ where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\ma
 %     d_N(\psi_{(0,0), \psi_{(0, \pi)}}) = \sum_{k = 1}^N \frac{1}{\sqrt{k(N-k+1)}}
 % \end{equation}
 
+\end{frame}
+
+\begin{frame}{General Study} % % % % % % % % % % % % % % % % % % %
+
+Auxiliary distance: lower bound: distance along diagonal matrices of $\acal_N$
+
+The distance is $SU(2)$-invariant
+
+The distance between $2$ states associated to the points $p, q \in S^2$ is non-decreasing with $N$/
 - In general:
     The distance between increasing fuzzy approximations of $p, q \in S^2$ is non-decreasing with $N$ and
     \begin{equation}
         \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(E(\phi, \theta), E(\phi', \theta'))
     \end{equation}
+In general:
+    \begin{equation}
+        \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{geo}((\phi, \theta), (\phi', \theta'))
+    \end{equation} and, finally,
+    \begin{equation}
+        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})
+    \end{equation}
 \end{frame}
-
-% \begin{frame}{$|j, m\ket$ Distances for all $N$} % % % % % % % % % % % % % % % % % % %
-
-% \end{frame}
-
-% \begin{frame}{General Study} % % % % % % % % % % % % % % % % % % %
-
-% Auxiliary distance: lower bound: distance along diagonal matrices of $\acal_N$
-
-% The distance is $SU(2)$-invariant
-
-% The distance between $2$ states associated to the points $p, q \in S^2$ is non-decreasing with $N$/
-
-% In general:
-%     \begin{equation}
-%         \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{geo}((\phi, \theta), (\phi', \theta'))
-%     \end{equation} and, finally,
-%     \begin{equation}
-%         \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})
-%     \end{equation}
-% \end{frame}
 
 % \begin{frame}{Main Points} % % % % % % % % % % % % % % % % % % %
 % Very similar procedure to calculate distances followed in Chakraborty Moyal Plane and Chakraborty Fuzzy Sphere.
