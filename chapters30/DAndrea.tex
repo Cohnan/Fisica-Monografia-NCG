@@ -75,6 +75,26 @@ where, e.g. $\text{ad}\pi_j(H) = [\pi_J(H), \cdot ]$ is the action of $J_3 \in s
 - \rtext{\textbf{Theorem}}: the two spectral triples induce the same distance in $\acal_N$. Pf: $[\dcal, a]b \otimes v = \cdots = \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v = [D_N, a] \cdot b \otimes v$
 \end{frame}
 
+\begin{frame}{$SU(2)$-invariance of the distance} % % % % % % % % % % % % % % % % % % %
+
+\textbf{\rtext{Theorem}}: For all $N = 2j \in \bb N$, the distance is $SU(2)$-invariant: 
+\begin{align}
+    d_N(g_* \omega, \omega') &= d_N(g_* \omega, g_*\omega'), & \text{for all $\omega, \omega' \in \mathcal S(\acal_N)$}.
+\end{align}
+
+Pf: $SU(2) \ni g$ acts on the states: $\lbtext{g_*\omega}(\cdot) := \omega(\cdot^g)$ $\longleftarrow$ it acts on the algebra: $\lbtext{a^g}:= g\circ a \circ g^* \cdot$ $\longleftarrow$ it acts on $V_j$: $\pi_j(g)$.
+
+The theorem follows once it is shown that
+    \rtext{$||[D_N, a^g]|| = ||[D_N, a]||$}
+$\xleftarrow{}$
+$[D_N, a^g \otimes 1] = u[D_N, a \otimes 1_2]u^*$ where $u = \pi_j(g) \otimes \pi_{1/2}(g)$ is the induced unitary action of $g$ in $H_N$ $\xleftarrow{}$
+1. $a^g \otimes 1_2 = u(a \otimes 1_2)u^*$;
+2. The spectral triple is $SU(2)$-equivariant, hence $D_N$ commutes with the $SU(2)$ action.
+
+$d_N(g_* \omega, g_* \omega') = sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g)|: ||[D_N, a \otimes 1_2]|| \leq 1 \} = sup_{b \in \acal_N}\{ |\omega(b) - \omega'(b)|: ||[D_N, b \otimes 1_2]|| \leq 1 \} = d_N(\omega, \omega')$, where $b = a^g$.
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Coherent States}
 
@@ -87,10 +107,10 @@ where, e.g. $\text{ad}\pi_j(H) = [\pi_J(H), \cdot ]$ is the action of $J_3 \in s
 
 %- \rtext{They will be considered fuzzy approximations of the points of $S^2$}.
 
-- \rtext{Points of the $E(\phi, \theta) \in S^2$ sphere are approximated by coherent vectors} $\lbtext{|\phi, \theta)_N} := R_{(\phi, \theta)}|j, -j\rangle \in V_j \Longleftrightarrow $ states of $\mathcal A_N = End(V_j)$ $\lbtext{\psi^N_{\phi, \theta}} = (\phi, \theta| \cdot |\phi, \theta)_N \in \mathcal S(\mathcal A_N)$. 
+- \rtext{Points of the $E(\phi, \theta) \in S^2$ sphere are approximated by coherent vectors} $\lbtext{|\phi, \theta)_N} := R_{(\phi, \theta)}|j, -j\rangle \in V_j \Longleftrightarrow $ states of $\mathcal A_N = End(V_j)$ $\lbtext{\psi^N_{(\phi, \theta)}} = (\phi, \theta| \cdot |\phi, \theta)_N \in \mathcal S(\mathcal A_N)$. 
 
-- This identification of points in $S^2$ with coherent states %($\psi^N: \acal_N \to L^2(S^2)$ at the algebra level) ???
-is $SU(2)$-equivariant \& the distance between them will be $SU(2)$-invariant.
+- \rtext{This identification of points in $S^2$ with coherent states %($\psi^N: \acal_N \to L^2(S^2)$ at the algebra level) ???
+is $SU(2)$-equivariant}: $g_* \psi^N_{(\phi, \theta)} = \psi^N_{g\cdot (\phi, \theta)}$ \& \rtext{the distance between them is $SU(2)$-invariant}.
 
 %What group used in Fiore?
 \end{frame}
