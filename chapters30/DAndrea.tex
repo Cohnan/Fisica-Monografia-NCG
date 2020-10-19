@@ -129,7 +129,7 @@ If $a$ is diagonal hermitian, then
 
 - $\omega_{\vec x}$ is pure \iff $\vec x = (\sin \theta \cos \phi, \sin \theta, \cos \theta) \in S^2$ \dbtext{\iff} $\omega_x = \psi^1_{(\phi, \theta)}$.
 
-- For $N = 1$: all pure states are coherent states and 
+\textbf{Theorem}: For $N = 1$ all pure states are coherent states and 
 \begin{equation}
     d_1(\hat p, \hat q) = \frac{1}{2}|\vec p - \vec q|_{\RR^3}
 \end{equation}
@@ -139,7 +139,7 @@ Pf: $|\omega_{\vec x}(b) - \omega_{\vec y}(b)| = |(\vec x - \vec y)\cdot \vec b|
 
 \begin{frame}{$|j, m\ket$ Distances for all $N$} % % % % % % % % % % % % % % % % % % %
 
-- For any $N$, letting $\omega_m = |j, m\rangle \langle j, m|$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
+\textbf{Theorem}: For any $N$, let $\lbtext{\omega_m} = \langle j, m| \cdot |j, m\rangle \in \mathcal S(\acal_N)$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
 \begin{equation}
     d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k)
 \end{equation}
@@ -147,7 +147,9 @@ Pf: $|\omega_{\vec x}(b) - \omega_{\vec y}(b)| = |(\vec x - \vec y)\cdot \vec b|
 % \begin{equation}
 %     d_N(\psi_{(0,0), \psi_{(0, \pi)}}) = \sum_{k = 1}^N \frac{1}{\sqrt{k(N-k+1)}}
 % \end{equation}
+Pf: Recall that $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$ \then $\omega_m(a) - \omega_n(a) = \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle$; since $|\langle j, k |a|j, k-1 \rangle  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, we get the upper bound. 
 
+Define the diagonal hermitian operator $\hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m  \right)|j, m\rangle$, hence $[E, \hat a] |j, m \rangle = |j, m+1\rangle$ ($m < j$) \then $\hat a$ saturates the inequality.
 \end{frame}
 
 \begin{frame}{General Study} % % % % % % % % % % % % % % % % % % %
