@@ -1,5 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Two $SU(2)$-equivariant distances/spectral triples on the Fuzzy Sphere}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Spectral Triples}
 
 \begin{frame}{Canonical Spectral Triple of $S^2$} % % % % % % % % % % % % % % % % % % %
 
@@ -71,6 +75,13 @@ where, e.g. $\text{ad}\pi_j(H) = [\pi_J(H), \cdot ]$ is the action of $J_3 \in s
 - \rtext{\textbf{Theorem}}: the two spectral triples induce the same distance in $\acal_N$. Pf: $[\dcal, a]b \otimes v = \cdots = \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v = [D_N, a] \cdot b \otimes v$
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Coherent States}
+
+\begin{frame}{SHO Coherent States} % % % % % % % % % % % % % % % % % % %
+
+\end{frame}
+
 \begin{frame}{(Bloch) $SU(2)$-coherent states on $\acal_N$} % % % % % % % % % % % % % % % % % % %
 - The Bloch/$SU(2)$-\rtext{coherent states} are for the group $SU(2)$ what the usual harmonic oscillator coherent states are for the Heisenberg group. In particular, they are minimum uncertainty states. 
 
@@ -84,21 +95,45 @@ is $SU(2)$-equivariant \& the distance between them will be $SU(2)$-invariant.
 %What group used in Fiore?
 \end{frame}
 
-\begin{frame}{Distance between $SU(2)$-coherent states (1/2)} % % % % % % % % % % % % % % % % % % %
-From now on: use the irreducible s.t. and not write the $\pi_j$'s.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Distance between $SU(2)$-coherent states}
 
-\textit{General lemma}: For $a \in \acal_N$, \begin{align}
-    ||[H, a]|| &\leq ||[D_N, a]|| & ||[E, a]|| &\leq ||[D_N, a]|| & ||[F, a]|| &\leq ||[D_N, a]|| .
-\end{align} If $a$ is diagonal hermitian, then
+\begin{frame}{Generalities} % % % % % % % % % % % % % % % % % % %
+From now on: we use the irreducible s.t. and not write the $\pi_j$'s.
+
+- The supremum $d_D(\omega, \omega')$ is always attained in hermitian elements.
+
+- For $a \in \acal_N$, 
+\begin{equation} \label{ineqDN}
+    ||[H, a]||, ||[E, a]||, ||[F, a]||  \leq ||[D_N, a]||
+\end{equation} \label{eqDNdiag}
+If $a$ is diagonal hermitian, then
 \begin{equation}
     ||[E, a]|| = ||[D_N, a]||.
 \end{equation}
 
+- A state may be defined only on hermitian elements of $\acal$, since from there it can be uniquely extended to all $\acal$: $a = \frac{a+a*}{2} + \frac{a - a*}{2} \in Herm. + Antiherm. = Herm. + i\, Herm.$.
+
+\end{frame}
+
+\begin{frame}{The $N = 1$ case} % % % % % % % % % % % % % % % % % % %
+% $\pi_{1/2}(J_k) = \sigma_k/2$
+
+- Any hermitian element in $\acal_1 = M_2(\CC)$ can be written as
+\begin{align}
+    a &= \begin{pmatrix} a_0 + a_3 & a_1 - i a_2 \\ a_1 + i a_2 & a_0 - a_3 = a_0 + \vec a \cdot \vec \sigma \end{pmatrix} & \text{for $(a_0, \dots, a_3) \in \RR^4$.}
+\end{align}
+
+
+- Positivity of states implies that, restricted to hermitian elements, they all are  $\omega_{\vec x}(a) = a_0 + \vec x \cdot \vec a$, for $\vec x \in B^3 \subset \RR^3$.
+
+- $\omega_{\vec x}$ is pure \iff $\vec x = (\sin \theta \cos \phi, \sin \theta, \cos \theta) \in S^2$ \iff $\omega_x = \psi^1_{(\phi, \theta)}$.
 
 - For $N = 1$: all pure states are coherent states and 
 \begin{equation}
     d_1(\hat p, \hat q) = \frac{1}{2}|\vec p - \vec q|_{\RR^3}
 \end{equation}
+Pf: $|\omega_{\vec x}(b) - \omega_{\vec y}(b)| = |(\vec x - \vec y)\cdot \vec b| \leq |\vec x - \vec y||\vec b|$; $i[D_1, a]$ is hermitian with max. eigenvalue/norm $=2 |\vec a|$ \then any $a \in \acal_1$ hermitian with $\vec a$ parallel to $\vec x - \vec y$ st. $2|\vec a| = 1$ saturates.
 
 \end{frame}
 
