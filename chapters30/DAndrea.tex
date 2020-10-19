@@ -169,27 +169,52 @@ if $a$ is diagonal hermitian, then
 Define the diagonal hermitian operator $\hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m  \right)|j, m\rangle$, \then $[E, \hat a] |j, k \rangle = |j, k+1\rangle$ ($k < j$), and so $\hat a$ saturates the inequality.
 \end{frame}
 
-\begin{frame}{General Study} % % % % % % % % % % % % % % % % % % %
+\begin{frame}{Relating Distinct $N$'s and Upper Bound} % % % % % % % % % % % % % % % % % % %
 
-Auxiliary distance: lower bound: distance along diagonal matrices of $\acal_N$
+\rtext{\textbf{Theorem}}: the distance $d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})$ is non-decreasing with $N$.
 
-The distance is $SU(2)$-invariant
+% KEY: Relate $N$ with $N+1$
+\textit{Pf}: $U^\pm_j |\phi, \theta)_{N+1} = |\phi, \theta)_N \otimes |\phi, \theta)_1$, $\xrightarrow{}$ $\eta^+_N: \acal_N \to \acal_{N + 1}$ $\longrightarrow{}$ $\psi^{N+1}_{(\phi, \theta)} \circ \eta^+_N(a) = \psi^N_{(\phi, \theta)}$ \& $||[D_{N + 1}, \eta^+_N(a)]|| \leq ||[D_N, a]||$.
 
-The distance between $2$ states associated to the points $p, q \in S^2$ is non-decreasing with $N$/
-- In general:
-    The distance between increasing fuzzy approximations of $p, q \in S^2$ is non-decreasing with $N$ and
-    \begin{equation}
+\rtext{\textbf{Theorem}}: For all $N$, 
+\begin{equation}
+    d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{geo}(E(\phi, \theta), E(\phi', \theta')).
+\end{equation}
+
+\textit{Pf}: \textbf{use SU(2)-invariance of distance} and only prove it between within the great circle $\theta = \frac{\pi}{2}$: $d_N(\psi^N_{(0, \frac{\pi}{2})}, \psi^N_{(\phi, \frac{\pi}{2})}) \leq |\phi|$. 
+$|\psi^N_{(\phi, \frac{\pi}{2})} - \psi^N_{(0, \frac{\pi}{2})}| = |i \int_0^\phi \psi^N_{(\alpha, \frac{\pi}{2})}([H, a]) d\alpha | \leq ||[H, a]|| |\phi| \leq |\phi| ||[D_N, a]||$.
+\end{frame}
+\begin{frame}{Auxiliary Distance and Limit}
+
+Distance along diagonal, hermitian matrices eassier to understand, but useful.
+
+% KEY: find simpler (we understand [D, a] if a is diagonal hermitian), but useful auxiliary distance (gives a lower bound that sandwhiches the actual distance)
+Let $\lbtext{\bcal_N} \subset \acal_N$ be sugalgebra of diagonal matrices $\xrightarrow{}$ $\psi^N_{(\phi, \theta)} = \psi^N_{(0, \theta)}$, now 
+$\lbtext{\rho_N}(\theta) := sup_{a \in \bcal_N, a = a^*}\{|\psi^N_{(0, \theta)} - \psi^N_{(0, 0)}| : ||[D_N, a]|| \leq 1\}$: \textbf{1.} exact formula related to $\omega_m$ states, \textbf{2.} $0 \leq \rho'_N(\theta) \leq 1$ $\xrightarrow{}$ $\rho_N(\theta) \leq \theta$, \textbf{3.} non-decreasing with $N$.
+
+
+\textbf{Lemma}: For all $N$, 
+\begin{align*}
+    1.& \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})  ; \\
+    2.& \text{the sequence $\rho_N(\theta)$ converges uniformly to $\theta$ as $N\to \infty$}.
+\end{align*}
+
+\textbf{\rtext{Theorem}}:  
+\begin{equation}
         \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(E(\phi, \theta), E(\phi', \theta'))
-    \end{equation}
-In general:
-    \begin{equation}
-        \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{geo}((\phi, \theta), (\phi', \theta'))
-    \end{equation} and, finally,
-    \begin{equation}
-        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})
-    \end{equation}
+\end{equation}
+
 \end{frame}
 
-% \begin{frame}{Main Points} % % % % % % % % % % % % % % % % % % %
-% Very similar procedure to calculate distances followed in Chakraborty Moyal Plane and Chakraborty Fuzzy Sphere.
-% \end{frame}
+\begin{frame}{Main Points} % % % % % % % % % % % % % % % % % % %
+- \textbf{Procedure}: Understand $||[D, a]||$; find upper limit for $|\omega(a) - \omega(a')|$ dependent on $||[D, a]||$; find hermitian algebra element that saturates the inequality (or sequence that get close). 
+%Very similar procedure to calculate distances followed in Chakraborty Moyal Plane and Chakraborty Fuzzy Sphere.
+
+- \textbf{Discrete Basis States}: In $\acal_N = End(V)$, study vector states of important basis, relating $\omega_m(a) - \omega_n(a)$ to $[D_N, a]$.
+
+- \textbf{$G$-invariance of distance}: if $G$ acts by ``isometries'', simplify what needs to be proven.
+
+- \textbf{Auxiliary distance}: study simpler subalgebra distance: lower bound whose behavior is understood and that encases the actual distance, allowing approximate study.
+
+- \textbf{Behaviour with $N$}: Relate algebras and coherent states of subsequent $N$, finding relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$.
+ \end{frame}
