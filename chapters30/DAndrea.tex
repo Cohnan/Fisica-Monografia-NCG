@@ -18,8 +18,8 @@
 % $\nabla_\mu = \partial_\mu - \frac{c_\mu}{q} \sigma_\mu \sigma_{\cut \mu} \cdot$, 
 % $\slashed D = -i \frac{q}{2} \sigma^\mu \nabla_\mu
 
-- So $\slashed D = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} = \partial_E \otimes \sigma_1 + \partial_F \otimes \sigma_2 + \partial_H \otimes \sigma_3$ where $\partial_H = -i \partial_\phi$, $\partial_E = e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right)$, $\partial_F = -\partial_E% = e^{-i\phi} \left( \partial_\theta - i cot\,\theta \partial_\phi \right)
-$ are the actions of $J_3$, $J^\pm \in i\,su(2)$ on $L^2(S^2)$ respectively. Eig. vectors: orth. basis of $\hcal$, Spectrum $= \{\pm l\} = \ZZ$ with multiplicities $2l$.%: L^2(S^2) \otimes \CC^2 \to L^2(S^2) \otimes \CC^2 = \oplus_{l \in \bb N} (\pi_l \otimes \pi_{1/2})(\mathcal D)$
+- So $\lbtext{\slashed D} = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3$ where $\partial_H = -i \partial_\phi$, $\partial_F = e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right)$, $\partial_E = -\partial_F% = e^{-i\phi} \left( \partial_\theta - i cot\,\theta \partial_\phi \right)
+$ are the actions of $J_3$, $J^\pm \in i\,su(2)$ on $L^2(S^2)$ respectively. \textit{Eig. vectors}: orth. basis of $\hcal$; \textit{Spectrum} $= \{\pm l\} = \ZZ - 0$ with multiplicities $2l$.%: L^2(S^2) \otimes \CC^2 \to L^2(S^2) \otimes \CC^2 = \oplus_{l \in \bb N} (\pi_l \otimes \pi_{1/2})(\mathcal D)$
 
 % - The eigenvectors (spinor harmonics) $Y^{'}_{lm}, Y^{''}_{lm}$, $l \in \NN + 1/2$, of $D$ make up an orthogonal basis of the spinor fields $\hcal$.
 % - The eigenvalues are: of $Y'_{l\cdot}: (l + 1/2) \in \NN$, of $Y{''}_{l\cdot}: -(l + 1/2)$, with multiplicities $2l+1$
@@ -28,8 +28,11 @@ $ are the actions of $J_3$, $J^\pm \in i\,su(2)$ on $L^2(S^2)$ respectively. Eig
 \begin{frame}{The Irreducible Spectral Triple} % % % % % % % % % % % % % % % % % % %
 A first spectral triple is simply taking 
 \begin{multline}
-    \lbtext{D_N} := (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 \\= \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} = \pi_j(E) \otimes \sigma_1 + \pi_j(F) \otimes \sigma_2 + \pi_j(H) \otimes \sigma_3
-\end{multline} where $H = J_3$, $E = J_+$, $F = J_-$ are the actions of $J_3$, $J^\pm \in su(2)$ on $V_j$ respectively.
+    \lbtext{D_N} 
+    := (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 \\
+    = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
+    = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
+\end{multline} where $H = J_3$, $F = J_+$, $E = J_-$ are the actions of $J_3$, $J^\pm \in su(2)$ on $V_j$ respectively.
 
 - The spectral triple \rtext{$(\acal_N, \lbtext{H_N} = V_j \otimes \CC^2, D_N)$}
     \begin{itemize}
@@ -49,7 +52,7 @@ A first spectral triple is simply taking
     \lbtext{\mathcal D_N} := (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) = D = \begin{pmatrix} 1 + \text{ad}\pi_j(H) & \text{ad}\pi_j(F) \\ \text{ad}\pi_j(E) & 1 - \text{ad}\pi_j(H)\end{pmatrix} 
     %= \text{ad}\pi_j(E) \otimes \sigma_1 + \text{ad}\pi_j(F) \otimes \sigma_2 + \text{ad}\pi_j(H) \otimes \sigma_3
 \end{multline}
-where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\mathcal A_N$
+where, e.g. $\text{ad}\pi_j(H) = [\pi_J(H), \cdot ]$ is the action of $J_3 \in su(2)$ on $\mathcal A_N$.
 
     \begin{itemize}
     
@@ -65,7 +68,7 @@ where, for example, $\text{ad}\pi_j(H)$ is the action of $J_3 \in su(2)$ on $\ma
 
 \textbf{It is a truncation of the canonical spectral triple}.
 
-- \rtext{\textbf{Theorem}}: the two spectral triples induce the same distance in the state space of $\acal_N$.
+- \rtext{\textbf{Theorem}}: the two spectral triples induce the same distance in $\acal_N$. Pf: $[\dcal, a]b \otimes v = \cdots = \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v = [D_N, a] \cdot b \otimes v$
 \end{frame}
 
 \begin{frame}{(Bloch) $SU(2)$-coherent states on $\acal_N$} % % % % % % % % % % % % % % % % % % %
