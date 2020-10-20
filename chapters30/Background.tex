@@ -11,12 +11,12 @@
     
     - \textbf{State of $C^*$-algebra} $\acal$ is an $\omega : \acal \to \CC$ linear, positive, of unit norm. \textbf{Pure}: can not be written as a convex combination of other states. Commutative: pure states $\Longleftrightarrow$ characters $\hat x$ $\Longleftrightarrow$ points $x$.
     
-    - \textbf{Distance}: $d_D(\omega, \omega') = sup_{a \in \acal} \left\{|\omega(a) - \omega'(a)| \, | \, ||[D, a]||_{op} \leq 1 \right\}$
+    - \textbf{Distance}: $d_D(\omega, \omega') := sup_{a \in \acal} \left\{|\omega(a) - \omega'(a)| \, | \, \rtext{||[D, a]||_{op} \leq 1} \right\}$
     
 \end{frame}
 
 \begin{frame}{Canonical Spectral Triple: $d(x, y) = d_D(\hat x, \hat y)$}
-    - $[\slashed D, f] = -i [(\partial_\mu f) \gamma_\mu] \psi = -i(df)\cdot$
+    - $[\slashed D, f]\psi = -i [(\partial_\mu f) \gamma^\mu] \psi = -i(df)\cdot \psi$
     
     - $||[\slashed D, f]||^2 = sup_{x \in M} ||g_x^{-1}(df, d \cut f)||^2 =: ||grad(f) \in \Gamma(TM)||_\infty^2$
 
@@ -50,7 +50,7 @@
     $\lbtext{\acal_N}= \bigoplus_{l = 0}^N V_l$ as $SU(2)$ representation. 
     As algebra: replacing $x^i \mapsto \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i)$, $[J_i, J_k] = i \epsilon_{ijk} J_k$, $\lbtext{\acal_N} := End(V_j) = M_{N+1}(\CC)$, understanding $V_j= \CC^{N+1} = span\{|j, m\ket\}_{|m| \leq j}$ as irrep. of $SU(2)$; this follows from  \then \rtext{$[x^i, x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} x_k$}, $\sum x_1^2 + x_2^2 + x_3^2 = 1$.
     
-    With these Dirac Spectral Triples \cite{DAndrea2013} \rtext{approximates $S^2$ as: \textbf{1.} $C^*$-algebra $\acal$ acting on the spinor fields $\hcal$; \textbf{2.} Representation of $SU(2)$; \textbf{3.}  Metric space on which $SU(2)$ acts by isometries.}
+    With these Dirac Spectral Triples\cite{DAndrea2013} \rtext{approximates $S^2$ as: \textbf{1.} $C^*$-algebra $\acal$ acting on the spinors $\hcal$; \textbf{2.} Representation of $SU(2)$ (diffeomorphisms); \textbf{3.}  Metric space on which $SU(2)$ acts by isometries.}
     
     %. Under the adjoint action, which makes sense since R J_3 R^{-1} is rotation under rotated axis
     

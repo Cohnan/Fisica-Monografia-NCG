@@ -8,18 +8,128 @@ As manifold? What preserves differential structure
 
 ($A$ unital) States: (DAndrea 2013) $S(A)$ (norm completion of) set of states of $A$. Is an ``extended (allowing infinity) metric space'' under the Connes' metric / \lbtext{spectral distance}. The supremum is alwasy attaine don self-adjoint elements (noted in Iochum 2001). ... COMPACT QUANTUM METRIC SPACE $(A,  d_{D})$.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Canonical Spectral Triple}
+To space: cofunctor that assigns algebra of functions
+
+To commutative algebra: cofunctor that assigns its spectrum: set of characters = set of multiplicative linear functionals <-> set of pure states.
+
+Gelfand transform
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spectral Triples Definitions and Connes' Distance Formula}
+\section{Serre-Swan theorem and Differential Structure?}
 
-Equivariant spectral triple (for D'Andrea, at least)
+Assume $M$ compact (the fuzzy sphere will be a ``compact quantum metric space''). $\acal C^\infty(M)$ is not a $C^*$ algebra, but it is dense in $A = C(M)$: set of ``sufficiently regular elements of $A$''.
 
-Meaning of the action and \textbf{the spectrum} of a Dirac operator.
+Characters of $\acal$ are measures, which extend to characters of $A$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Quantum Mechanics?}
+\section{Spectral Triples: Metric $\to$ Geometry}
+
+ - The Spectral Triple adds the final element to do geometry in noncommutative spaces: the metric (in gravitation, this is precisely the gravitational field).
+ 
+ Equivariant spectral triple (for D'Andrea, at least)
+
+Meaning of the action and \textbf{the spectrum} of a Dirac operator (in our case I think we think of the spectrum (and the multiplicities) to be an indication of how similar my Dirac operator is to the commutative one: the full spectral triple's Dirac operator ``tends'' to it in this sense)
+
+Presentation:
+    
+    \textbf{Canonical Spectral Triple}: Leg $(M, g)$ be an $n$-dimensional compact oriented Riemannian manifold which admits a spin structure% $(Spin_n \to Spin\,M \to M, \eta: Spin\,M \to SO\,M)$
+    , and let $\Sigma M$ % = Spin\, M \times_\rho \Sigma_n$
+    be the associated spinor bundle. Then $(\acal = C^\infty(M), \hcal = L^2(M, \Sigma M), \slashed D = -i \gamma^\mu \nabla^g_\mu)$%, where $\Sigma_n$ is the $2^{\lfloor n/2 \rfloor}$-dim. fermionic Fock space.
+    
+        \quad - The particle physics Dirac equation is $|p| = m$, where $|p| = \sqrt{E^2 - \vec p^2} = \sqrt{p^2} = \sqrt{\square} = \gamma_\mu p_\mu = -i \gamma^\mu \nabla_\mu$ is the Dirac operator
+        
+        \quad - Where $\{\gamma^\mu\}_\mu$ is a basis of $\RR^n = T^*_x M \hookrightarrow Cl(M, g)$ as operators on the fermionic Fock space, so they satisfy $\{\gamma^\mu, \gamma^\nu\} = 2 g^{\mu \nu}$
+        
+        \quad A connection $\nabla^\Sigma$ on the spinor bundle satisfies $\nabla^\Sigma = dx^\mu \otimes s_i + \psi^i \gamma^\mu \otimes A_i(E_\mu) = \gamma^\mu \otimes (E_\mu \psi - \psi^i A_i(E_\mu))$   ${E_\mu}_\mu$ is a local frame of $T M$ and $\{s_i\}_i$ is a basis of the spinor space / fermionic Fock space, and $A_\psi(X) = \psi^i A_i(X)$ where $A_i = \nabla^\Sigma s_i \in \Omega_U^1(TM) \otimes \Gamma_U(\Sigma_M)$ and $\Gamma_U(\Sigma M) = C^\infty(U, \Sigma_m)$.
+    
+    - \textbf{State of $C^*$-algebra} $\acal$ is an $\omega : \acal \to \CC$ linear, positive, of unit norm. \textbf{Pure}: can not be written as a convex combination of other states. Commutative: pure states $\Longleftrightarrow$ characters $\hat x$ $\Longleftrightarrow$ points $x$.
+        \quad - Interpretation: expected values
+        
+        \quad - CM: measures: Dirac measures are points
+        
+        \quad - Pure states: then, closer notion of point.
+        
+        
+    
+    \textbf{Unital Spectral Triple} $(\acal , \hcal, D)$: $\hcal$ is a complex separable Hilbert space; $\acal$ is a complex associative involutive unital $C^*$-algebra with a faithful unital $*$-representation $\acal \hookrightarrow \mathcal B(\hcal)$; a self-adjoint (unbounded) operator $D: \hcal \to \hcal$ with compact resolvent, such that $[D, a] \in \mathcal B(\hcal)$ $\forall a \in \acal$.
+    
+    - \textbf{Distance}: $d_D(\omega, \omega') := sup_{a \in \acal} \left\{|\omega(a) - \omega'(a)| \, | \, \rtext{||[D, a]||_{op} \leq 1} \right\}$
+    
+
+\textbf{Canonical: algebraic formulation of known facts (not in present.)}
+
+ - Conjugation $\iff$ \textbf{Real spectral triple / Spin geometry} $\iff$ Matter/Antimatter? $\iff$ ``admits spin structure'' $\to$ exists a unique Dirac operator (see Varilly formal)
+ 
+ - If only $spin^\CC$ $\iff$ Dixmier-Doudary Check cohomology class $\delta = 0$ $\iff$ no obstruction to the existance of the B-A bimodule ``w/'' Morita equivalence $\alg s$: \textbf{Spinor Bundle}: irred. Clifford module of rank $2^m$, where $m = \lfloor rank(M)/2 \rfloor$
+ 
+ - Grading $\gamma^5$: matter-antimatter distinction
+
+
+\textbf{Canonical: calculation}:
+
+- $[\slashed D, f]\psi = -i [(\partial_\mu f) \gamma^\mu] \cdot \psi = -i(df)\cdot \psi$
+    
+    - $||[\slashed D, f]||^2 = sup_{x \in M} ||g_x^{-1}(df, d \cut f)||^2 =: ||grad(f) \in \Gamma(TM)||_\infty^2$
+
+    - $d(x, y) := inf\{length(\gamma): \gamma:[0,1] \to M; \gamma(0) = x, \gamma(1) = y\}$
+    
+    - Good upper bound for $d_D(\hat x, \hat y)$: $d(x, y)$: for all $\gamma$, $f(y) - f(x) = \int_0^1 \frac{d}{dt}[f(\gamma(t))]dt = \int_0^1 df_{\gamma(t)} (\dot \gamma(t)) = \int_0^1 g_{\gamma(t)}(grad(f), \dot \gamma) dt$, 
+    so
+    $|f(x) - f(y)| \leq \int_0^1 |grad(f)| |\dot \gamma(t)| dt \leq ||grad(f)||_
+    \infty \, length(\gamma) = ||[\slashed D, f]|| length(\gamma)$. 
+    Thus:
+    $d_D(\hat x, \hat y) = sup\{|f(x) - f(y)|: f \in C(M), ||[\slashed D, f]||\leq 1\} \leq inf \, length(\gamma) \equiv d(x, y)$
+    
+    - Saturation of the upper bound: let $a_x \in C(M)$, $a_x(y) := d(x, y)$, %its continuity is simply the triangle inequality
+    $||[\slashed D, a_x]|| = ||grad(a_x)||_\infty = 1$ and $|a_x(y) - a_x(x)| = |d(x,y)| = d(x,y)$ saturates the inequality, meaning that $ d_D(\hat x, \hat y) = d(x, y)$.
+    
+\linea
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Physical Motivation}
+
+    \begin{itemize}
+        
+    \item QM's phase space is the seminal NC space: \rtext{noncommuting coordinates!}
+    
+        \begin{itemize}
+            
+        \item Coherent states $\iff$ (in this context?) closest notion to classical things (points of commutative space? classical systems?)
+        
+        \item 
+            
+        \end{itemize}
+    
+    \item Applications of NC in physics:
+    
+        \begin{itemize}
+            
+        \item Fuzzy Spheres: condensed matter: study of phase transitions? quantum fields?
+        
+        \item High energy/small distances Spacetime? 
+        
+        \item Renormalization
+    
+        \item In M theory apparently in the 90's 
+    
+        \item Particle physics: Yang-Mills-Higgs theories obtained through these procedures
+        
+        \item MORE
+            
+        \end{itemize}
+   
+   \item Why study this? toy model to understand how to do geometry in NC spaces: matrices are well understood, should be easy to do calculations (trivial K-theory?)
+   
+        \begin{itemize}
+            
+        \item Cutoff: some renormalization procedures (DFR paper?)
+            
+        \end{itemize}
+    
+    \end{itemize}
+
+\linea
