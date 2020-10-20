@@ -47,20 +47,26 @@ where $J_k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such
 
 Let $\lbtext{\pi_j}: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ be the spin $j \in \frac{\NN}{2}$ representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J_3)(e_m) = m e_m$, where $\vec J^2$ is notation for $J_1^2 + J_2^2 + J_3^3 \in U(\sut)$.
 
-Recall that the every continuous / square integrable / smooth function on $S^2$ may be decomposed in terms of spherical harmonics $Y^l_m \in L^2(S^2)$, $l \in \NN$ ,$m \in \{-l, \dots, l-1, l\}$, and the spaces $\tilde V_l = span\{Y^l_m\}_{|m| \leq l}$ for fixed $l$ are the spaces of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$, which are precisely all the irreducible representation spaces of $SO(3)$, and another description of the spin-$l$ representations of $SU(2)$, $V_l$. Hence, $L^2(S^2) \cong \bigoplus_{l = 0}^\infty \tilde V_l$ as representation spaces of $SU(2)$.
+Recall that the every continuous / square integrable / smooth function on $S^2$ may be decomposed in terms of spherical harmonics $Y^l_m \in L^2(S^2)$, $l \in \NN$, $m \in \{-l, \dots, l-1, l\}$, and the spaces $\tilde V_l = span\{Y^l_m\}_{|m| \leq l}$ for fixed $l$ are the spaces of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$, which are precisely all the irreducible representation spaces of $SO(3)$, and another description of the spin-$l$ representations $V_l$ of $SU(2)$. 
+This decomposition of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$, inherited from the action on $S^2$, and which can be seen to be induced by the natural action of $\sut$ on $S^2$ as vector fields. In particular, 
+\begin{align}
+    \partial_H &:= - i \partial_\phi & \text{is the action of $\lbtext{H} := J_3$ in $L^2(S^2)$} \\
+    \partial_F &:= e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right) &\text{is the action of $\lbtext{F} := J_+ = J_1 + i J_2$ in $L^2(S^2)$}\\
+    \partial_E &:= - \partial_E &\text{is the action of $\lbtext{E} := J_- = J_1 - i J_2$ in $L^2(S^2)$}
+\end{align} where $\phi$ and $\theta$ are the azimuthal and polar angles in $S^2$, respectively.
+Hence, $L^2(S^2) \cong \bigoplus_{l = 0}^\infty V_l$ as representation spaces of $SU(2)$.
 
-The spinor bundle of $S^2$ is trivial, so the space of spinor fields $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the spinor bundle of $S^2$ decomposes as representation of $SU(2)$ as $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}.
+The spinor bundle of $S^2$ is trivial, so the space of spinor fields $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the spinor bundle of $S^2$ decomposes as representation of $SU(2)$ as $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}.
+
+\lin
 
 This decomposition of the spinor bundle induced by the action of $SU(2)$ correctly suggests that the Dirac operator can be seen as the operator
 \begin{equation}
-    \lbtext{\slashed D} = \rtext{ \bigoplus_{l\in \bb N} \pi_l  \otimes \pi_{1/2}(\dcal)}
-\end{equation}
+    \lbtext{\slashed D} = \rtext{ \bigoplus_{l\in \bb N} \pi_l  \otimes \pi_{1/2}(\dcal)} = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3 = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} ,
+\end{equation} acting on $L^2(S^2)\otimes \CC^2$, where $\sigma \pm = \sigma_1 \pm i \sigma_2$.
 
-$\lbtext{\slashed D} = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3$ where $\partial_H = -i \partial_\phi$, $\partial_F = e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right)$, $\partial_E = -\partial_F% = e^{-i\phi} \left( \partial_\theta - i cot\,\theta \partial_\phi \right)
-$ are the actions of $J_3$, $J^\pm \in i\,su(2)$ on $L^2(S^2)$ respectively. \textit{Eig. vectors}: orth. basis of $\hcal$; \textit{Spectrum} $= \{\pm l\} = \ZZ - 0$ with multiplicities $2l$. (The tensor with $2x\times 2$ matrices means that we are looking at spinors as column vectors $\psi = \begin{pmatrix} \cdot \\ \cdot \end{pmatrix}$)%: L^2(S^2) \otimes \CC^2 \to L^2(S^2) \otimes \CC^2 = \oplus_{l \in \bb N} (\pi_l \otimes \pi_{1/2})(\mathcal D)$
+The eigenvectors of $\slashed D$ $Y^{'}_{jm}, Y^{''}_{jm}$ $j \in \NN + 1/2$, $m = -j, \dots, j$, called the \textit{spinor harmonics}, make up an orthogonal basis of the spinor fields $\hcal$. The eigenvalue of the $Y'_{l\cdot}$ is $(j + 1/2) \in \NN$, and of the $Y{''}_{j\cdot}: -(l + 1/2)$, so the eigenvalue $j$ has multiplicity $2j+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is another Dirac operator in the Fuzzy sphere. 
 
-The eigenvectors (spinor harmonics) $Y^{'}_{lm}, Y^{''}_{lm}$, $l \in \NN + 1/2$, of $D$ make up an orthogonal basis of the spinor fields $\hcal$.
- - The eigenvalues are: of $Y'_{l\cdot}: (l + 1/2) \in \NN$, of $Y{''}_{l\cdot}: -(l + 1/2)$, with multiplicities $2l+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is another Dirac operator in the Fuzzy sphere. 
 
 \linea
 
