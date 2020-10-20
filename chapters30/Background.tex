@@ -22,14 +22,14 @@
 
     - $d(x, y) := inf\{length(\gamma): \gamma:[0,1] \to M; \gamma(0) = x, \gamma(1) = y\}$
     
-    - Good lower bound for $d_D(\hat x, \hat y)$: for all $\gamma$, $f(y) - f(x) = \int_0^1 \frac{d}{dt}[f(\gamma(t))]dt = \int_0^1 df_{\gamma(t)} (\dot \gamma(t)) = \int_0^1 g_{\gamma(t)}(grad(f), \dot \gamma) dt$, 
+    - Good upper bound for $d_D(\hat x, \hat y)$: $d(x, y)$: for all $\gamma$, $f(y) - f(x) = \int_0^1 \frac{d}{dt}[f(\gamma(t))]dt = \int_0^1 df_{\gamma(t)} (\dot \gamma(t)) = \int_0^1 g_{\gamma(t)}(grad(f), \dot \gamma) dt$, 
     so
     $|f(x) - f(y)| \leq \int_0^1 |grad(f)| |\dot \gamma(t)| dt \leq ||grad(f)||_
     \infty \, length(\gamma) = ||[\slashed D, f]|| length(\gamma)$. 
     Thus:
     $d_D(\hat x, \hat y) = sup\{|f(x) - f(y)|: f \in C(M), ||[\slashed D, f]||\leq 1\} \leq inf \, length(\gamma) \equiv d(x, y)$
     
-    - Saturation of the lower bound: let $a_x \in C(M)$, $a_x(y) := d(x, y)$, %its continuity is simply the triangle inequality
+    - Saturation of the upper bound: let $a_x \in C(M)$, $a_x(y) := d(x, y)$, %its continuity is simply the triangle inequality
     $||[\slashed D, a_x]|| = ||grad(a_x)||_\infty = 1$ and $|a_x(y) - a_x(x)| = |d(x,y)| = d(x,y)$ saturates the inequality, meaning that $ d_D(\hat x, \hat y) = d(x, y)$.
     
     
