@@ -313,10 +313,11 @@ This tells us that $[\slashed D_N, a]: \hcal_N \to \hcal_N$ is the operator of l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Coherent States}\todo{Complement with intro given in Fiore and Pisacane}
-% {\color{gray}
-% -- Fuzzy approximations of points in S2. In QM they are the closes thing to classical states we have (minimum uncertainty states for some observables).}
+ {\color{gray}
+% -- Fuzzy approximations of points in S2. In QM they are the closes thing to classical states we have (minimum uncertainty states for some observables).
 
 - \dbtext{Are they pure}? They are vector states, I think that suffices to make them pure.
+}
 
 We now define the Bloch or $SU(2)$-coherent states in each $\acal_N$. Given $N$, each coherent state is labeled by a point in $S^2 = SU(2) / S^1$, allowing us to interpret each coherent state as a fuzzy approximation of a point in $S^2$. Furtheremore, the fuzzyness of this approximation decreases as $N \to \infty$ since theorem \ref{} shows that the distance between coherent states corresponding to two points in $S^2$ tends to the respective distance in $S^2$. 
 
@@ -335,10 +336,11 @@ Particularly Perolomov \cite{Perolomov} defines systems of coherent states using
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{SHO Coherent States}
 
-3 characterizations. Heisenberg group.
+{\color{gray} 3 characterizations. Heisenberg group.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$SU(2)$-Coherent States}
 
+{\color{gray} 
  - Rotations of $|j, -j \rangle$
  
 Presentation:
@@ -355,6 +357,7 @@ is $SU(2)$-equivariant}: $g_* \psi^N_{(\phi, \theta)} = \psi^N_{g\cdot (\phi, \t
 What group used in Fiore? $O(D)$
 
 - In Fiore2020 there is a simple introduction to Coherent states: group $G$ acting (irreducibly) on a Hilbert space. AND the example for $G = SU(2)$ is sketched, although there is a mistake for one of the $3$ characterizations, since it isn't true that the coherent states are eigenvectors of the ``annihilation operator'' $J_+$. D'Andrea mentions other sources.
+}
 
 \linea
 
@@ -409,7 +412,7 @@ A state may be defined from its action on hermitian elements of the $C^*$-algebr
 
 The general procedure to find the distance between two states will be the following: 
 
-    \begin{itemize}
+    \begin{enumerate}
     
     \item Understand $||[D, a]||$; 
     
@@ -417,10 +420,11 @@ The general procedure to find the distance between two states will be the follow
     
     \item find a hermitian algebra element that saturates the inequality (or a sequence that has this bound as limit).
     
-    \end{itemize} 
+    \end{enumerate} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$SU(2)$-invariance of the distance}
 
+{\color{gray} 
  - If $G$ acts by ``isometries'', simplify what needs to be proven.
 
 Presentation:
@@ -439,6 +443,7 @@ $d_N(g_* \omega, g_* \omega') = sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g
 \textit{Pf}: $[D_N, a^g \otimes 1] = u[D_N, a \otimes 1_2]u^*$ where $u = \pi_j(g) \otimes \pi_{1/2}(g)$ is the induced unitary action of $g$ in $H_N$ $\xleftarrow{}$
 1. $a^g \otimes 1_2 = u(a \otimes 1_2)u^*$;
 2. The spectral triple is $SU(2)$-equivariant, hence $D_N$ commutes with the $SU(2)$ action.
+}
 
 \linea
 
@@ -447,6 +452,7 @@ $d_N(g_* \omega, g_* \omega') = sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The $N=1$ distance between coherent states}
 
+{\color{gray} 
  - 
  
  Presentation:
@@ -468,10 +474,14 @@ $\pi_{1/2}(J_k) = \sigma_k/2$
     d_1(\hat p, \hat q) = \frac{1}{2}|\vec p - \vec q|_{\RR^3}
 \end{equation}
 \textit{Pf}: $|\omega_{\vec x}(b) - \omega_{\vec y}(b)| = |(\vec x - \vec y)\cdot \vec b| \leq |\vec x - \vec y||\vec b|$; $i[D_1, a]$ is hermitian with max. eigenvalue/norm $=2 |\vec a|$ $\longrightarrow$ $a \in \acal_1$ hermitian with $\vec a$ parallel to $\vec x - \vec y$ st. $2|\vec a| = 1$ saturates the inequality.
+}
+
+\linea
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Distance Between (Vector) Discrete States $|j,n\rangle$ for Arbitrary $N$}
 
+{\color{gray} 
 Presentation:
 
 \rtext{\textbf{Theorem}}: For any $N$, let $\lbtext{\omega_m} = \langle j, m| \cdot |j, m\rangle \in \mathcal S(\acal_N)$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
@@ -485,11 +495,13 @@ Presentation:
 \textit{Pf}: Recall that $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$ $\longrightarrow$ $\omega_m(a) - \omega_n(a) = \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle$; since $|\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, we get the upper bound. 
 
 Define the diagonal hermitian operator $\hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m  \right)|j, m\rangle$, $\longrightarrow$ $[E, \hat a] |j, k \rangle = |j, k+1\rangle$ ($k < j$), and so $\hat a$ saturates the inequality.
+}
 
 \linea
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Relating Distinct $N$'s and Upper Bound}
 
+{\color{gray} 
  - Relate algebras and coherent states of subsequent $N$, finding relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$.
  
 Presentation:
@@ -512,11 +524,14 @@ Presentation:
 $|\psi^N_{(\phi, \frac{\pi}{2})} - \psi^N_{(0, \frac{\pi}{2})}| = |i \int_0^\phi \psi^N_{(\alpha, \frac{\pi}{2})}([H, a]) d\alpha | \leq ||[H, a]|| |\phi| \leq |\phi| ||[D_N, a]||$.
 
 (Dibujito: $N=1$ en un color, other increasing $N's$ (equivalent paths), finally commutative distance).
+}
 
 \linea
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Auxiliary Distance and Limit}
+
+{\color{gray} 
  - Study simpler subalgebra distance: lower bound whose behavior is understood and that encases the actual distance, allowing approximate study.
 
 Presentation:
@@ -539,12 +554,19 @@ $\lbtext{\rho_N}(\theta) := sup_{a \in \bcal_N, a = a^*}\{|\psi^N_{(0, \theta)} 
 \begin{equation}
         \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(E(\phi, \theta), E(\phi', \theta'))
 \end{equation}
+}
+
+\linea
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Convergence of fuzzy sphere to $S^2$}\label{FSsec:convergence}
 
+{\color{gray} 
  - This identification of points in $S^2$ with coherent states ($\psi^N: \acal_N \to L^2(S^2)$ at the algebra level) \todo{???}
 is $SU(2)$-equivariant: $g_* \psi^N_{(\phi, \theta)} = \psi^N_{g\cdot (\phi, \theta)}$, \& \rtext{the distance between them is $SU(2)$-invariant}.
  
  - as: \textbf{1.} $C^*$-algebra $\acal$ acting on the spinor fields $\hcal$; \textbf{2.} Representation of $SU(2)$: homeomorphisms?\todo{homeomorphisms? Symmetries?}; \textbf{3.}  Metric space on which $SU(2)$ acts by isometries.
+
+}
