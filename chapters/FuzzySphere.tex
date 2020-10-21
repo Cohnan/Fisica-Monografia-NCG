@@ -173,7 +173,17 @@ Then, the sequence of noncommutative $C^*$-algebras approximates the commutative
 
  --  Truncate the $SU(2)$-equivariant \textbf{decomposition} of the canonical spectral triple
 
-(The tensor with $2x\times 2$ matrices means that we are looking at spinors as column vectors $\psi = \begin{pmatrix} \cdot \\ \cdot \end{pmatrix}$)
+The introduction of a spectral triple on each unital algebra $\acal_N$ that conforms the fuzzy sphere will introduce the notion of distance between states of the algebra, opening the door to the study of geometry on this spaces. Furthermore, we would like to introduce a spectral triple that somehow allows us to think of the fuzzy sphere as an approximation of $S^2$ also as metric spaces. 
+
+In this document, this will occur in the following senses:
+
+    \begin{itemize}
+    
+    \item The spectrum (and the multiplicities of the eigenvalues) of the Dirac operator approximates that of $\slashed D$ as $N$ increases
+    
+    \item To each point in $S^2$ there is a corresponding pure state on each $\acal_N$, and the distance between the coherent states corresponding to two points in $S^2$ tends to the commutative distance between the points as $N \to \infty$.
+    
+    \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -203,7 +213,31 @@ A first spectral triple is simply taking ``one term'' of $\slashed D$:
     
 \linea
 
+This spectral triple, although unsatisfactory as an approximation of the canonical spectral triple of $S^2$ with respect to the first criteria, will turn out to be very useful for computations.
 
+\begin{definition}
+For each $N \in \NN$ and $j = N/2$, define the \lbtext{irreducible spectral triple} as $(\acal_N, \lbtext{H_N} := V_j \otimes \CC^2, D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D))$, where $\acal_N = End(V_j)$ acts naturally on the first factor of $H_N$.
+\end{definition}
+
+This spectral triple may be seen to come as a single term of the $SU(2)$-induced expansion of $\slashed D$ \eqref{}. The Dirac operators can also be written as
+\begin{equation}
+    D_N = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
+    = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
+\end{equation}
+where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J^+, J^- \in U(\sut(2))$ on $V_j$.
+
+\begin{proposition}
+For each $N \in \NN$, the irreducible spectral triple:
+
+    \begin{itemize}
+        
+    \item Is $SU(2)$-equivariant
+    
+    \item Has eigenvalues $j+1$ and $-j$ with multiplicities $2j+2$ and $2j$.
+        
+    \item Isn't compatible with a grading or a real structure.
+    \end{itemize}
+\end{proposition}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -237,6 +271,43 @@ where, e.g. $\text{ad}\pi_j(H) = [\pi_J(H), \cdot ]$ is the action of $J_3 \in s
 - \rtext{\textbf{Theorem}}: the two spectral triples induce the same distance in $\acal_N$. Pf: $[\dcal, a]b \otimes v = \cdots = \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v = [D_N, a] \cdot b \otimes v$
 
 \linea
+
+\begin{definition}
+For each $N \in \NN$, $j = N/2$, the \lbtext{full spectral triple} is $(\acal_N, \lbtext{\hcal_N} := \mathcal A_N \otimes \CC^2, \lbtext{\mathcal D_N} := (\text{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) )$, where $a \in \acal_N$ acts on the first factor of $\hcal_N$ via the commutator $[a, \cdot]$.
+\end{definition}
+
+Notice that the action of $\acal_N$ on itself is simply the derivative of the action $B \mapsto \pi_j(g) B \pi_j(g)^{-1}$ of $SU(2) \ni g$ on $\acal_N = End(V_j)$. Under the $SU(2)$-induced decomposition of $\acal_N$, the Hilbert space $\hcal_N$ is isomorphic to $\bigoplus_{l =1}^N H_l$, where the representation $\text{ad}\pi_j$ then corresponds to the representation $\bigoplus_{l = 0}^N \pi_l$, in which case the Dirac operator $\dcal_N$ becomes:
+\begin{equation}
+    \mathcal D_N : \hcal_N \to \hcal_N  \iff \bigoplus_{l =1}^N D_l: \bigoplus_{l =1}^N H_l \to \bigoplus_{l =1}^N H_l.
+\end{equation}
+
+\begin{theorem}
+The full spectral triples satisfies:
+    \begin{itemize}
+    
+    \item It is a real spectral triple.
+    
+    \item It is $SU(2)$-equivariant
+    
+    \item The spectrum of $\mathcal D_N$ is the truncation of $\slashed D$ to $\{-N, \dots, N+1\}$, ie. the eigenvalues of $\mathcal D_N$ are $N+1$ with multiplicity $2N+2$, and $\pm l$ with multiplicity $2l$ for $l = 1, \dots, N$.
+    
+    \item It is not compatible with a grading.
+    
+    \end{itemize}
+\end{theorem}
+
+\rtext{The third statement of the theorems says that we have found a spectral triple with the desired property of being a truncation of the canonical spectral triple of $S^2$}. Hence, this will be the spectral triple which we will assign the forming algebras of the fuzzy sphere, under which the metric properties are to be studied, since it \rtext{may be considered a sequence of spectral triple that approximate the metric of $S^2$ increasingly better with growing $N$}. However, the following theorem allows us to study instead the much simpler irreducible spectral triple.
+
+\begin{theorem}
+The irreducible and full spectral triple on $\acal_N$, for each $N \in \NN$, induce the same distance in the state space of $\acal_N$.
+\end{theorem}
+\begin{proof}
+Let $\omega, \omega'$ be states on $\acal_N$. Notice that distinct spectral triples induce different notions of distance only due to the condition $||[D, a]|| \leq 1$, which determines over which elements $a$ of the algebra the supremum of $|\omega(a) - \omega'(a)|$ is evaluated. However, for all $a \in \acal$, $||[\dcal_N, a]|| = ||[D_N, a]||$ as shown by the following calculation:
+\begin{align*}
+    [\dcal, a]b \otimes v = \cdots = \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v = [D_N, a] \cdot b \otimes v.
+\end{align*}
+This tells us that $[\slashed D_N, a]: \hcal_N \to \hcal_N$ is the operator of left multiplication by the matrix $[D_N, a] \in \acal_N \otimes M_2(\CC)$, implying that its operator norm coincides with the norm of the matrix $[D_N, a]$.
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
