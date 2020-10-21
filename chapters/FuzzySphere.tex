@@ -56,7 +56,7 @@ This decomposition of $L^2(S^2)$ is in fact the one induced by the action of $SU
 \end{align} where $\phi$ and $\theta$ are the azimuthal and polar angles in $S^2$, respectively.
 Hence, $L^2(S^2) \cong \bigoplus_{l = 0}^\infty V_l$ as representation spaces of $SU(2)$.
 
-The spinor bundle of $S^2$ is trivial, so the space of spinor fields $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the spinor bundle of $S^2$ decomposes as representation of $SU(2)$ as $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}.
+The spinor bundle of $S^2$ is trivial, so the space of spinor fields $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the spinor bundle of $S^2$ decomposes as representation of $SU(2)$ as $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}; \ptext{we will understand from now on the separable Hilbert space $\lbtext{\hcal} = L^2(S^2)\otimes \CC^2$ as the space of spinor fields on the 2-sphere}.
 
 \lin
 
@@ -100,7 +100,7 @@ Presentation:
         % \item Why? To preserve the (continuous) symmetries of the space while keeping the algebra finite dimensional.
         % \end{itemize}
     
-    \textbf{Fuzzy Sphere}: Notice that $\acal \cong \bigoplus_{l \in \bb N} V_l \cong L^2(S^2)$, where $V_l$ is the spin $l$ representation of $SO(3)$: homogeneous $l$-degree polynomials in $x^1, x^2, x^3$, with basis $\{Y^l_m\}_{|m| \leq l}$. 
+    \textbf{Fuzzy Sphere}: Notice that $\acal = C(S^2) \cong \bigoplus_{l \in \bb N} V_l \cong L^2(S^2)$, where $V_l$ is the spin $l$ representation of $SO(3)$: homogeneous $l$-degree polynomials in $x^1, x^2, x^3$, with basis $\{Y^l_m\}_{|m| \leq l}$. 
     For $N = 2j \in \bb N$, 
     $\lbtext{\acal_N}= \bigoplus_{l = 0}^N V_l$ as $SU(2)$ representation. 
     As algebra: replacing $x^i \mapsto \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i)$, $[J_i, J_k] = i \epsilon_{ijk} J_k$, $\lbtext{\acal_N} := End(V_j) = M_{N+1}(\CC)$, understanding $V_j= \CC^{N+1} = span\{|j, m\ket\}_{|m| \leq j}$ as irrep. of $SU(2)$; this follows from  $\longrightarrow$ \rtext{$[x^i, x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} x_k$}, $\sum x_1^2 + x_2^2 + x_3^2 = 1$.
@@ -113,7 +113,59 @@ Presentation:
     
 \linea
 
-Following the decomposition in irreducible representations $\acal = L^2(S^2)$
+A \lbtext{fuzzy space} is a sequence of finite dimensional $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ with increasing dimension which approximate, in some sense to be determined later/in the specific case \todo{is there a precise definition?}, a (commutative) $C^*$ algebra $\acal$ in the limit $N \to \infty$. When the commutative algebra encodes a topological space or a manifold with certain symmetry group $G$ that acts by homeomorphisms or diffeomorphisms, we require a fuzzy space to implement this symmetry, i.e. that $G$ acts on each $\acal_N$ by $*$-isomorphisms (the algebraic version of homeomorphisms\todo{be certain of this.}) and in a way compatible with the derivations of $\acal$ (algebraic version of diffeomorphisms).
+
+With the full spectral triple defined below, the \textit{fuzzy sphere} will approximate $S^2$ as:
+    
+    \begin{enumerate}
+    
+    \item A $C^*$-algebra acting on the Hilbert space of spinors \todo{Madore does this}.
+    
+    \item $SU(2)$ acts by ``diffeomorphisms'' on the space.
+    
+    \item A metric space on which $SU(2)$ acts by ``isometries''.
+    
+    \end{enumerate}
+
+\lin 
+
+To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the decomposition of $\lbtext{\acal} = C(S^2) =  \bigoplus_{l \in \NN} \tilde V_l \cong L^2(S^2)$ \todo{different ``limits''} into irreducible representations of $SO(3)$, where, recall, $\tilde V_l$ is the vector space of homogeneous polynomials on the coordinates $x_1, x_2, x_3$ of $\RR^3$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: there is a clear way in which they approximate $\acal$; $SU(2)$ acts naturally on each $\acal_N'$.
+
+However, an obvious problem with this definition is that $\acal_N'$ doesn't have a natural multiplication, so it isn't an algebra. From the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring that the radical\footnote{} of the algebra be zero, there are only two possibilities, and only one being noncommutative:
+\begin{align}
+    x_i &\mapsto \hat x_i := \lambda \sigma_i & i = 1, 2, 3;
+\end{align}
+where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Notice that the identification $x_i \mapsto \hat x_i$ is $SU(2)$-covariant since $\frac{\sigma_i}{2} \in U(\sut) \cong U(\alg{so(3)})$ corresponds to the generator of rotations with respect to the $x_i$-axis. The constant $\lambda$ is chosen such that ``radius of the sphere be $1$'', meaning that $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
+
+Instead of insisting on defining a foreign multiplication in $\acal'_N$, the \lbtext{fuzzy sphere} is now defined by $\lbtext{\acal_N} :=  \pi_{j}(U(\sut)) \equiv End(V_j)$ which, when the irreducible representation $\pi_j$ of $SU(2)$ is defined as in the previous subsection where $V_j = \CC^{N+1}$, $\acal_N \equiv M_{N+1}(\CC)$ for all $N \in \NN$, $j$ satisfying $N =: 2\lbtext{j}$, which arises from the following generalization of the $N = 1$ case studied above:
+\begin{align}
+    \tilde V_1 \hookrightarrow \bigoplus_{l = 0}^N \tilde V_l &\to \acal_N\\
+    x_i &\mapsto \hat x_i := \frac{1}{j(j+1)} \pi_{j}(J_i) & i = 1, 2, 3;
+\end{align} that is, for each $N$, the coordinate $x_i$ is understood as the infinitesimal rotation with respect to the axis $x_i$ operator on the space $V_j = \CC^{N+1}$. The normalization constant guarantees again $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, and we now obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
+\begin{align}
+    \rtext{[\hat x^i, \hat x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} \hat x_k}, && i, j, k \in \{1, 2, 3\},
+\end{align} where sum over repeated indices is understood, and $\epsilon_{ijk}$ is the Levi-Civita tensor.
+
+\lin
+
+This \textit{fuzzy} version of the sphere is, so far, good in two of the three ways stated at the beginning of this subsection:
+
+\subsubsection{$SU(2)$ acts by diffeomorphisms}
+
+From the $SU(2)$-equivariance of the identifications $x_i \to \hat x_i$, we see that $\acal_N \cong \acal'_N \cong \bigoplus_{l=0}^N V_l$ as representation space of $SU(2)$, where the action of $g \in SU(2)$ is the one induced in $\acal_N$ seen as $End(V_j)$, namely by the inner automorphism $B  \mapsto \pi_j(g)B \pi_j(g)^{-1}$, where $\pi_j(g) \in SU(N+1)$ since $\pi_j$ is an unitary representation. That $(\pi_j(g)B \pi_j(g)^{-1})^* = \pi_j(g)B^* \pi_j(g)^{-1}$, where $B^*$ is the adjoint of $B \in M_{N+1}(\CC)$, shows that \rtext{$SU(2)$ acts by $*$-automorphisms on $\acal_N$}.
+
+A diffeomorphism of $S^2$ is equivalent to an automorphism of the algebra $C^\infty(S^2)$ (dense subalgebra of $\acal$) that respects the complex conjugation $*$. In the matrix algebras $M_{N+1}(\CC)$, since they are simple, all $*$-automorphisms are precisely of the form $B \mapsto C B C^{-1}$ for some $C \in SU(N+1)$. Furthermore, all such automorphisms also respect the derivations of $\acal_N$, which are the noncommutative analogues of vector fields. Hence, all $*$-automorphisms of $\acal_N$ are good analogues of diffeomorphisms of $S^2$, and so \rtext{$SU(2)$ \textit{is acting by diffeomorphisms on the fuzzy sphere}}.
+
+\subsubsection{As $C^*$-algebra}
+
+The elements $\hat x_i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace free as a tensor. Replacing the coordinates $x_i$ by $\hat x_i$ in the polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
+
+Define the linear, injective mapping
+\begin{align}
+    \acal_N &\to \acal'_N \subset \acal \\
+    \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}} &\mapsto \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} x_{a_{\mu_1}}  \cdots x_{a_{l}}.
+\end{align}
+Then, the sequence of noncommutative $C^*$-algebras approximates the commutative algebra $A = C(S^2)$ in the limit $N \to \infty$ in the sense that the above map gets increasingly closer to being an algebra morphism and \textbf{the algebra $A$ can be considered as the image of the diagonal matrices in $\acal_N$}; the precise statements and their proofs may be found in \cite{Madore}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
