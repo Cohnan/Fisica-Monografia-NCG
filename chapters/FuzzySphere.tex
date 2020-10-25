@@ -514,7 +514,10 @@ Notice that, under this matrix notation that follows from the tensor product wit
 \end{equation} as an operator on $H_N$.
 
 \begin{remark}
-If $\acal$ is a unital $C^*$-algebra, and $D$ is an associated Dirac operator, the supremum  $d_\dcal(\omega, \omega')$, of $|\omega(a) - \omega'(a)|$ for $a \in \acal$ such that $||[D, a]|| \leq 1$, is always attained in hermitian $(a = a^*)$ elements \ref{Rieffel30,33}.
+If $\acal$ is a unital $C^*$-algebra, and $D$ is an associated Dirac operator, the supremum  $d_\dcal(\omega, \omega')$, of $|\omega(a) - \omega'(a)|$ for $a \in \acal$ such that $||[D, a]|| \leq 1$, is always attained in hermitian $(a = a^*)$ elements \ref{Rieffel30,33}, hence Connes' distant formula for a spectral triple $(\acal, \hcal, \dcal)$ can be changed to
+\begin{equation} \label{distanceFormulaHermitian}
+    d_\dcal(\omega, \omega') = sup_{a \in \acal, \,a = a^*} \{|\omega(a) - \omega'(a)| : ||[\dcal, a\|| \leq 1\}.
+\end{equation}
 \end{remark}
 
 \begin{remark}
@@ -632,7 +635,7 @@ This form for the states identifies the convex combination $\alpha \omega_{\vec 
 The set $\{\omega_{E(\phi, \theta)} \,|\, E(\phi, \theta)\}$ of pure states on $\acal_1$ coincides with the set of $SU(2)$-coherent states, under the equality $\omega_{E(\phi, \theta)} = \psi^1_{(\phi, \theta)}$.
 \end{proposition}
 \begin{proof}
-Shouldn't be too complicated once the correct framing is achieved.... $|j, j\rangle = \begin{pmatrix} 1&0 \end{pmatrix}$
+Shouldn't be too complicated once the correct framing is achieved...  AND IT CAN BE A GOOD WAY TO UNDERSTAND THE COHERENT STATES\todo{I would like to do this} $|j, j\rangle = \begin{pmatrix} 1&0 \end{pmatrix}$
 \end{proof}
 
 \begin{theorem}
@@ -643,13 +646,13 @@ For $N = 1$ all pure states are coherent states and
 \end{theorem}
 
 \begin{proof}
-Let $b \in \acal_1$ be arbitrary. Then,
+As stated at the beginning of this section, we may restrict our search to hermitian elements. Let $a \in \acal_1 = M_2(\CC)$ be hermitian. Then,
 \begin{align*}
     |\omega_{\vec x}(b) - \omega_{\vec y}(b)| &= |(\vec x - \vec y)\cdot \vec b| \\
         &\leq |\vec x - \vec y||\vec b|.
 \end{align*}
 
-Now, for $a \in \acal_1 = M_2(\CC)$ hermitian, let $a_\pm = a_1 \pm i a_2$, so that $a = a_0 + a_+ \sigma_+ + a_- \sigma_- + a_3 \sigma_3$. Recall that $\pi_{1/2}(J_k) = \frac{\sigma_k}{2}$, $k = 1, \dots, 3$, hence
+Now, let $a_\pm = a_1 \pm i a_2$, so that $a = a_0 + a_+ \sigma_+ + a_- \sigma_- + a_3 \sigma_3$. Recall that $\pi_{1/2}(J_k) = \frac{\sigma_k}{2}$, $k = 1, 2, 3$, hence
 \begin{equation*}
     [D_1, a] = 
     \begin{pmatrix}
@@ -665,7 +668,7 @@ Therefore, if we choose $a \in \acal_1$ hermitian with associated $\vec a$ paral
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Distance Between (Vector) Discrete States $|j,n\rangle$ for Arbitrary $N$}
+\subsection{Distance Between (Vector) Discrete States $|j,m\rangle$ for Arbitrary $N$}
 
 {\color{gray} 
 Presentation:
