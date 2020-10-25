@@ -67,6 +67,14 @@ This decomposition of the spinor bundle induced by the action of $SU(2)$ correct
 
 The eigenvectors of $\slashed D$ $Y^{'}_{jm}, Y^{''}_{jm}$ $j \in \NN + 1/2$, $m = -j, \dots, j$, called the \textit{spinor harmonics}, make up an orthogonal basis of the spinor fields $\hcal$. The eigenvalue of the $Y'_{l\cdot}$ is $(j + 1/2) \in \NN$, and of the $Y{''}_{j\cdot}: -(l + 1/2)$, so the eigenvalue $j$ has multiplicity $2j+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is another Dirac operator in the Fuzzy sphere. 
 
+{\color{gray}
+The following aiding lemma will allow us to study the spectrum of the dirac operators of the dirac triples that will be defined on the fuzzy sphere.
+
+\begin{lemma}
+The operator $(\pi_0 \otimes \pi_{1/2})(\dcal^2): V_0 \otimes \CC^2 \to V_0 \otimes \CC^2$ has as unique eigenvalue $1$ with multiplicity $2$. For any $j \in \frac{\ZZ_{\geq 1}}{0}$, the $(\pi_j \otimes \pi_{1/2})(\dcal^2)$ has two eigenvalues: $j^2$ with multiplicity $2j$, and $(j+1)^2$ with multiplicity $2j+2$.
+\end{lemma}
+
+}
 
 \linea
 
@@ -185,17 +193,55 @@ In this document, this will occur in the following senses:
     
     \end{itemize}
 
-One important property of these spectral triples is their equivariance under $SU(2)$, implying that $SU(2)$-acts by isometries on the (state) spaces as shown in \ref{theoInvDistance}. The \lbtext{equivariance of a spectral triple} under the group $SU(2)$ reduces to/is\ref{}\cite{} the commutation of the action of the action of both the Dirac operator and the algebra on the Hilbert space, with the action of the group. Hence, , we must understand how $SU(2)$ is acting on the distinct sets involved in our ....
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{$SU(2)$-equivariance}
 
-MY DEFINITIONS:
-\begin{definition}
-$(A, H, D)$ spectral triple. Let $G$ act on $H$ and $A$. The spectral triple is $G$-equivariant if the distant function induced in the state space $S(A)$ is $G$-invariant.
-\end{definition}
+Rotating the 2-sphere leaves invariant not only its topological and differential properties, but it also leaves invariant the metric, $g = d\theta^2 + \sin^2(\theta) d\theta^2$, implying that the distance between any $2$ points is the same as the distance between the rotated points, under any rotation $h \in SO(3)$. Since $SU(2)$ is the double covering of $SO(3)$, there is a $2$-to-$1$ Lie group morphism $SU(2) \to SO(3)$ under which any rotation $h \in SO(3)$ corresponds to two distinct points $\pm \tilde h \in SU(2)$. From this it follows that each element of $SU(2)$ acts as a rotation on $S^2$, so that \rtext{$SU(2)$ is also a group of symmetries of $S^2$ that acts by diffeomorphisms and isometries}. Notice, however, that the most general symmetry group of $S^2$ is the orthogonal group $O(3)$, which includes reflections under planes on $\RR^3$ that pass through the origin.
 
-\begin{theorem}
-$(A, H, D)$ spectral triple. Let $G$ act on $H$ unitary, and on $A$. Then, if $[D, G\cdot] = 0$ and the induced action on $A$ as operators on $H$ interwines with the action on $A$, then the spectral triple is $G$-equivariant.
+One important property of the spectral triples that will be defined on the fuzzy sphere is their equivariance under $SU(2)$, or more generally the Hopf algebra $U(\sut)$ as defined in\cite{Sitarz}, giving an analogous notion to the action of these symmetry spaces by isometries. The precise definition of a \textit{spectral triple $(\acal, \hcal, \dcal)$ equivariant under a symmetry space $H$}, $H$ being called \textit{the isometry of the spectral triple}, is fairly involved, but, ignoring some details, reduces to the following:
+    \begin{itemize}
+    
+    \item $\acal$ is a representation of $H$.
+    
+    \item $\hcal $ is a representation of $H$.
+    
+    \item The action of $H$ on $\acal$ coincides with the action $\acal$ as subalgebra of operators on $H$, i.e. the adjoint action $A \mapsto g \circ A \circ g^{-1}$. %there is a dense subspace $V$ of $\hcal$ on which the action induced on operators
+    
+    \item The \textit{Dirac operator is equivariant}, i.e. the operator $[\dcal, h] = 0$ for all $h \in H$.
+    
+    \end{itemize}
+\ref{theoInvDistance}
+\textbf{For the spectral triples defined in this section, the $SU(2)$-equivariance reduces to the verification of the last two conditions}, since the first two ones are readily satisfied. The following theorem, which will apply to all the spectral triples defined in this chapter, illustrates how this notion of equivariance induces a notion of isometry on the respective noncommutative spaces.
+
+\begin{theorem} \label{theoGInvariantDistance}
+Let $(\acal, \hcal, \dcal)$ be a spectral triple. Let $G$ be a group, let $\hcal$ and $\acal$ be representation spaces of $G$, with $G$ acting unitarily on $H$. Then, if for all $g \in G$, $[D, g\cdot] = 0$ and the action on $A$ coincides / interwines with the induced action on $A$ as subalgebra of operators on $H$, then $SU(2)$ acts by isometries on the state space $\mathcal S(\acal)$. That is, for all $g \in G$:
+\begin{align}
+    d_\dcal(\omega, \omega') &= d_\dcal(g_* \omega, g_*\omega'), & \text{for all $\omega, \omega' \in \mathcal S(\acal)$};
+\end{align}
+we have denoted by $g^*\omega$ the action of $G$ on $\mathcal S(\acal)$, $g^* \omega: \acal \to \CC$, $a \mapsto \omega(a^g)$, induced from the action $a \mapsto a^g$ of $G$ on $\acal$.
 \end{theorem}
 
+\begin{proof}
+The theorem follows once we show that 
+\begin{equation}\label{normEqualDiracAction}
+    \rtext{||[\dcal, a^g]|| = ||[\dcal, a]||},
+\end{equation} since, in that case,
+\begin{align*}
+d_\dcal(g_* \omega, g_* \omega') &= sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g)|: ||[\dcal, a \otimes 1_2]|| \leq 1 \} \\
+    &= sup_{b \in \acal_N}\{ |\omega(b) - \omega'(b)|: ||[D_N, b \otimes 1_2]|| \leq 1 \} \\
+    &= d_N(\omega, \omega'),
+\end{align*}
+since $b = a^g$, for fixed $g \in SU(2)$, sweeps all $\acal_N$ if $a$ does.
+
+Now, denoting the action of $G \ni g$ on $\hcal$ by $g \cdot$:
+\begin{align*}
+    (g \cdot) \circ [\dcal, a]\circ (g\cdot )^* &= (g \cdot) \circ [\dcal, a]\circ (g^{-1}\cdot )\\
+        &= (g \cdot) \circ \dcal \circ a \circ (g^{-1}\cdot ) - (g \cdot) \circ a \circ  \dcal \circ (g^{-1}\cdot )\\
+        &= \dcal (g \cdot) \circ a\circ (g^{-1}\cdot ) - (g \cdot) \circ a\circ (g^{-1}\cdot ) \dcal & \text{$\dcal$ commutes with $g\cdot$} \\
+        &= \dcal \circ a^g - a^g \circ \dcal & \text{actions of $g$ and $\acal$ interwine} \\
+        & = [\dcal, a^g]
+\end{align*} 
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -238,7 +284,7 @@ This spectral triple may be seen to come as a single term of the $SU(2)$-induced
 \end{equation}
 where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J^+, J^- \in U(\sut(2))$ on $V_j$.
 
-For all $g \in SU(2)$, the unitary representation $\pi_j$ of $SU(2)$ on $V_j$ induces the left action $u_g := \pi_j(g) \otimes \pi_{1/2} \in \mathcal B(H_n)$ on $H_N = V_j \otimes V_{1/2}$. This coincides with one of the summands of the action of $g$ on $\hacal = L^2(S^2) \otimes \CC^2$ when $j \in \NN$. The action on $H_N$ induces the left action on the operators on $H_N$, including $D_N$ and $a \otimes 1 \cong a$ for all $a \in \acal_N$, given by $u_g \circ \mathcal O u_{g}^*$.
+For all $g \in SU(2)$, the unitary representation $\pi_j$ of $SU(2)$ on $V_j$ induces the left action $u_g := \pi_j(g) \otimes \pi_{1/2} \in \mathcal B(H_n)$ on $H_N = V_j \otimes V_{1/2}$. This coincides with one of the summands of the action of $g$ on $\hcal = L^2(S^2) \otimes \CC^2$ when $j \in \NN$. The action on $H_N$ induces the left action on the operators on $H_N$, including $D_N$ and $a \otimes 1 \equiv a$ for all $a \in \acal_N$, given by $u_g \circ \mathcal O \circ u_{g}^*$.
 
 \begin{proposition}
 For each $N \in \NN$, the irreducible spectral triple:
@@ -384,7 +430,7 @@ What group used in Fiore? $O(D)$
 
 % \textit{From now on}: we use the irreducible s.t. and not write the $\pi_j$'s.
 
-% - The supremum $d_D(\omega, \omega')$ is always attained in hermitian elements.
+% - The supremum $d_}(\omega, \omega')$ is always attained in hermitian elements.
 
 % - For $a \in \acal_N$, 
 % \begin{equation} \label{ineqDN}
@@ -414,10 +460,10 @@ What group used in Fiore? $O(D)$
 
 \linea
 
-Due to theorem \ref{}, although the full spectral triple seems to be a better approximation of the canonical spectral triple due to the properties of the spectrum of $\dcal_N$, we will study the distances using the irreducible spectral triple since it induces exactly the same notion of distance on each $\acal_N$. From now on we will stop writing the symbols $\pi_j$ unless confusion may arise.
+Due to theorem \ref{}, although the full spectral triple seems to be a better approximation of the canonical spectral triple due to the properties of the spectrum of $\dcal_N$, it suffices to study the distances using the irreducible spectral triple since it induces exactly the same notion of distance on each $\acal_N$. From now on we will stop writing the symbols $\pi_j$ unless confusion may arise.
 
 \begin{remark}
-If $\acal$ is a unital $C^*$-algebra, and $D$ is an associated Dirac operator, the supremum  $d_D(\omega, \omega')$, of $|\omega(a) - \omega'(a)|$ for $a \in \acal$ such that $||[D, a]|| \leq 1$, is always attained in hermitian $(a = a^*)$ elements \ref{Rieffel30,33}.
+If $\acal$ is a unital $C^*$-algebra, and $D$ is an associated Dirac operator, the supremum  $d_\dcal(\omega, \omega')$, of $|\omega(a) - \omega'(a)|$ for $a \in \acal$ such that $||[D, a]|| \leq 1$, is always attained in hermitian $(a = a^*)$ elements \ref{Rieffel30,33}.
 \end{remark}
 
 \begin{remark}
@@ -461,42 +507,13 @@ $d_N(g_* \omega, g_* \omega') = sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g
 
 \linea
 
-Rotating the 2-sphere leaves invariant not only its topological and differential properties, but it also leaves invariant the metric, $g = d\theta^2 + \sin^2(\theta) d\theta^2$, implying that the distance between any $2$ points is the same as the distance between the rotated points, under any rotation $h \in SO(3)$. Since $SU(2)$ is the double covering of $SO(3)$, there is a $2$-to-$1$ Lie group morphism $SU(2) \to SO(3)$ under which any rotation $h \in SO(3)$ corresponds to two distinct points $\pm \tilde h \in SU(2)$. From this it follows that each element of $SU(2)$ acts as a rotation on $S^2$, so that \rtext{$SU(2)$ is also a group of symmetries of $S^2$ that acts by diffeomorphisms and isometries}. Notice, however, that the most general symmetry group of $S^2$ is the orthogonal group $O(3)$, which includes reflections under planes on $\RR^3$ that pass through the origin.
-
-Under the distance function defined by the previously introduced spectral triples, \rtext{$SU(2)$ acts, in fact, by isometries on each $\acal_N$}.
-
-\begin{theorem}
-\textbf{\rtext{Theorem}}: For all $N = 2j \in \bb N$, the distance is $SU(2)$-invariant: 
-\begin{align}
-    d_N(\omega, \omega') &= d_N(g_* \omega, g_*\omega'), & \text{for all $\omega, \omega' \in \mathcal S(\acal_N)$}.
-\end{align}
-
-\end{theorem}
-
-\begin{proof}
-    The theorem follows once we show 
-    \begin{equation}
-        \rtext{||[D_N, a^g]|| = ||[D_N, a]||},
-    \end{equation} since, then,
-    \begin{align*}
-    d_N(g_* \omega, g_* \omega') &= sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g)|: ||[D_N, a \otimes 1_2]|| \leq 1 \} \\
-        &= sup_{b \in \acal_N}\{ |\omega(b) - \omega'(b)|: ||[D_N, b \otimes 1_2]|| \leq 1 \} \\
-        &= d_N(\omega, \omega'),
-\end{align*}
-since $b = a^g$ for fixed $g \in SU(2)$ sweeps all $\acal_N$ if $a$ does.
-
-The action on $\acal_N \ni a$ as a an operator subalgebra on $H_N$, i.e. as elements of the type $a \otimes 1 \subset End(H_N)$, is  $u(a \otimes 1)u^* = a^g \otimes 1$, coinciding with the already defined action on $a \in \acal_N$. 
-
-    
-\end{proof} since from there it follows that
 
 
 
 
 
-\textit{Pf}: $[D_N, a^g \otimes 1] = u[D_N, a \otimes 1_2]u^*$ where $u = \pi_j(g) \otimes \pi_{1/2}(g)$ is the induced unitary action of $g$ in $H_N$ $\xleftarrow{}$
-1. $a^g \otimes 1_2 = u(a \otimes 1_2)u^*$;
-2. The spectral triple is $SU(2)$-equivariant, hence $D_N$ commutes with the $SU(2)$ action.
+
+\textit{Pf}: 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
