@@ -284,7 +284,7 @@ This spectral triple may be seen to come as a single term of the $SU(2)$-induced
 \end{equation}
 where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J^+, J^- \in U(\sut(2))$ on $V_j$.
 
-We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense we first need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, $a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*$. Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2} \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$ \eqref{}.
+We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense we first need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, $a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*$. Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition \eqref{} of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
 
 \begin{proposition}
 For each $N \in \NN$, the irreducible spectral triple:
@@ -306,7 +306,7 @@ That those are the eigenvalues and their multiplicities follows from finding eig
 
 If the spectral triple had a grading, the Dirac operator would have a symmetric spectrum, hence this can't be the case.
 
-A real structure doesn't exist since, if it did, its commutant would have dimension greater than $4 = $
+That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows from the fact that the commutant of $\acal_N$ is $2$, and so it can't contain $J \acal_N J^{-1}$.
 
 \end{proof}
 
@@ -353,11 +353,13 @@ Notice that the action of $\acal_N$ on itself is simply the derivative of the ac
     \mathcal D_N : \hcal_N \to \hcal_N  \iff \bigoplus_{l =1}^N D_l: \bigoplus_{l =1}^N H_l \to \bigoplus_{l =1}^N H_l.
 \end{equation}
 
+
+
 \begin{theorem}
 The full spectral triples satisfies:
     \begin{itemize}
     
-    \item It is a real spectral triple.
+    \item It is a real spectral triple, with real structure $\mathcal J_N: \hcal_N \to hcal_N$, $a \otimes v \mapsto a^* \otimes \sigma_2 \cut v$.
     
     \item It is $SU(2)$-equivariant
     
