@@ -595,9 +595,57 @@ The general procedure to find the distance between two states will be the follow
     
     \end{enumerate} 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Distance Between (Vector) Discrete States $|j,m\rangle$ for Arbitrary $N$}
+
+% {\color{gray} 
+% Presentation:
+
+% \rtext{\textbf{Theorem}}: 
+% %  and so, between the north and south poles
+% % \begin{equation}
+% %     d_N(\psi_{(0,0), \psi_{(0, \pi)}}) = \sum_{k = 1}^N \frac{1}{\sqrt{k(N-k+1)}}
+% % \end{equation}
+% \textit{Pf}: Recall that $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$ $\longrightarrow$ $\omega_m(a) - \omega_n(a) = \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle$; since $|\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, we get the upper bound. 
+
+% Define the diagonal hermitian operator $\hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m  \right)|j, m\rangle$, $\longrightarrow$ $[E, \hat a] |j, k \rangle = |j, k+1\rangle$ ($k < j$), and so $\hat a$ saturates the inequality.
+% }
+
+\linea
+
+Another family of pure states on each $\acal_N = End(V_j)$, for $N = 2j \in \NN$  is the family of vector states $\lbtext{\omega_m} := \langle j, m | \cdot | j, m \rangle$, where $m = -j, \dots, j-1, j$. The study of this distance will be useful to the study of coherent states.
+
+\begin{theorem}
+For any $N$, let $\lbtext{\omega_m} = \langle j, m| \cdot |j, m\rangle \in \mathcal S(\acal_N)$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
+\begin{equation}
+    d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k).
+\end{equation}
+In particular, the distance between this family of states is additive.
+\end{theorem}
+
+\begin{proof}
+Recall that $E = J_+ = J_-^* \in U(\sut)$ and that, for $m \pm 1 = -j\pm 1, \dots, j$, $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$. Therefore, 
+\begin{align*}
+    \langle j, m | [E, a] |j, m - 1 \rangle &= \sqrt{(j+m)(j-m+1)} \langle j, m-1| a | j, m-1\rangle \\
+    & -\sqrt{(j-m+1)(j+m)} \langle j, m| a | j, m\rangle
+\end{align*}
+Hence, 
+\begin{align*}
+    \omega_m(a) - \omega_n(a) &= \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle \\
+    &= \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle
+\end{align*}
+Applying the triangle inequality on the norm of the above equation, and using proposition \ref{}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, so we get the distance formula in the statement as an upper bound. 
+
+Define the diagonal hermitian operator 
+\begin{equation*}
+    \hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m \frac{1}{\sqrt{(j+k)(j-k+1}}  \right)|j, m\rangle.    
+\end{equation*} 
+For this $\hat a$, $[E, \hat a] |j, m \rangle = |j, m+1\rangle$ for all $m = -j, \dots, j-1$, and so $\hat a$ saturates the inequality.
+\end{proof}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The $N=1$ distance between coherent states}
+\subsection{The distance between $N=1$ coherent states}
 
 % {\color{gray} 
 %  - 
@@ -673,53 +721,7 @@ and so $i[D_1, a]$ is hermitian, with characteristic polynomial $\lambda^2(\lamb
 Therefore, if we choose $a \in \acal_1$ hermitian with associated $\vec a$ parallel to $\vec x - \vec y$ such that $2|\vec a| = 1$, this element saturates the inequality.
 \end{proof}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Distance Between (Vector) Discrete States $|j,m\rangle$ for Arbitrary $N$}
 
-{\color{gray} 
-Presentation:
-
-\rtext{\textbf{Theorem}}: 
-%  and so, between the north and south poles
-% \begin{equation}
-%     d_N(\psi_{(0,0), \psi_{(0, \pi)}}) = \sum_{k = 1}^N \frac{1}{\sqrt{k(N-k+1)}}
-% \end{equation}
-\textit{Pf}: Recall that $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$ $\longrightarrow$ $\omega_m(a) - \omega_n(a) = \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle$; since $|\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, we get the upper bound. 
-
-Define the diagonal hermitian operator $\hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m  \right)|j, m\rangle$, $\longrightarrow$ $[E, \hat a] |j, k \rangle = |j, k+1\rangle$ ($k < j$), and so $\hat a$ saturates the inequality.
-}
-
-\linea
-
-Another family of pure states on each $\acal_N = End(V_j)$, for $N = 2j \in \NN$  is the family of vector states $\lbtext{\omega_m} := \langle j, m | \cdot | j, m \rangle$, where $m = -j, \dots, j-1, j$. The study of this distance will be useful to the study of coherent states.
-
-\begin{theorem}
-For any $N$, let $\lbtext{\omega_m} = \langle j, m| \cdot |j, m\rangle \in \mathcal S(\acal_N)$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
-\begin{equation}
-    d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k).
-\end{equation}
-In particular, the distance between this family of states is additive.
-\end{theorem}
-
-\begin{proof}
-Recall that $E = J_+ = J_-^* \in U(\sut)$ and that, for $m \pm 1 = -j\pm 1, \dots, j$, $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$. Therefore, 
-\begin{align*}
-    \langle j, m | [E, a] |j, m - 1 \rangle &= \sqrt{(j+m)(j-m+1)} \langle j, m-1| a | j, m-1\rangle \\
-    & -\sqrt{(j-m+1)(j+m)} \langle j, m| a | j, m\rangle
-\end{align*}
-Hence, 
-\begin{align*}
-    \omega_m(a) - \omega_n(a) &= \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle \\
-    &= \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle
-\end{align*}
-Applying the triangle inequality on the norm of the above equation, and using proposition \ref{}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, we get the distance formula in the statement as an upper bound. 
-
-Define the diagonal hermitian operator 
-\begin{equation*}
-    \hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m \frac{1}{\sqrt{(j+k)(j-k+1}}  \right)|j, m\rangle.    
-\end{equation*} 
-For this $\hat a$, $[E, \hat a] |j, k \rangle = |j, k+1\rangle$ for all $k = -j, \dots, j-1$, and so $\hat a$ saturates the inequality.
-\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Relating Distinct $N$'s and Upper Bound}
