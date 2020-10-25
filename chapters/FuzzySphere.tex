@@ -301,7 +301,7 @@ This spectral triple may be seen to come as a single term of the $SU(2)$-induced
     D_N = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
     = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
 \end{equation}
-where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J^+, J^- \in U(\sut)$ on $V_j$.
+where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J_+, J_- \in U(\sut)$ on $V_j$.
 
 We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense in the first place we need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, $a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*$. Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition \eqref{} of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
 
@@ -461,6 +461,9 @@ is $SU(2)$-equivariant}: $g_* \psi^N_{(\phi, \theta)} = \psi^N_{g\cdot (\phi, \t
 What group used in Fiore? $O(D)$
 
 - In Fiore2020 there is a simple introduction to Coherent states: group $G$ acting (irreducibly) on a Hilbert space. AND the example for $G = SU(2)$ is sketched, although there is a mistake for one of the $3$ characterizations, since it isn't true that the coherent states are eigenvectors of the ``annihilation operator'' $J_+$. D'Andrea mentions other sources.
+
+\lbtext{WHY DO WE WANT TO STUDY DISTANCE BETWEEN COHERENT STATES???} Make this very explicit.
+
 }
 
 \linea
@@ -662,7 +665,10 @@ Now, let $a_\pm = a_1 \pm i a_2$, so that $a = a_0 + a_+ \sigma_+ + a_- \sigma_-
     0 & -a_- & a_- & 0
     \end{pmatrix}
 \end{equation*}
-and so $i[D_1, a]$ is hermitian, with characteristic polynomial $\lambda^2(\lambda^2 -4|\vec a|^2)$, so its norm is its maximum eigenvalue. Then $||[D_1, a]|| = 2 |\vec a|$.
+and so $i[D_1, a]$ is hermitian, with characteristic polynomial $\lambda^2(\lambda^2 -4|\vec a|^2)$, so its norm is its maximum eigenvalue. Then 
+\begin{equation*}
+    ||[D_1, a]|| = 2 |\vec a|.
+\end{equation*}
 
 Therefore, if we choose $a \in \acal_1$ hermitian with associated $\vec a$ parallel to $\vec x - \vec y$ such that $2|\vec a| = 1$, this element saturates the inequality.
 \end{proof}
@@ -673,10 +679,7 @@ Therefore, if we choose $a \in \acal_1$ hermitian with associated $\vec a$ paral
 {\color{gray} 
 Presentation:
 
-\rtext{\textbf{Theorem}}: For any $N$, let $\lbtext{\omega_m} = \langle j, m| \cdot |j, m\rangle \in \mathcal S(\acal_N)$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
-\begin{equation}
-    d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k)
-\end{equation}
+\rtext{\textbf{Theorem}}: 
 %  and so, between the north and south poles
 % \begin{equation}
 %     d_N(\psi_{(0,0), \psi_{(0, \pi)}}) = \sum_{k = 1}^N \frac{1}{\sqrt{k(N-k+1)}}
@@ -687,6 +690,37 @@ Define the diagonal hermitian operator $\hat a |j, m\rangle := - \left( \sum_{k 
 }
 
 \linea
+
+Another family of pure states on each $\acal_N = End(V_j)$, for $N = 2j \in \NN$  is the family of vector states $\lbtext{\omega_m} := \langle j, m | \cdot | j, m \rangle$, where $m = -j, \dots, j-1, j$. The study of this distance will be useful to the study of coherent states.
+
+\begin{theorem}
+For any $N$, let $\lbtext{\omega_m} = \langle j, m| \cdot |j, m\rangle \in \mathcal S(\acal_N)$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
+\begin{equation}
+    d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k).
+\end{equation}
+In particular, the distance between this family of states is additive.
+\end{theorem}
+
+\begin{proof}
+Recall that $E = J_+ = J_-^* \in U(\sut)$ and that, for $m \pm 1 = -j\pm 1, \dots, j$, $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$. Therefore, 
+\begin{align*}
+    \langle j, m | [E, a] |j, m - 1 \rangle &= \sqrt{(j+m)(j-m+1)} \langle j, m-1| a | j, m-1\rangle \\
+    & -\sqrt{(j-m+1)(j+m)} \langle j, m| a | j, m\rangle
+\end{align*}
+Hence, 
+\begin{align*}
+    \omega_m(a) - \omega_n(a) &= \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle \\
+    &= \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle
+\end{align*}
+Applying the triangle inequality on the norm of the above equation, and using proposition \ref{}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, we get the distance formula in the statement as an upper bound. 
+
+Define the diagonal hermitian operator 
+\begin{equation*}
+    \hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m \frac{1}{\sqrt{(j+k)(j-k+1}}  \right)|j, m\rangle.    
+\end{equation*} 
+For this $\hat a$, $[E, \hat a] |j, k \rangle = |j, k+1\rangle$ for all $k = -j, \dots, j-1$, and so $\hat a$ saturates the inequality.
+\end{proof}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Relating Distinct $N$'s and Upper Bound}
 
