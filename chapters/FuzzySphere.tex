@@ -282,11 +282,11 @@ This spectral triple may be seen to come as a single term of the $SU(2)$-induced
     D_N = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
     = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
 \end{equation}
-where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J^+, J^- \in U(\sut(2))$ on $V_j$.
+where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J^+, J^- \in U(\sut)$ on $V_j$.
 
-We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense we first need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, $a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*$. Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition \eqref{} of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
+We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense in the first place we need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, $a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*$. Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition \eqref{} of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
 
-\begin{proposition}
+\begin{proposition}\label{propIrredSpectralTriple}
 For each $N \in \NN$, the irreducible spectral triple:
 
     \begin{itemize}
@@ -348,20 +348,18 @@ That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows fro
 For each $N \in \NN$, $j = N/2$, the \lbtext{full spectral triple} is $(\acal_N, \lbtext{\hcal_N} := \mathcal A_N \otimes \CC^2, \lbtext{\mathcal D_N} := (\text{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) )$, where $a \in \acal_N$ acts on the first factor of $\hcal_N$ via the commutator $[a, \cdot]$.
 \end{definition}
 
-Notice that the action of $\acal_N$ on itself is simply the derivative of the action $B \mapsto \pi_j(g) B \pi_j(g)^{-1}$ of $SU(2) \ni g$ on $\acal_N = End(V_j)$. Under the $SU(2)$-induced decomposition of $\acal_N$, the Hilbert space $\hcal_N$ is isomorphic to $\bigoplus_{l =1}^N H_l$, where the representation $\text{ad}\pi_j$ then corresponds to the representation $\bigoplus_{l = 0}^N \pi_l$, in which case the Dirac operator $\dcal_N$ becomes:
-\begin{equation}
+Notice that the action of $\acal_N$ on itself as the first factor of $\hcal_N$ is simply the derivative of the adjoint action $B \mapsto \pi_j(g) B \pi_j(g)^{-1}$ of $SU(2) \ni g$ on $\acal_N = End(V_j)$. This action extends to an action $\text{ad}\pi_j \otimes \pi_{1/2}$ on $\hcal_N = \acal_N \otimes V_{1/2}$. Under the $SU(2)$-induced decomposition of $\acal_N$ into irreducible representations, the Hilbert space $\hcal_N$ is isomorphic to $\bigoplus_{l =1}^N H_l$, where the representation $\text{ad}\pi_j$ on one side then corresponds to the representation $\bigoplus_{l = 0}^N \pi_l$ on the other side, in which case the Dirac operator $\dcal_N$ corresponds to:
+\begin{equation}\label{reducibleDiracDecomposition}
     \mathcal D_N : \hcal_N \to \hcal_N  \iff \bigoplus_{l =1}^N D_l: \bigoplus_{l =1}^N H_l \to \bigoplus_{l =1}^N H_l.
 \end{equation}
 
-
-
 \begin{theorem}
-The full spectral triples satisfies:
+Under the adjoint action of $SU(2)$ on the algebra $\acal_N$ and the action of $SU(2)$ defined in the previous paragraph, the full spectral triples satisfies:
     \begin{itemize}
     
-    \item It is a real spectral triple, with real structure $\mathcal J_N: \hcal_N \to hcal_N$, $a \otimes v \mapsto a^* \otimes \sigma_2 \cut v$.
+    \item It is $SU(2)$-equivariant.
     
-    \item It is $SU(2)$-equivariant
+    \item It is a real spectral triple, with real structure $\mathcal J_N: \hcal_N \to \hcal_N$, $a \otimes v \mapsto a^* \otimes \sigma_2 \cut v$.
     
     \item The spectrum of $\mathcal D_N$ is the truncation of $\slashed D$ to $\{-N, \dots, N+1\}$, ie. the eigenvalues of $\mathcal D_N$ are $N+1$ with multiplicity $2N+2$, and $\pm l$ with multiplicity $2l$ for $l = 1, \dots, N$.
     
@@ -369,6 +367,14 @@ The full spectral triples satisfies:
     
     \end{itemize}
 \end{theorem}
+
+\begin{proof}
+It is straightforward to verify that: $\mathcal J_N$ is antilinear and antiunitary, $\mathcal J_N^2 = - 1$, $\mathcal J_N (\acal_N \mathcal\otimes 1) J_N^{-1} \subset \acal_N \mathcal\otimes M_2(\CC) \subset \bcal(\hcal_N)$, and $\mathcal J_N \dcal_N = + \dcal_N \mathcal J_N$; hence $\mathcal J_N$ is a real structure.
+
+From decomposition \eqref{reducibleDiracDecomposition} of the Dirac operator, results (ii) and (iii) follow from the application of proposition \ref{reducibleDiracDecomposition} to each of the terms.
+
+Once again, a grading can't exist since the spectrum of $\dcal_N$ isn't symmetric.
+\end{proof}
 
 \rtext{The third statement of the theorems says that we have found a spectral triple with the desired property of being a truncation of the canonical spectral triple of $S^2$}. Hence, this will be the spectral triple which we will assign the forming algebras of the fuzzy sphere, under which the metric properties are to be studied, since it \rtext{may be considered a sequence of spectral triple that approximate the metric of $S^2$ increasingly better with growing $N$}. However, the following theorem allows us to study instead the much simpler irreducible spectral triple.
 
@@ -378,7 +384,11 @@ The irreducible and full spectral triple on $\acal_N$, for each $N \in \NN$, ind
 \begin{proof}
 Let $\omega, \omega'$ be states on $\acal_N$. Notice that distinct spectral triples induce different notions of distance only due to the condition $||[D, a]|| \leq 1$, which determines over which elements $a$ of the algebra the supremum of $|\omega(a) - \omega'(a)|$ is evaluated. However, for all $a \in \acal$, $||[\dcal_N, a]|| = ||[D_N, a]||$ as shown by the following calculation:
 \begin{align*}
-    [\dcal, a]b \otimes v = \cdots = \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v = [D_N, a] \cdot b \otimes v.
+    [\dcal, a]b \otimes v &= \dcal_N(ab \otimes v) - a\left(b \otimes v + \sum_{k = 1}^3 [\pi_j(J_k), b] \otimes \sigma_k v\right)\\
+        &= ab \otimes v + \sum_{k = 1}^3[\pi_j(J_k), ab] \otimes \sigma_k v - ab \otimes v - \sum_{k = 1}^3 a[\pi_j(J_k), b]\otimes \sigma_k v\\
+        &= \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v\\
+        &= [1_{N+1} \otimes 1_2 + \sum_{k = 1}^3 \pi_j(J_k)\otimes \sigma_k, a](b, v)\\
+        &= [D_N, a] \cdot b \otimes v.
 \end{align*}
 This tells us that $[\slashed D_N, a]: \hcal_N \to \hcal_N$ is the operator of left multiplication by the matrix $[D_N, a] \in \acal_N \otimes M_2(\CC)$, implying that its operator norm coincides with the norm of the matrix $[D_N, a]$.
 \end{proof}
