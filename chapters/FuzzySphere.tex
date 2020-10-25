@@ -739,30 +739,30 @@ Therefore, if we choose $a \in \acal_1$ hermitian with associated $\vec a$ paral
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Relating Distinct $N$'s and Upper Bound}
 
-{\color{gray} 
- - Relate algebras and coherent states of subsequent $N$, finding relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$.
+% {\color{gray} 
+%  - Relate algebras and coherent states of subsequent $N$, finding relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$.
  
-Presentation:
+% Presentation:
 
-\rtext{\textbf{Theorem}}: the distance $d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})$ is non-decreasing with $N$:
-\begin{equation}
-    d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{N+1}(\psi^{N+1}_{(\phi, \theta)}, \psi^{N+1}_{(\phi', \theta')})
-\end{equation}
+% \rtext{\textbf{Theorem}}: the distance $d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})$ is non-decreasing with $N$:
+% \begin{equation}
+%     d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{N+1}(\psi^{N+1}_{(\phi, \theta)}, \psi^{N+1}_{(\phi', \theta')})
+% \end{equation}
 
- KEY: Relate $N$ with $N+1$
+%  KEY: Relate $N$ with $N+1$
  
-\textit{Pf}: $U^\pm_j |\phi, \theta)_{N+1} = |\phi, \theta)_N \otimes |\phi, \theta)_1$, $\xrightarrow{}$ $\eta^+_N: \acal_N \to \acal_{N + 1}$ $\longrightarrow{}$ $\psi^{N+1}_{(\phi, \theta)} \circ \eta^+_N(a) = \psi^N_{(\phi, \theta)}$ \& $||[D_{N + 1}, \eta^+_N(a)]|| \leq ||[D_N, a]||$.
+% \textit{Pf}: $U^\pm_j |\phi, \theta)_{N+1} = |\phi, \theta)_N \otimes |\phi, \theta)_1$, $\xrightarrow{}$ $\eta^+_N: \acal_N \to \acal_{N + 1}$ $\longrightarrow{}$ $\psi^{N+1}_{(\phi, \theta)} \circ \eta^+_N(a) = \psi^N_{(\phi, \theta)}$ \& $||[D_{N + 1}, \eta^+_N(a)]|| \leq ||[D_N, a]||$.
 
-\rtext{\textbf{Theorem}}: For all $N$, 
-\begin{equation}
-    \frac{1}{2}|E(\phi, \theta)- E(\phi', \theta')| \leq || \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{geo}(E(\phi, \theta), E(\phi', \theta')).
-\end{equation}
+% \rtext{\textbf{Theorem}}: For all $N$, 
+% \begin{equation}
+%     \frac{1}{2}|E(\phi, \theta)- E(\phi', \theta')| \leq || \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{geo}(E(\phi, \theta), E(\phi', \theta')).
+% \end{equation}
 
-\textit{Pf}: \textbf{use SU(2)-invariance of distance} and only prove it between within the great circle $\theta = \frac{\pi}{2}$: $d_N(\psi^N_{(0, \frac{\pi}{2})}, \psi^N_{(\phi, \frac{\pi}{2})}) \leq |\phi|$. 
-$|\psi^N_{(\phi, \frac{\pi}{2})} - \psi^N_{(0, \frac{\pi}{2})}| = |i \int_0^\phi \psi^N_{(\alpha, \frac{\pi}{2})}([H, a]) d\alpha | \leq ||[H, a]|| |\phi| \leq |\phi| ||[D_N, a]||$.
+% \textit{Pf}: \textbf{use SU(2)-invariance of distance} and only prove it between within the great circle $\theta = \frac{\pi}{2}$: $d_N(\psi^N_{(0, \frac{\pi}{2})}, \psi^N_{(\phi, \frac{\pi}{2})}) \leq |\phi|$. 
+% $|\psi^N_{(\phi, \frac{\pi}{2})} - \psi^N_{(0, \frac{\pi}{2})}| = |i \int_0^\phi \psi^N_{(\alpha, \frac{\pi}{2})}([H, a]) d\alpha | \leq ||[H, a]|| |\phi| \leq |\phi| ||[D_N, a]||$.
 
-(Dibujito: $N=1$ en un color, other increasing $N's$ (equivalent paths), finally commutative distance).
-}
+% (Dibujito: $N=1$ en un color, other increasing $N's$ (equivalent paths), finally commutative distance).
+% }
 
 \linea
 
@@ -802,7 +802,7 @@ This is a direct consequence of the definitions of $U_J^\pm$ and $\eta_N^+$, sin
 \end{align*}
 \end{proof}
 
-Finally, using some more properties of the maps $U_j^\pm$ and $\eta^\pm_N$, together with the previous lemmas, the following can be proven.
+Finally, using some more properties of the maps $U_j^\pm$ and $\eta^\pm_N$, together with the previous lemmas, the following can be proven:
 \begin{lemma}\label{normCommutatorsDiracDifferentNRelation}
 For any $a \in \acal_N$,
 \begin{equation}
@@ -837,7 +837,7 @@ An interesting upper bound is possible for the increasing sequence with $N$ that
 \begin{theorem}\label{geometricDistanceCommutativeUpperBound}
 For all $N$, and for all $E(\phi, \theta), E(\phi', \theta') \in S^2$
 \begin{equation}
-    \frac{1}{2}|E(\phi, \theta)- E(\phi', \theta')|_{\RR^3} \leq || \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{S^2}(E(\phi, \theta), E(\phi', \theta')),
+    \frac{1}{2}|E(\phi, \theta)- E(\phi', \theta')|_{\RR^3}  \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{S^2}(E(\phi, \theta), E(\phi', \theta')),
 \end{equation}
 where $d_{S^2}$ is the usual distance within $S^2$, inherited from the metric $g = d\theta^2 + \sin^2 \theta \, d\phi^2$.
 \end{theorem}
