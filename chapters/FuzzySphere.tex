@@ -70,7 +70,7 @@ The eigenvectors of $\slashed D$ $Y^{'}_{jm}, Y^{''}_{jm}$ $j \in \NN + 1/2$, $m
 {\color{gray}
 The following aiding lemma will allow us to study the spectrum of the dirac operators of the dirac triples that will be defined on the fuzzy sphere.
 
-\begin{lemma}
+\begin{lemma}\label{lemmaSpectrumAlgebraic}
 The operator $(\pi_0 \otimes \pi_{1/2})(\dcal^2): V_0 \otimes \CC^2 \to V_0 \otimes \CC^2$ has as unique eigenvalue $1$ with multiplicity $2$. For any $j \in \frac{\ZZ_{\geq 1}}{0}$, the $(\pi_j \otimes \pi_{1/2})(\dcal^2)$ has two eigenvalues: $j^2$ with multiplicity $2j$, and $(j+1)^2$ with multiplicity $2j+2$.
 \end{lemma}
 
@@ -228,8 +228,8 @@ The theorem follows once we show that
 \end{equation} since, in that case,
 \begin{align*}
 d_\dcal(g_* \omega, g_* \omega') &= sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g)|: ||[\dcal, a \otimes 1_2]|| \leq 1 \} \\
-    &= sup_{b \in \acal_N}\{ |\omega(b) - \omega'(b)|: ||[D_N, b \otimes 1_2]|| \leq 1 \} \\
-    &= d_N(\omega, \omega'),
+    &= sup_{b \in \acal_N}\{ |\omega(b) - \omega'(b)|: ||[\dcal, b \otimes 1_2]|| \leq 1 \} \\
+    &= d_\dcal(\omega, \omega'),
 \end{align*}
 since $b = a^g$, for fixed $g \in SU(2)$, sweeps all $\acal_N$ if $a$ does.
 
