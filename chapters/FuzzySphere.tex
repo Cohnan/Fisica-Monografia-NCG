@@ -395,7 +395,9 @@ From the $SU(2)$-decomposition \eqref{reducibleDiracDecomposition} of the Dirac 
 Once again, a grading can't exist since the spectrum of $\dcal_N$ isn't symmetric.
 \end{proof}
 
-\rtext{The third statement of the theorems says that we have found a spectral triple with the desired property of being a truncation of the canonical spectral triple of $S^2$}. Hence, this will be the spectral triple which we will assign the forming algebras of the fuzzy sphere, under which the metric properties are to be studied, since it \rtext{may be considered a sequence of spectral triple that approximate the metric of $S^2$ increasingly better with growing $N$}. However, the following theorem allows us to study instead the much simpler irreducible spectral triple.
+\rtext{The third statement of the theorems says that we have found a spectral triple with the desired property of being a truncation of the canonical spectral triple of $S^2$}. { \color{gray}
+Furthermore, sust like the eigenvectors of $\slashed D$ are vectors conformed by pairs of spherical harmonics, the eigenvectors of each $\dcal_N$ are pairs of fuzzy spherical harmonics $\hat Y^l_m$ (not sure if they can be the ones I defined before) for which the traditional spherical harmonics $Y^l_m$ may be considered ``symbols''.
+} Hence, this will be the spectral triple which we will assign the forming algebras of the fuzzy sphere, under which the metric properties are to be studied, since it \rtext{may be considered a sequence of spectral triple that approximate the metric of $S^2$ increasingly better with growing $N$}. However, the following theorem allows us to study instead the much simpler irreducible spectral triple.
 
 \begin{theorem}
 The irreducible and full spectral triple on $\acal_N$, for each $N \in \NN$, induce the same distance in the state space of $\acal_N$.
@@ -502,31 +504,77 @@ What group used in Fiore? $O(D)$
 
 \linea
 
-Due to theorem \ref{}, although the full spectral triple seems to be a better approximation of the canonical spectral triple due to the properties of the spectrum of $\dcal_N$, it suffices to study the distances using the irreducible spectral triple since it induces exactly the same notion of distance on each $\acal_N$. From now on we will stop writing the symbols $\pi_j$ unless confusion may arise.
+Due to theorem \ref{}, although the full spectral triple seems to be a better approximation of the canonical spectral triple due to the properties of the spectrum of $\dcal_N$, for $N$ any natural number, it suffices to study the distances using the irreducible spectral triple since it induces exactly the same notion of distance on each $\acal_N$. From now on we will stop writing the symbols $\pi_j$, $j = N/2$, denoting the unitary representation of $U(\sut) \ni H = J_3, E = J_-, F = J_+$ on $V_j$ unless confusion may arise; hence we will write the Dirac operator as
+\begin{equation}
+    D_N = \begin{pmatrix} 1 + H & F \\ E & 1 - H\end{pmatrix}.
+\end{equation}
+Notice that, under this matrix notation that follows from the tensor product with the Pauli matrices, an algebra element $a \in \acal$ corresponds to the matrix
+\begin{equation}\label{aAsMatrixOperator}
+    a = \begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix}
+\end{equation} as an operator on $H_N$.
 
 \begin{remark}
 If $\acal$ is a unital $C^*$-algebra, and $D$ is an associated Dirac operator, the supremum  $d_\dcal(\omega, \omega')$, of $|\omega(a) - \omega'(a)|$ for $a \in \acal$ such that $||[D, a]|| \leq 1$, is always attained in hermitian $(a = a^*)$ elements \ref{Rieffel30,33}.
 \end{remark}
 
 \begin{remark}
-A state may be defined from its action on hermitian elements of the $C^*$-algebra $\acal$, since from there it can be uniquely extended to all of $\acal$, since any $a \in \acal$ can be written as $a = \frac{a+a^*}{2} + \frac{a - a^*}{2} \in Herm. + Antiherm. = Herm. + i\, Herm$.
+A state may be defined from its action on hermitian elements of the $C^*$-algebra $\acal$, since from there it can be uniquely extended to all of $\acal$, since any $a \in \acal$ can be written as $a = \frac{a+a^*}{2} + i \frac{a - a^*}{2i}$, where $\frac{a+a^*}{2}$ and $\frac{a-a^*}{2i}$ are hermitian.
 \end{remark}
 
-The following lemma will also be a very helpful tool for our studies.
+The following lemma will also be a very helpful tool for our following  studies, and its proof exemplifies how the norm of the commutator $||[D, a]||$ appearing in the definition of Connes' distance, may be studied.
 
 \begin{lemma}
-For any $a \in \acal_N$,
+For any $a \in \acal_N$, the following inequalities about operators on $H_N$ are satisfied:
 \begin{equation} \label{ineqDN}
     ||[H, a]||, ||[E, a]||, ||[F, a]||  \leq ||[D_N, a]||;
 \end{equation} \label{eqDNdiag}
 if $a$ is diagonal and hermitian, then
 \begin{equation}
-    ||[E, a]|| = ||[D_N, a]||.
+    ||[D_N, a]|| = ||[E, a]|| = ||[F, a]||.
 \end{equation}
 \end{lemma}
 
 \begin{proof}
+Let $a \in \acal_N$ be arbitrary. Then
+\begin{align*}
+    ||[D_N, a]||^2 
+        &= sup_{v \in H_N, |v| = 1} |[D_N, a] | v \rangle|^2 \\
+        &= sup_{v \in H_N, |v| = 1} \langle v | [D_N, a]^* [D_N, a] | v \rangle.
+\end{align*}
 
+To find a lower bound for the norm of $[D_N, a]$, first notice that 
+\begin{align*}
+    [D_N, a] &= \begin{pmatrix} [H, a] & [F, a] \\ [E, a] & -[H, a] \end{pmatrix}&
+    [D_N, a]^* = \begin{pmatrix} [H, a]^* & [F, a]^* \\ [E, a]^* & -[H, a]^* \end{pmatrix},
+\end{align*} hence
+\begin{equation*}
+    [D_N, a]^* [D_N, a] 
+    = \begin{pmatrix}
+    [H, a]^*[H, a] + [E, a]^*[E, a] & \cdots \\
+    \cdots & [H, a]^*[H, a] + [F, a]^*[F, a]
+    \end{pmatrix}.
+\end{equation*}
+If in the equation for $||[D_N, a]||$ instead of taking the supremum over all $v \in H_N$ of unit norm we take it over all unit vectors of the form $(x, 0)^t$, and $(0, y)^t$, we obtain, respectively, the following lower bounds:
+\begin{align}
+    ||[D_N, a]||^2 &\geq ||[H, a]||^2 + ||[E, a]||^2 \\
+    ||[D_N, a]||^2 &\geq ||[H, a]||^2 + ||[F, a]||^2,
+\end{align}
+and so the first inequalities follow.
+
+If $a \in \acal_N = M_{N+1}(\CC)$ is diagonal, then $[H, a] = 0$ since $H = \pi_j(J_3)$ is also diagonal, and so
+\begin{equation*}
+    [D_N, a]^* [D_N, a] 
+    = \begin{pmatrix}
+    [E, a]^*[E, a] & 0 \\
+    0 & [F, a]^*[F, a]
+    \end{pmatrix}
+\end{equation*}
+hence
+\begin{equation}
+    ||[D_N, a]|| = max\left\{ ||[E, a]||, ||[F, a]|| \right\}.
+\end{equation}
+
+Finally, $[D_N, a]^* = -[D_N, a^*]$ and $E = F^*$ imply that $[F, a] = - [E, a^*]^*$, so, if $a$ is hermitian and diagonal, $||[E, a]|| = ||[F, a]||$ and the last part of the statement follows.
 \end{proof}
 
 The general procedure to find the distance between two states will be the following: 
