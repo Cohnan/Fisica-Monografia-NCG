@@ -239,8 +239,8 @@ Now, denoting the action of $G \ni g$ on $\hcal$ by $g \cdot$:
         &= (g \cdot) \circ \dcal \circ a \circ (g^{-1}\cdot ) - (g \cdot) \circ a \circ  \dcal \circ (g^{-1}\cdot )\\
         &= \dcal (g \cdot) \circ a\circ (g^{-1}\cdot ) - (g \cdot) \circ a\circ (g^{-1}\cdot ) \dcal & \text{$\dcal$ commutes with $g\cdot$} \\
         &= \dcal \circ a^g - a^g \circ \dcal & \text{actions of $g$ and $\acal$ interwine} \\
-        & = [\dcal, a^g]
-\end{align*} 
+        & = [\dcal, a^g].
+\end{align*} The desired equality \eqref{normEqualDiracAction} follows from this calculation, and from the unitarity of the operators $(g \cdot)$ and $(g\cdot)^*$.
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -271,20 +271,20 @@ Now, denoting the action of $G \ni g$ on $\hcal$ by $g \cdot$:
 % }    
 \linea
 
-This spectral triple, although unsatisfactory as an approximation of the canonical spectral triple of $S^2$ with respect to the first criteria, will turn out to be very useful for computations.
+This spectral triple, although unsatisfactory as an approximation of the canonical spectral triple of $S^2$ with respect to the first criteria stated at the beginning of the section, will turn out to be very useful for computations.
 
 \begin{definition}
 For each $N \in \NN$ and $j = N/2$, define the \lbtext{irreducible spectral triple} as $(\acal_N, \lbtext{H_N} := V_j \otimes \CC^2, D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D))$, where $\acal_N = End(V_j)$ acts naturally on the first factor of $H_N$.
 \end{definition}
 
-This spectral triple may be seen to come as a single term of the $SU(2)$-induced expansion of $\slashed D$ \eqref{}, although we are also taking half integer spin representations, which don't appear in this expansion. The Dirac operators can also be written as
+This spectral triple may be seen to come as a single term of the $SU(2)$-induced expansion of $\slashed D$ \eqref{}, although we are also allowing  half integer spin representations in the current construction, which don't appear in the expansion of $\slashed \dcal$. The Dirac operators can also be written as
 \begin{equation}
     D_N = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
     = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
 \end{equation}
 where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J^+, J^- \in U(\sut(2))$ on $V_j$.
 
-For all $g \in SU(2)$, the unitary representation $\pi_j$ of $SU(2)$ on $V_j$ induces the left action $u_g := \pi_j(g) \otimes \pi_{1/2} \in \mathcal B(H_n)$ on $H_N = V_j \otimes V_{1/2}$. This coincides with one of the summands of the action of $g$ on $\hcal = L^2(S^2) \otimes \CC^2$ when $j \in \NN$. The action on $H_N$ induces the left action on the operators on $H_N$, including $D_N$ and $a \otimes 1 \equiv a$ for all $a \in \acal_N$, given by $u_g \circ \mathcal O \circ u_{g}^*$.
+We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense we first need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, $a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*$. Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2} \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$ \eqref{}.
 
 \begin{proposition}
 For each $N \in \NN$, the irreducible spectral triple:
@@ -298,6 +298,17 @@ For each $N \in \NN$, the irreducible spectral triple:
     \item Isn't compatible with a grading or a real structure.
     \end{itemize}
 \end{proposition}
+
+\begin{proof}
+As stated at the beginning of the section, to proof the $SU(2)$-equivariance follows from $[D_N, u_g] = 0$ and $u_g  a  u_g^* \equiv u_g \circ (a \otimes 1) \circ u_g^* = a^g \otimes 1 \equiv a_g$.
+
+That those are the eigenvalues and their multiplicities follows from finding eigenvectors $|j, m \kket_+$ and $|j, m\kket_-$, $|m| \leq j$ with the mentioned eigenvectors, and deducing that these are all thanks to the lemma \ref{lemmaSpectrumAlgebraic}.
+
+If the spectral triple had a grading, the Dirac operator would have a symmetric spectrum, hence this can't be the case.
+
+A real structure doesn't exist since, if it did, its commutant would have dimension greater than $4 = $
+
+\end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
