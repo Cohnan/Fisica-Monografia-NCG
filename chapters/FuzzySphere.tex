@@ -388,7 +388,7 @@ Under the adjoint action of $SU(2)$ on the algebra $\acal_N$ and the action of $
 \end{theorem}
 
 \begin{proof}
-It is straightforward to verify that: $\mathcal J_N$ is antilinear and antiunitary, $\mathcal J_N^2 = - 1$, $\mathcal J_N (\acal_N \mathcal\otimes 1) J_N^{-1} \subset \acal_N \mathcal\otimes M_2(\CC) \subset \bcal(\hcal_N)$, and $\mathcal J_N \dcal_N = + \dcal_N \mathcal J_N$; hence $\mathcal J_N$ is a real structure.
+It is straightforward to verify that: $\mathcal J_N$ is antilinear and antiunitary, $\mathcal J_N^2 = - 1$, $\mathcal J_N (\acal_N \mathcal\otimes 1) J_N^{-1} \subset (\acal_N \mathcal\otimes 1)' \subset \bcal(\hcal_N)$ (the $\acal '$ denotes the algebra that commutes with the algebra $\acal$), and $\mathcal J_N \dcal_N = + \dcal_N \mathcal J_N$; hence $\mathcal J_N$ is a real structure.
 
 From decomposition \eqref{reducibleDiracDecomposition} of the Dirac operator, results (ii) and (iii) follow from the application of proposition \ref{reducibleDiracDecomposition} to each of the terms.
 
@@ -512,6 +512,23 @@ If $\acal$ is a unital $C^*$-algebra, and $D$ is an associated Dirac operator, t
 A state may be defined from its action on hermitian elements of the $C^*$-algebra $\acal$, since from there it can be uniquely extended to all of $\acal$, since any $a \in \acal$ can be written as $a = \frac{a+a^*}{2} + \frac{a - a^*}{2} \in Herm. + Antiherm. = Herm. + i\, Herm$.
 \end{remark}
 
+The following lemma will also be a very helpful tool for our studies.
+
+\begin{lemma}
+For any $a \in \acal_N$,
+\begin{equation} \label{ineqDN}
+    ||[H, a]||, ||[E, a]||, ||[F, a]||  \leq ||[D_N, a]||;
+\end{equation} \label{eqDNdiag}
+if $a$ is diagonal and hermitian, then
+\begin{equation}
+    ||[E, a]|| = ||[D_N, a]||.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+
+\end{proof}
+
 The general procedure to find the distance between two states will be the following: 
 
     \begin{enumerate}
@@ -553,6 +570,28 @@ $\pi_{1/2}(J_k) = \sigma_k/2$
 }
 
 \linea
+
+Any hermitian element in $\acal_1 = M_2(\CC)$ can be written as
+\begin{align*}
+    a &= \begin{pmatrix} a_0 + a_3 & a_1 - i a_2 \\ a_1 + i a_2 & a_0 - a_3  \end{pmatrix}= a_0 + \vec a \cdot \vec \sigma, & \text{for $(a_0, \dots, a_3) \in \RR^4$.}
+\end{align*}
+
+Positivity of states implies that, restricted to evaluation on hermitian elements, they all are of the form $\omega_{\vec x}(a) = a_0 + \vec x \cdot \vec a$, for $\vec x \in B^3 \subset \RR^3$.
+
+\begin{lemma}
+All pure states on $\acal_1$ are of the form $\omega_{\vec x}$ for $\vec x = E(\phi, \theta):= (\sin \theta \cos \phi, \sin \theta, \cos \theta) \in S^2$. Furthermore, $\omega_{E(\phi, \theta)} = \psi^1_{(\phi, \theta)}$, i.e. all the pure states on $\acal_1$ are the $SU(2)$-coherent states.
+\end{lemma}
+
+\begin{theorem}
+For $N = 1$ all pure states are coherent states and 
+\begin{equation}
+    d_1(\hat p, \hat q) = \frac{1}{2}|\vec p - \vec q|_{\RR^3}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+$|\omega_{\vec x}(b) - \omega_{\vec y}(b)| = |(\vec x - \vec y)\cdot \vec b| \leq |\vec x - \vec y||\vec b|$; $i[D_1, a]$ is hermitian with max. eigenvalue/norm $=2 |\vec a|$ $\longrightarrow$ $a \in \acal_1$ hermitian with $\vec a$ parallel to $\vec x - \vec y$ st. $2|\vec a| = 1$ saturates the inequality.
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Distance Between (Vector) Discrete States $|j,n\rangle$ for Arbitrary $N$}
