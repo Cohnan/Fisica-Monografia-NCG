@@ -215,7 +215,7 @@ $d_N(g_* \omega, g_* \omega') = sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g
 2. The spectral triple is $SU(2)$-equivariant, hence $D_N$ commutes with the $SU(2)$ action.
 }
 
-Rotating the 2-sphere leaves invariant not only its topological and differential properties, but it also leaves invariant the metric, $g = d\theta^2 + \sin^2(\theta) d\theta^2$, implying that the distance between any $2$ points is the same as the distance between the rotated points, under any rotation $h \in SO(3)$. Since $SU(2)$ is the double covering of $SO(3)$, there is a $2$-to-$1$ Lie group morphism $SU(2) \to SO(3)$ under which any rotation $h \in SO(3)$ corresponds to two distinct points $\pm \tilde h \in SU(2)$. From this it follows that each element of $SU(2)$ acts as a rotation on $S^2$, so that \rtext{$SU(2)$ is also a group of symmetries of $S^2$ that acts by diffeomorphisms and isometries}. Notice, however, that the most general symmetry group of $S^2$ is the orthogonal group $O(3)$, which includes reflections under planes on $\RR^3$ that pass through the origin.
+Rotating the 2-sphere leaves invariant not only its topological and differential properties, but it also leaves invariant the metric, $g = d\theta^2 + \sin^2(\theta) d\phi^2$, implying that the distance between any $2$ points is the same as the distance between the rotated points, under any rotation $h \in SO(3)$. Since $SU(2)$ is the double covering of $SO(3)$, there is a $2$-to-$1$ Lie group morphism $SU(2) \to SO(3)$ under which any rotation $h \in SO(3)$ corresponds to two distinct points $\pm \tilde h \in SU(2)$. From this it follows that each element of $SU(2)$ acts as a rotation on $S^2$, so that \rtext{$SU(2)$ is also a group of symmetries of $S^2$ that acts by diffeomorphisms and isometries}. Notice, however, that the most general symmetry group of $S^2$ is the orthogonal group $O(3)$, which includes reflections under planes on $\RR^3$ that pass through the origin.
 
 One important property of the spectral triples that will be defined on the fuzzy sphere is their equivariance under $SU(2)$, or more generally the Hopf algebra $U(\sut)$ as defined in\cite{Sitarz}, giving an analogous notion to the action of these symmetry spaces by isometries. The precise definition of a \textit{spectral triple $(\acal, \hcal, \dcal)$ equivariant under a symmetry space $H$}, $H$ being called \textit{the isometry of the spectral triple}, is fairly involved, but, ignoring some details, reduces to the following:
     \begin{itemize}
@@ -306,13 +306,13 @@ where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J^+,
 We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense in the first place we need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, $a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*$. Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition \eqref{} of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
 
 \begin{proposition}\label{propIrredSpectralTriple}
-For each $N \in \NN$, the irreducible spectral triple:
+For each $N \in \NN$, the associated irreducible spectral triple:
 
     \begin{itemize}
         
     \item Is $SU(2)$-equivariant
     
-    \item Has eigenvalues $j+1$ and $-j$ with multiplicities $2j+2$ and $2j$.
+    \item Has eigenvalues $j+1$ and $-j$ with multiplicities $2j+2$ and $2j$, where $j = N/2$.
         
     \item Isn't compatible with a grading or a real structure.
     \end{itemize}
@@ -325,7 +325,7 @@ That those are the eigenvalues and their multiplicities follows from finding eig
 
 If the spectral triple had a grading, the Dirac operator would have a symmetric spectrum, hence this can't be the case.
 
-That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows from the fact that the commutant of $\acal_N$ is $2$, and so it can't contain $J \acal_N J^{-1}$.
+That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows from the fact that the commutant of $\acal_N$ is $2$, and so it can't contained $J \acal_N J^{-1}$.
 
 \end{proof}
 
@@ -388,9 +388,9 @@ Under the adjoint action of $SU(2)$ on the algebra $\acal_N$ and the action of $
 \end{theorem}
 
 \begin{proof}
-It is straightforward to verify that: $\mathcal J_N$ is antilinear and antiunitary, $\mathcal J_N^2 = - 1$, $\mathcal J_N (\acal_N \mathcal\otimes 1) J_N^{-1} \subset (\acal_N \mathcal\otimes 1)' \subset \bcal(\hcal_N)$ (the $\acal '$ denotes the algebra that commutes with the algebra $\acal$), and $\mathcal J_N \dcal_N = + \dcal_N \mathcal J_N$; hence $\mathcal J_N$ is a real structure.
+It is straightforward to verify that: $\mathcal J_N$ is antilinear and antiunitary, $\mathcal J_N^2 = - 1$, $\mathcal J_N (\acal_N \mathcal\otimes 1) J_N^{-1} \subset (\acal_N \mathcal\otimes 1)' \subset \bcal(\hcal_N)$ (the $\acal '$ denotes the algebra that commutes with the algebra $\acal \subset \bcal(\hcal_N)$), and $\mathcal J_N \dcal_N = \dcal_N \mathcal J_N$; hence $\mathcal J_N$ is a real structure.
 
-From decomposition \eqref{reducibleDiracDecomposition} of the Dirac operator, results (ii) and (iii) follow from the application of proposition \ref{reducibleDiracDecomposition} to each of the terms.
+From the $SU(2)$-decomposition \eqref{reducibleDiracDecomposition} of the Dirac operator, results (ii) and (iii) follow from the application of proposition \ref{reducibleDiracDecomposition} to each of the terms.
 
 Once again, a grading can't exist since the spectrum of $\dcal_N$ isn't symmetric.
 \end{proof}
