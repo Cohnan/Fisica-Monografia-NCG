@@ -626,7 +626,7 @@ Any hermitian element in $\acal_1 = M_2(\CC)$ can be written as
 
 Since very state $\omega: \acal_1 \to \CC$, in addition to its linearity over this $4$-dimensional vector space, must satisfy that $\omega(Id_2) = 1$ and $\omega(a^*a) \geq 0$, then, when evaluated on hermitian elements $a$ as above, every state must be of the form $\omega_{\vec x}(a) = a_0 + \vec x \cdot \vec a$, for $\vec x \in B^3 \subset \RR^3$.
 
-This form for the states identifies the convex combination $\alpha \omega_{\vec x} + \beta \omega_{\vec y}$, i.e. $\alpha, \beta \in \RR_{\geq 0}$ and $\alpha + \beta = 1$, of states $\omega_{\vec x}$ and $\omega_{\vec y}$, with convex combination of the points $\vec x, \vec y \in B^3$. Hence, all pure states on $\acal_1$, i.e. those that can not be written as a convex combination of more than one state, are of the form $\omega_{E(\phi, \theta)}$ for $E(\phi, \theta):= (\sin \theta \cos \phi, \sin \theta, \cos \theta) \in S^2$. Furthermore, $\omega_{E(\phi, \theta)} = \psi^1_{(\phi, \theta)}$.
+This form for the states identifies the convex combination $\alpha \omega_{\vec x} + \beta \omega_{\vec y}$, i.e. $\alpha, \beta \in \RR_{\geq 0}$ and $\alpha + \beta = 1$, of states $\omega_{\vec x}$ and $\omega_{\vec y}$, with the convex combination points $\alpha\vec x + \beta\vec y$ in $B^3$. Hence, all pure states on $\acal_1$, i.e. those that can not be written as a convex combination of more than one state, are of the form $\omega_{E(\phi, \theta)}$ for $E(\phi, \theta):= (\sin \theta \cos \phi, \sin \theta, \cos \theta) \in S^2$. Furthermore, $\omega_{E(\phi, \theta)} = \psi^1_{(\phi, \theta)}$.
 
 \begin{proposition}
 The set $\{\omega_{E(\phi, \theta)} \,|\, E(\phi, \theta)\}$ of pure states on $\acal_1$ coincides with the set of $SU(2)$-coherent states, under the equality $\omega_{E(\phi, \theta)} = \psi^1_{(\phi, \theta)}$.
@@ -649,9 +649,9 @@ Let $b \in \acal_1$ be arbitrary. Then,
         &\leq |\vec x - \vec y||\vec b|.
 \end{align*}
 
-Now, for $a \in \acal_1 = M_2(\CC)$, let $a_\pm = a_1 \pm i a_2$, so that $a = a_0 + a_+ \sigma_+ + a_- \sigma_- + a_3 \sigma_3$. Recall that $\pi_{1/2}(J_k) = \frac{\sigma_k}{2}$, $k = 1, \dots, 3$, hence
+Now, for $a \in \acal_1 = M_2(\CC)$ hermitian, let $a_\pm = a_1 \pm i a_2$, so that $a = a_0 + a_+ \sigma_+ + a_- \sigma_- + a_3 \sigma_3$. Recall that $\pi_{1/2}(J_k) = \frac{\sigma_k}{2}$, $k = 1, \dots, 3$, hence
 \begin{equation*}
-    i[D_1, a] = 
+    [D_1, a] = 
     \begin{pmatrix}
     0 & a_+ & -a_+ & 0\\
     -a_- & 0 & 2a_3 & a_+ \\
@@ -659,9 +659,9 @@ Now, for $a \in \acal_1 = M_2(\CC)$, let $a_\pm = a_1 \pm i a_2$, so that $a = a
     0 & -a_- & a_- & 0
     \end{pmatrix}
 \end{equation*}
-and so $i[D_1, a]$ is hermitian, whose characteristic polynomial is $\lambda^2(\lambda&2 -4|\vec a|^2)$. Therefore, its norm  is its maximum eigenvalue:  $||[D_1, a]|| = 2 |\vec a|$.
+and so $i[D_1, a]$ is hermitian, with characteristic polynomial $\lambda^2(\lambda^2 -4|\vec a|^2)$, so its norm is its maximum eigenvalue. Then $||[D_1, a]|| = 2 |\vec a|$.
 
-Therefore, if $a \in \acal_1$ hermitian with $\vec a$ parallel to $\vec x - \vec y$ such that $2|\vec a| = 1$, this element saturates the inequality.
+Therefore, if we choose $a \in \acal_1$ hermitian with associated $\vec a$ parallel to $\vec x - \vec y$ such that $2|\vec a| = 1$, this element saturates the inequality.
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
