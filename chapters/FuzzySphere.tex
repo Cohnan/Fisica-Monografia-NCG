@@ -702,7 +702,7 @@ The set $\{\omega_{E(\phi, \theta)} \,|\, E(\phi, \theta)\}$ of pure states on $
 Shouldn't be too complicated once the correct framing is achieved...  AND IT CAN BE A GOOD WAY TO UNDERSTAND THE COHERENT STATES\todo{I would like to do this} $|j, j\rangle = \begin{pmatrix} 1&0 \end{pmatrix}$
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{N=1CaseDistance}
 For $N = 1$ all pure states are coherent states and 
 \begin{equation}
     d_1(\hat p, \hat q) = \frac{1}{2}|\vec p - \vec q|_{\RR^3},
@@ -766,6 +766,100 @@ $|\psi^N_{(\phi, \frac{\pi}{2})} - \psi^N_{(0, \frac{\pi}{2})}| = |i \int_0^\phi
 
 \linea
 
+In this subsection we will relate the coherent states and the algebras of subsequent $N$'s, which will then allow us to find a relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$ for any $N = 2j \in \NN$.
+
+First define the linear injections, that respect the $SU(2)$ action,
+\begin{align*}
+    U^+_j : V_{j+\frac{1}{2}} &\to V_j \otimes V_{\frac{1}{2}} 
+    & U^-_j : V_{j-\frac{1}{2}} &\to V_j \otimes V_{\frac{1}{2}} \\
+    \left|j + \frac{1}{2}, m + \frac{1}{2}\right\rangle &\mapsto |j, m\kket_+ &
+    \left|j - \frac{1}{2}, m + \frac{1}{2}\right\rangle &\mapsto |j, m\kket_-
+\end{align*} where $|j, m\kket_\pm$ are the fuzzy spinors eigenvectors of $D_N$ defined in \ref{irreducibleDiracFuzzySpinorBasis}, and $m \pm 1 = -j \mp 1, \dots, j$ for $U_j^\pm$. 
+%Notice that $H_N = V_j \otimes V_{\frac{1}{2}}$ is the orthogonal direct sum of the ranges of $U_j^+$ and $U_j^-$.
+Then, using only the formula for the coherent states \ref{coherentStatesDefinitionRotation}, it can be easily shown that:
+
+\begin{lemma}\label{relationCoherentVectorsDifferentN}
+$U_+|\phi, \theta)_{N+1} = |\phi, \theta)_N \otimes |\phi, \theta)_1$ for any $E(\phi, \theta) \in S^2$.
+\end{lemma}
+
+Now, define the injective linear maps
+\begin{align*}
+    \eta^\pm_N &: \acal_N \to \acal_{N+1} \\
+    a &\mapsto (U_j^\pm)^*(a \otimes 1_2) U_j^\pm.
+\end{align*}
+
+\begin{lemma} \label{relationDifferentNCoherentStates}
+For any $a \in \acal_N$,
+\begin{equation}
+    \psi^{N+1}_{(\phi, \theta)} \circ \eta_N^+(a) = \psi^N_{(\phi, \theta)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+This is a direct consequence of the definitions of $U_J^\pm$ and $\eta_N^+$, since
+\begin{align*}
+    (\phi, \theta| \eta^+_N(a) |\phi, \theta)_{N+1} &= (\phi, \theta|a|\phi, \theta)_N (\phi, \theta| \phi, \theta), & \text{lemma \ref{relationCoherentVectorsDifferentN}}\\
+        &= (\phi, \theta| a | \phi, \theta)_N.
+\end{align*}
+\end{proof}
+
+Finally, using some more properties of the maps $U_j^\pm$ and $\eta^\pm_N$, together with the previous lemmas, the following can be proven.
+\begin{lemma}\label{normCommutatorsDiracDifferentNRelation}
+For any $a \in \acal_N$,
+\begin{equation}
+    ||[D_{N+1}, \eta^\pm(a)]|| \leq ||[D_N, a]||.
+\end{equation}
+\end{lemma}
+
+From this relation between the norms of the commutators $[D_N, \cdot]$ for consecutive $N$'s, we can now show the following.
+
+\begin{theorem}\label{nondecreasingDistanceRelatingNCoherent}
+For any $N \geq 1$, the distance $d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')})$ is non-decreasing with $N$, i.e.:
+\begin{equation}
+    d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{N+1}(\psi^{N+1}_{(\phi, \theta)}, \psi^{N+1}_{(\phi', \theta')}).
+\end{equation}
+\end{theorem}
+\begin{proof}
+\begin{align*}
+    d_{N+1}(\psi^{N+1}_{(\phi, \theta)}, \psi^{N+1}_{(\phi', \theta')}) 
+        &= sup_{a \in \acal_{N+1}} \{|\psi^{N+1}_{(\phi, \theta)}(a) - \psi^{N+1}_{(\phi', \theta')}(a)| : ||[D_{N+1}, a]|| \leq 1\} \\
+        &\geq sup_{a = \eta_N^+(b) \in \acal_{N+1}} \{|\psi^{N+1}_{(\phi, \theta)}(a) - \psi^{N+1}_{(\phi', \theta')}(a)| : ||[D_{N+1}, a]|| \leq 1\}\\
+        &= sup_{a \in \acal_{N}} \{|\psi^{N+1}_{(\phi, \theta)}\circ \eta_N^+(a) - \psi^{N+1}_{(\phi', \theta')}\circ \eta_N^+(a)| : ||[D_{N+1},  \eta_N^+(a)]|| \leq 1\} \\
+        &= sup_{a \in \acal_{N}} \{|\psi^{N}_{(\phi, \theta)}(a) - \psi^{N}_{(\phi', \theta')}(a)| : ||[D_{N+1}, \eta_N^+(a)]|| \leq 1\}\\
+        &\geq sup_{a \in \acal_{N}} \{|\psi^{N}_{(\phi, \theta)}(a) - \psi^{N}_{(\phi', \theta')}(a)| : ||[D_{N}, a]|| \leq 1\} \\
+        &= d_N(\psi^{N}_{(\phi, \theta)}, \psi^{N}_{(\phi', \theta')});
+\end{align*} the fourth line is an application of lemma \ref{relationDifferentNCoherentStates}, and the fifth line of lemma \ref{normCommutatorsDiracDifferentNRelation}.
+\end{proof}
+
+\lin
+
+An interesting upper bound is possible for the increasing sequence with $N$ that is the distance between any two coherent states associated to two points in the sphere.
+
+\begin{theorem}\label{geometricDistanceCommutativeUpperBound}
+For all $N$, and for all $E(\phi, \theta), E(\phi', \theta') \in S^2$
+\begin{equation}
+    \frac{1}{2}|E(\phi, \theta)- E(\phi', \theta')|_{\RR^3} \leq || \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{S^2}(E(\phi, \theta), E(\phi', \theta')),
+\end{equation}
+where $d_{S^2}$ is the usual distance within $S^2$, inherited from the metric $g = d\theta^2 + \sin^2 \theta \, d\phi^2$.
+\end{theorem}
+\begin{proof}
+The lower bound is a simple consequence of the $N = 1$ distance found in theorem \ref{N=1CaseDistance} and of the nondecrease of the distance with $N$ found in theorem \ref{nondecreasingDistanceRelatingNCoherent}.
+
+To prove the upper bound, thanks to the $SU(2)$-invariance of the distance between states proven in theorem \ref{theoGInvariantDistance}, we only need to prove it within the great circle $\theta = \frac{\pi}{2}$, i.e. we only need to prove that 
+\begin{equation*}
+    d_N(\psi^N_{(0, \frac{\pi}{2})}, \psi^N_{(\phi, \frac{\pi}{2})}) \leq |\phi|.
+\end{equation*}
+
+It can be shown that $\psi^N_{(\phi, \theta)}([H, a]) = -i \frac{\partial}{\partial \phi} \psi^N_{(\phi, \theta)}(a)$; this is a statement of the equivariance under $SU(2)$ of the identification of $SU(2)$-coherent states and points in $S^2$. Then the following calculation
+\begin{align*}
+    |\psi^N_{(\phi, \frac{\pi}{2})} - \psi^N_{(0, \frac{\pi}{2})}| 
+        &= \left|i \int_0^\phi \psi^N_{(\alpha, \frac{\pi}{2})}([H, a]) d\alpha \right|  \\
+        &\leq \left| \int_0^\phi d\alpha \right| \left| \psi^N_{(\alpha, \theta)}([H, a]) \right|\\
+        &\leq |\phi|\,||[H, a]|| 
+        & |\omega(a)| \leq ||a|| \text{ for any state $\omega: \acal \ni a \to \CC$}\\
+        &\leq |\phi|\, ||[D_N, a]||    & \text{Theorem \ref{ineqDN}}
+\end{align*}
+proves the desired upper bound.
+\end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Auxiliary Distance and Limit}
 
