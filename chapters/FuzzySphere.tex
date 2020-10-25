@@ -321,9 +321,22 @@ For each $N \in \NN$, the associated irreducible spectral triple:
 \begin{proof}
 As stated at the beginning of the section, to proof the $SU(2)$-equivariance follows from $[D_N, u_g] = 0$ and $u_g  a  u_g^* \equiv u_g \circ (a \otimes 1) \circ u_g^* = a^g \otimes 1 \equiv a_g$.
 
-That those are the eigenvalues and their multiplicities follows from finding eigenvectors $|j, m \kket_+$ and $|j, m\kket_-$, $|m| \leq j$ with the mentioned eigenvectors, and deducing that these are all thanks to the lemma \ref{lemmaSpectrumAlgebraic}.
+That those are the eigenvalues and their multiplicities follows from finding eigenvectors 
+\begin{align}\label{irreducibleDiracFuzzySpinorBasis}
+    |j, m \kket_+ := 
+    \begin{pmatrix} 
+    \sqrt{\frac{j+m+1}{2j+1}} |j, m\rangle \\ 
+    \sqrt{\frac{j-m}{2j+1}} |j, m+1 \rangle
+    \end{pmatrix} \\
+    |j, m\kket_- := 
+    \begin{pmatrix} 
+    -\sqrt{\frac{j-m}{2j+1}} |j, m\rangle \\ 
+    \sqrt{\frac{j+m+1}{2j+1}} |j, m+1 \rangle
+    \end{pmatrix}
+\end{align}
+for $|m| \leq j$ with the mentioned eigenvectors, and deducing that there are no more eigenvectors thanks to the lemma \ref{lemmaSpectrumAlgebraic}.
 
-If the spectral triple had a grading, the Dirac operator would have a symmetric spectrum, hence this can't be the case.
+If the spectral triple had a grading, the Dirac operator would have a symmetric spectrum about $0$, hence this can't be the case.
 
 That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows from the fact that the commutant of $\acal_N$ is $2$, and so it can't contained $J \acal_N J^{-1}$.
 
