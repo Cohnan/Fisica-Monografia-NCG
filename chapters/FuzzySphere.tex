@@ -175,6 +175,10 @@ Define the linear, injective mapping
 \end{align}
 Then, the sequence of noncommutative $C^*$-algebras approximates the commutative algebra $A = C(S^2)$ in the limit $N \to \infty$ in the sense that the above map gets increasingly closer to being an algebra morphism and \textbf{the algebra $A$ can be considered as the image of the diagonal matrices in $\acal_N$}; the precise statements and their proofs may be found in \cite{Madore}.
 
+\subsubsection{As metric space on which $SU(2)$ acts by isometries}
+
+This is what theorem \ref{theoremReducibleSpectralTripleDiracApproximation} and the remark that follows assert.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spectral Triples}
@@ -196,24 +200,24 @@ In this document, this will occur in the following senses:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$SU(2)$-equivariance}
 
-{\color{gray}
-Presentation:
+% {\color{gray}
+% Presentation:
 
-$SU(2) \ni g$ acts on the states: $\lbtext{g_*\omega}(\cdot) := \omega(\cdot^g)$ $\longleftarrow$ it acts on the algebra: $\lbtext{a^g}:= g\circ a \circ g^* \cdot$ $\longleftarrow$ it acts on $V_j$: $\pi_j(g)$.
+% $SU(2) \ni g$ acts on the states: $\lbtext{g_*\omega}(\cdot) := \omega(\cdot^g)$ $\longleftarrow$ it acts on the algebra: $\lbtext{a^g}:= g\circ a \circ g^* \cdot$ $\longleftarrow$ it acts on $V_j$: $\pi_j(g)$.
 
-\textbf{\rtext{Theorem}}: For all $N = 2j \in \bb N$, the distance is $SU(2)$-invariant: 
-\begin{align}
-    d_N(\omega, \omega') &= d_N(g_* \omega, g_*\omega'), & \text{for all $\omega, \omega' \in \mathcal S(\acal_N)$}.
-\end{align}
+% \textbf{\rtext{Theorem}}: For all $N = 2j \in \bb N$, the distance is $SU(2)$-invariant: 
+% \begin{align}
+%     d_N(\omega, \omega') &= d_N(g_* \omega, g_*\omega'), & \text{for all $\omega, \omega' \in \mathcal S(\acal_N)$}.
+% \end{align}
 
-\textit{Pf}: The theorem follows once we show 
-    \rtext{$||[D_N, a^g]|| = ||[D_N, a]||$}:
-$d_N(g_* \omega, g_* \omega') = sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g)|: ||[D_N, a \otimes 1_2]|| \leq 1 \} = sup_{b \in \acal_N}\{ |\omega(b) - \omega'(b)|: ||[D_N, b \otimes 1_2]|| \leq 1 \} = d_N(\omega, \omega')$, where $b = a^g$ sweeps all $\acal_N$.
+% \textit{Pf}: The theorem follows once we show 
+%     \rtext{$||[D_N, a^g]|| = ||[D_N, a]||$}:
+% $d_N(g_* \omega, g_* \omega') = sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g)|: ||[D_N, a \otimes 1_2]|| \leq 1 \} = sup_{b \in \acal_N}\{ |\omega(b) - \omega'(b)|: ||[D_N, b \otimes 1_2]|| \leq 1 \} = d_N(\omega, \omega')$, where $b = a^g$ sweeps all $\acal_N$.
 
-\textit{Pf}: $[D_N, a^g \otimes 1] = u[D_N, a \otimes 1_2]u^*$ where $u = \pi_j(g) \otimes \pi_{1/2}(g)$ is the induced unitary action of $g$ in $H_N$ $\xleftarrow{}$
-1. $a^g \otimes 1_2 = u(a \otimes 1_2)u^*$;
-2. The spectral triple is $SU(2)$-equivariant, hence $D_N$ commutes with the $SU(2)$ action.
-}
+% \textit{Pf}: $[D_N, a^g \otimes 1] = u[D_N, a \otimes 1_2]u^*$ where $u = \pi_j(g) \otimes \pi_{1/2}(g)$ is the induced unitary action of $g$ in $H_N$ $\xleftarrow{}$
+% 1. $a^g \otimes 1_2 = u(a \otimes 1_2)u^*$;
+% 2. The spectral triple is $SU(2)$-equivariant, hence $D_N$ commutes with the $SU(2)$ action.
+% }
 
 Rotating the 2-sphere leaves invariant not only its topological and differential properties, but it also leaves invariant the metric, $g = d\theta^2 + \sin^2(\theta) d\phi^2$, implying that the distance between any $2$ points is the same as the distance between the rotated points, under any rotation $h \in SO(3)$. Since $SU(2)$ is the double covering of $SO(3)$, there is a $2$-to-$1$ Lie group morphism $SU(2) \to SO(3)$ under which any rotation $h \in SO(3)$ corresponds to two distinct points $\pm \tilde h \in SU(2)$. From this it follows that each element of $SU(2)$ acts as a rotation on $S^2$, so that \rtext{$SU(2)$ is also a group of symmetries of $S^2$ that acts by diffeomorphisms and isometries}. Notice, however, that the most general symmetry group of $S^2$ is the orthogonal group $O(3)$, which includes reflections under planes on $\RR^3$ that pass through the origin.
 
@@ -307,15 +311,14 @@ We have said before that this spectral triple is $SU(2)$-equivariant, but for th
 
 \begin{proposition}\label{propIrredSpectralTriple}
 For each $N \in \NN$, the associated irreducible spectral triple:
-
-    \begin{itemize}
+    \begin{enumerate}[(i)]
         
     \item Is $SU(2)$-equivariant
     
     \item Has eigenvalues $j+1$ and $-j$ with multiplicities $2j+2$ and $2j$, where $j = N/2$.
         
     \item Isn't compatible with a grading or a real structure.
-    \end{itemize}
+    \end{enumerate}
 \end{proposition}
 
 \begin{proof}
@@ -385,9 +388,9 @@ Notice that the action of $\acal_N$ on itself as the first factor of $\hcal_N$ i
     \mathcal D_N : \hcal_N \to \hcal_N  \iff \bigoplus_{l =1}^N D_l: \bigoplus_{l =1}^N H_l \to \bigoplus_{l =1}^N H_l.
 \end{equation}
 
-\begin{theorem}
+\begin{theorem}\label{theoremReducibleSpectralTripleDiracApproximation}
 Under the adjoint action of $SU(2)$ on the algebra $\acal_N$ and the action of $SU(2)$ defined in the previous paragraph, the full spectral triples satisfies:
-    \begin{itemize}
+    \begin{enumerate}[(i)]
     
     \item It is $SU(2)$-equivariant.
     
@@ -397,7 +400,7 @@ Under the adjoint action of $SU(2)$ on the algebra $\acal_N$ and the action of $
     
     \item It is not compatible with a grading.
     
-    \end{itemize}
+    \end{enumerate}
 \end{theorem}
 
 \begin{proof}
@@ -409,7 +412,7 @@ Once again, a grading can't exist since the spectrum of $\dcal_N$ isn't symmetri
 \end{proof}
 
 \rtext{The third statement of the theorems says that we have found a spectral triple with the desired property of being a truncation of the canonical spectral triple of $S^2$}. { \color{gray}
-Furthermore, sust like the eigenvectors of $\slashed D$ are vectors conformed by pairs of spherical harmonics, the eigenvectors of each $\dcal_N$ are pairs of fuzzy spherical harmonics $\hat Y^l_m$ (not sure if they can be the ones I defined before) for which the traditional spherical harmonics $Y^l_m$ may be considered ``symbols''.
+Furthermore, just like the eigenvectors of $\slashed D$ are vectors conformed by pairs of spherical harmonics, the eigenvectors of each $\dcal_N$ are pairs of fuzzy spherical harmonics $\hat Y^l_m$ (not sure if they can be the ones I defined before) for which the traditional spherical harmonics $Y^l_m$ may be considered ``symbols''.
 } Hence, this will be the spectral triple which we will assign the forming algebras of the fuzzy sphere, under which the metric properties are to be studied, since it \rtext{may be considered a sequence of spectral triple that approximate the metric of $S^2$ increasingly better with growing $N$}. However, the following theorem allows us to study instead the much simpler irreducible spectral triple.
 
 \begin{theorem}
