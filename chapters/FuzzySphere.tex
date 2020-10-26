@@ -863,30 +863,30 @@ proves the desired upper bound.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Auxiliary Distance and Limit}
 
-{\color{gray} 
- - Study simpler subalgebra distance: lower bound whose behavior is understood and that encases the actual distance, allowing approximate study.
+% {\color{gray} 
+%  - Study simpler subalgebra distance: lower bound whose behavior is understood and that encases the actual distance, allowing approximate study.
 
-Presentation:
+% Presentation:
 
-Distance along diagonal, hermitian matrices eassier to understand, but useful.
+% Distance along diagonal, hermitian matrices eassier to understand, but useful.
 
- KEY: find simpler (we understand [D, a] if a is diagonal hermitian), but useful auxiliary distance (gives a lower bound that sandwhiches the actual distance)
+%  KEY: find simpler (we understand [D, a] if a is diagonal hermitian), but useful auxiliary distance (gives a lower bound that sandwhiches the actual distance)
  
-Let $\lbtext{\bcal_N} \subset \acal_N$ be sugalgebra of diagonal matrices $\xrightarrow{}$ $\psi^N_{(\phi, \theta)} = \psi^N_{(0, \theta)}$, now 
-$\lbtext{\rho_N}(\theta) := sup_{a \in \bcal_N, a = a^*}\{|\psi^N_{(0, \theta)} - \psi^N_{(0, 0)}| : ||[D_N, a]|| \leq 1\}$: \textbf{1.} exact formula related to $\omega_m$ states, \textbf{2.} $0 \leq \rho'_N(\theta) \leq 1$ $\xrightarrow{}$ $\rho_N(\theta) \leq \theta$, \textbf{3.} non-decreasing with $N$.
+% Let $\lbtext{\bcal_N} \subset \acal_N$ be sugalgebra of diagonal matrices $\xrightarrow{}$ $\psi^N_{(\phi, \theta)} = \psi^N_{(0, \theta)}$, now 
+% $\lbtext{\rho_N}(\theta) := sup_{a \in \bcal_N, a = a^*}\{|\psi^N_{(0, \theta)} - \psi^N_{(0, 0)}| : ||[D_N, a]|| \leq 1\}$: \textbf{1.} exact formula related to $\omega_m$ states, \textbf{2.} $0 \leq \rho'_N(\theta) \leq 1$ $\xrightarrow{}$ $\rho_N(\theta) \leq \theta$, \textbf{3.} non-decreasing with $N$.
 
 
-\textbf{Lemma}: For all $N$, 
-\begin{align*}
-    1.& \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) d_{geo}(E(\phi, \theta), E(\phi', \theta'))  ; \\
-    2.& \text{the sequence $\rho_N(\theta)$ converges uniformly to $\theta$ as $N\to \infty$} \leq .
-\end{align*}
+% \textbf{Lemma}: For all $N$, 
+% \begin{align*}
+%     1.& \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) d_{geo}(E(\phi, \theta), E(\phi', \theta'))  ; \\
+%     2.& \text{the sequence $\rho_N(\theta)$ converges uniformly to $\theta$ as $N\to \infty$} \leq .
+% \end{align*}
 
-\textbf{\rtext{Theorem}}:  
-\begin{equation}
-        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(E(\phi, \theta), E(\phi', \theta'))
-\end{equation}
-}
+% \textbf{\rtext{Theorem}}:  
+% \begin{equation}
+%         \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(E(\phi, \theta), E(\phi', \theta'))
+% \end{equation}
+% }
 
 \linea
 
@@ -897,25 +897,33 @@ Let $\lbtext{\bcal_N} \subset \acal_N$ be subalgebra of diagonal matrices. Notic
     \lbtext{\rho_N}(\theta) := sup_{a \in \bcal_N, a = a^*}\{|\psi^N_{(0, \theta)} - \psi^N_{(0, 0)}| : ||[D_N, a]|| \leq 1\}.
 \end{equation}
 
-\begin{lemma} \label{lemmaFormulaAuxiliaryDistanceAllN}
-\begin{align}
-    \rho_N(\theta) &= \psi^N_{(0, \theta)}(\hat a) - \psi^N_{(0, 0)}(\hat a) \\
-    &   = \sum_{k = 1} \binom{2j}{j+m} (\sin \frac{\theta}{2})^{2n} (\cos \frac{\theta}{2})^{2(N-n)}  \sum_{k = 1}^n \frac{1}{\sqrt{k(N - k+1)}}
-\end{align}
+\begin{lemma} \label{lemmaFormulaAuxiliaryDistanceAllN} \label{lemmaDerivativeAuxiliaryDistance}
+For $N \in \NN$ fixed:
+    \begin{enumerate}[(i)]
+    
+    \item Let $\hat a$ be diagonal hermitian element introduced in \eqref{} to saturate the distance between the $\omega_m$'s
+    \begin{align}
+        \rho_N(\theta) &= \psi^N_{(0, \theta)}(\hat a) - \psi^N_{(0, 0)}(\hat a) \\
+        &   = \sum_{k = 1}^N \binom{2j}{j+m} (\sin \frac{\theta}{2})^{2n} (\cos \frac{\theta}{2})^{2(N-n)}  \sum_{k = 1}^n \frac{1}{\sqrt{k(N - k+1)}}
+    \end{align}
+    
+    \item $0 \leq \rho'_N(\theta) \leq 1$. In particular $\rho_N(\theta - \theta') \leq |\theta - \theta'| = d_{S^2}(E(0, \theta), E(0, \theta'))$.
+    
+    \item
+    \begin{equation}
+        \rho_{N}(\theta - \theta') \leq \rho_{N+1}(\theta - \theta')
+    \end{equation}
+    \end{enumerate}
+    
 \end{lemma}
 \begin{proof}
-For a diagonal element $a$,  
+(i) For a diagonal element $a$,  
 \begin{equation*}
-    \psi^N_{(0, \theta)}(a) = \sum_{k = 1} \binom{2j}{j+m} (\sin \frac{\theta}{2})^{2(j+m)} (\cos \frac{\theta}{2})^{2(j-m)} \omega_m(a),
+    \psi^N_{(0, \theta)}(a) = \sum_{k = 1}^N \binom{2j}{j+m} (\sin \frac{\theta}{2})^{2(j+m)} (\cos \frac{\theta}{2})^{2(j-m)} \omega_m(a),
 \end{equation*}
-hence $|\psi^N_{(0, \theta)}(a) - \psi^N_{(0, 0)}(a)|$ over the diagonal elements can be bounded by the claimed distance using the triangle inequality and the bound $|| \leq d_N(\omega_m, \omega_{-j}) = \sum_{k = 1}^n \frac{1}{\sqrt{k(N - k+1)}}$. Using the diagonal hermitian element $\hat a$ introduced in \eqref{} to saturate the distance between the $\omega_m$'s, we obtain the desired formula.
-\end{proof}
+hence $|\psi^N_{(0, \theta)}(a) - \psi^N_{(0, 0)}(a)|$ over the diagonal elements can be bounded by the claimed distance using the triangle inequality and the bound $|| \leq d_N(\omega_m, \omega_{-j}) = \sum_{k = 1}^n \frac{1}{\sqrt{k(N - k+1)}}$. Using $\hat a$ to saturate the inequality, we obtain the desired formula.
 
-\begin{lemma}\label{lemmaDerivativeAuxiliaryDistance}
-For $N \in \NN$ fixed, $0 \leq \rho'_N(\theta) \leq 1$.
-\end{lemma}
-\begin{proof}
-From the first formula in lemma \ref{lemmaFormulaAuxiliaryDistanceAllN} we easily deduce that $\rho_N'(\theta) = \frac{d}{d\theta} \psi^N_{(0, \theta)} (\hat a)$. Furthermore, from the $SU(2)$-equivariance of the identification of coherent states and points in $S^2$, on the diagonal elements it follows that 
+(ii) From the first formula of the first part of the lemma \ref{lemmaFormulaAuxiliaryDistanceAllN} we easily deduce that $\rho_N'(\theta) = \frac{d}{d\theta} \psi^N_{(0, \theta)} (\hat a)$. Furthermore, from the $SU(2)$-equivariance of the identification of coherent states and points in $S^2$, on the diagonal elements it follows that 
 \begin{equation}
     \rho_N'(\theta) 
         =\frac{d}{d\theta} \psi^N_{(0, \theta)} (\hat a) 
@@ -928,26 +936,36 @@ Since for every state $\omega$ is is true that $|\omega(a)| \leq ||a||$ for ever
 \begin{equation*}
     |\rho_N'(\theta)| = |\psi^N_{(0, \theta)}([E, \hat a])| \leq ||[E, a]|| \leq 1
 \end{equation*}
-recalling that $[E, \hat a]$ is the ladder operator on $V_j$, of unit norm. From expanding the formula $\rho_N'(\theta) = (0, \theta| [E, \hat a] |0, \theta)_N$ using the definition \ref{}, the lower bound $0$ then follows.
+recalling that $[E, \hat a]$ is the ladder operator on $V_j$, of unit norm. From expanding the formula $\rho_N'(\theta) = (0, \theta| [E, \hat a] |0, \theta)_N$ using the definition \ref{defnCoherentStatesRotations}, the lower bound $0$ then follows by noticing that every term in the expansion is positive since $\theta \in [0, \pi]$.
+
+(iii) This follows from adapting the proof of \ref{nondecreasingDistanceRelatingNCoherent}, but where we need to take into account that $\eta^+_N(\bcal_N) \subset \acal_{N+1}$ might not be contained in the diagonal subalgebra $\bcal_{N+1}$, but it is contained in an algebra $\bcal_{N+1}'$ conjugate to $\bcal_{N+1}$ through a unitary operator commuting with the $SU(2)$ action on $\acal_{N+1}$ ($\pi_{j + \frac{1}{2}}$); this equates to rotating the basis vectors of $V_{j + \frac{1}{2}}$ in a way that leaves invariant the $\psi^{N+1}_{(\phi, \theta)}$ unchanged. This allows us to write the first equation of the proof of \ref{nondecreasingDistanceRelatingNCoherent} by changing $\acal_{N+1}$ by $\bcal'_N$, and from then on simply changing $\acal_N$ by $\bcal_N$.
 \end{proof}
 
-The following lemma is last piece of our puzzle, but its proof requires some detailed analysis that can is shown in \cite{DAndrea2013}.
-\begin{lemma}: For all $N$, the sequence $\rho_N(\theta)$ converges uniformly to $\theta$ as $N\to \infty$. 
+
+The following lemma is last piece of our puzzle. \cite{DAndrea2013}.
+\begin{lemma}: For all $N$ and $\theta \in [0, \pi]$, the sequence $\rho_N(\theta)$ converges uniformly to $\theta = d_{S^2}(E(0, 0), E(0, \theta))$ as $N\to \infty$. 
 \end{lemma}
 
-From all of this, the following theorem has been proven.
+\begin{proof}
+ Let $f_N(\theta) := \theta - \rho_N(\theta)$; since $f_N(0) = 0$ and, by the second part of the lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, $f_N'(\theta) \geq 0$, so for each $N$ the function $f_N(\theta)$ is nondecreasing and positive, so $|| \theta - f_N(\theta)||_\infty - sup_{\theta \in [0, \pi]} f_N(\theta) = f_N(\pi) = \pi - \rho_N(\pi)$. So, the uniform convergence follows if and only if $\lim_{N \to \infty} \rho_N(\pi) = \pi$. For fixed $\theta$, by the third part of lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, $\rho_N(\theta)$ is a nondecreasing sequence, and it is bounded above by $\pi$, so the sequence $\rho_N(\theta)$ is convergent and any subsequence has the same limit.
+ 
+ By using the formula for $\rho_N(\pi)$ given in the first part of lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, 
+ \begin{align*}
+     \rho_N(\pi) &= 2 \sum_{k = 1}^{\frac{1}{2}(N-1)} \frac{1}{k (N - k + 1)} + \frac{2}{\sqrt{N+1}} \\
+     &\geq \int_{1}^{\frac{1}{2}} \frac{dx}{\sqrt{x(N-x+1)}} = 2 &\arcsin \frac{N-1}{N+1},
+ \end{align*} since the function $\frac{1}{\sqrt{x(N-x+1)}}$ is positive for $1 \leq x \leq $ and symmetric about $x = \frac{1}{2}(N+1)$ and monotonically decreasing\todo{...} for $1 \leq x \leq \frac{1}{2}(N+1)$. The sequence $2 \arcsin \frac{N-1}{N+1}$ converges monotonically to $\pi$ as $N \to \infty$ if we restrict to the subsequence of odd $N$'s, but this suffices to prove that $\lim_{N \to \infty} \rho_N(\theta) = \pi$.
+\end{proof}
+
+From the previous lemma, and joining for completeness some previous results, the theorem follows.
 \begin{theorem}
 $$
     \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) d_{geo}(E(\phi, \theta), E(\phi', \theta'))
 $$
 
 \begin{equation}
-        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(E(\phi, \theta), E(\phi', \theta'))
+        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{S^2}(E(\phi, \theta), E(\phi', \theta'))
 \end{equation}
 \end{theorem}
-\begin{proof}
-
-\end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
