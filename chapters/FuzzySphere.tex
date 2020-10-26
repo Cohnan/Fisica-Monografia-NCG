@@ -67,14 +67,11 @@ This decomposition of the spinor bundle induced by the action of $SU(2)$ correct
 
 The eigenvectors of $\slashed D$ $Y^{'}_{jm}, Y^{''}_{jm}$ $j \in \NN + 1/2$, $m = -j, \dots, j$, called the \textit{spinor harmonics}, make up an orthogonal basis of the spinor fields $\hcal$. The eigenvalue of the $Y'_{l\cdot}$ is $(j + 1/2) \in \NN$, and of the $Y{''}_{j\cdot}: -(l + 1/2)$, so the eigenvalue $j$ has multiplicity $2j+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is another Dirac operator in the Fuzzy sphere. 
 
-{\color{gray}
-The following aiding lemma will allow us to study the spectrum of the dirac operators of the dirac triples that will be defined on the fuzzy sphere.
+The following aiding lemma will allow us to study the spectrum of the Dirac operators of the Dirac triples that will be defined on the fuzzy sphere.
 
 \begin{lemma}\label{lemmaSpectrumAlgebraic}
 The operator $(\pi_0 \otimes \pi_{1/2})(\dcal^2): V_0 \otimes \CC^2 \to V_0 \otimes \CC^2$ has as unique eigenvalue $1$ with multiplicity $2$. For any $j \in \frac{\ZZ_{\geq 1}}{0}$, the $(\pi_j \otimes \pi_{1/2})(\dcal^2)$ has two eigenvalues: $j^2$ with multiplicity $2j$, and $(j+1)^2$ with multiplicity $2j+2$.
 \end{lemma}
-
-}
 
 \linea
 
@@ -478,7 +475,7 @@ What group used in Fiore? $O(D)$
 
 - In Fiore2020 there is a simple introduction to Coherent states: group $G$ acting (irreducibly) on a Hilbert space. AND the example for $G = SU(2)$ is sketched, although there is a mistake for one of the $3$ characterizations, since it isn't true that the coherent states are eigenvectors of the ``annihilation operator'' $J_+$. D'Andrea mentions other sources.
 
-\lbtext{WHY DO WE WANT TO STUDY DISTANCE BETWEEN COHERENT STATES???} Make this very explicit.
+\dbtext{WHY DO WE WANT TO STUDY DISTANCE BETWEEN COHERENT STATES???} Make this very explicit.
 
 }
 
@@ -632,7 +629,7 @@ The general procedure to find the distance between two states will be the follow
 Another family of pure states on each $\acal_N = End(V_j)$, for $N = 2j \in \NN$  is the family of vector states $\lbtext{\omega_m} := \langle j, m | \cdot | j, m \rangle$, where $m = -j, \dots, j-1, j$. The study of this distance will be useful to the study of coherent states.
 
 \begin{theorem}
-For any $N$, let $\lbtext{\omega_m} = \langle j, m| \cdot |j, m\rangle \in \mathcal S(\acal_N)$ (SP $\Longleftrightarrow |j, -j\rangle$, NP $\Longleftrightarrow |j, j\rangle$):
+For any $N$:
 \begin{equation}
     d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k).
 \end{equation}
@@ -653,7 +650,7 @@ Hence,
 Applying the triangle inequality on the norm of the above equation, and using proposition \ref{}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, so we get the distance formula in the statement as an upper bound. 
 
 Define the diagonal hermitian operator 
-\begin{equation}\ref{saturatingDiagonalADiscreteBasis}
+\begin{equation}\label{saturatingDiagonalADiscreteBasis}
     \hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m \frac{1}{\sqrt{(j+k)(j-k+1}}  \right)|j, m\rangle.    
 \end{equation} 
 For this $\hat a$, $[E, \hat a] |j, m \rangle = |j, m+1\rangle$ for all $m = -j, \dots, j-1$, and so $\hat a$ saturates the inequality.
@@ -973,12 +970,12 @@ $$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Convergence of fuzzy sphere to $S^2$}\label{FSsec:convergence}
+% \section{Convergence of fuzzy sphere to $S^2$}\label{FSsec:convergence}
 
-{\color{gray} 
- - This identification of points in $S^2$ with coherent states ($\psi^N: \acal_N \to L^2(S^2)$ at the algebra level) \todo{???}
-is $SU(2)$-equivariant: $g_* \psi^N_{(\phi, \theta)} = \psi^N_{g\cdot (\phi, \theta)}$, \& \rtext{the distance between them is $SU(2)$-invariant}.
+% {\color{gray} 
+%  - This identification of points in $S^2$ with coherent states ($\psi^N: \acal_N \to L^2(S^2)$ at the algebra level) \todo{???}
+% is $SU(2)$-equivariant: $g_* \psi^N_{(\phi, \theta)} = \psi^N_{g\cdot (\phi, \theta)}$, \& \rtext{the distance between them is $SU(2)$-invariant}.
  
- - as: \textbf{1.} $C^*$-algebra $\acal$ acting on the spinor fields $\hcal$; \textbf{2.} Representation of $SU(2)$: homeomorphisms?\todo{homeomorphisms? Symmetries?}; \textbf{3.}  Metric space on which $SU(2)$ acts by isometries.
+%  - as: \textbf{1.} $C^*$-algebra $\acal$ acting on the spinor fields $\hcal$; \textbf{2.} Representation of $SU(2)$: homeomorphisms?\todo{homeomorphisms? Symmetries?}; \textbf{3.}  Metric space on which $SU(2)$ acts by isometries.
 
-}
+% }
