@@ -650,9 +650,9 @@ Hence,
 Applying the triangle inequality on the norm of the above equation, and using proposition \ref{}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, so we get the distance formula in the statement as an upper bound. 
 
 Define the diagonal hermitian operator 
-\begin{equation*}
+\begin{equation}\ref{saturatingDiagonalADiscreteBasis}
     \hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m \frac{1}{\sqrt{(j+k)(j-k+1}}  \right)|j, m\rangle.    
-\end{equation*} 
+\end{equation} 
 For this $\hat a$, $[E, \hat a] |j, m \rangle = |j, m+1\rangle$ for all $m = -j, \dots, j-1$, and so $\hat a$ saturates the inequality.
 \end{proof}
 
@@ -889,6 +889,65 @@ $\lbtext{\rho_N}(\theta) := sup_{a \in \bcal_N, a = a^*}\{|\psi^N_{(0, \theta)} 
 }
 
 \linea
+
+A final result, stating that the distance between any two coherent states associated to two points in the sphere is not only bounded by the euclidean distance between the points, but that in fact this is the limit distance when $N \to \infty$ can be shown. To do this, we use an auxiliary distance by limiting the algebra on which we maximize the norm of the difference of the evaluation of the states that appears in the definition of Connes' distance. By reducing the algebra the supremum over it will necessarily be a lower bound, but an exact formula for the distance will be possible.
+
+Let $\lbtext{\bcal_N} \subset \acal_N$ be subalgebra of diagonal matrices. Notice that for any $a \in \bcal_N$, $\psi^N_{(\phi, \theta)} = \psi^N_{(0, \theta)}$ for all $\phi$; also note that, for $|n|, |m| \leq j$, on the diagonal element $a$ with entries $a_{nm} = c_m \delta_{nm}$, $c_m = \omega_m(a)$, where $\omega_m$ is the vector state of $|j, m\rangle \in V_j$. Define
+\begin{equation}
+    \lbtext{\rho_N}(\theta) := sup_{a \in \bcal_N, a = a^*}\{|\psi^N_{(0, \theta)} - \psi^N_{(0, 0)}| : ||[D_N, a]|| \leq 1\}.
+\end{equation}
+
+\begin{lemma} \label{lemmaFormulaAuxiliaryDistanceAllN}
+\begin{align}
+    \rho_N(\theta) &= \psi^N_{(0, \theta)}(\hat a) - \psi^N_{(0, 0)}(\hat a) \\
+    &   = \sum_{k = 1} \binom{2j}{j+m} (\sin \frac{\theta}{2})^{2n} (\cos \frac{\theta}{2})^{2(N-n)}  \sum_{k = 1}^n \frac{1}{\sqrt{k(N - k+1)}}
+\end{align}
+\end{lemma}
+\begin{proof}
+For a diagonal element $a$,  
+\begin{equation*}
+    \psi^N_{(0, \theta)}(a) = \sum_{k = 1} \binom{2j}{j+m} (\sin \frac{\theta}{2})^{2(j+m)} (\cos \frac{\theta}{2})^{2(j-m)} \omega_m(a),
+\end{equation*}
+hence $|\psi^N_{(0, \theta)}(a) - \psi^N_{(0, 0)}(a)|$ over the diagonal elements can be bounded by the claimed distance using the triangle inequality and the bound $|| \leq d_N(\omega_m, \omega_{-j}) = \sum_{k = 1}^n \frac{1}{\sqrt{k(N - k+1)}}$. Using the diagonal hermitian element $\hat a$ introduced in \eqref{} to saturate the distance between the $\omega_m$'s, we obtain the desired formula.
+\end{proof}
+
+\begin{lemma}\label{lemmaDerivativeAuxiliaryDistance}
+For $N \in \NN$ fixed, $0 \leq \rho'_N(\theta) \leq 1$.
+\end{lemma}
+\begin{proof}
+From the first formula in lemma \ref{lemmaFormulaAuxiliaryDistanceAllN} we easily deduce that $\rho_N'(\theta) = \frac{d}{d\theta} \psi^N_{(0, \theta)} (\hat a)$. Furthermore, from the $SU(2)$-equivariance of the identification of coherent states and points in $S^2$, on the diagonal elements it follows that 
+\begin{equation}
+    \rho_N'(\theta) 
+        =\frac{d}{d\theta} \psi^N_{(0, \theta)} (\hat a) 
+        = \psi^N_{(0, \theta)}([E, \hat a])
+        = (0, \theta| [E, \hat a] |0, \theta)_N,
+\end{equation} 
+where, recall, $[E, \hat a]$ is the ladder operator on $V_j$.
+
+Since for every state $\omega$ is is true that $|\omega(a)| \leq ||a||$ for every $a$, we get the following inequality:
+\begin{equation*}
+    |\rho_N'(\theta)| = |\psi^N_{(0, \theta)}([E, \hat a])| \leq ||[E, a]|| \leq 1
+\end{equation*}
+recalling that $[E, \hat a]$ is the ladder operator on $V_j$, of unit norm. From expanding the formula $\rho_N'(\theta) = (0, \theta| [E, \hat a] |0, \theta)_N$ using the definition \ref{}, the lower bound $0$ then follows.
+\end{proof}
+
+The following lemma is last piece of our puzzle, but its proof requires some detailed analysis that can is shown in \cite{DAndrea2013}.
+\begin{lemma}: For all $N$, the sequence $\rho_N(\theta)$ converges uniformly to $\theta$ as $N\to \infty$. 
+\end{lemma}
+
+From all of this, the following theorem has been proven.
+\begin{theorem}
+$$
+    \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) d_{geo}(E(\phi, \theta), E(\phi', \theta'))
+$$
+
+\begin{equation}
+        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{geo}(E(\phi, \theta), E(\phi', \theta'))
+\end{equation}
+\end{theorem}
+\begin{proof}
+
+\end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
