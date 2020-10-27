@@ -1,0 +1,164 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General Setting}
+
+{
+    \color{gray}
+    
+    - $H = - \frac{1}{2} \Delta + V(r)$ invariant under $O(D)$
+    
+    - Introducing the cutoff $\cut E$, as the energy where
+    \begin{align}
+        \label{eqn5}
+            V(r) \approx V_0 + 2k(r-1)^2 && \text{for $r$ such that $V(r) \leq  \cut E$}.
+    \end{align}
+    %in the region $\nu_{\cut E} = \{r \,|\, V(r) \leq \cut E\}$.
+    
+    - Eigenfunctions of $H$ as product of a spherical harmonic $Y(\phi, \dots)$ (eigenvector of $L^2$) and an eigenfunction of the radial equation 
+    \begin{align}
+        \label{eqn9}
+        \left[-\partial_r^2 - (D-1) \frac{1}{r} \partial_r + \frac{1}{r^2} j(j+D-2) + V(r)\right] \tilde f(r) = E \tilde f(r).
+    \end{align}
+    - This last equation can be approximated by a harmonic oscillator equation, since outside the region $\{V(r) \leq \cut E\}$ $\psi$ is negligibly small.
+    : \rtext{$\hcal_{\cut E} \approx $ solutions of Schrodinger Eq. of energy $\leq \cut E$, $\acal_{\cut E} = End(\hcal_{\cut E})$}.
+}
+
+\linea
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Construction of $\acal_{\cut E}$ for $D = 2$}
+
+{
+    \color{gray}
+    
+    - Equation \eqref{eqn9} has the approximation, where $\rho := \ln r$
+    \begin{equation}
+        \label{harmonic2D}
+        \hat H f(\rho) = e_m f(\rho), \qquad
+        \hat H = - \partial_\rho^2 + k_m(\rho - \tilde \rho_m)^2,
+    \end{equation} $
+        k_m := 2(k - E'), \quad
+        E' := E - V_0, \quad
+        \tilde \rho_m := \frac{E'}{k_m}, \quad
+        e_m = \frac{E'^2}{k_m} + E' - m^2
+    $
+    - The solutions $f_{n,m}$ are known, $n \in \bb N, m \in \ZZ$ \then $e_{m, n}(k) = (2n+1)\sqrt{k_m}$ \then $E'_{m,n}(k)$ satisfies a quartic equation \then $E_{m,n}(k, V_0)$.
+    
+    - Fixing $V_0 = V_0(k)$ such that $E_{0, 0} = 0$ \then $V_0(k) = -\sqrt{2k} + 2 - \frac{7}{2}\frac{1}{\sqrt{2k}} + o(1/k)$ and 
+    $\sum_{n = -1}^\infty v_n \left( \sqrt{\frac{1}{k}} \right)^n \approx -\sqrt{2k} + 2 - o(1/k)$ \then
+    \begin{equation}
+        \rtext{E_{n, m}(k)} = m^2 + 2n\sqrt{2k} - 2n + o(1/\sqrt{k})
+    \end{equation}
+    
+    - Choosing $\cut E < 2 \sqrt{2k} - 2$, the spectrum of $H$ is a truncation of $L^2$: \textbf{the radial oscillations are ``frozen''}: $\cut{\partial_r} = 0$.
+    \begin{multline*}
+        \lbtext{\psi_m(\rho, \phi)} := f_{0, m}(\rho) e^{im\phi} = c_m e^{im\phi}exp{\left[ -\frac{(\rho - \tilde \rho_m)^2 \sqrt{k_m}}{2} \right]} \\\xrightarrow{k \to \infty} \delta(r-1)e^{i m \phi}
+    \end{multline*}
+    \begin{equation}
+        E = E_m(k) = m^2 + o(1/\sqrt{k})
+    \end{equation}
+    
+    - For $\lbtext{\Lambda} := \lfloor \cut E \rfloor$, 
+    \begin{align}
+        \lbtext{\hcal_{\Lambda}}:= \lbtext{\hcal_{\cut E}} := span\{\psi_m\}_{|m| \leq 
+    \lfloor \cut E \rfloor} ,
+    \lbtext{\acal_\Lambda} := \mathcal B(\hcal_\Lambda)
+    \end{align}
+    
+    - Since $H$ generates the time evolution, a
+    An element of $\hcal_\Lambda$ doesn't evolve out of $\hcal_\Lambda$.
+    
+    - Get a fuzzy space: e.g. choosing $k = \Lambda^2(\Lambda+1)^2$ --make $k$ diverge with $\Lambda$ while $\nu_{\cut E}$ goes to $\{r = 1\}$
+    
+    - This cutoff entails replacing every observable by $A \mapsto \lbtext{\cut A} = P_{\cut E} A P_{\cut E}$% \dbtext{when?}
+}
+
+\linea
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Important Observables and their Commutation Relations}
+
+{
+    \color{gray}
+    
+    - Up to infinite, $1/k^{1/2}\dbtext{?}$ and $1/k^{3/2}$ orders, respectively
+    \begin{align}
+    \label{projObs2D}
+        \rtext{\cut L} \psi_m &= m \psi_m; & 
+        \rtext{\cut H} &= \cut L^2; & 
+        \rtext{\cut x^\pm} \psi_m = 
+            \begin{cases}
+                \frac{a}{\sqrt{2}} \sqrt{ 1 + \frac{m(m \pm 1)}{k} } \psi_{m \pm 1} & -\Lambda \leq \pm m \leq \Lambda - 1 \\
+                0 & \text{otherwise}
+            \end{cases}
+    \end{align}
+    - And so, up to terms of $1/k^{3/2}$
+    \begin{align}
+        \label{conmObs2D}
+        \cut{x^+}^\dagger &= \cut{x^-}; &
+        [\cut L, \cut{x^\pm}] &= \pm \cut{x^\pm}; &
+        \rtext{[\cut{x^+}, \cut{x^-}]} &= - \frac{\cut L}{k} + \left[1 + \frac{\Lambda(\Lambda+1)}{k}\right] (\tilde P_{\Lambda} - P_{-\Lambda})a^2.
+    \end{align}
+     - If \eqref{projObs2D} are used exactly to define elements of $\mathcal B(\hcal_\Lambda) \equiv \acal_\Lambda$ then \eqref{conmObs2D} are also exact, and $\cut{x^\pm}$ generate $\acal_\Lambda$. -- $\cut{\partial_\pm}$ are now redundant... but I'm not sure why
+     
+}
+
+\linea
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Realization of$\acal_\Lambda$ through $U\soth$}
+
+{
+    \color{gray}
+    
+    - $O(2)$ acts on $\hcal_\Lambda \subset L^2(\RR^2)$, and so \rtext{on $\acal_\Lambda$}, since $[H, O(2)\cdot ] = 0$. through the action induced in $\acal_\Lambda$ by its action on $\RR^2$.
+        \begin{itemize}
+            
+        \item \textit{Rotation} $R_\theta$: $\cut{x^\pm} \mapsto e^{\pm i \theta} \cut{x ^\pm}; \cut L \mapsto \cut L \in \acal_\Lambda$.
+        
+        \item \textit{Reflection}: $\cut{x^\pm} \mapsto -\cut{x^\mp}; \cut L \mapsto -\cut L$.
+        
+        \end{itemize}
+    
+    - \rtext{We can consider \otext{$\acal_\Lambda \cong  M_N(\CC) = \pi_\Lambda(Uso(3))$} \textbf{as a $*$-algebra and representations of $O(2)$}}, where $\pi_\Lambda$ is the $\lbtext{N} := 2 \Lambda + 1$ dimensional representation. $SU(N) \ni g$ is the group of $*$-automorphisms of $M_N(\CC) \cong \acal_\Lambda$ acting by $a \mapsto g a g^{-1}$; $O(2)$ is then a subgroup. Comes from mapping:
+    \begin{align}
+        \rtext{\cut{x^\pm}} &\longleftrightarrow \rtext{f_\pm (J^0) J^\pm}, &
+        \rtext{\cut L }& \rtext{\longleftrightarrow J^0}
+    \end{align}
+    where $J^\pm, J^0$ is the Weyl-Cartan basis of $so(3)$, $\lbtext{f_\pm(s)} := \frac{1}{\sqrt{2}} \sqrt{\frac{1 + s(s-1)/k}{\Lambda (\Lambda + 1) - s(s-1)}} =: \lbtext{f_-(-s)}$%: $[J^+, J^-] = J^0; [J^\pm, J^0] = \pm J^\pm$
+
+    - $O(2) \subset SO(3)$: \textit{Rotation}: $\pi_\Lambda(e^{i \theta J_0})$; \textit{Refl.}: $\pi_\Lambda(e^{i\pi (J^+ + J^-)/\sqrt{2}})$
+}
+
+\linea
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Convergence}
+
+{
+    \color{gray}
+    
+    - \textbf{$\psi_m$ as fuzzy analogues of $e^{i m \phi} \in \hcal$}: $O(2)$-covariant embedding $\hcal_\Lambda \hookrightarrow \otext{\hcal = L^2(S^1)}$, $\psi_m \mapsto e^{im\phi}$; \hfill \\then $\hcal_\Lambda \to \hcal$ as $\Lambda \to \infty$ in the sense that $\forall \phi \in \hcal$, $\lbtext{\phi_\Lambda} := \sum_{|m| \leq \Lambda} \phi_m e^{im\phi} \to \phi$ in the $L^2$-norm.
+    
+    - Induces, \rtext{embedding $\acal_\Lambda \hookrightarrow \otext{\acal = \mathcal B(\hcal)}$ and limit $\acal_\Lambda \to \acal$} as $\Lambda \to \infty$.
+    
+    - \textbf{Fuzzy analogue of $B(S^1)$ of (bounded) functions on $S^1$} as subalgebra (act by mult.) of $\mathcal B(\hcal)$: $\lbtext{C_\Lambda} := \left\{ \sum_{h = -2\Lambda}^\Lambda f_h \eta^h \,|\, f_h \in \CC\right\}$ where $\eta^\pm  = \frac{\sqrt{2}}{a}x^\pm$ (so $\eta^\pm \to e^{\pm i \phi}$ as operators).
+    
+    - Choosing $k(\Lambda) \geq 2 \Lambda(\Lambda + 1)(w\Lambda+1)^2$, then \rtext{$B(S^1) \to \mathcal B(\hcal)$ as operators} due to the strong limits: $\hat f_\Lambda \to f\cdot$, $\hat{(fg)}_\Lambda \to fg\cdot $, $\hat f_\Lambda \hat g_\Lambda \to fg\cdot$, where $\lbtext{\hat f_\Lambda} := \sum_{h = -2\Lambda}^{2\Lambda} f_h \eta^h$ is ``truncation'' of $f \in B(S^1)$.
+    
+}
+
+\linea
+
