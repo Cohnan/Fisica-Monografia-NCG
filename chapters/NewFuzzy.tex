@@ -204,9 +204,9 @@ By Fuchs theorem \ref{}, for this equation to have a solution, $V(r)$ needs to g
 We now see that the near confining harmonic potential \ref{equationPotentialHarmonicGeneralD} implies that the energy eigenfunction $\psi$ becomes negligibly small outside the $\nu_{\cut E}$ region.
 Finally, it can be shown that the above equation can be approximated, for $r \approx 1$, by a harmonic oscillator equation
 \begin{equation} \label{harmonicApproximationRadialSolutionGeneralD}
-    [- \partial_{\tilde r} + \tilde k(\tilde r - \tilde r_0)^2]\psi = \tilde E \psi
+    [- \partial_{\tilde r} + \tilde k_j(\tilde r - \tilde r_{j})^2] f(\tilde r) = \tilde E_j \tilde f(r)
 \end{equation} 
-for some $\tilde r$ function of $r$ and $\tilde k, \tilde r_0$ constants, and, furthermore, that the lowest eigenvalue solutions of equation the Schr\"odinger equation are approximately the solutions of the above harmonic oscillator equation; in particular, at least for the lowest eigenvalue solutions $\psi = \tilde f(r) Y(\phi, \dots)$ of the Schr\"odinger equation, the respective energies will have two labels: a label $j \in \ZZ$ coming from the angular factor $Y(\phi, \dots)$, and a label $n \in \ZZ_{\geq 0}$ coming from the radial part $\tilde f(r)$: $E_{n, j}$. Image taken from \cite{Fiore2018}.
+for some $\tilde r$ function of $r$, $f(\tilde r) := \tilde f(r)$ and $\tilde k, \tilde r_j$ constants, and, furthermore, that the lowest eigenvalue solutions of equation the Schr\"odinger equation are approximately the solutions of the above harmonic oscillator equation; in particular, at least for the lowest eigenvalue solutions $\psi = \tilde f(r) Y(\phi, \dots)$ of the Schr\"odinger equation, the respective energies will have two labels: a label $j \in \ZZ$ coming from the angular factor $Y(\phi, \dots)$, and a label $n \in \ZZ_{\geq 0}$ coming from the radial part $\tilde f(r)$: $E_{n, j}$. Image taken from \cite{Fiore2018}.
 
 \lin
 
@@ -217,7 +217,8 @@ for some $\tilde r$ function of $r$ and $\tilde k, \tilde r_0$ constants, and, f
     \label{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}
 \end{figure}
 
-As illustrated in \ref{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}, we will see that, if $\cut E$ is chosen small enough with respect to $k$, e.g. $\cut E \lesssim 8\sqrt{k}$, the eigenvalues of $H$ below $E_{1,0}$ will be a truncation of the spectrum of $L^2$, i.e. the smallest eigenvalues of $H$ will be (approximately) $j(j+D-1)$ for $j = 1, 2, \dots, \Lambda$ for some positive integer $\Lambda$. This introduces the second main ingredient of our construction: \textit{the energy cutoff}. In general, \rtext{for any given $D = d + 1 \in \ZZ_{\geq 2}$, first suppose that $k$ is sufficiently steep to make the eigenvalue $E_{1, 0}$ be above the cutoff energy $\cut E$, then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{0, j} \equiv \psi_j$ of the Schrodinger equation (under the harmonic approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{0, j} \equiv E_j$ are below $\cut E$}.
+As illustrated in \ref{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}, we will see that, if $\cut E$ is chosen small enough with respect to $k$, e.g. $\cut E \lesssim 8\sqrt{k}$, the eigenvalues of $H$ below $E_{1,0}$ will be a truncation of the spectrum of $L^2$, i.e. the smallest eigenvalues of $H$ will be (approximately) $j(j+D-1)$ for $j = 1, 2, \dots, \Lambda$ for some positive integer $\Lambda$. This introduces the second main ingredient of our construction: \textit{the energy cutoff}. In general, \rtext{for any given $D = d + 1 \in \ZZ_{\geq 2}$, first suppose that $k$ is sufficiently steep to make the eigenvalue $E_{1, 0}$ be above the cutoff energy $\cut E$, %\dbtext{but also that $\cut E$ is high enough so that no eigenvalues are between it and $E_{1, 0}$} 
+then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{0, j} \equiv \psi_j$ of the Schrodinger equation (under the harmonic approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{0, j} \equiv E_j$ are below $\cut E$}.
 
 In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this construction of algebras $\acal_{\cut E}$, we need to make $\cut E$ and $k$ grow with a $\Lambda \in \NN$ in such a way that: 1. $k$ is big enough to not produce radial excitations, i.e. keep nontrivial radial eigenfunctions, for which the label $n \geq 1$, above the cutoff; 2. for fixed $\Lambda$, the extremum eigenvalues are $\Lambda(\Lambda + D - 2)$. This may be done, for example, by choosing 
 \begin{align}
@@ -274,6 +275,89 @@ In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this
 }
 
 \linea
+
+When decomposing the eigenfunctions of the Schrodinger equation into radial and angular components, $\psi(r, \phi) = \tilde f(r) Y(\phi)$, the angular equation $L^2 Y = EY$ for $D = d+1 = 2$ is 
+\begin{equation}
+    - \partial_\phi^2 Y = E Y
+\end{equation}
+since the only angular momentum component is $L_{12} = - L_{21} =: L = -i(x^1 \partial_2  - x_2 \partial_1) = - i \partial_\phi$. The \dbtext{spherical harmonics} are, then, labeled by an integer $m$ and:
+\begin{align}
+    Y_m(\phi) &= e^{im \phi} & m \in \ZZ\\
+    E_m &= m^2.
+\end{align}
+
+\lin
+
+Defining $\rho := \ln r$ and $f(\rho) := \tilde f(r)$, the radial equation \ref{equationRadialSchrodingerGeneralDPolarAngles} becomes $f''(\rho) + \{e^{2\rho} [E - V(e^\rho)] - m^2 \} f(\rho) = 0$, and expanding $e^{2\rho}$ about $\rho = 0$ we obtain the following harmonic approximation of the radial equation \ref{equationRadialSchrodingerGeneralDPolarAngles}: 
+\begin{equation}\label{equationHarmonicApproximation2DRadial}
+        [- \partial_\rho^2 + k_m(\rho - \tilde \rho_m)^2] f(\rho) = e_m f(\rho),\text{ where}
+\end{equation}
+\begin{equation}\label{equationConstantsHarmonicApproximationRadialD2}
+        k_m := 2(k - E'_m),\quad 
+        E'_m := E_m - V_0,\quad 
+        \tilde \rho_m := \frac{E'_m}{k_m},\quad
+        e_m = \frac{E'^2_m}{k_m} + E'_m - m^2.
+\end{equation} 
+When solving this equation, taking into account that $\psi = f(\rho) $ an additional label $n \in \ZZ_{\geq 0}$ appears to label the eigenvalues of the previous equation; these solutions are:
+\begin{eqnsplit}
+    f_{n, m}(\rho) &= \exp\{\left[ - \frac{(\rho - \tilde \rho_m \sqrt{k_m})}{2}\right]\} H_n\left[ (\rho - \rho_m)\right]\\
+    e_{n, m} &= (2n+1) \sqrt{k_m},
+\end{eqnsplit}
+where $H_n$ are the Hermite polynomials, $H_n$ being a polynomial of degree $n$ on the dependent variable; in particular, $H_0 = 1$.
+
+From equation \ref{equationConstantsHarmonicApproximationRadialD2} it follows that $E'_m \equiv E'_{n, m} = E_{n, m} - V_0$ satisfies
+\begin{equation}\label{equationAlmostQuarticDeterminesE'}
+    \frac{E'_{n, m}}{2(k - E'_{n, m})} + E'_{n, m} - m^2 = (2n+1) \sqrt{2(k - E'_{n, m})};
+\end{equation}
+by squaring both sides we obtain a quartic equation for $E'_{n,m}$ that makes it a function of $k$, and hence we obtain the original eigenvalues of the approximate Schr\"odinger equation $E_{n,m}$ as a functions of $k$ and $V_0$.
+
+\lin
+
+As was mentioned in the previous section, in order to get simple eigenenergies we fix $V_0$ such that the ground energy $E_{0, 0}$ equals $0$. To do this we replace use the tags $m = n = 0$ in equation \ref{equationAlmostQuarticDeterminesE'} and use $E_{0, 0} = 0$. From there, we deduce that $V_0$ has a quartic equation that determines it a function of $k$, which can be rewritten as
+\begin{equation}\label{equationV0AlternativeNotQuartic}
+    - \sqrt{\frac{1}{2k}}V_0 - \left( \sqrt{\frac{1}{2k}} \right)^3 V_0^2 = \left( 1 + \frac{V_0}{k} \right)^\frac{3}{2}
+\end{equation}
+. Although a closed formula of $V_0(k)$ is possible, we opt for finding its Taylor expansion with respect to the variable $1/\sqrt{k}$ by using the implicit formula for $V_0(k)$; the resulting formula is:
+\begin{equation}\label{equationFormulaExpansionV0functionOfK}
+    V_0(k) = - \sqrt{2k} + 2 - \frac{7}{2} \frac{1}{\sqrt{2k}} + o\left(\frac{1}{k}\right).
+\end{equation}\todo{check that $o$}
+Finally, this expansion in $k$ of $V_0$ induces the following expansion of the eigenenergies of the harmonic approximation of Schrodinger equation:
+\begin{equation}\label{equationEigenEnergies2DSchrodingerSolutionsHarmonicApproximation}
+    E_{n, m} = m^2 + 2n\sqrt{2k} - 2n + o\left(\frac{1}{\sqrt{k}}\right).
+\end{equation}
+
+\lin 
+
+The final step to build the Hilbert space $\hcal_{\cut E}$ and $\acal_{\cut E}$ given a cutoff energy $\cut E \geq 0$, is to make sure that $k$ is steep enough to ensure that $E_{1, 0}$ is above it, and for this is expressed by the inequality
+\begin{align}
+    \cut E < E_{1, 0} \approx 2 \sqrt{2k} - 2.
+\end{align}\todo{perhaps the $o(1/\sqrt{k})$ term is negative?}
+In that case, renaming $\psi_{0, m}$ and $E_{0, m}$ as $\psi_m$ and $E_m$ for $m \in \ZZ$, we define the spaces
+\begin{eqnsplit} \label{equationDefinitionOFHandEHilbertAndAlgebraGivenCutoff}
+    \hcal_{\cut E} &:= span\{ \psi_m(\rho, \phi) \,:\, E_m \leq \cut E \}\\
+    \acal_{\cut E} &:= End(\hcal_{\cut E});
+\end{eqnsplit} where
+\begin{equation}\label{equationDefinitionPsimD2BasisOfHCutE}
+    \psi_m(\rho, \phi) = c_m e^{im\phi} \exp \left[ - \frac{(\rho - \tilde \rho_m) \sqrt{k_m}}{2} \right], \quad \text{where}
+\end{equation}
+\begin{align}\label{equationExpansionKDependentConstantsPsim}
+    k_m &= 2k \left( 1 - \frac{2}{\sqrt{2k}} + \frac{2-m^2}{k} + o\left( \frac{1}{k^{3/2}} \right) \right), &
+    \tilde \rho_m &= \frac{1}{\sqrt{2k}} + \frac{m^2}{2k} + o\left( \frac{1}{k^{3/2}} \right).
+\end{align}
+
+Notice that, in principle, the definition of $\acal_{\cut E}$ is dependent on the chosen $k$ due to $k_m$ and $\tilde \rho_m$, so we may write instead $\psi_{n, m}(\rho, \phi)$ as $\psi_{n, m}(\rho, \phi; k)$; also notice that, for a fixed $k$ and two cutoffs $\cut E_1$ and $\cut E_2 > \cut E_1$ compatible with this $k$, then $\hcal_{\cut E_1}$ is, strictly, a subspace of $\hcal_{\cut E_2}$ since its basis elements $\psi_m$ are also basis elements of the latter, but only due to the fixed choice of $k$ for both cutoffs. 
+However, first notice since $k$ is chosen large, all $\psi_m$ essentially vanish outside the $k$ dependent region $\nu_{\cut E}$, for $m$ fixed, and in fact $\psi_m(\rho, \phi) \to e^{im\phi} \delta(\rho - 1)$ in probability as $k \to \infty$; more importantly, the dependence on $k$ of the definition of $\acal_{\cut E}$ will not be relevant to our studies, since all what we will need in order to study the fuzzy spaces they form are the fact that they are endomorphism algebras over finite dimensional Hilbert spaces, and their behavior under the action of the group $O(2)$ induced by the action on the underlying Hilbert space. In fact, it is easy to see (since $O(2)$ doesn't affect the radial coordinate) that, for any compatible $k$, $\hcal_{\cut E}$ is isomorphic to  $\hcal'_{\cut E} := span\{e^{i m \phi} \, : \, m \in \ZZ, \, m^2 \leq \cut E\}$ in an $O(2)$-equivariant way, and, hence, that \rtext{$\acal_{\cut E}$\todo{again, strictly speaking, I am assuming that the extra factor in the $k$-expansion of the energies is positive} is isomorphic to $\acal'_{\cut E} := End(\hcal'_{\cut E})$ as a $C^*$-algebra and as a representation space of $O(2)$}.
+
+
+Now, to parametrize these algebras by $\Lambda \in \NN$, define
+\begin{eqnsplit}
+    \hcal_\lambda &:= \hcal_{\Lambda = \lfloor \cut E \rfloor} \\
+    \acal_\Lambda &:= End(\hcal_\Lambda);
+\end{eqnsplit}
+this means that the energies of the basis elements of $\hcal_\Lambda$ are all those $m^2$ that are below the energies $E_{1,0}$. Strictly speaking, to define each $\acal_\Lambda$ we also need to choose $k$ as a function on $\Lambda$ in such a way that it diverges with $\Lambda$ and that $k(N)$ is compatible with the cutoff energy $\Lambda$, for this,  equation \eqref{ } tells us that we can choose any function
+\begin{equation}
+    k(\Lambda) \geq \Lambda^2 (\Lambda + 1^2).
+\end{equation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
