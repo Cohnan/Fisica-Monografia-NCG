@@ -166,7 +166,7 @@ $\Rightarrow$ $O(2)$ acts on $\mathcal H_{\cut E}$ $\Rightarrow$ $O(2)$ acts on 
 
 \linea
 
-In dimension $D \in \ZZ_{\geq 2}$, let/the dynamics of a quantum spinless particle with wavefunction $\psi(\vec r) \in \hcal$, where $\hcal = L^2(\RR^D)$ is the Hilbert space of square integrable complex valued functions on $\RR^D$, be/is described by Schr\"odinger equation which, using natural units where $\hbar = c = 1$, looks as follows:
+In dimension $D = d + 1 \in \ZZ_{\geq 2}$, let/the dynamics of a quantum spinless particle with wavefunction $\psi(\vec r) \in \hcal$, where $\hcal = L^2(\RR^D)$ is the Hilbert space of square integrable complex valued functions on $\RR^D$, be/is described by Schr\"odinger equation which, using natural units where $\hbar = c = 1$, looks as follows:
 \begin{equation} \label{SchrodingerEquationFullGeneralD}
     H \psi = i \frac{\partial}{\partial t} \psi,
 \end{equation}
@@ -174,39 +174,48 @@ where $H$ is the Hamiltonian operator of the system
 \begin{equation}
     H = -\frac{1}{2} \Delta + V(r);
 \end{equation}
-here, $\nabla = \sum_{i = 1}^D \frac{\partial}{\partial x^i} =: \sum_{i = 1}^D \partial_i \partial_i$ is the Laplacian of $\RR^D$, where $x^i$, $i = 1, \dots, D$ are the Cartesian coordinates on $\RR^D$. 
+here, $\Delta = \sum_{i = 1}^D \frac{\partial}{\partial x^i} =: \sum_{i = 1}^D \partial_i \partial_i$ is the Laplacian of $\RR^D$, where $x^i$, $i = 1, \dots, D$ are the Cartesian coordinates on $\RR^D$. 
 
 The first ingredient to construct the new fuzzy spheres $\{S^d_\Lambda\}_{\Lambda \in \NN}$ is to suppose that the potential is nearly harmonic with minimum value $V(1) = V_0$ at $r = 1$, i.e. that
 \begin{align}\label{equationPotentialHarmonicGeneralD}
             V(r) &\approx V_0 + 2k(r-1)^2 & k \geq 0
     \end{align}
-in some region $\nu_{\cut E} := \{r \,|\, V(r) \leq \cut E\}$, for some energy value $\cut E \geq 0$. Furthermore, we will suppose that $k = V''(r)/4 > 0$ is very large, so that $V(r)$ is a close to confining potential for the particle into the $d$-sphere, $S^d$, where $d = D-1 \in \ZZ_{\geq 1}$.
+in some region $\nu_{\cut E} := \{r \,|\, V(r) \leq \cut E\}$, for some energy value $\cut E \geq V_0$. Furthermore, we will suppose that $k = V''(r)/4 > 0$ is very large, so that $V(r)$ is a close to a confining potential for the particle into the $d$-sphere, $S^d$.
 
 \lin
 
-As stated in the introduction, we wish to introduce the new fuzzy sphere as the space of observables of the vector subspace of $\hcal$ for in which no wavefunctions of energy higher that some cutoff energy inhabit, hence we need a description of the eigenfunctions of the energy operator, i.e. of the Hamiltonian. 
+As stated in the introduction, we wish to introduce the new fuzzy sphere as the space of observables of the vector subspace of $\hcal$ inside which no wavefunctions of energy higher that some cutoff energy inhabit, hence we need a description of the eigenfunctions of the energy operator, i.e. of the Hamiltonian. 
 To do this, we use polar coordinates $r, \phi, \cdots$ where $r = \sqrt{\sum_i (x^i)^2}$ is the radius, and $\phi, \cdots$ are angles on $S^d$, so
 \begin{equation}\label{LaplacianPolarCoordinatesGeneralD}
     \Delta = \partial_r^2 + (D-1)\frac{1}{r} \partial_r - \frac{1}{r^2} L^2,
 \end{equation}
-where, letting $p_i$ be the linear momentum conjugate to $x^i$, and $L_{ij} = x_i p_j - x_j p_i$ be the angular momentum operator perpendicular to the plane $x_i$-$x_j$, then $L^2 = \frac{1}{2} \sum_{i, j} (L_ij)^2$ is the square angular momentum operator, and also the Laplacian on $S^d$ as the above equation shows. It is well known \cite{} that the eigenvectors of $L^2$, called \dbtext{spherical harmonics}, have eigenvalues $j(j+D-2)$, for $j = $\todo{I think $j \in \ZZ_{\geq 0}$}. 
+where, letting $p_i$ be the linear momentum conjugate to $x^i$, and $L_{ij} = i(x^i p_j - x^j p_i)$ be the angular momentum operator perpendicular to the plane $x_i$-$x_j$, then $L^2 = \frac{1}{2} \sum_{i, j} (L_ij)^2$ is the square angular momentum operator, and also the Laplacian on $S^d$ as the above equation shows. It is well known \cite{} that the eigenvectors of $L^2$, called \dbtext{spherical harmonics}, have eigenvalues $j(j+D-2)$, for $j = $\todo{I think $j \in \ZZ_{\geq 0}$}. 
 
-By using the ansatz for the eigenfunction $\psi$ of $H$ with eigenvalue $E$,
+For the eigenfunction $\psi$ of $H$ with eigenvalue $E$  we may use the ansatz
 \begin{equation}\label{ansatzSolutionEigenfunctionEigenvalueEnergyHamiltonianGeneralD}
-    \psi(r, \phi, \dots) = \tilde f(r) Y(\phi, \dots)
+    \psi(r, \phi, \dots) = \tilde f(r) Y(\phi, \dots).
 \end{equation}
-we may use separation of variables on the Schr\"odinger equation \ref{SchrodingerEquationFullGeneralD}, from where we deduce that \textbf{$\psi$ is eigenfunction of $L^2$ with eigenvalue $j(j+D-2)$}; this means that we may add a first label $j$ to the observable energies: $E_j$. On the other side, the radial part of $\psi$ satisfies
+Using separation of variables on the Schr\"odinger equation \ref{SchrodingerEquationFullGeneralD} we deduce that \textbf{$\psi$ is an eigenfunction of $L^2$ with eigenvalue $j(j+D-2)$}; this means that we may add a first label $j$ to the observable energy: $E_j$. On the other hand, the radial part of $\psi$ satisfies
 \begin{align}\label{equationRadialSchrodingerGeneralDPolarAngles}
-        \left[-\partial_r^2 - (D-1) \frac{1}{r} \partial_r + \frac{1}{r^2} j(j+D-2) + V(r)\right] \tilde f(r) = E \tilde f(r).
+        \left[-\partial_r^2 - (D-1) \frac{1}{r} \partial_r + \frac{1}{r^2} j(j+D-2) + V(r)\right] \tilde f(r) = E_j \tilde f(r).
 \end{align}
 
-For this equation to be solved $V(r)$ has behavior such. To make it square integrable, it is such and such at $0$ and $\infty$. 
+By Fuchs theorem \ref{}, for this equation to have a solution, $V(r)$ needs to grow at most as $\beta/r^2$ when $r$ goes to $0$, for some $\beta \geq 0$, in which case \ref{equationRadialSchrodingerGeneralDPolarAngles} has two independent solutions with asymptotic behavior $r^\alpha$ and $r^{-\alpha}$, respectively, as $r$ goes to $0$. For $\tilde f$ to be defined in the origin the contribution of the second solution must vanish, in particular $\tilde f(0) = 0$; for $\psi = \tilde f\, Y$ to be square integrable on $\RR^D$ it is required that $\tilde f(r) \to 0$ as $r$ goes to infinity.
+We now see that the near confining harmonic potential \ref{equationPotentialHarmonicGeneralD} implies that the energy eigenfunction $\psi$ becomes negligibly small outside the $\nu_{\cut E}$ region.
+Finally, it can be shown that the above equation can be approximated, for $r \approx 1$, by a harmonic oscillator equation
+\begin{equation} \label{harmonicApproximationRadialSolutionGeneralD}
+    [- \partial_{\tilde r} + \tilde k(\tilde r - \tilde r_0)^2]\psi = \tilde E \psi
+\end{equation} 
+for some $\tilde r$ function of $r$ and $\tilde k, \tilde r_0$ constants, and, furthermore, that the lowest eigenvalue solutions of equation the Schr\"odinger equation are approximately the solutions of the above harmonic oscillator equation; in particular, at least for the lowest eigenvalue solutions $\psi = \tilde f(r) Y(\phi, \dots)$ of the Schr\"odinger equation, the respective energies will have two labels: a label $j \in \ZZ$ coming from the angular factor $Y(\phi, \dots)$, and a label $n \in \ZZ_{\geq 0}$ coming from the radial part $\tilde f(r)$: $E_{n, j}$.
 
-Joining with condition, \textbf{$\psi$} becomes negligible small outside $\nu$
+\lin
 
-The lower eigenvalue solutions are approximately the solutions of the harmonic approximation of this equaiton.
+We will see that, if $\cut E$ is chosen small enough with respect to $k$, e.g. $\cut E \lesssim \sqrt{k}$, the eigenvalues of $H$ below $E_{0,1}$ will be a truncation of the spectrum of $L^2$, i.e. the smallest eigenvalues of $H$ will be (approximately) $j(j+D-1)$ for $j = 1, 2, \dots, \Lambda$ for some positive integer $\Lambda$. This introduces the second main ingredient of our construction: \textit{the energy cutoff}. In general, \rtext{for any given $D = d + 1 \in \ZZ_{\geq 2}$, first suppose that $k$ is sufficiently steep to make the eigenvalue $E_{0, 1}$ be above the cutoff energy $\cut E$, then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{j, 0}$ of the Schrodinger equation (under the harmonic approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{j, 0}$ are below $\cut E$}.
 
-
+In order to make a fuzzy space out of this construction, we need to make $\cut E$ and $k$ grow with a $\Lambda \in \NN$ in such a way that, 1. $k$ is big enough to keep radial excitations, i.e. eigenvalues for which the label $n \geq 1$, above the cutoff; 2. for fixed $\Lambda$, the extremum eigenvalues are $\Lambda(\Lambda _ D - 1)$. This may be done, for example, by choosing 
+\begin{align}
+    \cut E = \cut E(\Lambda) &= \Lambda(\Lambda + d - 1) & k = k(\Lambda) \geq \Lambda^2(\Lambda + 1)^2.
+\end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
