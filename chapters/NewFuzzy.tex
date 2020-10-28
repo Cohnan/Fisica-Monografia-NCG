@@ -143,26 +143,26 @@ $\Rightarrow$ $O(2)$ acts on $\mathcal H_{\cut E}$ $\Rightarrow$ $O(2)$ acts on 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{General Setting}
 
-{
-    \color{gray}
+% {
+%     \color{gray}
     
-    - $H = - \frac{1}{2} \Delta + V(r)$ invariant under $O(D)$
+%     - $H = - \frac{1}{2} \Delta + V(r)$ invariant under $O(D)$
     
-    - Introducing the cutoff $\cut E$, as the energy where
-    \begin{align}
-        \label{eqn5}
-            V(r) \approx V_0 + 2k(r-1)^2 && \text{for $r$ such that $V(r) \leq  \cut E$}.
-    \end{align}
-    %in the region $\nu_{\cut E} = \{r \,|\, V(r) \leq \cut E\}$.
+%     - Introducing the cutoff $\cut E$, as the energy where
+%     \begin{align}
+%         \label{eqn5}
+%             V(r) \approx V_0 + 2k(r-1)^2 && \text{for $r$ such that $V(r) \leq  \cut E$}.
+%     \end{align}
+%     %in the region $\nu_{\cut E} = \{r \,|\, V(r) \leq \cut E\}$.
     
-    - Eigenfunctions of $H$ as product of a spherical harmonic $Y(\phi, \dots)$ (eigenvector of $L^2$) and an eigenfunction of the radial equation 
-    \begin{align}
-        \label{eqn9}
-        \left[-\partial_r^2 - (D-1) \frac{1}{r} \partial_r + \frac{1}{r^2} j(j+D-2) + V(r)\right] \tilde f(r) = E \tilde f(r).
-    \end{align}
-    - This last equation can be approximated by a harmonic oscillator equation, since outside the region $\{V(r) \leq \cut E\}$ $\psi$ is negligibly small.
-    : \rtext{$\hcal_{\cut E} \approx $ solutions of Schrodinger Eq. of energy $\leq \cut E$, $\acal_{\cut E} = End(\hcal_{\cut E})$}.
-}
+%     - Eigenfunctions of $H$ as product of a spherical harmonic $Y(\phi, \dots)$ (eigenvector of $L^2$) and an eigenfunction of the radial equation 
+%     \begin{align}
+%         \label{eqn9}
+%         \left[-\partial_r^2 - (D-1) \frac{1}{r} \partial_r + \frac{1}{r^2} j(j+D-2) + V(r)\right] \tilde f(r) = E \tilde f(r).
+%     \end{align}
+%     - This last equation can be approximated by a harmonic oscillator equation, since outside the region $\{V(r) \leq \cut E\}$ $\psi$ is negligibly small.
+%     : \rtext{$\hcal_{\cut E} \approx $ solutions of Schrodinger Eq. of energy $\leq \cut E$, $\acal_{\cut E} = End(\hcal_{\cut E})$}.
+% }
 
 \linea
 
@@ -200,7 +200,7 @@ Using separation of variables on the Schr\"odinger equation \ref{SchrodingerEqua
         \left[-\partial_r^2 - (D-1) \frac{1}{r} \partial_r + \frac{1}{r^2} j(j+D-2) + V(r)\right] \tilde f(r) = E_j \tilde f(r).
 \end{align}
 
-By Fuchs theorem \ref{}, for this equation to have a solution, $V(r)$ needs to grow at most as $\beta/r^2$ when $r$ goes to $0$, for some $\beta \geq 0$, in which case equation \ref{equationRadialSchrodingerGeneralDPolarAngles} has two independent solutions with asymptotic behavior $r^\alpha$ and $r^{-\alpha}$, respectively, as $r$ goes to $0$. For $\tilde f$ to be defined in the origin the contribution of the second solution must vanish, in particular $\tilde f(0) = 0$; for $\psi = \tilde f\, Y$ to be square integrable on $\RR^D$ it is required that $\tilde f(r) \to 0$ as $r$ goes to infinity.
+By Fuchs theorem \ref{}, for this equation to have a solution, $V(r)$ needs to grow at most as $\beta/r^2$ when $r$ goes to $0$, for some $\beta \geq 0$ and $\alpha = \sqrt{\beta + j(j+D-2)}$, in which case equation \ref{equationRadialSchrodingerGeneralDPolarAngles} has two independent solutions with asymptotic behavior $r^\alpha$ and $r^{-\alpha}$, respectively, as $r$ goes to $0$. For $\tilde f$ to be defined in the origin the contribution of the second solution must vanish, in particular $\tilde f(0) = 0$; for $\psi = \tilde f\, Y$ to be square integrable on $\RR^D$ it is required that $\tilde f(r) \to 0$ as $r$ goes to infinity.
 We now see that the near confining harmonic potential \ref{equationPotentialHarmonicGeneralD} implies that the energy eigenfunction $\psi$ becomes negligibly small outside the $\nu_{\cut E}$ region.
 Finally, it can be shown that the above equation can be approximated, for $r \approx 1$, by a harmonic oscillator equation
 \begin{equation} \label{harmonicApproximationRadialSolutionGeneralD}
@@ -210,16 +210,16 @@ for some $\tilde r$ function of $r$ and $\tilde k, \tilde r_0$ constants, and, f
 
 \lin
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics{images/FioreEigenvalues.PNG}
-    \caption{Eigenvalues of the Hamiltonian for steep enough potential. The cutoff energy $\cut E$ can be chosen so that the energies below it are the spectrum of the free Hamiltonian $L^2$ in $S^d$.}
-    \label{fig:my_label}
+    \includegraphics[width = \textwidth/2]{images/FioreEigenvalues.PNG}
+    \caption{Eigenvalues of the Hamiltonian for steep enough potential for $D = 2$. The cutoff energy $\cut E$ can be chosen so that the energies below it are the spectrum of the free Hamiltonian $L^2$ in $S^d$.}
+    \label{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}
 \end{figure}
 
-As illustrated in We will see that, if $\cut E$ is chosen small enough with respect to $k$, e.g. $\cut E \lesssim 8\sqrt{k}$, the eigenvalues of $H$ below $E_{0,1}$ will be a truncation of the spectrum of $L^2$, i.e. the smallest eigenvalues of $H$ will be (approximately) $j(j+D-1)$ for $j = 1, 2, \dots, \Lambda$ for some positive integer $\Lambda$. This introduces the second main ingredient of our construction: \textit{the energy cutoff}. In general, \rtext{for any given $D = d + 1 \in \ZZ_{\geq 2}$, first suppose that $k$ is sufficiently steep to make the eigenvalue $E_{0, 1}$ be above the cutoff energy $\cut E$, then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{j, 0} \equiv \psi_j$ of the Schrodinger equation (under the harmonic approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{j, 0} \equiv E_j$ are below $\cut E$}.
+As illustrated in \ref{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}, we will see that, if $\cut E$ is chosen small enough with respect to $k$, e.g. $\cut E \lesssim 8\sqrt{k}$, the eigenvalues of $H$ below $E_{0,1}$ will be a truncation of the spectrum of $L^2$, i.e. the smallest eigenvalues of $H$ will be (approximately) $j(j+D-1)$ for $j = 1, 2, \dots, \Lambda$ for some positive integer $\Lambda$. This introduces the second main ingredient of our construction: \textit{the energy cutoff}. In general, \rtext{for any given $D = d + 1 \in \ZZ_{\geq 2}$, first suppose that $k$ is sufficiently steep to make the eigenvalue $E_{0, 1}$ be above the cutoff energy $\cut E$, then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{j, 0} \equiv \psi_j$ of the Schrodinger equation (under the harmonic approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{j, 0} \equiv E_j$ are below $\cut E$}.
 
-In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this construction of algebras $\acal_{\cut E}$, we need to make $\cut E$ and $k$ grow with a $\Lambda \in \NN$ in such a way that, 1. $k$ is big enough to keep radial excitations, i.e. eigenvalues for which the label $n \geq 1$, above the cutoff; 2. for fixed $\Lambda$, the extremum eigenvalues are $\Lambda(\Lambda _ D - 1)$. This may be done, for example, by choosing 
+In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this construction of algebras $\acal_{\cut E}$, we need to make $\cut E$ and $k$ grow with a $\Lambda \in \NN$ in such a way that: 1. $k$ is big enough to not produce radial excitations, i.e. keep nontrivial radial eigenfunctions, for which the label $n \geq 1$, above the cutoff; 2. for fixed $\Lambda$, the extremum eigenvalues are $\Lambda(\Lambda + D - 2)$. This may be done, for example, by choosing 
 \begin{align}
     \cut E = \cut E(\Lambda) &= \Lambda(\Lambda + d - 1) & k = k(\Lambda) \geq \Lambda^2(\Lambda + 1)^2.
 \end{align}
