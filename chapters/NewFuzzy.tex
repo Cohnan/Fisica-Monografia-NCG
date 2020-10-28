@@ -148,7 +148,7 @@ In dimension $D = d + 1 \in \ZZ_{\geq 2}$, let/the dynamics of a quantum spinles
     H \psi = i \frac{\partial}{\partial t} \psi,
 \end{equation}
 where $H$ is the Hamiltonian operator of the system (using natural units $\hbar = c = 1$)
-\begin{equation}
+\begin{equation}\label{equationHamiltonianGeneralD}
     H = -\frac{1}{2} \Delta + V(r);
 \end{equation}
 here, $V(\vec r)$ is a potential and $\Delta = \sum_{i = 1}^D \frac{\partial}{\partial x^i} =: \sum_{i = 1}^D \partial_i \partial_i$ is the Laplacian of $\RR^D$, where $x^i$, $i = 1, \dots, D$ are the Cartesian coordinates on $\RR^D$. 
@@ -195,20 +195,34 @@ for some $\tilde r$ function of $r$, $f(\tilde r) := \tilde f(r)$ and $\tilde k,
 \end{figure}
 
 As illustrated in \ref{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}, we will see that if $\cut E$ is chosen small enough with respect to $k$, e.g. $\cut E \lesssim 8\sqrt{k}$, the eigenvalues of $H$ below $E_{1,0}$ will be a truncation of the spectrum of $L^2$, i.e. the smallest eigenvalues of $H$ will be (approximately) $j(j+D-1)$ for $j = 1, 2, \dots, \Lambda$ for some positive integer $\Lambda$. This introduces the second main ingredient of our construction: \textit{the energy cutoff}. In general, \rtext{for any given $D = d + 1 \in \ZZ_{\geq 2}$, first suppose that $k$ is sufficiently steep to make the eigenvalue $E_{1, 0}$ be above the cutoff energy $\cut E$, %\dbtext{but also that $\cut E$ is high enough so that no eigenvalues are between it and $E_{1, 0}$} 
-then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{0, j} \equiv \psi_j$ of the Schrodinger equation (under the harmonic oscillator approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{0, j} \equiv E_j$ are below $\cut E$}.
+then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{0, j} \equiv \psi_j$ of the Schrodinger equation (under the harmonic oscillator approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{0, j} \equiv E_j$ are below $\cut E$}. 
 
-In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this construction of algebras $\acal_{\cut E}$, we need to make $\cut E$ and $k$ grow with a $\Lambda \in \NN$ in such a way that: 1. $k$ is big enough to not produce radial excitations, i.e. keep nontrivial radial eigenfunctions, for which the label $n \geq 1$, above the cutoff; 2. for fixed $\Lambda$, the extremum eigenvalues are $\Lambda(\Lambda + D - 2)$. This may be done, for example, by choosing 
+\begin{remark}
+For every cutoff $\cut E$, and $k$ compatible with it, we find a \textit{low energy effective theory} of the quantum mechanics of the particle on $S^d$, described by the Hilbert space $\hcal_{\cut E}$, its algebra of observables $\acal_{\cut E}$ with a time evolution determined by $\cut H = H|_{\hcal_{\cut E}}$. In this theory, every observable $A \in \bcal(\hcal)$ may be represented\todo{I might leave this word, since it is ambiguous} in this effective theory by $\cut A = P_{\cut E} A P_{\cut E} \in \acal_{\cut E}$. In particular, the new position observables will be $\cut{x^i}$\todo{If I say this, I am putting myself in trouble... what I say here is true, but for $D = 2$ what we interpret as the position observables are the $\xi$'s}, $i, j = 1, \dots, D$, and between them \rtext{it is now true that they do not commute: 
+\begin{equation}
+    [\cut x^i, \cut x^j] \neq 0.
+\end{equation}
+} 
+\end{remark}
+
+\begin{remark}
+Since the Hamiltonian operator is the generator of time evolution for a quantum system, a quantum system that is setup in a state $\psi \in \hcal_{\cut E}$ will not evolve out of $\hcal_{\cut E}$. More precisely, recall that the eigenvectors of the Hamiltonian operator are called \dbtext{steady-state states} since their time evolutions consists only of a change of phase, leaving invariant the probability distribution they induce and, in particular, staying as states of constant energy; 
+%since the Hamiltonian is hermitian, it is diagonalizable and every wavefunction can be written \todo{Always? In the f.d. case this is true} as a (countable)\todo{Como es que se llama esto? La alternative a Hamel basis} linear combination of eigenfunctions of $H$; 
+hence, if $\psi_0 \in \hcal_{\cut E}$, it is a linear combination of eigenfunctions of $H$ of energy lower than $\cut E$ and, by applying the linear, time-evolution operator $\exp{-itH} = 1 - itH - t^2 H^2 + \cdots$, $\psi(t) := U(t) \psi_0$ will once again be a linear combination of eigenfunctions of $H$ with low energy, i.e. $\psi(t)$ is also in $\hcal_{\cut E}$.
+\end{remark}
+
+\begin{remark}
+The orthogonal group $O(D)$ is defined as the subset of the matrices $M_D(\RR)$ acting on the vectors of $\RR^D$ that respects preserves the inner product of $\RR^d$, i.e. for any $\vec v, \vec w \in \RR^D$, every matrix $A \in O(D)$ satisfies $(A v) \cdot (A w) = v \cdot w$; it is easily shown that this condition is equivalent to the $A^t A = 1_D$. This group contains not only all possible rotations on $\RR^D$, but also the reflections with respect to every hyperplane on $\RR^D$. $O(D) \ni A$ acts naturally on $\RR^D$, and so it also acts on functions $\psi$ of $\RR^D$, in particular on $\hcal = L^2(\RR^D)$, as follows: $A \cdot \psi: \vec v \to A^{-1} \psi(\vec v)$. Even better, \rtext{$O(D)$ acts on $\hcal_{\cut E} \subset \hcal$}, meaning that the action of any $g \in O(D)$ on any function $\psi \in \hcal_{\cut E}$ produces again a function in $\hcal_{\cut E}$; this follows from the fact that the Hamiltonian \ref{equationHamiltonianGeneralD} is $O(D)$-invarirant, i.e. $[H, g\cdot] = 0 \in \bcal(\hcal)$ for the action of any $g \in O(D)$, which implies that, if $\psi_E$ is an eigenfunction of $H$ of energy $E \leq \cut E$, then $g\cdot \psi_E$ is also an eigenfunction with the same energy, then, acting on any $\psi \in \hcal_{\cut E}$, linear combination of such $\psi_E$'s, $g\cdot \psi$ is also in $\hcal_{\cut E}$.
+\end{remark}
+
+In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this construction of algebras $\acal_{\cut E}$, we need to make $\cut E$ and $k$ grow with a $\Lambda \in \NN$ in such a way that: 1. $k$ is big enough to not produce radial excitations, i.e. keep nontrivial radial eigenfunctions, for which the label $n \geq 1$, above the cutoff; 2. for fixed $\Lambda$, the extremum eigenvalues are $\Lambda(\Lambda + D - 2)$. This may be done by choosing 
 \begin{align}
     \cut E = \cut E(\Lambda) &= \Lambda(\Lambda + d - 1) & k = k(\Lambda) \geq \Lambda^2(\Lambda + 1)^2.
 \end{align}
 
 \lin 
 
-For every cutoff $\cut E$, and $k$ compatible with it, we find a \textit{low energy effective theory} of the quantum mechanics of the particle on $S^d$, described by the Hilbert space $\hcal_{\cut E}$, its algebra of observables $\acal_{\cut E}$ with a time evolution determined by $\cut H = H|_{\hcal_{\cut E}}$. In this theory, every observable $A \in \bcal(\hcal)$ may be represented\todo{I might leave this word, since it is ambiguous} in this effective theory by $\cut A = P_{\cut E} A P_{\cut E} \in \acal_{\cut E}$. In particular, the new position observables will be $\cut{x^i}$\todo{If I say this, I am putting myself in trouble... what I say here is true, but for $D = 2$ what we interpret as the position observables are the $\xi$'s}, $i, j = 1, \dots, D$, and between them \rtext{it is now true that the position observables do not commute: 
-\begin{equation}
-    [\cut x^i, \cut x^j] \neq 0.
-\end{equation}
-} 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
