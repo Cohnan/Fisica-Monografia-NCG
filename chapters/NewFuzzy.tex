@@ -70,12 +70,12 @@
     
         \begin{itemize}
             
-        \item \rtext{My choice:} It is true that the Hamiltonian and the group action commute, which implies that
+        \item \rtext{My best guess:} $O(2)$ acts by diffeomorphisms on the NC space.
             
             \begin{itemize}
                 
             \item The action of $G$ makes things fall again in $\mathcal H_{\cut E}$, since it even makes an eigenvalue of $H$ fall again into an eigenvalue of $H$ with the same energy.
-$\Rightarrow$ $O(2)$ acts on $\mathcal H_{\cut E}$ $\Rightarrow$ $O(2)$ acts on $\mathcal A_{\cut E}$ by inner automorphisms, i.e. \rtext{$O(2)$ acts by diffeomorphisms on the NC space}.         
+$\Rightarrow$ $O(2)$ acts on $\mathcal H_{\cut E}$ $\Rightarrow$ $O(2)$ acts on $\mathcal A_{\cut E}$ by inner automorphisms, i.e. \rtext{$O(2)$ acts by diffeomorphisms on the NC space}.    
             \item The time evolution of a ``rotated'' vector is simply given at any time as the rotation of the evolution of the orignal vector. Alternatively, $H^g = H$, so the time evolution of the a rotated vector is given by the same Hamiltonian.
             
             \item The two above things imply that the evolution of a vector in $\mathcal H_{\cut E}$ is given by the same $H$, and that \rtext{this evolution is invariant under $O(2)$}
@@ -165,6 +165,46 @@ $\Rightarrow$ $O(2)$ acts on $\mathcal H_{\cut E}$ $\Rightarrow$ $O(2)$ acts on 
 }
 
 \linea
+
+In dimension $D \in \ZZ_{\geq 2}$, let/the dynamics of a quantum spinless particle with wavefunction $\psi(\vec r) \in \hcal$, where $\hcal = L^2(\RR^D)$ is the Hilbert space of square integrable complex valued functions on $\RR^D$, be/is described by Schr\"odinger equation which, using natural units where $\hbar = c = 1$, looks as follows:
+\begin{equation} \label{SchrodingerEquationFullGeneralD}
+    H \psi = i \frac{\partial}{\partial t} \psi,
+\end{equation}
+where $H$ is the Hamiltonian operator of the system
+\begin{equation}
+    H = -\frac{1}{2} \Delta + V(r);
+\end{equation}
+here, $\nabla = \sum_{i = 1}^D \frac{\partial}{\partial x^i} =: \sum_{i = 1}^D \partial_i \partial_i$ is the Laplacian of $\RR^D$, where $x^i$, $i = 1, \dots, D$ are the Cartesian coordinates on $\RR^D$. 
+
+The first ingredient to construct the new fuzzy spheres $\{S^d_\Lambda\}_{\Lambda \in \NN}$ is to suppose that the potential is nearly harmonic with minimum value $V(1) = V_0$ at $r = 1$, i.e. that
+\begin{align}\label{equationPotentialHarmonicGeneralD}
+            V(r) &\approx V_0 + 2k(r-1)^2 & k \geq 0
+    \end{align}
+in some region $\nu_{\cut E} := \{r \,|\, V(r) \leq \cut E\}$, for some energy value $\cut E \geq 0$. Furthermore, we will suppose that $k = V''(r)/4 > 0$ is very large, so that $V(r)$ is a close to confining potential for the particle into the $d$-sphere, $S^d$, where $d = D-1 \in \ZZ_{\geq 1}$.
+
+\lin
+
+As stated in the introduction, we wish to introduce the new fuzzy sphere as the space of observables of the vector subspace of $\hcal$ for in which no wavefunctions of energy higher that some cutoff energy inhabit, hence we need a description of the eigenfunctions of the energy operator, i.e. of the Hamiltonian. 
+To do this, we use polar coordinates $r, \phi, \cdots$ where $r = \sqrt{\sum_i (x^i)^2}$ is the radius, and $\phi, \cdots$ are angles on $S^d$, so
+\begin{equation}\label{LaplacianPolarCoordinatesGeneralD}
+    \Delta = \partial_r^2 + (D-1)\frac{1}{r} \partial_r - \frac{1}{r^2} L^2,
+\end{equation}
+where, letting $p_i$ be the linear momentum conjugate to $x^i$, and $L_{ij} = x_i p_j - x_j p_i$ be the angular momentum operator perpendicular to the plane $x_i$-$x_j$, then $L^2 = \frac{1}{2} \sum_{i, j} (L_ij)^2$ is the square angular momentum operator, and also the Laplacian on $S^d$ as the above equation shows. It is well known \cite{} that the eigenvectors of $L^2$, called \dbtext{spherical harmonics}, have eigenvalues $j(j+D-2)$, for $j = $\todo{I think $j \in \ZZ_{\geq 0}$}. 
+
+By using the ansatz for the eigenfunction $\psi$ of $H$ with eigenvalue $E$,
+\begin{equation}\label{ansatzSolutionEigenfunctionEigenvalueEnergyHamiltonianGeneralD}
+    \psi(r, \phi, \dots) = \tilde f(r) Y(\phi, \dots)
+\end{equation}
+we may use separation of variables on the Schr\"odinger equation \ref{SchrodingerEquationFullGeneralD}, from where we deduce that \textbf{$\psi$ is eigenfunction of $L^2$ with eigenvalue $j(j+D-2)$}; this means that we may add a first label $j$ to the observable energies: $E_j$. On the other side, the radial part of $\psi$ satisfies
+\begin{align}\label{equationRadialSchrodingerGeneralDPolarAngles}
+        \left[-\partial_r^2 - (D-1) \frac{1}{r} \partial_r + \frac{1}{r^2} j(j+D-2) + V(r)\right] \tilde f(r) = E \tilde f(r).
+\end{align}
+
+For this equation to be solved $V(r)$ has behavior such. To make it square integrable, it is such and such at $0$ and $\infty$. 
+
+Joining with condition, \textbf{$\psi$} becomes negligible small outside $\nu$
+
+The lower eigenvalue solutions are approximately the solutions of the harmonic approximation of this equaiton.
 
 
 
