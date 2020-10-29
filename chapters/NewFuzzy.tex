@@ -198,7 +198,7 @@ As illustrated in \ref{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}, we will se
 then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{0, j} \equiv \psi_j$ of the Schrodinger equation (under the harmonic oscillator approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{0, j} \equiv E_j$ are below $\cut E$}. 
 
 \begin{remark}
-For every cutoff $\cut E$, and $k$ compatible with it, we find a \textit{low energy effective theory} of the quantum mechanics of the particle on $S^d$, described by the Hilbert space $\hcal_{\cut E}$, its algebra of observables $\acal_{\cut E}$ with a time evolution determined by $\cut H = H|_{\hcal_{\cut E}}$. In this theory, every observable $A \in \bcal(\hcal)$ may be represented\todo{I might leave this word, since it is ambiguous} in this effective theory by $\cut A = P_{\cut E} A P_{\cut E} \in \acal_{\cut E}$. In particular, the new position observables will be $\cut{x^i}$\todo{If I say this, I am putting myself in trouble... what I say here is true, but for $D = 2$ what we interpret as the position observables are the $\xi$'s}, $i, j = 1, \dots, D$, and between them \rtext{it is now true that they do not commute: 
+For every cutoff $\cut E$, and $k$ compatible with it, we find a \textit{low energy effective theory} of the quantum mechanics of the particle on $S^d$, described by the Hilbert space $\hcal_{\cut E}$, its algebra of observables $\acal_{\cut E}$ with a time evolution determined by $\cut H = H|_{\hcal_{\cut E}}$. In this effective theory, every observable $A \in \bcal(\hcal)$ may be represented\todo{I might leave this word, since it is ambiguous} by $\cut A = P_{\cut E} A P_{\cut E} \in \acal_{\cut E}$. In particular, the new position observables will be $\cut{x^i}$\todo{If I say this, I am putting myself in trouble... what I say here is true, but for $D = 2$ what we interpret as the position observables are the $\xi$'s}, $i, j = 1, \dots, D$, and between them \rtext{it is now true that they do not commute: 
 \begin{equation}
     [\cut x^i, \cut x^j] \neq 0.
 \end{equation}
@@ -208,11 +208,11 @@ For every cutoff $\cut E$, and $k$ compatible with it, we find a \textit{low ene
 \begin{remark}
 Since the Hamiltonian operator is the generator of time evolution for a quantum system, a\rtext{ quantum system that is setup in a state $\psi \in \hcal_{\cut E}$ will not evolve out of $\hcal_{\cut E}$}. More precisely, recall that the eigenvectors of the Hamiltonian operator are called \dbtext{steady-state states} since their time evolutions consists only of a change of phase, leaving invariant the probability distribution they induce and, in particular, staying as states of constant energy; 
 %since the Hamiltonian is hermitian, it is diagonalizable and every wavefunction can be written \todo{Always? In the f.d. case this is true} as a (countable)\todo{Como es que se llama esto? La alternative a Hamel basis} linear combination of eigenfunctions of $H$; 
-hence, if $\psi_0 \in \hcal_{\cut E}$, it is a linear combination of eigenfunctions of $H$ of energy lower than $\cut E$ and, by applying the linear, time-evolution operator $\exp{-itH} = 1 - itH - t^2 H^2 + \cdots$, $\psi(t) := U(t) \psi_0$ will once again be a linear combination of eigenfunctions of $H$ with low energy, i.e. $\psi(t)$ is also in $\hcal_{\cut E}$.
+hence, if $\psi_0 \in \hcal_{\cut E}$, it is a linear combination of eigenfunctions of $H$ of energy lower than $\cut E$ and, by applying the linear time-evolution operator $\exp[-itH] = 1 - itH - t^2 H^2 + \cdots$, $\psi(t) := U(t) \psi_0$ will once again be a linear combination of eigenfunctions of $H$ with low energy, i.e. $\psi(t)$ is also in $\hcal_{\cut E}$.
 \end{remark}
 
 \begin{remark}
-The orthogonal group $O(D)$ is defined as the subset of the matrices $M_D(\RR)$ acting on the vectors of $\RR^D$ that respects preserves the inner product of $\RR^d$, i.e. for any $\vec v, \vec w \in \RR^D$, every matrix $A \in O(D)$ satisfies $(A v) \cdot (A w) = v \cdot w$; it is easily shown that this condition is equivalent to the $A^t A = 1_D$. This group contains not only all possible rotations on $\RR^D$, but also the reflections with respect to every hyperplane on $\RR^D$. $O(D) \ni A$ acts naturally on $\RR^D$, and so it also acts on functions $\psi$ of $\RR^D$, in particular on $\hcal = L^2(\RR^D)$, as follows: $A \cdot \psi: \vec v \to A^{-1} \psi(\vec v)$. Even better, \rtext{$O(D)$ acts on $\hcal_{\cut E} \subset \hcal$}, meaning that the action of any $g \in O(D)$ on any function $\psi \in \hcal_{\cut E}$ produces again a function in $\hcal_{\cut E}$; this follows from the fact that the Hamiltonian \ref{equationHamiltonianGeneralD} is $O(D)$-invarirant, i.e. $[H, g\cdot] = 0 \in \bcal(\hcal)$ for the action of any $g \in O(D)$, which implies that, if $\psi_E$ is an eigenfunction of $H$ of energy $E \leq \cut E$, then $g\cdot \psi_E$ is also an eigenfunction with the same energy, then, acting on any $\psi \in \hcal_{\cut E}$, being a linear combination of such eigenfunctions, $g\cdot \psi$ is also in $\hcal_{\cut E}$.
+The orthogonal group $O(D)$ is defined as the subset of the matrices $M_D(\RR)$ acting on the vectors of $\RR^D$ that respects the inner product of $\RR^d$, i.e. for any $\vec v, \vec w \in \RR^D$, every matrix $A \in O(D)$ satisfies $(A \vec v) \cdot (A \vec w) = \vec v \cdot \vec w$; it is easily shown that this condition is equivalent to $A^t A = 1_D$, where the subscript $\cdot ^t$ denotes the transpose matrix. This group contains not only all possible rotations on $\RR^D$, the group $SO(D)$, but also the reflections with respect to every hyperplane on $\RR^D$. $O(D) \ni A$ acts naturally on $\RR^D$, and so it also acts on functions $\psi$ of $\RR^D$, in particular on $\hcal = L^2(\RR^D)$, as follows: $A \cdot \psi: \vec v \to A^{-1} \psi(\vec v)$. Even better, \rtext{$O(D)$ acts on $\hcal_{\cut E} \subset \hcal$}, meaning that the action of any $g \in O(D)$ on any function $\psi \in \hcal_{\cut E}$ produces again a function in $\hcal_{\cut E}$; this follows from the fact that the Hamiltonian \ref{equationHamiltonianGeneralD} is $O(D)$-invarirant, i.e. $[H, g\cdot] = 0 \in \bcal(\hcal)$ for the action of any $g \in O(D)$, which implies that, if $\psi_E$ is an eigenfunction of $H$ of energy $E \leq \cut E$, then $g\cdot \psi_E$ is also an eigenfunction with the same energy, then, acting on any $\psi \in \hcal_{\cut E}$, being a linear combination of such eigenfunctions, $g\cdot \psi$ is also in $\hcal_{\cut E}$.
 \end{remark}
 
 In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this construction of algebras $\acal_{\cut E}$, we need to make $\cut E$ and $k$ grow with a $\Lambda \in \NN$ in such a way that: 1. $k$ is big enough to not produce radial excitations, i.e. keep nontrivial radial eigenfunctions, for which the label $n \geq 1$, above the cutoff; 2. for fixed $\Lambda$, the extremum eigenvalues are $\Lambda(\Lambda + D - 2)$. This may be done by choosing 
@@ -228,50 +228,50 @@ In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Construction of $\acal_{\cut E}$ for $D = 2$}
 
-{
-    \color{gray}
+% {
+%     \color{gray}
     
-    - Equation \eqref{eqn9} has the approximation, where $\rho := \ln r$
-    \begin{equation}
-        \label{harmonic2D}
-        \hat H f(\rho) = e_m f(\rho), \qquad
-        \hat H = - \partial_\rho^2 + k_m(\rho - \tilde \rho_m)^2,
-    \end{equation} $
-        k_m := 2(k - E'), \quad
-        E' := E - V_0, \quad
-        \tilde \rho_m := \frac{E'}{k_m}, \quad
-        e_m = \frac{E'^2}{k_m} + E' - m^2
-    $
-    - The solutions $f_{n,m}$ are known, $n \in \bb N, m \in \ZZ$ \then $e_{m, n}(k) = (2n+1)\sqrt{k_m}$ \then $E'_{m,n}(k)$ satisfies a quartic equation \then $E_{m,n}(k, V_0)$.
+%     - Equation \eqref{eqn9} has the approximation, where $\rho := \ln r$
+%     \begin{equation}
+%         \label{harmonic2D}
+%         \hat H f(\rho) = e_m f(\rho), \qquad
+%         \hat H = - \partial_\rho^2 + k_m(\rho - \tilde \rho_m)^2,
+%     \end{equation} $
+%         k_m := 2(k - E'), \quad
+%         E' := E - V_0, \quad
+%         \tilde \rho_m := \frac{E'}{k_m}, \quad
+%         e_m = \frac{E'^2}{k_m} + E' - m^2
+%     $
+%     - The solutions $f_{n,m}$ are known, $n \in \bb N, m \in \ZZ$ \then $e_{m, n}(k) = (2n+1)\sqrt{k_m}$ \then $E'_{m,n}(k)$ satisfies a quartic equation \then $E_{m,n}(k, V_0)$.
     
-    - Fixing $V_0 = V_0(k)$ such that $E_{0, 0} = 0$ \then $V_0(k) = -\sqrt{2k} + 2 - \frac{7}{2}\frac{1}{\sqrt{2k}} + o(1/k)$ and 
-    $\sum_{n = -1}^\infty v_n \left( \sqrt{\frac{1}{k}} \right)^n \approx -\sqrt{2k} + 2 - o(1/k)$ \then
-    \begin{equation}
-        \rtext{E_{n, m}(k)} = m^2 + 2n\sqrt{2k} - 2n + o(1/\sqrt{k})
-    \end{equation}
+%     - Fixing $V_0 = V_0(k)$ such that $E_{0, 0} = 0$ \then $V_0(k) = -\sqrt{2k} + 2 - \frac{7}{2}\frac{1}{\sqrt{2k}} + o(1/k)$ and 
+%     $\sum_{n = -1}^\infty v_n \left( \sqrt{\frac{1}{k}} \right)^n \approx -\sqrt{2k} + 2 - o(1/k)$ \then
+%     \begin{equation}
+%         \rtext{E_{n, m}(k)} = m^2 + 2n\sqrt{2k} - 2n + o(1/\sqrt{k})
+%     \end{equation}
     
-    - Choosing $\cut E < 2 \sqrt{2k} - 2$, the spectrum of $H$ is a truncation of $L^2$: \textbf{the radial oscillations are ``frozen''}: $\cut{\partial_r} = 0$.
-    \begin{multline*}
-        \lbtext{\psi_m(\rho, \phi)} := f_{0, m}(\rho) e^{im\phi} = c_m e^{im\phi}exp{\left[ -\frac{(\rho - \tilde \rho_m)^2 \sqrt{k_m}}{2} \right]} \\\xrightarrow{k \to \infty} \delta(r-1)e^{i m \phi}
-    \end{multline*}
-    \begin{equation}
-        E = E_m(k) = m^2 + o(1/\sqrt{k})
-    \end{equation}
+%     - Choosing $\cut E < 2 \sqrt{2k} - 2$, the spectrum of $H$ is a truncation of $L^2$: \textbf{the radial oscillations are ``frozen''}: $\cut{\partial_r} = 0$.
+%     \begin{multline*}
+%         \lbtext{\psi_m(\rho, \phi)} := f_{0, m}(\rho) e^{im\phi} = c_m e^{im\phi}exp{\left[ -\frac{(\rho - \tilde \rho_m)^2 \sqrt{k_m}}{2} \right]} \\\xrightarrow{k \to \infty} \delta(r-1)e^{i m \phi}
+%     \end{multline*}
+%     \begin{equation}
+%         E = E_m(k) = m^2 + o(1/\sqrt{k})
+%     \end{equation}
     
-    - For $\lbtext{\Lambda} := \lfloor \cut E \rfloor$, 
-    \begin{align}
-        \lbtext{\hcal_{\Lambda}}:= \lbtext{\hcal_{\cut E}} := span\{\psi_m\}_{|m| \leq 
-    \lfloor \cut E \rfloor} ,
-    \lbtext{\acal_\Lambda} := \mathcal B(\hcal_\Lambda)
-    \end{align}
+%     - For $\lbtext{\Lambda} := \lfloor \cut E \rfloor$, 
+%     \begin{align}
+%         \lbtext{\hcal_{\Lambda}}:= \lbtext{\hcal_{\cut E}} := span\{\psi_m\}_{|m| \leq 
+%     \lfloor \cut E \rfloor} ,
+%     \lbtext{\acal_\Lambda} := \mathcal B(\hcal_\Lambda)
+%     \end{align}
     
-    - Since $H$ generates the time evolution, a
-    An element of $\hcal_\Lambda$ doesn't evolve out of $\hcal_\Lambda$.
+%     - Since $H$ generates the time evolution, a
+%     An element of $\hcal_\Lambda$ doesn't evolve out of $\hcal_\Lambda$.
     
-    - Get a fuzzy space: e.g. choosing $k = \Lambda^2(\Lambda+1)^2$ --make $k$ diverge with $\Lambda$ while $\nu_{\cut E}$ goes to $\{r = 1\}$
+%     - Get a fuzzy space: e.g. choosing $k = \Lambda^2(\Lambda+1)^2$ --make $k$ diverge with $\Lambda$ while $\nu_{\cut E}$ goes to $\{r = 1\}$
     
-    - This cutoff entails replacing every observable by $A \mapsto \lbtext{\cut A} = P_{\cut E} A P_{\cut E}$% \dbtext{when?}
-}
+%     - This cutoff entails replacing every observable by $A \mapsto \lbtext{\cut A} = P_{\cut E} A P_{\cut E}$% \dbtext{when?}
+% }
 
 \linea
 
@@ -347,17 +347,17 @@ In that case, renaming $\psi_{0, m}$ and $E_{0, m}$ as $\psi_m$ and $E_m$ for $m
 \begin{remark}
 Notice that, in principle, the definition of $\acal_{\cut E}$ is dependent on the chosen $k$ due to $k_m(k)$ and $\tilde \rho_m(k)$, so we may write instead $\psi_{n, m}(\rho, \phi)$ as $\psi_{n, m}(\rho, \phi; k)$; also notice that, for fixed $k$ and two cutoffs $\cut E_1$ and $\cut E_2 > \cut E_1$ compatible with this $k$, $\hcal_{\cut E_1}$ is a subspace of $\hcal_{\cut E_2}$ since its basis elements $\psi_m$ are also basis elements of the latter, but only due to the fixed choice of $k$ for both cutoffs. 
 Also notice that, since $k$ is chosen large, all $\psi_m$ essentially vanish outside the $k$ dependent region $\nu_{\cut E}$, for $m$ fixed, and, in fact, $\psi_m(\rho, \phi) \to e^{im\phi} \delta(\rho - 1)$ in probability\todo{creo que es este tipo de convergence} as $k \to \infty$. 
-However, \rtext{the dependence on $k$ of the definition of the $\psi_m$ and, in consequence, of $\acal_{\cut E}$ will not be relevant to our studies}, since all what we will need in order to study the fuzzy spaces they form are the fact that they are endomorphism algebras over finite dimensional Hilbert spaces, and their behavior under the action of the group $O(2)$ induced by the action on the underlying Hilbert space. 
-Indeed, it is easy to see (since $O(2)$ doesn't affect the radial coordinate) that, for any compatible $k$, $\hcal_{\cut E}$ is isomorphic to $\hcal'_{\cut E} := span\{e^{i m \phi} \, : \, m \in \ZZ, \, m^2 \leq \cut E\}$ in an $O(2)$-equivariant way, and, hence, that \rtext{$\acal_{\cut E}$\todo{again, strictly speaking, I am assuming that the extra factor in the $k$-expansion of the energies is positive} is isomorphic to $\acal'_{\cut E} := End(\hcal'_{\cut E})$ as a $C^*$-algebra and as a representation space of $O(2)$}.
+However, \rtext{the dependence on $k$ of the definition of the $\psi_m$ and, in consequence, of $\acal_{\cut E}$ will not be relevant to our studies}, since all we will need in order to study the fuzzy spaces they form are: the fact that they are endomorphism algebras over finite dimensional Hilbert spaces, and their behavior under the action of the group $O(2)$ induced by the action on the underlying Hilbert space. 
+Indeed, it is easy to see  that (since $O(2)$ doesn't affect the radial coordinate), for any compatible $k$, $\hcal_{\cut E}$ is isomorphic to $\hcal'_{\cut E} := span\{e^{i m \phi} \, : \, m \in \ZZ, \, m^2 \leq \cut E\}$ in an $O(2)$-equivariant way, and, hence, that \rtext{$\acal_{\cut E}$\todo{again, strictly speaking, I am assuming that the extra factor in the $k$-expansion of the energies is positive} is isomorphic to $\acal'_{\cut E} := End(\hcal'_{\cut E})$ as a $C^*$-algebra and as a representation space of $O(2)$}.
 \end{remark}
 
-Now, to parametrize these algebras by $\Lambda \in \NN$, define
+Now, to parametrize these algebras by $\Lambda \in \NN$ and obtain a fuzzy space, define
 \begin{eqnsplit}
     \hcal_\Lambda &:= \hcal_{\cut E  = \Lambda^2} \\
     \acal_\Lambda &:= End(\hcal_\Lambda);
 \end{eqnsplit}
-this means that the energies of the basis elements of $\hcal_\Lambda$ are all those $m^2$ that are below the energies $E_{1,0}$. Strictly speaking, to define each $\acal_\Lambda$ we also need to choose $k$ as a function on $\Lambda$ in such a way that it diverges with $\Lambda$ and such that $k(N)$ is compatible with the cutoff energy $\Lambda$; for this, equation \eqref{ } tells us that we can choose any function
-\begin{equation}
+this means that the energies of the basis elements of $\hcal_\Lambda$ are all those $m^2 \in \ZZ_{\geq 0}$ that are below the energies $E_{1,0}$. Strictly speaking, to define each $\acal_\Lambda$ we also need to choose $k$ as a function on $\Lambda$ in such a way that it diverges with $\Lambda$ and such that $k(N)$ is compatible with the cutoff energy $\Lambda$; for this, equation \eqref{ } tells us that we can choose any function
+\begin{equation}\label{inequationInequalityNeededforKasFunctionLambdaD2}
     k(\Lambda) \geq \Lambda^2 (\Lambda + 1^2).
 \end{equation}
 
