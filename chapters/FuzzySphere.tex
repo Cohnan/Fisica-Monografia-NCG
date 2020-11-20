@@ -145,7 +145,7 @@ where $\lambda\in \CC$ is any constant; this means that we are defining the $N =
 Instead of insisting on defining a foreign multiplication in $\acal'_N$, the \lbtext{fuzzy sphere} is now defined by $\lbtext{\acal_N} :=  \pi_{j}(U(\sut)) \equiv End(V_j)$ which, when the irreducible representation $\pi_j$ of $SU(2)$ is defined as in the previous subsection where $V_j = \CC^{N+1}$, $\acal_N \equiv M_{N+1}(\CC)$ for all $N \in \NN$, $j$ satisfying $N =: 2\lbtext{j}$, which arises from the following generalization of the $N = 1$ case studied above:
 \begin{align}
     \tilde V_1 \hookrightarrow \bigoplus_{l = 0}^N \tilde V_l &\to \acal_N\\
-    x_i &\mapsto \hat x_i := \frac{1}{j(j+1)} \pi_{j}(J_i) & i = 1, 2, 3;
+    x_i &\mapsto \hat x_i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i) & i = 1, 2, 3;
 \end{align} that is, for each $N$, the coordinate $x_i$ is understood as the infinitesimal rotation with respect to the axis $x_i$ operator on the space $V_j = \CC^{N+1}$. The normalization constant guarantees again $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, and we now obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
 \begin{align}
     \rtext{[\hat x^i, \hat x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} \hat x_k}, && i, j, k \in \{1, 2, 3\},
@@ -163,14 +163,14 @@ A diffeomorphism of $S^2$ is equivalent to an automorphism of the algebra $C^\in
 
 \subsubsection{As $C^*$-algebra acting on spinors}
 
-The elements $\hat x_i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace free as a tensor. Replacing the coordinates $x_i$ by $\hat x_i$ in the polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
+The elements $\hat x_i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace-free as a tensor\todo{Not sure how to prove these two statements. Not even sure what the trace might mean if there are not even number of components. If $N=1$ it is easy to see that indeed ever $2x2$ matrix is combination of $1$ and Pauli}. Replacing the coordinates $x_i$ by $\hat x_i$  in the (symmetric) polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
 
 Define the linear, injective mapping
-\begin{align}
+\begin{eqnsplit}
     \acal_N &\to \acal'_N \subset \acal \\
     \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}} &\mapsto \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} x_{a_{\mu_1}}  \cdots x_{a_{l}}.
-\end{align}
-Then, the sequence of noncommutative $C^*$-algebras approximates the commutative algebra $A = C(S^2)$ in the limit $N \to \infty$ in the sense that the above map gets increasingly closer to being an algebra morphism and \textbf{the algebra $A$ can be considered as the image of the diagonal matrices in $\acal_N$}; the precise statements and their proofs may be found in \cite{Madore}.
+\end{eqnsplit}
+Then, the sequence of noncommutative $C^*$-algebras approximates the commutative algebra $A = C(S^2)$ in the limit $N \to \infty$ in the sense that the above map gets increasingly closer to being an algebra morphism and \textbf{the algebra $A$ can be considered as the image of the \textit{near-diagonal matrices} in $\acal_N$} i.e. matrices which commute within order $1$ or $\lambda = \frac{1}{\sqrt{j(j+1)}}$ (the normalizing factor in \ref{}); the proof can be found in \cite{Madore}.
 
 \subsubsection{As metric space on which $SU(2)$ acts by isometries}
 

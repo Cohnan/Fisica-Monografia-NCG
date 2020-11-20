@@ -198,14 +198,6 @@ As illustrated in \ref{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}, we will se
 then, we will define the algebra \lbtext{$\acal_{\cut E}$} as the algebra of operators over the finite dimensional Hilbert space \lbtext{$\hcal_{\cut E}$}, spanned by the solutions $\psi_{0, j} \equiv \psi_j$ of the Schrodinger equation (under the harmonic oscillator approximation \ref{harmonicApproximationRadialSolutionGeneralD}) whose energies $E_{0, j} \equiv E_j$ are below $\cut E$}. 
 
 \begin{remark}
-For every cutoff $\cut E$, and $k$ compatible with it, we find a \textit{low energy effective theory} of the quantum mechanics of the particle on $S^d$, described by the Hilbert space $\hcal_{\cut E}$, its algebra of observables $\acal_{\cut E}$ with a time evolution determined by $\cut H = H|_{\hcal_{\cut E}}$. In this effective theory, every observable $A \in \bcal(\hcal)$ may be represented\todo{I might leave this word, since it is ambiguous} by $\cut A = P_{\cut E} A P_{\cut E} \in \acal_{\cut E}$. In particular, the new position observables will be $\cut{x^i}$\todo{If I say this, I am putting myself in trouble... what I say here is true, but for $D = 2$ what we interpret as the position observables are the $\xi$'s}, $i, j = 1, \dots, D$, and between them \rtext{it is now true that they do not commute: 
-\begin{equation}
-    [\cut x^i, \cut x^j] \neq 0.
-\end{equation}
-} 
-\end{remark}
-
-\begin{remark}
 Since the Hamiltonian operator is the generator of time evolution for a quantum system, a \rtext{ quantum system that is setup in a state $\psi \in \hcal_{\cut E}$ will not evolve out of $\hcal_{\cut E} \subset \hcal$}. More precisely, recall that the eigenvectors of the Hamiltonian operator are called \dbtext{steady-state states} since their time evolutions consists only of a change of phase, leaving invariant the probability distribution they induce and, in particular, staying as states of constant energy; 
 %since the Hamiltonian is hermitian, it is diagonalizable and every wavefunction can be written \todo{Always? In the f.d. case this is true} as a (countable)\todo{Como es que se llama esto? La alternative a Hamel basis} linear combination of eigenfunctions of $H$; 
 hence, if $\psi_0 \in \hcal_{\cut E}$, it is a linear combination of eigenfunctions of $H$ of energy lower than $\cut E$ and, by applying the linear time-evolution operator $\exp[-itH] = 1 - itH - t^2 H^2 + \cdots$, $\psi(t) := U(t) \psi_0$ will once again be a linear combination of eigenfunctions of $H$ with low energy, i.e. $\psi(t)$ is also in $\hcal_{\cut E}$.
@@ -219,6 +211,26 @@ In order to make a fuzzy space $\{\acal_\Lambda\}_{\Lambda \in \NN}$ out of this
 \begin{align}
     \cut E = \cut E(\Lambda) &= \Lambda(\Lambda + d - 1) & k = k(\Lambda) \geq \Lambda^2(\Lambda + 1)^2.
 \end{align}
+
+
+\begin{remark}
+For every cutoff $\cut E$, and $k$ compatible with it, we find a \textit{low energy effective theory} of the quantum mechanics of the particle on $S^d$, described by the Hilbert space $\hcal_{\cut E}$, its algebra of observables $\acal_{\cut E}$ with a time evolution determined by $\cut H = H|_{\hcal_{\cut E}}$. In this effective theory, a possible approximation of the observable $A \in \bcal(\hcal)$ is $\cut A = P_{\cut E} A P_{\cut E} \in \acal_{\cut E}$. In particular, a first approximation of the position observables of the effective quantum theory are the $\cut{x^i}$, $i, j = 1, \dots, D$, and between them \rtext{it is now true that: 
+\begin{equation}
+    [\cut x^i, \cut x^j] \neq 0.
+\end{equation}
+} 
+\end{remark}
+
+For any given observable $A$ of a quantum system described by $\mathcal H$, there is not a clear way to define the analogous observable in an effective theory derived from an energy cutoff described by a finite dimensional Hilbert space $\hcal_{\cut E}$. Although $\cut A$ might seem a good starting point, in the case of the position observables an exact measurement necessarily involves the use of high energy probes, and the ``position eigenfunction'' the wavefunction collapses would be a delta distribution which includes a contribution from all energy eigenfunctions; hence, $\cut x^i = P_{\cut E} x^i P_{\cut E}$ which involves the measurement of $x^i$, followed by a projection, may not be a good operator that represents the measurement $x_i$ in the effective theory. Fiore and Pisacane in \ref{2020last} propose the following minimal criteria for a set of operators $\chi^i$, $i = 1, \dots, D$ to be a good $O(D)$-covariant approximation of the position operators $x^i$, on a sequence of effective theories whose commutative limit is the quantum theory of a spinless particle on $S^d$:
+    \begin{enumerate}
+    
+    \item The spectrum of $\chi_i$ is invariant under the action of $O(D)$, including inversion $x^i \mapsto -x^i$. In particular, the spectra $\Sigma_i$ of $\chi_i$ are all equal.
+    
+    \item Each spectrum $\Sigma_i$ becomes uniformly dense in $[-1, 1]$ in the commutative limit. In particular, the maximal and minimal eigenvalues are sequence converging to $-1$ and $1$, respectively.
+    
+    \end{enumerate}
+    
+For $D = d +1 =  3$, these criteria are satisfied by the position coordinates $x^i = \frac{1}{\sqrt{j(j+1)}}\pi_j(J_i) \in \acal_{2j} = End(V_j)$, $2j \in \NN$ of the Fuzzy sphere can be easily seen to satisfy these two properties, since the spectrum of each $x_i$ is $\{-\sqrt{\frac{j}{j+1}}, \dots, \sqrt{\frac{j}{j+1}}\}$, and the group $O(3)$ acts naturally on $U(\sut) \cong U(\soth)$, and hence on $A_{2j} = \pi_j(U(\sut))$, and this action coincides with the expected action of $O(D) \ni g$ on coordinate functions: $g\, (x^1, \dots, x^D)^T = (g\cdot x^1 , \dots, g \cdot x^D)^T$, where $g \cdot x^i = \frac{1}{\sqrt{j(j+1)}}\pi_j(g J_i g^{-1})$. Similarly, we will see in \ref{} that this criteria will be satisfied for the new Fuzzy sphere with $d = 2$ if the operators chosen as position coordinates are $\chi^i = \frac{\sqrt{2}}{a} \cut x^i$ as defined in $\ref{}$.
 
 \lin 
 
@@ -279,7 +291,11 @@ When decomposing the eigenfunctions of the Schrodinger equation into radial and 
 \begin{equation}
     - \partial_\phi^2 Y = E Y
 \end{equation}
-since the only angular momentum component is $L_{12} = - L_{21} =: L = -i(x^1 \partial_2  - x_2 \partial_1) = - i \partial_\phi$. The \dbtext{spherical harmonics} are, then, labeled by an integer $m$ and:
+since the only angular momentum component is $L_{12} = - L_{21} =:-i(x^1 \partial_2  - x_2 \partial_1) = - i \partial_\phi$, we define the angular momentum operator to be
+\begin{equation}\label{equationAngularMomentumD2d1PartialPhi}
+    L:= -i \partial_\phi    
+\end{equation}
+The \dbtext{spherical harmonics} are, then, labeled by an integer $m$ and:
 \begin{align}
     Y_m(\phi) &= e^{im \phi} & m \in \ZZ\\
     E_m &= m^2.
@@ -287,7 +303,7 @@ since the only angular momentum component is $L_{12} = - L_{21} =: L = -i(x^1 \p
 
 \lin
 
-Defining $\rho := \ln r$ and $f(\rho) := \tilde f(r)$, the radial equation \ref{equationRadialSchrodingerGeneralDPolarAngles} becomes $f''(\rho) + \{e^{2\rho} [E - V(e^\rho)] - m^2 \} f(\rho) = 0$, and expanding $e^{2\rho}$ about $\rho = 0$ we obtain the following harmonic approximation of the radial equation \ref{equationRadialSchrodingerGeneralDPolarAngles}: 
+Defining $\rho := \ln r$ and $f(\rho) := \tilde f(r)$, the radial equation \ref{equationRadialSchrodingerGeneralDPolarAngles} becomes $f''(\rho) + \{e^{2\rho} [E - V(e^\rho)] - m^2 \} f(\rho) = 0$, and expanding $e^{2\rho}$ about $\rho = 0$ we obtain the following harmonic approximation of the radial equation \ref{equationRadialSchrodingerGeneralDPolarAngles}\todo{Up to what order in $\rho$ or $r$ do these solutions coincide with the radial part of the action Schrodinger solution?}: 
 \begin{equation}\label{equationHarmonicApproximation2DRadial}
         [- \partial_\rho^2 + k_m(\rho - \tilde \rho_m)^2] f(\rho) = e_m f(\rho),\text{ where}
 \end{equation}
@@ -299,10 +315,10 @@ Defining $\rho := \ln r$ and $f(\rho) := \tilde f(r)$, the radial equation \ref{
 \end{equation} 
 When solving this equation, taking into account that $\psi = f(\rho) $ an additional label $n \in \ZZ_{\geq 0}$ appears to label the eigenvalues of the previous equation; these solutions are:
 \begin{eqnsplit}
-    f_{n, m}(\rho) &= \exp\{\left[ - \frac{(\rho - \tilde \rho_m \sqrt{k_m})}{2}\right]\} H_n\left[ (\rho - \rho_m)\right]\\
+    f_{n, m}(\rho) &= N_m \exp\left[ - \frac{(\rho - \tilde \rho_m \sqrt{k_m})}{2}\right] H_n\left[ (\rho - \rho_m)\right]\\
     e_{n, m} &= (2n+1) \sqrt{k_m},
 \end{eqnsplit}
-where $H_n$ are the Hermite polynomials, $H_n$ being a polynomial of degree $n$ on the dependent variable; in particular, $H_0 = 1$.
+where $N_m$ is a normalization constant and the $H_n$ are the Hermite polynomials, $H_n$ being a polynomial of degree $n$ on the dependent variable; in particular, $H_0 = 1$.
 
 From equation \ref{equationConstantsHarmonicApproximationRadialD2} it follows that $E'_m \equiv E'_{n, m} = E_{n, m} - V_0$ satisfies
 \begin{equation}\label{equationAlmostQuarticDeterminesE'}
@@ -352,15 +368,15 @@ Indeed, it is easy to see  that (since $O(2)$ doesn't affect the radial coordina
 \end{remark}
 
 Now, to parametrize these algebras by $\Lambda \in \NN$ and obtain a fuzzy space, define
-\begin{eqnsplit}
+\begin{eqnsplit}\label{equationDefinitionHilbertAndAlgebraObservablesGivenLambda}
     \hcal_\Lambda &:= \hcal_{\cut E  = \Lambda^2} \\
     \acal_\Lambda &:= End(\hcal_\Lambda);
 \end{eqnsplit}
-this means that the energies of the basis elements of $\hcal_\Lambda$ are all those $m^2 \in \ZZ_{\geq 0}$ that are below the energies $E_{1,0}$; additionally, we also need to choose $k$ as a function on $\Lambda$ in such a way that it diverges with $\Lambda$ and such that $k(N)$ is compatible with the cutoff energy $\Lambda$; for this, the equation \eqref{equationConditionCompatibilityCutoffEandK} tells us that we may choose any function
+this means that the energies of the basis elements of $\hcal_\Lambda$ are all those $m^2 \in \ZZ_{\geq 0}$, up to the constant term in $k$, and are below the energies $E_{1,0}$; additionally, we also need to choose $k$ as a function on $\Lambda$ in such a way that it diverges with $\Lambda$ and such that $k(N)$ is compatible with the cutoff energy $\Lambda$; for this, the equation \eqref{equationConditionCompatibilityCutoffEandK} tells us that we may choose any function $k = k(\Lambda)$ such that
 \begin{equation}\label{inequationInequalityNeededforKasFunctionLambdaD2}
-    k(\Lambda) \geq  \left( \frac{\lambda^2 + 2}{8} \right)^2\leq \Lambda^2 (\Lambda + 1)^2.
+    k(\Lambda) \geq  \left( \frac{\Lambda^2 + 2}{8} \right)^2\leq \Lambda^2 (\Lambda + 1)^2.
 \end{equation}
-Although the value of $k(\Lambda)$ isn't relevant for the study of a single algebra $\acal_\Lambda$ within the fuzzy space, it does play an important role in the study of the convergence of this sequence of algebras to other algebras, namely to the commutative algebra of continuous functions $C(S^2)$ and to the algebra of operators $\bcal(\hcal)$.
+Although the value of $k(\Lambda)$ isn't relevant for the study of a single algebra $\acal_\Lambda$ within the fuzzy space, it does play an important role in the study of the convergence of this sequence of algebras to other algebras, namely to the commutative algebra of continuous functions $C(S^2)$ on $S^2$ and to the algebra of operators $\bcal(\hcal)$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -394,23 +410,192 @@ Although the value of $k(\Lambda)$ isn't relevant for the study of a single alge
 
 \linea
 
-Grading of $\hcal$ and of $\bcal(\hcal)$ through the action of $L$.
+% Grading of $\hcal$ and of $\bcal(\hcal)$ through the action of $L$. An element $A^h$ raises by $h$ the basis elements.
 
-The grading is inherited by $\acal_{\cut E}$ and $\hcal_{\cut E}$; if $A$ has degree $h$, so does $\cut A$... coming from $\cut L$\todo{}?
+% The grading is inherited by $\acal_{\cut E}$ and $\hcal_{\cut E}$; if $A$ has degree $h$, so does $\cut A$... coming from $\cut L$\todo{}?
 
-Tool: formula (69)\todo{}: to calculate matrix elements of $A^h$ when $A$ is of the form $f(\rho)e^{ih \phi}$. Then:
+% Tool: formula (69)\todo{}: to calculate matrix elements of $A^h$ when $A$ is of the form $f(\rho)e^{ih \phi}$. Then:
 
-(Approximate, expansion in $k$) action of: $\cut {x^+}$; $\cut u$ is raising operator; both of degree one. Then, formula for $\cut{x^+}$, involves $\cut u$.
+% (Approximate, expansion in $k$) action of: $\cut {x^+}$; $\cut u$ is raising operator; both of degree one. Then, formula for $\cut{x^+}$, involves $\cut u$.
 
-$\cut{u^\dagger}$ is $\cut{u}^\dagger$ and similarly with $x^+$, so we know how they act: one is the lowering operator, the other one has a minus. The combined action of $x^\pm$ may be written as (17). The commutator is then....
+% $\cut{u^\dagger}$ is $\cut{u}^\dagger$ and similarly with $x^+$, so we know how they act: one is the lowering operator, the other one has a minus. The combined action of $x^\pm$ may be written as (17). The commutator is then....
 
-I THINK If $a$ is indeed a multiplying constant, and not just a factor that appears AFTER the truncation is made\todo{I'm now not sure this makes sense}, then we can divide by this normalizing constant the $x^\pm$ to obtain new operators $\xi^\pm$ with the given actions up to the mentioned orders in $k$.
+% I THINK If $a$ is indeed a multiplying constant, and not just a factor that appears AFTER the truncation is made\todo{I'm now not sure this makes sense}, then we can divide by this normalizing constant the $x^\pm$ to obtain new operators $\xi^\pm$ with the given actions up to the mentioned orders in $k$.
 
-$[L, \xi^\pm]$, $(x^\pm)^{2\Lambda + 1} = 0$, $\cut H = L^2$ up to some orders.
+% $[L, \xi^\pm]$, $(x^\pm)^{2\Lambda + 1} = 0$, $\cut H = L^2$ up to some orders.
 
-Defining new operators $\xi^\pm$ with the previously mentioned actions on the basis but in an exact way, we deduce that they generate the algebra (and all the previous commutation relations are exact). Apparently\todo{} this follows from having $(x^+)^h L^l (x^-)^n$ be a basis for $\acal_{\cut E}$. In particular $L$ can be expressed as a polynomial in $\xi^\pm$.
+% Defining new operators $\xi^\pm$ with the previously mentioned actions on the basis but in an exact way, we deduce that they generate the algebra (and all the previous commutation relations are exact). Apparently\todo{} this follows from having $(x^+)^h L^l (x^-)^n$ be a basis for $\acal_{\cut E}$. In particular $L$ can be expressed as a polynomial in $\xi^\pm$.
 
-Since the projection operators can be written as polynomials on $L$, the commutation relations of the $x$'s depend only on angular momentum. 
+% Since the projection operators can be written as polynomials on $L$, the commutation relations of the $x$'s depend only on angular momentum. 
+
+Throughout this section let $\Lambda$ be any natural number, let $k$ be such that equation \eqref{inequationInequalityNeededforKasFunctionLambdaD2} is satisfied, and let $\hcal_\Lambda = span\{\psi_m\}_{|m|\leq \Lambda}$ and $\acal_\Lambda$ be as defined in \eqref{equationDefinitionHilbertAndAlgebraObservablesGivenLambda}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quantum Mechanics in $\RR^2$}
+
+% - (L), x+, x-, partial+, partial-
+% - Proposition: L x+, x-, partial+, partial- generate; its commutation relations with x+, x-, partial+, partial- (fist of Ch 3) generate.
+%     - L gives an orthogonal decomposition of H
+%     - Then, x+/x- acting on eigenvector of L produced produces eigenvector          of L with the next/previous eigenvalue. Mention: Similarly, but               opposite, for partial+, partial-.
+
+The algebra of observables $\acal = \bcal(\hcal)$ of the Hilbert space $\hcal = L^2(\RR^2)$ is generated by the coordinate functions $x_i$ and the corresponding momentum operators $-i\partial_i$, for $i = 1, D = 2$ which satisfy the canonical\todo{more formally, their complex exponential are bounded operators that satisfy the Weyl form of the CCR... these $4$ families of $1$-parameter isomorphisms generate the Heisenberg group, which should be a subset? all of it? of $\acal$... or is the Heisenberg algebra what is equal to the $C^*$-algebra $\acal$? but it contains $x$ and $\partial$... I should really know this before I graduate} commutation relations. Let 
+\begin{eqnsplit}
+    x^\pm &:= \frac{x^1 \pm i x^2}{\sqrt{2}}\\
+\end{eqnsplit}
+and
+\begin{eqnsplit}
+    \partial_\pm &:= \partial_{x^\pm}\\
+        &=\frac{1}{\sqrt{2}}(\partial_1 \mp i \partial_2).
+\end{eqnsplit}
+The set of operators $x^\pm, \partial_\pm$ also generate the algebra of observables $\acal$ since each $x^i$ is linear combinations of $x^+$ and $x^-$ and, similarly, each $\partial_i$ is linear combination of $\partial_+$ and $\partial_-$. 
+
+The angular momentum operator $L = -i \partial_\phi$ can also be written as $L = x^+ \partial_+ - x^- \partial_-$, hence
+\begin{align}\label{equationCommutationLXpmPartialPmD2}
+    [L, x^\pm] &= \pm x^\pm & [L, \partial_\pm] &= \mp \partial_\pm.
+\end{align}
+\begin{proposition}\label{propositionGradingQMHilbertD2}
+$L$ induces the decomposition $\hcal = \bigoplus_{m \in \ZZ} \hcal^m$ into orthogonal subspaces, where $\hcal^m = \{g(r) e^{im\phi} \,:\, g \in L^2(\RR_{\geq 0})\}$ is the eigenspace of $L$ associated to the eigenvalue $m \in \ZZ$ of $L$. 
+\end{proposition}
+\begin{proof}
+This is a consequence of the application of the spectral theorem for the (unbounded) hermitian operator $L$.
+\end{proof}
+
+Rewriting the commutation relations \eqref{equationCommutationLXpmPartialPmD2} as
+\begin{align}\label{equationCommutatorRewrittenXPMIncreasesDecreasesDegreesD2Hilbert}
+L x^\pm &= x^\pm(L \pm 1) &  L \partial_\pm &= \partial_\pm (L \mp 1),
+\end{align}
+we see that
+\begin{align}\label{equationX+XPlusIncreasesDecreasesDegreeEigenvalueL}
+    x^\pm \psi^m &\in \hcal^{m \pm 1} & \partial_\pm \psi^{m} &\subset \hcal^{m \mp 1}, & \text{for any }\psi^m \in \hcal^m,
+\end{align}
+when the applications of $x^\pm$ and $\partial_\pm$ can be made and the result falls into $\hcal$; this means that, for example, $x^\pm \psi^m$ is an eigenvector of $L$ for the eigenvalue $m \pm 1$, if $\psi^m$ is eivenvalue for $m \in \ZZ$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{General Facts about $\acal_{\Lambda}$}
+
+\begin{proposition}\label{propositionGeneralResultsStatementsCutD2}
+\hfill
+    \begin{itemize}
+        
+    \item The elements $\cut{x^+}$ and $\cut{x^-}$ of $\acal_\Lambda$ are adjoints.
+    
+    \item $\cut L = L|_{\hcal_\Lambda}$. Therefore, $\hcal_\Lambda$ has the orthogonal decomposition $\hcal_\Lambda = \bigoplus_{m = \Lambda}^\Lambda \hcal^m$.
+    
+    \item $[\cut L, \cut A] = \cut{[L, A]}$ for any $A \in \acal$ and domain for which the operator $[L, A]$ exists.
+        
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+It is easy to see that the adjoint of an orthogonal projection is itself. It follows from proposition \ref{propositionGradingQMHilbertD2} that the projection $P_\Lambda = \sum_{m = -\lambda}^\Lambda \tilde P_m$ is an orthogonal projection, where $\tilde P_m$ is the orthogonal projection onto $\hcal^m$. Hence, $\cut{x^\pm}^* = (P_\lambda x^\pm P_\Lambda)^* = P_\Lambda^* (x^\pm)^* P_\Lambda^* = \cut{x^\mp}$.
+
+The second statement follows from the fact that each $\psi_m$ is eigenvector of $L$ for the eigenvalue $m \in \{-\Lambda, \dots, \Lambda\}$, since the $\psi_m$ make up a basis of $\hcal_\Lambda$.
+
+Notice that $[\cut L, P_\Lambda] = 0$, so
+\begin{align*}
+    [\cut L, \cut A] 
+        &= P_\Lambda L P_\Lambda A P_\Lambda - P_\Lambda A P_\Lambda L P_\Lambda \\
+        &= P_\Lambda^2 L A P_\Lambda - P_\Lambda A L P_\Lambda^2\\
+        &= P_\Lambda [L, A] P_\Lambda\\
+        &= \cut{[L, A]}.
+\end{align*}
+\end{proof}
+
+Applying the last item of proposition \ref{propositionGeneralResultsStatementsCutD2} to $A = x^\pm$ gives us a result analogous to equation \eqref{equationCommutationLXpmPartialPmD2}, and therefore, applying the second statement, an analog of equation \eqref{equationX+XPlusIncreasesDecreasesDegreeEigenvalueL}. In fact, the following useful generalization applies:
+
+\begin{definition}\label{definitionGradingOperatorsD2Cut}
+Let $\acal^n_\Lambda$, for $n \in \{-2\Lambda, \dots, 2\Lambda\}$ be the subspace of $\acal_\Lambda$ for which, for any $A^n \in \acal^n_\Lambda$
+\begin{equation*}
+    A^n \psi^m \in 
+    \begin{cases}
+        A^{n+m},& \text{if } |n+m| \leq \Lambda\\
+        0, & \text{otherwise}
+    \end{cases},
+\end{equation*}
+where $m \in \{-\Lambda, \dots, \Lambda\}$ and $\psi^m \in \hcal^m$.
+\end{definition}
+
+We can see that an element $A \in \acal_\Lambda$ is in $\acal^n_\Lambda$ if and only if $[\cut L, A] = nA$, since this can be rewritten as $\cut L A = A(\cut L + n)$. In particular, 
+\begin{equation}\label{equationXPMGradeUpDownD2}
+    x^\pm \in \acal^{\pm 1}_\Lambda.
+\end{equation}
+
+\lin
+
+We will now find generators for $\acal_\Lambda$, and in the meantime a deeper understanding of $\acal_\Lambda$ will be developed.
+
+\begin{proposition}\label{propositionAboutLProjectorsGeneralFunctionD2}
+\hfill
+    \begin{itemize}
+    
+    \item The orthogonal projections $\tilde P_m \in \acal_\Lambda$ onto $\hcal_m$, for all $m \in \{-\Lambda, \dots, \Lambda\}$ are polynomials of $\cut L$ of degree at most $2 \Lambda$.
+    
+    \item Any operator $A \in \acal^0_\Lambda$ can be written as a polynomial in $L$ of degree at most $2\Lambda$.
+    
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+Since $\{\psi_m\}$ is a basis of $\hcal_\Lambda$, the polynomial $\prod_{n = -\Lambda}^\Lambda (L - n) = 0$, and so the image of $\prod_{n \neq m} (L - n)$ is a subset of $\hcal^m$; in fact,
+\begin{equation}\label{equationFormulaProjectionTildemD2}
+    \tilde P_m = \frac{\prod_{n \neq m} (L - n)}{\prod_{n \neq m} (m - n)}
+\end{equation}
+is a polynomial formula for $\tilde P_m$.
+
+To prove the second statement, notice that any $A \in \acal^0_\Lambda$ satisfies $A \psi_m = A(m) \psi_m$ for some complex valued function $A(m)$ defined on $m \in \{-\Lambda, \dots, \Lambda\}$. Hence $A$ may be written as 
+\begin{equation}
+    A = \sum_{m = -\Lambda}^\Lambda A(m) \tilde P_m,
+\end{equation} 
+which is a polynomial in $L$ of degree at most $2\Lambda$.
+\end{proof}
+
+\begin{lemma}\label{lemmaLUDScalarAngularMomentumGenerateD2}
+Any elements $U \in \acal^1_\Lambda$, $D \in \acal^{-1}_\Lambda$ and $\cut L$ generate the algebra $\acal_\Lambda$.
+\end{lemma}
+\begin{proof}
+Let
+\begin{equation*}
+    T^l := 
+    \begin{cases}
+    U^l, &   \text{if } l \geq 0\\
+    D^l, &   \text{if } -l \leq 0;
+    \end{cases}
+\end{equation*}
+then $T^l \in \acal_N^l$ if $l \in \{-2\Lambda, \dots, 2\Lambda\}$. This operator works similarly to a ladder operator, but with some undesired coefficients appearing after its application. To get rid of these coefficients, we can define
+\begin{align}\label{equationFormulaGeneralLadderOperatorD2}
+    S^l &:= \sum_{m = -\Lambda}^\Lambda ST(l,m) T^l \tilde P_m, & \text{where }
+    ST(l,m) =
+        \begin{cases}
+        \frac{1}{\langle \psi_{m+l}| T^l | \psi_{m}\rangle}, & \text{if } |m+l| \leq \Lambda\\
+        0 & \text{otherwise;}
+        \end{cases}
+\end{align}
+we can easily see that $S^l$ is a ladder operator with respect to the basis $\{\psi_m\}$, and, furthermore, that it is a polynomial in $U$, $D$ and $L$.
+
+Now, an arbitrary element $A$ of $\acal_\Lambda$ may be written as the polynomial in $U$, $D$ and $L$: $A =\sum_{m,n} A(m,n) S^{n-m} \tilde P_m$, for some function $A(m,n)$ defined on the discrete set $m,n \in \{-\Lambda, \dots, \Lambda\}$.
+\end{proof}
+
+\begin{lemma}\label{lemmaLIsPolynomialOfUpDownLaddersD2}
+$\cut L \in \acal_\Lambda$ is a polynomial in $U$ and $D$, for any $U \in \acal^1_\Lambda$ and $D \in \acal^{-1}_\Lambda$.
+\end{lemma}
+\begin{proof}
+Notice that $U^{\Lambda+m} D^{2\Lambda}U^{\Lambda-m} \in \acal^0_\Lambda$ for all $m \in \{-\Lambda, \Lambda\}$, hence the following is one such polynomial for $\cut L$:
+\begin{equation}
+    \cut L = \sum_{m = -\Lambda}^\Lambda \frac{m}{\langle \psi_{m+l}| U^{\Lambda+m} D^{2\Lambda}U^{\Lambda-m} | \psi_{m}\rangle} U^{\Lambda+m} D^{2\Lambda}U^{\Lambda-m}.
+\end{equation}
+\end{proof}
+
+\begin{theorem}
+Let $U \in \acal^1_\Lambda$ and $D \in \acal^{-1}_\Lambda$ be arbitrary, e.g. $U = \cut {x^+}$ and $D = \cut{x^-}$. Then $U$ and $D$ generate $\acal_\Lambda$.
+\end{theorem}
+\begin{proof}
+This follows directly from the combination of lemmas \ref{lemmaLUDScalarAngularMomentumGenerateD2} and \ref{lemmaLIsPolynomialOfUpDownLaddersD2}.
+\end{proof}
+
+
+
+
+
+\linea
 
 In some sense $\cut L \to L$. In what sense?\todo{} What about the $x^\pm$ and the $\xi^\pm$?\todo{}
 
@@ -480,7 +665,7 @@ $\cut{\partial_{\pm}}$ are not needed as generators, and they do not go to $\par
     
     - \textbf{Fuzzy analogue of $B(S^1)$ of (bounded) functions on $S^1$} as subalgebra (act by mult.) of $\mathcal B(\hcal)$: $\lbtext{C_\Lambda} := \left\{ \sum_{h = -2\Lambda}^\Lambda f_h \eta^h \,|\, f_h \in \CC\right\}$ where $\eta^\pm  = \frac{\sqrt{2}}{a}x^\pm$ (so $\eta^\pm \to e^{\pm i \phi}$ as operators).
     
-    - Choosing $k(\Lambda) \geq 2 \Lambda(\Lambda + 1)(w\Lambda+1)^2$, then \rtext{$B(S^1) \to \mathcal B(\hcal)$ as operators} due to the strong limits: $\hat f_\Lambda \to f\cdot$, $\hat{(fg)}_\Lambda \to fg\cdot $, $\hat f_\Lambda \hat g_\Lambda \to fg\cdot$, where $\lbtext{\hat f_\Lambda} := \sum_{h = -2\Lambda}^{2\Lambda} f_h \eta^h$ is ``truncation'' of $f \in B(S^1)$.
+    - Choosing $k(\Lambda) \geq 2 \Lambda(\Lambda + 1)(w\Lambda+1)^2$, then \rtext{$C_\Lambda \to C(S^1) \subset B(\hcal)$ as operators} due to the strong limits: $\hat f_\Lambda \to f\cdot$, $\hat{(fg)}_\Lambda \to fg\cdot $, $\hat f_\Lambda \hat g_\Lambda \to fg\cdot$, where $\lbtext{\hat f_\Lambda} := \sum_{h = -2\Lambda}^{2\Lambda} f_h \eta^h$ is ``truncation'' of $f \in B(S^1)$.
     
 }
 
