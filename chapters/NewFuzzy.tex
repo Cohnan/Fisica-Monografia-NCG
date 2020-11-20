@@ -591,9 +591,124 @@ Let $U \in \acal^1_\Lambda$ and $D \in \acal^{-1}_\Lambda$ be arbitrary, e.g. $U
 This follows directly from the combination of lemmas \ref{lemmaLUDScalarAngularMomentumGenerateD2} and \ref{lemmaLIsPolynomialOfUpDownLaddersD2}.
 \end{proof}
 
+\subsection{Approximations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+We now find explicit values for the action of $\cut {x^\pm}$ and related observables by using the Proposition 6.1 by Fiore and Pisacane in \cite{Fiore2018}, stated below:
 
+\begin{proposition}\label{propositionEquation69MatrixElementsGradedOperatorsD2}
+For every entire function $f(\rho)$ not depending on $k$, and $h \in \ZZ$, the matrix elements of the operator $f(\rho)e^{ih\phi}$ are:
+\begin{equation}
+    \langle \psi_{m'} | f(\rho) e^{ih\phi} |\psi_m \rangle = \delta_{h,m'-m} K_{m,m'}(k) \exp\left[ \frac{\partial_\rho^2|_{\rho = \rho_{m,m'}}}{4 c_{m,m'}(k)} f(\rho) \right] 
+\end{equation}
+with,
+\begin{eqnsplit}\label{equationsExtraVariables69D2}
+    c_{m,m'}(k) &:= \frac{\sqrt{k_m}}{k_{m'}} 
+        = \sqrt{2k} - 1 + \frac{3-m^2-m'^2}{2\sqrt{2}} \frac{1}{\sqrt{k}} - \frac{2+m^2+m'^2}{2}\frac{1}{k} + O(\frac{1}{k^{3/2}}) \\
+    \rho_{m,m'}(k) &:= \frac{2 + \sqrt{k_m}\tilde \rho_m + \sqrt{k_{m'}}\tilde \rho_{m'}}{2 c_{m,m'}}
+        = \sqrt{2}\frac{1}{\sqrt{k}} + \frac{2+m^2 + m'^2}{4}\frac{1}{k} + O(\frac{1}{k^{3/2}})\\
+    K_{m,m'}(k) &:= \sqrt{\frac{4 \pi^3}{c_{m,m'}}} N_m \overline{N_{m'}} e^{\frac{[2 + \sqrt{k_m}\tilde \rho_m + \sqrt{k_{m'}}\tilde \rho_{m'}]^2}{4c_{m,m'}} - \frac{\sqrt{k_m}\tilde \rho^2_{m} + \sqrt{k_{m'}}\tilde \rho^2_{m'}}{2}}
+        = 1 + O(\frac{1}{k^{3/2}}),
+\end{eqnsplit}
+where 
+\begin{equation}
+    N_m(k) = \sqrt[4]{\frac{\sqrt{k_m}}{4\pi^3}}e^{-\frac{1}{2\sqrt{k_m}} - \tilde \rho_m} = 1 - \frac{3}{2\sqrt{2}}\frac{1}{\sqrt{k}} + \frac{5-8m^2}{16} \frac{1}{k} + \frac{15}{32 \sqrt{2}}\frac{1}{k^{3/2}} + O(\frac{1}{k^2})
+\end{equation} is the normalization factor of $\psi_m$ up to a phase.
+\end{proposition}
 
+\begin{remark}
+Let $F(x)$ and $f(x)$ be functions with power series expansions around $f(x_0)$ and $x_0 \in \RR$ respectively, for non-zero radius of convergence. Then, to know the $n$th coefficient of the power expansion of $F \circ f$ around $f(x_0)$ (assuming the radius of convergence is non-zero) we only need know the first $n$ coefficients for both $f$ and $F$ of the previously mentioned power series. In our case this, using the power expansions of \eqref{equationsExtraVariables69D2} up to order $2$ in $\frac{1}{\sqrt{k}}$ we can calculate the matrix elements of operators $f(\rho) e^{ih\phi}$ up to the same order.
+\end{remark}
+
+\begin{proposition}
+\begin{align}
+    \cut{x^\pm}  \psi_m
+        &= \begin{cases}
+        \left(1 + \frac{9}{8} \frac{1}{\sqrt{k}} + \frac{137 \pm 32m + 32m^2}{64 \sqrt{2}} \frac{1}{k} + O(\frac{1}{k^{3/2}}) \right) \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
+        \\
+        0 & \text{otherwise}
+        \end{cases}\\
+    [\cut{x^+}, \cut{x^-}]  \psi_m
+        &= \begin{cases}
+        \left( -\frac{m}{k}  + O(\frac{1}{k^{3/2}}) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
+        \\
+        \pm \left( \frac{1}{2} + \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} +  \frac{109-16\Lambda + 16\lambda^2}{32} \frac{1}{k} + O(\frac{1}{k^{3/2}}) \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \end{cases}\\
+    R^2  \psi_m
+        &= \begin{cases}
+        \left( 1+ \frac{9}{2\sqrt{2}} \frac{1}{\sqrt{k}} -\left(\frac{109}{16}+m^2\right) \frac{1}{k}  + O(\frac{1}{k^{3/2}}) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
+        \\
+        \pm \left( 1+ \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{109-16\Lambda+16\lambda^2}{32} \frac{1}{k} + O(\frac{1}{k^{3/2}}) \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \end{cases}
+\end{align}
+where $R^2 := \cut{x^1}^2 + \cut{x^1}^2 = \cut{x^+}\cut{x^-} + \cut{x^-}\cut{x^+}$.
+\end{proposition}
+\begin{proof}
+First notice that $x^\pm \in \acal^{\pm 1}_\Lambda$ so $[\cut{x^+}, \cut{x^-}]$ and $R^2$ are in $\acal^0_\Lambda$, hence no other matrix elements than the displayed above are nonzero. We now use \ref{propositionEquation69MatrixElementsGradedOperatorsD2}, with the Help of the software Mathematica, to find the power expansions above.
+\end{proof}
+
+\begin{definition}
+\emph{The normalization constant of the position operators} is the function in $k$:
+\begin{eqnsplit}
+    a(k) &:= \sqrt{2}\langle \psi_1 | x^+ | \psi_0 \rangle = \sqrt{2}\langle \psi_1 | x^- | \psi_0 \rangle\\
+    &= K_{0,1}(k) e^{\rho_{0,1}(k) + \frac{1}{4c_{m,m'}(k)}}\\
+    &= 1 + \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{137}{64} \frac{1}{k} + \frac{715}{256 \sqrt{2}} \frac{1}{k^{3/2}} + O(\frac{1}{k^2})
+\end{eqnsplit}
+\emph{The normalized position operators} are, for $i = 1, 2$:
+\begin{eqnsplit}
+    \chi^i &:= \frac{\cut{x^i}}{a(k)}\\
+    \chi^\pm &:= \frac{\cut{x^\pm}}{a(k)}
+\end{eqnsplit}\todo{In the last papers the $\pm$ ones include a factor of $\sqrt{2}$ in front, but I don't think it is important}.
+\end{definition}
+
+\begin{proposition}\todo{the notation for $m$ is bad, but it is for me to remember that perhaps something should be said about how the powers of $m$ increase with the powers of $k$} Up to second order of powers in $\frac{1}{\sqrt{k}}$ the following relations hold:
+\begin{align}\label{equationActionChiD2}
+    \chi^\pm  \psi_m
+        &= \begin{cases}
+        \frac{1}{\sqrt{2}}\sqrt{1 + \frac{m(m+1)}{k}}  \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
+        \\
+        0 & \text{otherwise}
+        \end{cases}\\
+    \label{equationCommutatorChiD2}
+    [\chi^+, \chi^-]  \psi_m
+        &= \begin{cases}
+         -\frac{m}{k} \psi_{m} & \text{if } |m| \leq \Lambda -1
+        \\
+        \pm \left( \frac{1}{2} + \frac{\Lambda(\Lambda-1)}{k} \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \end{cases}\\
+    \label{equationRChiD2}
+    \mathcal R^2  \psi_m
+        &= \begin{cases}
+        \left( 1+ \frac{m^2}{k} \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
+        \\
+        \pm \left( 1+ \frac{\Lambda(\Lambda-1)}{k} \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \end{cases}
+\end{align}
+where $\mathcal R^2 := (\chi^1)^2 + (\chi^2)^2 = \chi^+\chi^- + \chi^-\chi^+ = R^2/a^2$.
+\end{proposition}
+\begin{remark}
+Notice that if we drop the terms of order $3$ and higher in $\frac{1}{\sqrt{2}}$ in the action \eqref{equationActionChiD2} of $\chi^\pm$, then equations \eqref{equationCommutatorChiD2} and \eqref{equationRChiD2} are exact. This is thanks to the fact that, although the square root in \eqref{equationActionChiD2} is only valid up to the power $\frac{1}{k}$, i.e. it is only meaningful to say that it is equal to $ 1+\frac{m(m+1)}{2}$, when we use it to calculate the commutator and the radius it produces the factors exactly up to the power $\frac{1}{k}$.
+\end{remark}
+
+\begin{proposition}[Summary]
+$\chi^+$ and $\chi^-$ generate the $*$-algebra $\acal_\lambda = End(\hcal_\Lambda)$. The generators $\chi^\pm$ and $\cut L$ satisfy \todo{does this characterize algebraically the algebra?} the relations:
+\begin{align}\label{equationOperatorFormulaRelationsChiD2}
+    (\chi^+)^{2\Lambda+1} &= 0, & 
+    (\chi^-)^{2\Lambda+1} &= 0, & 
+    (\chi^+)^*&= \chi^-, & 
+    \prod_{m = \Lambda}^\Lambda (\cut L - m), &= 0 & 
+    \cut L^* &= \cut L,
+\end{align}
+\begin{align}\label{equationOperatorFormulaCommutatorsChiD2}
+    [\cut L, \chi^\pm] &= \pm \chi^\pm,&
+    [\chi^+, \chi^-] &= - \frac{\cut L}{k} + \left[ 1 + \frac{\Lambda(\Lambda+1)}{k}\right](\tilde P_\Lambda - \tilde P_\Lambda),
+\end{align}
+where the projections $\tilde P_m$ are polynomials in $\cut L$. Furthermore,
+\begin{equation}\label{equationOperatorFormulaRChiD2}
+    \mathcal R^2 = 1 + \frac{L^2}{k} - \left[ 1 + \frac{\Lambda(\Lambda+1)}{k}\right]\frac{\tilde P_\Lambda - \tilde P_\Lambda}{2}.
+\end{equation}
+Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_3$ and \eqref{equationOperatorFormulaRChiD2} are only valid up to second order in powers of $\frac{1}{\sqrt{k}}$; however, if the formulas \eqref{equationActionChiD2} are used as exact definitions of the operators, then this theorem is satisfied exactly.
+\end{proposition}
 
 \linea
 
