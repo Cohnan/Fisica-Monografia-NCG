@@ -66,7 +66,7 @@ The spinor bundle of $S^2$ is trivial, so the space of spinor fields $\hcal = L^
 This decomposition of the spinor bundle induced by the action of $SU(2)$ correctly suggests that the Dirac operator can be seen as the operator
 \begin{equation}
     \lbtext{\slashed D} = \rtext{ \bigoplus_{l\in \bb N} \pi_l  \otimes \pi_{1/2}(\dcal)} = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3 = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} ,
-\end{equation} acting on $L^2(S^2)\otimes \CC^2$, where $\sigma \pm = \sigma_1 \pm i \sigma_2$.
+\end{equation} acting on $L^2(S^2)\otimes \CC^2$, where $\sigma^\pm = \sigma_1 \pm i \sigma_2$.
 
 The eigenvectors of $\slashed D$ $Y^{'}_{jm}, Y^{''}_{jm}$ $j \in \NN + 1/2$, $m = -j, \dots, j$, called the \textit{spinor harmonics}, make up an orthogonal basis of the spinor fields $\hcal$. The eigenvalue of the $Y'_{l\cdot}$ is $(j + 1/2) \in \NN$, and of the $Y{''}_{j\cdot}: -(l + 1/2)$, so the eigenvalue $j$ has multiplicity $2j+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is another Dirac operator in the Fuzzy sphere. 
 
@@ -307,7 +307,11 @@ This spectral triple may be seen to come as a single term of the $SU(2)$-induced
 \end{equation}
 where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J_+, J_- \in U(\sut)$ on $V_j$.
 
-We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense in the first place we need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, $a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*$. Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition \eqref{} of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
+We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense in the first place we need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, also called an action by \emph{inner automorphisms}:
+\begin{equation}
+    a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*.
+\end{equation} 
+Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition \eqref{} of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
 
 \begin{proposition}\label{propIrredSpectralTriple}
 For each $N \in \NN$, the associated irreducible spectral triple:

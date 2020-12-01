@@ -407,7 +407,7 @@ On the elements of the fuzzy sphere $\acal_N$ indexed by even $N$, let $\hat x^i
 \end{proposition}
 \begin{proof}
  We saw in proposition \ref{propositionMadoreCoordinatesAreSO3ContravariantCovariant} that those algebra elements transform $SO(3)$-contravariently; we will bring the notation from the proof of said proposition. This was basically derived from the fact that $\hat x ^i = \frac{1}{\sqrt{j(j+1)}} \hat \pi_N(\hat J^i)$, where $iJ^i$ is the infinitesimal rotation with respect to the $i$-th axis. In general, an infinitesimal rotation on $\RR^3$ has the form $\vec{\hat J} \cdot \hat n$ for some $\hat n \in \RR^3$ unitary that indicates the axis of rotation. Thus, equation \eqref{equationAdjointActionsOnHatJsGeneratorsofRotationsInfinitesimal} means that acting with $g \in SO(3)$ on the infinitesimal rotation $i \vec J \cdot \hat n$ produces again an infinitesimal rotation, namely $i (g^{-1} \hat n)\cdot \vec J$, and so the spectrum of $\hat \pi_N(J^i)$ is invariant under actions of $SO(3)$. Thus, the spectrum of each $x_i$ \begin{equation*}
-     \Sigma_i \left\{-\sqrt{\frac{j}{j+1}}, \frac{-j+1}{\sqrt{j(j+1)}}, \dots, \frac{j-1}{\sqrt{j(j+1)}},  \sqrt{\frac{j}{j+1}}\right\},
+     \Sigma_i = \left\{-\sqrt{\frac{j}{j+1}}, \frac{-j+1}{\sqrt{j(j+1)}}, \dots, \frac{j-1}{\sqrt{j(j+1)}},  \sqrt{\frac{j}{j+1}}\right\},
  \end{equation*} is invariant under the action of $SO(3)$. 
  
  The spectrum shown above is such that, for any point $x \in [-1, 1]$ and any open ball $U \subset [-1, 1]$ containing $x$, there is some $N$ such that, for all $n \geq N$, $U \cup \Sigma_i$ is not empty, and, furthermore, it is evenly distributed within $U$.
@@ -550,12 +550,15 @@ However, \rtext{the dependence on $k$ of the definition of the $\psi_m$ and, in 
 Indeed, it is easy to see  that (since $O(2)$ doesn't affect the radial coordinate), for any compatible $k$, $\hcal_{\cut E}$ is isomorphic to $\hcal'_{\cut E} := span\{e^{i m \phi} \, : \, m \in \ZZ, \, m^2 \leq \cut E\}$ in an $O(2)$-equivariant way, and, hence, that \rtext{$\acal_{\cut E}$\todo{again, strictly speaking, I am assuming that the extra factor in the $k$-expansion of the energies is positive} is isomorphic to $\acal'_{\cut E} := End(\hcal'_{\cut E})$ as a $C^*$-algebra and as a representation space of $O(2)$}.
 \end{remark}
 
-Now, to parametrize these algebras by $\Lambda \in \NN$ and obtain a fuzzy space, define
+Now, to parametrize these algebras by $\Lambda \in \NN$ and obtain a fuzzy space, define:
+\begin{definition}\label{definitionHLambdaALambdaD2} For $\Lambda \in \NN$, let
 \begin{eqnsplit}\label{equationDefinitionHilbertAndAlgebraObservablesGivenLambda}
     \hcal_\Lambda &:= \hcal_{\cut E  = \Lambda^2} \\
-    \acal_\Lambda &:= End(\hcal_\Lambda);
+    \acal_\Lambda &:= End(\hcal_\Lambda).
 \end{eqnsplit}
-this means that the energies of the basis elements of $\hcal_\Lambda$ are all those $m^2 \in \ZZ_{\geq 0}$, up to the constant term in $k$, and are below the energies $E_{1,0}$; additionally, we also need to choose $k$ as a function on $\Lambda$ in such a way that it diverges with $\Lambda$ and such that $k(N)$ is compatible with the cutoff energy $\Lambda$; for this, the equation \eqref{equationConditionCompatibilityCutoffEandK} tells us that we may choose any function $k = k(\Lambda)$ such that
+\end{definition}
+
+This means that the energies of the basis elements of $\hcal_\Lambda$ are all those $m^2 \in \NN$, up to the constant term $\Lambda^2$, and are below the energies $E_{1,0}$; additionally, we also need to choose $k$ as a function on $\Lambda$ in such a way that it diverges with $\Lambda$ and such that $k(N)$ is compatible with the cutoff energy $\Lambda$; for this, the equation \eqref{equationConditionCompatibilityCutoffEandK} tells us that we may choose any function $k = k(\Lambda)$ such that
 \begin{equation}\label{inequationInequalityNeededforKasFunctionLambdaD2}
     k(\Lambda) \geq  \left( \frac{\Lambda^2 + 2}{8} \right)^2\leq \Lambda^2 (\Lambda + 1)^2.
 \end{equation}
@@ -629,16 +632,18 @@ The algebra of observables $\acal = \bcal(\hcal)$ of the Hilbert space $\hcal = 
 \end{align}
 Let 
 \begin{eqnsplit}
-    x^\pm &:= \frac{x^1 \pm i x^2}{\sqrt{2}}\\
+    %x^\pm &:= \frac{x^1 \pm i x^2}{\sqrt{2}}\\
+    x^\pm &:= x^1 \pm i x^2
 \end{eqnsplit}
 and
 \begin{eqnsplit}
     \partial_\pm &:= \partial_{x^\pm}\\
-        &=\frac{1}{\sqrt{2}}(\partial_1 \mp i \partial_2).
+        %&=\frac{1}{\sqrt{2}}(\partial_1 \mp i \partial_2).
+        &=(\partial_1 \mp i \partial_2).
 \end{eqnsplit}
 The set of operators $x^\pm, \partial_\pm$ also generate the algebra of observables $\acal$ since each $x^i$ is linear combinations of $x^+$ and $x^-$ and, similarly, each $\partial_i$ is linear combination of $\partial_+$ and $\partial_-$. 
 
-The angular momentum operator $L = -i \partial_\phi$ can also be written as $L = x^+ \partial_+ - x^- \partial_-$, hence
+The angular momentum operator $L = -i \partial_\phi$ can also be written as $L = \frac{1}{2} (x^+ \partial_+ - x^- \partial_-)$, hence
 \begin{align}\label{equationCommutationLXpmPartialPmD2}
     [L, x^\pm] &= \pm x^\pm & [L, \partial_\pm] &= \mp \partial_\pm.
 \end{align}
@@ -794,11 +799,11 @@ For every entire function $f(\rho)$ not depending on $k$, and $h \in \ZZ$, the m
 with,
 \begin{eqnsplit}\label{equationsExtraVariables69D2}
     c_{m,m'}(k) &:= \frac{\sqrt{k_m} + \sqrt{k_{m'}}}{2} 
-        = \sqrt{2k} - 1 + \frac{3-m^2-m'^2}{2\sqrt{2}} \frac{1}{\sqrt{k}} - \frac{2+m^2+m'^2}{2}\frac{1}{k} + O(\frac{1}{k^{3/2}}) \\
+        = \sqrt{2k} - 1 + \frac{3-m^2-m'^2}{2\sqrt{2}} \frac{1}{\sqrt{k}} - \frac{2+m^2+m'^2}{2}\frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right) \\
     \rho_{m,m'}(k) &:= \frac{2 + \sqrt{k_m}\tilde \rho_m + \sqrt{k_{m'}}\tilde \rho_{m'}}{2 c_{m,m'}}
-        = \sqrt{2}\frac{1}{\sqrt{k}} + \frac{2+m^2 + m'^2}{4}\frac{1}{k} + O(\frac{1}{k^{3/2}})\\
+        = \sqrt{2}\frac{1}{\sqrt{k}} + \frac{2+m^2 + m'^2}{4}\frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right)\\
     K_{m,m'}(k) &:= \sqrt{\frac{4 \pi^3}{c_{m,m'}}} N_m \overline{N_{m'}} e^{\frac{[2 + \sqrt{k_m}\tilde \rho_m + \sqrt{k_{m'}}\tilde \rho_{m'}]^2}{4c_{m,m'}} - \frac{\sqrt{k_m}\tilde \rho^2_{m} + \sqrt{k_{m'}}\tilde \rho^2_{m'}}{2}}
-        = 1 + O(\frac{1}{k^{3/2}}),
+        = 1 + O\left(\frac{1}{k^{3/2}}\right),
 \end{eqnsplit}
 where $k_m(k)$ and $\tilde \rho_m(k)$ were defined in \eqref{equationConstantsHarmonicApproximationRadialD2}
 \begin{equation}
@@ -814,24 +819,24 @@ Let $F(x)$ and $f(x)$ be functions with power series expansions around $f(x_0)$ 
 \begin{align}
     \cut{x^\pm}  \psi_m
         &= \begin{cases}
-        \left(1 + \frac{9}{8} \frac{1}{\sqrt{k}} + \frac{137 \pm 32m + 32m^2}{64 \sqrt{2}} \frac{1}{k} + O(\frac{1}{k^{3/2}}) \right) \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
+        \left(1 + \frac{9 \sqrt{2}}{8} \frac{1}{\sqrt{k}} + \frac{137 \pm 32m + 32m^2}{64} \frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
         \\
         0 & \text{otherwise}
         \end{cases}\\
     [\cut{x^+}, \cut{x^-}]  \psi_m
         &= \begin{cases}
-        \left( -\frac{m}{k}  + O(\frac{1}{k^{3/2}}) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
+        \left( -\frac{2m}{k}  + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
         \\
-        \pm \left( \frac{1}{2} + \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} +  \frac{109-16\Lambda + 16\lambda^2}{32} \frac{1}{k} + O(\frac{1}{k^{3/2}}) \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \pm \left( 1 + \frac{9}{2\sqrt{2}} \frac{1}{\sqrt{k}} +  \frac{109-16\Lambda + 16\lambda^2}{16} \frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m} & \text{if } m = \pm \Lambda 
         \end{cases}\\
     R^2  \psi_m
         &= \begin{cases}
-        \left( 1+ \frac{9}{2\sqrt{2}} \frac{1}{\sqrt{k}} -\left(\frac{109}{16}+m^2\right) \frac{1}{k}  + O(\frac{1}{k^{3/2}}) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
+        \left( 1+ \frac{9}{2\sqrt{2}} \frac{1}{\sqrt{k}} -\left(\frac{109}{16}+m^2\right) \frac{1}{k}  + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
         \\
-        \pm \left( 1+ \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{109-16\Lambda+16\lambda^2}{32} \frac{1}{k} + O(\frac{1}{k^{3/2}}) \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \left( 1+ \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{109-16\Lambda+16\lambda^2}{32} \frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m} & \text{if } m = \pm \Lambda 
         \end{cases}
 \end{align}
-where $R^2 := \cut{x^1}^2 + \cut{x^1}^2 = \cut{x^+}\cut{x^-} + \cut{x^-}\cut{x^+}$.
+where $R^2 := \cut{x^1}^2 + \cut{x^1}^2 = \frac{1}{2}(\cut{x^+}\cut{x^-} + \cut{x^-}\cut{x^+})$.
 \end{proposition}
 \begin{proof}
 First notice that $x^\pm \in \acal^{\pm 1}_\Lambda$ so $[\cut{x^+}, \cut{x^-}]$ and $R^2$ are in $\acal^0_\Lambda$, hence no other matrix elements than the displayed above are nonzero. 
@@ -839,13 +844,13 @@ First notice that $x^\pm \in \acal^{\pm 1}_\Lambda$ so $[\cut{x^+}, \cut{x^-}]$ 
 Now, proposition \ref{propositionEquation69MatrixElementsGradedOperatorsD2} implies that:
 \begin{align*}
     \langle \psi_{m+1} | x^+ | \psi_m \rangle 
-        &= \frac{1}{\sqrt{2}}\langle \psi_{m+1} | e^\rho e^{i\phi} | \psi_m \rangle
-        &= \frac{K_{m,m+1}}{\sqrt{2}} e^{\rho_{m,m+1} + \frac{1}{4 c_{m,m+1}}};
-\end{align*}
-\begin{align*}
+        &= %\frac{1}{\sqrt{2}}\langle \psi_{m+1} | e^\rho e^{i\phi} | \psi_m \rangle
+        \langle \psi_{m+1} | e^\rho e^{i\phi} | \psi_m \rangle
+        &= %\frac{K_{m,m+1}}{\sqrt{2}} e^{\rho_{m,m+1} + \frac{1}{4 c_{m,m+1}}};\\
+        K_{m,m+1} e^{\rho_{m,m+1} + \frac{1}{4 c_{m,m+1}}};\\
     \langle \psi_{m-1} | x^- | \psi_m \rangle 
         &= \overline{\langle \psi_{m} | x^+ | \psi_{m-1} \rangle}
-        &= \frac{K_{m-1,m}}{\sqrt{2}} e^{\rho_{m-1,m} + \frac{1}{4 c_{m-1,m}}}.
+        &= K_{m-1,m} e^{\rho_{m-1,m} + \frac{1}{4 c_{m-1,m}}}.
 \end{align*}
 
 With the help of the software Mathematica, and having in mind the remark \ref{remarkPowerSeries}, we found the power expansions for these expressions.
@@ -854,50 +859,52 @@ With the help of the software Mathematica, and having in mind the remark \ref{re
 \begin{definition}
 \emph{The normalization constant of the position operators} is the function in $k$:
 \begin{eqnsplit}
-    a(k) &:= \sqrt{2}\langle \psi_1 | x^+ | \psi_0 \rangle = \sqrt{2}\langle \psi_{-1} | x^- | \psi_0 \rangle\\
+    a(k) &:= %\sqrt{2}\langle \psi_1 | x^+ | \psi_0 \rangle = \sqrt{2}\langle \psi_{-1} | x^- | \psi_0 \rangle\\
+    \langle \psi_1 | x^+ | \psi_0 \rangle = \langle \psi_{-1} | x^- | \psi_0 \rangle\\
     &= K_{0,1}(k) e^{\rho_{0,1}(k) + \frac{1}{4c_{0,1}(k)}}\\
     &= 1 + \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{137}{64} \frac{1}{k} + \frac{715}{256 \sqrt{2}} \frac{1}{k^{3/2}} + O(\frac{1}{k^2})
 \end{eqnsplit}
 \emph{The normalized position operators} are, for $i = 1, 2$:
 \begin{eqnsplit}
     \chi^i &:= \frac{\cut{x^i}}{a(k)}\\
-    \chi^\pm &:= \frac{\cut{x^\pm}}{a(k)}.
+    \chi^\pm &:= \frac{\cut{x^\pm}}{a(k)} = \chi^+ \pm i \chi^-.
 \end{eqnsplit}\todo{In the last papers the $\pm$ ones include a factor of $\sqrt{2}$ in front, but I don't think it is important}
 \end{definition}
 
 The normalization constant $a$ is simply the factor that extracts the $m$ independent terms in the series expansion of the action of $\cut{x^\pm}$ on each $\psi_m$. $a$ rapidly converges to $1$ with increasing $k$, as shown in the graph \ref{}.
 
-\begin{proposition}\todo{the notation for $m$ is bad, but it is for me to remember that perhaps something should be said about how the powers of $m$ increase with the powers of $k$} Up to second order of powers in $\frac{1}{\sqrt{k}}$ the following relations hold:
+\begin{proposition}\todo{the notation for $m$ is bad, but it is for me to remember that perhaps something should be said about how the powers of $m$ increase with the powers of $k$} Up to second order of powers in $\frac{1}{\sqrt{k}}$ in the coefficients the following relations hold:
 \begin{align}\label{equationActionChiD2}
     \chi^\pm  \psi_m
         &= \begin{cases}
-        \frac{1}{\sqrt{2}}\sqrt{1 + \frac{m(m+1)}{k}}  \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
+        %\frac{1}{\sqrt{2}}\sqrt{1 + \frac{m(m+1)}{k}}  \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
+        \sqrt{1 + \frac{m(m+1)}{k}}  \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
         \\
         0 & \text{otherwise}
         \end{cases}\\
     \label{equationCommutatorChiD2}
     [\chi^+, \chi^-]  \psi_m
         &= \begin{cases}
-         -\frac{m}{k} \psi_{m} & \text{if } |m| \leq \Lambda -1
+         -\frac{2m}{k} \psi_{m} & \text{if } |m| \leq \Lambda -1
         \\
-        \pm \left( \frac{1}{2} + \frac{\Lambda(\Lambda-1)}{k} \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \pm \left( 1 + \frac{\Lambda(\Lambda-1)}{k} \right) \psi_{m} & \text{if } m = \pm \Lambda 
         \end{cases}\\
     \label{equationRChiD2}
     \mathcal R^2  \psi_m
         &= \begin{cases}
         \left( 1+ \frac{m^2}{k} \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
         \\
-        \pm \left( 1+ \frac{\Lambda(\Lambda-1)}{k} \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \frac{1}{2} \left( 1+ \frac{\Lambda(\Lambda-1)}{k} \right) \psi_{m} & \text{if } m = \pm \Lambda 
         \end{cases}
 \end{align}
-where $\mathcal R^2 := (\chi^1)^2 + (\chi^2)^2 = \chi^+\chi^- + \chi^-\chi^+ = R^2/a^2$.
+where $\mathcal R^2 := (\chi^1)^2 + (\chi^2)^2 = \frac{1}{2}(\chi^+\chi^- + \chi^-\chi^+)= R^2/a^2$.
 \end{proposition}
 \begin{remark}
-Notice that if the action \eqref{equationActionChiD2} were used exactly to define the operators $\chi^\pm$, then equations \eqref{equationCommutatorChiD2} and \eqref{equationRChiD2} would also be exact. This is thanks to the fact that, although the square root in \eqref{equationActionChiD2} is only valid up to the power $\frac{1}{k}$, i.e. it is only meaningful to say that it is equal to $ 1+\frac{m(m+1)}{2}$, when we use it to calculate the commutator and the radius it produces the factors exactly up to the power $\frac{1}{k}$.
+Notice that if the action \eqref{equationActionChiD2} were used exactly to define operators $\chi^\pm$, then equations \eqref{equationCommutatorChiD2} and \eqref{equationRChiD2} would also be exact. This is thanks to the fact that, although the square root in \eqref{equationActionChiD2} is only valid up to the power $\frac{1}{k}$, i.e. it is only meaningful to say that it is equal to $ 1+\frac{m(m+1)}{2}$, when we use it to calculate the commutator and the radius it produces precisely the correct first order terms stated above.
 \end{remark}
 
-\begin{proposition}[Summary]
-$\chi^+$ and $\chi^-$ generate the $*$-algebra $\acal_\lambda = End(\hcal_\Lambda)$. The generators $\chi^\pm$ and $\cut L$ satisfy \todo{does this characterize algebraically the algebra?} the relations:
+\begin{theorem}[Summary]
+$\chi^+$ and $\chi^-$ generate the $*$-algebra $\acal_\Lambda = End(\hcal_\Lambda)$. The generators $\chi^\pm$ and $\cut L$ satisfy \todo{does this characterize algebraically the algebra?} the relations:
 \begin{align}\label{equationOperatorFormulaRelationsChiD2}
     (\chi^+)^{2\Lambda+1} &= 0, & 
     (\chi^-)^{2\Lambda+1} &= 0, & 
@@ -907,14 +914,14 @@ $\chi^+$ and $\chi^-$ generate the $*$-algebra $\acal_\lambda = End(\hcal_\Lambd
 \end{align}
 \begin{align}\label{equationOperatorFormulaCommutatorsChiD2}
     [\cut L, \chi^\pm] &= \pm \chi^\pm,&
-    [\chi^+, \chi^-] &= - \frac{\cut L}{k} + \left[ 1 + \frac{\Lambda(\Lambda+1)}{k}\right](\tilde P_\Lambda - \tilde P_\Lambda),
+    [\chi^+, \chi^-] &= - \frac{2\cut L}{k} + \left[ 1 + \frac{\Lambda(\Lambda+1)}{k}\right](\tilde P_\Lambda - \tilde P_\Lambda),
 \end{align}
 where the projections $\tilde P_m$ are polynomials in $\cut L$. Furthermore,
 \begin{equation}\label{equationOperatorFormulaRChiD2}
     \mathcal R^2 = 1 + \frac{L^2}{k} - \left[ 1 + \frac{\Lambda(\Lambda+1)}{k}\right]\frac{\tilde P_\Lambda - \tilde P_\Lambda}{2}.
 \end{equation}
-Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_3$ and \eqref{equationOperatorFormulaRChiD2} are only valid up to second order in powers of $\frac{1}{\sqrt{k}}$; however, if the formulas \eqref{equationActionChiD2} are used as exact definitions of the operators, then this theorem is satisfied exactly.
-\end{proposition}
+Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_3$ and \eqref{equationOperatorFormulaRChiD2} are only valid up to second order in powers of $\frac{1}{\sqrt{k}}$; however, if the formulas \eqref{equationActionChiD2} are used as exact definitions of $\chi^\pm$, then all the equations in this theorem are satisfied exactly.
+\end{theorem}
 
 \linea
 
@@ -930,7 +937,7 @@ Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_3$ and \eqref{equatio
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Realization of $\acal_\Lambda$ through $U\soth$}
+\section{Realization of $\acal_\Lambda$ through $U(\soth)$}
 
 {
     \color{gray}
@@ -974,7 +981,13 @@ Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_3$ and \eqref{equatio
 
 \linea
 
-\subsection{}
+Lemma:
+
+Every rotation, det = 1, is a product of a rotation and the reflection F.
+
+The explicit action of a rotation and of F on xpm and L is.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
