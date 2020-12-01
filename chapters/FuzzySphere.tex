@@ -41,7 +41,10 @@ Let $G$ be a compact semisimple Lie group $G$ with Lie algebra $\alg g$, where t
 \begin{equation}
     \lbtext{\dcal} := 1 \otimes 1 + 2 \sum_{k = 1}^3 J_k \otimes J_k \in U(\sut) \otimes U(\sut)
 \end{equation}
-where $J_k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such that $[J_i, J_j] = i \epsilon_{ijk} J_k$ (i.e. $J_k = \frac{\sigma_k}{2} = \pi_{1/2}(J_k)$). 
+where $J_k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such that 
+\begin{equation}\label{equationCommutationRelationJs}
+    [J_i, J_j] = i \epsilon_{ijk} J_k
+\end{equation} (i.e. $J_k = \frac{\sigma_k}{2} = \pi_{1/2}(J_k)$). 
 
 \lin
 
@@ -95,7 +98,7 @@ Equivariance of $\dcal$: $U(\alg g)$ is a Hopf algebra\footnote{} with coproduct
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Fuzzy Sphere}
 
-% {\color{gray} -- Change $x_i$ in $\RR^3$ by infinitesimal rotation $J_i$, acting on $\CC^{N+1} = span\{|j, m\rangle\}$.
+% {\color{gray} -- Change $x^i$ in $\RR^3$ by infinitesimal rotation $J_i$, acting on $\CC^{N+1} = span\{|j, m\rangle\}$.
 
 % Presentation:
 
@@ -138,15 +141,15 @@ To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the decomposi
 
 However, an obvious problem with this definition is that $\acal_N'$ doesn't have a natural multiplication, so it isn't an algebra. From the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring that the radical\footnote{} of the algebra be zero, there are only two possibilities, and only one being noncommutative:
 \begin{align}
-    x_i &\mapsto \hat x_i := \lambda \sigma_i & i = 1, 2, 3;
+    x^i &\mapsto \hat x^i := \lambda \sigma_i & i = 1, 2, 3;
 \end{align}
-where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Notice that the identification $x_i \mapsto \hat x_i$ is $SU(2)$-covariant since $\frac{\sigma_i}{2} \in U(\sut) \cong U(\alg{so(3)})$ corresponds to the generator of rotations with respect to the $x_i$-axis. The constant $\lambda$ is chosen such that ``radius of the sphere be $1$'', meaning that $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
+where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Notice that the identification $x^i \mapsto \hat x^i$ is $SU(2)$-equivariant since $\frac{\sigma_i}{2} \in U(\sut) \cong U(\alg{so}(3))$ corresponds to the generator of rotations with respect to the $x^i$-axis. The constant $\lambda$ is chosen such that ``radius of the sphere be $1$'', meaning that $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
 
-Instead of insisting on defining a foreign multiplication in $\acal'_N$, the \lbtext{fuzzy sphere} is now defined by $\lbtext{\acal_N} :=  \pi_{j}(U(\sut)) \equiv End(V_j)$ which, when the irreducible representation $\pi_j$ of $SU(2)$ is defined as in the previous subsection where $V_j = \CC^{N+1}$, $\acal_N \equiv M_{N+1}(\CC)$ for all $N \in \NN$, $j$ satisfying $N =: 2\lbtext{j}$, which arises from the following generalization of the $N = 1$ case studied above:
-\begin{align}
+Instead of insisting on defining a foreign multiplication in $\acal'_N$, the \lbtext{fuzzy sphere} is now defined by $\lbtext{\acal_N} :=  \pi_{j}(U(\sut)) \equiv End(V_j)$ which, when the irreducible representation $\pi_j$ of $SU(2)$ is understood as in the previous subsection, i.e. as $V_j = \CC^{N+1}$, is equal to $\acal_N \equiv M_{N+1}(\CC)$ for all $N \in \NN$, $j$ satisfying $N =: 2\lbtext{j}$, which arises from the following generalization of the $N = 1$ case studied above:
+\begin{align}\label{equationDefinitionGeneratorsFuzzySphere}
     \tilde V_1 \hookrightarrow \bigoplus_{l = 0}^N \tilde V_l &\to \acal_N\\
-    x_i &\mapsto \hat x_i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i) & i = 1, 2, 3;
-\end{align} that is, for each $N$, the coordinate $x_i$ is understood as the infinitesimal rotation with respect to the axis $x_i$ operator on the space $V_j = \CC^{N+1}$. The normalization constant guarantees again $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, and we now obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
+    x^i &\mapsto \hat x^i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i) & i = 1, 2, 3;
+\end{align} that is, for each $N$, the coordinate $x^i$ is understood as the infinitesimal rotation with respect to the axis $x^i$ operator on the space $V_j = \CC^{N+1}$. The normalization constant guarantees again $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, and we now obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
 \begin{align}
     \rtext{[\hat x^i, \hat x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} \hat x_k}, && i, j, k \in \{1, 2, 3\},
 \end{align} where sum over repeated indices is understood, and $\epsilon_{ijk}$ is the Levi-Civita tensor.
@@ -157,13 +160,13 @@ This \textit{fuzzy} version of the sphere is, so far, good in two of the three w
 
 \subsubsection{$SU(2)$ acts by diffeomorphisms}
 
-From the $SU(2)$-equivariance of the identifications $x_i \to \hat x_i$, we see that $\acal_N \cong \acal'_N \cong \bigoplus_{l=0}^N V_l$ as representation space of $SU(2)$, where the action of $g \in SU(2)$ is the one induced in $\acal_N$ seen as $End(V_j)$, namely by the inner automorphism $B  \mapsto \pi_j(g)B \pi_j(g)^{-1}$, where $\pi_j(g) \in SU(N+1)$ since $\pi_j$ is an unitary representation. That $(\pi_j(g)B \pi_j(g)^{-1})^* = \pi_j(g)B^* \pi_j(g)^{-1}$, where $B^*$ is the adjoint of $B \in M_{N+1}(\CC)$, shows that \rtext{$SU(2)$ acts by $*$-automorphisms on $\acal_N$}.
+From the $SU(2)$-equivariance of the identifications $x^i \to \hat x^i$, we see that $\acal_N \cong \acal'_N \cong \bigoplus_{l=0}^N V_l$ as representation space of $SU(2)$, where the action of $g \in SU(2)$ is the one induced in $\acal_N$ seen as $End(V_j)$, namely by the inner automorphism $B  \mapsto \pi_j(g)B \pi_j(g)^{-1}$, where $\pi_j(g) \in SU(N+1)$ since $\pi_j$ is an unitary representation. That $(\pi_j(g)B \pi_j(g)^{-1})^* = \pi_j(g)B^* \pi_j(g)^{-1}$, where $B^*$ is the adjoint of $B \in M_{N+1}(\CC)$, shows that \rtext{$SU(2)$ acts by $*$-automorphisms on $\acal_N$}.
 
 A diffeomorphism of $S^2$ is equivalent to an automorphism of the algebra $C^\infty(S^2)$ (dense subalgebra of $\acal$) that respects the complex conjugation $*$. In the matrix algebras $M_{N+1}(\CC)$, since they are simple, all $*$-automorphisms are precisely of the form $B \mapsto C B C^{-1}$ for some $C \in SU(N+1)$. Furthermore, all such automorphisms also respect the derivations of $\acal_N$, which are the noncommutative analogues of vector fields. Hence, all $*$-automorphisms of $\acal_N$ are good analogues of diffeomorphisms of $S^2$, and so \rtext{$SU(2)$ \textit{is acting by diffeomorphisms on the fuzzy sphere}}.
 
 \subsubsection{As $C^*$-algebra acting on spinors}
 
-The elements $\hat x_i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace-free as a tensor\todo{Not sure how to prove these two statements. Not even sure what the trace might mean if there are not even number of components. If $N=1$ it is easy to see that indeed ever $2x2$ matrix is combination of $1$ and Pauli}. Replacing the coordinates $x_i$ by $\hat x_i$  in the (symmetric) polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
+The elements $\hat x^i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace-free as a tensor\todo{Not sure how to prove these two statements. Not even sure what the trace might mean if there are not even number of components. If $N=1$ it is easy to see that indeed ever $2x2$ matrix is combination of $1$ and Pauli}. Replacing the coordinates $x^i$ by $\hat x^i$  in the (symmetric) polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
 
 Define the linear, injective mapping
 \begin{eqnsplit}
