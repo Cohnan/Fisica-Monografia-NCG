@@ -1065,9 +1065,11 @@ Similarly, the (contravariant) transformation under the reflection $F$ is
 This all implies that the action on the operators $\cut{x^\pm} = \cut{x^1} + i \cut{x^2}$ is
 \begin{eqnsplit}\label{equationActionO2xpmD2}
     (\cut{x^\pm})^{R_\theta} &= e^{-i \theta} x^\pm,\\
-     (\cut{x^\pm})^F &= x^{\mp}.
+     (\cut{x^\pm})^F &= x^{\mp};
 \end{eqnsplit}
-Now, since on $\RR^2$ $\pi(R_\theta)\partial_\phi \pi(R_\theta)*\psi(r, \phi) = \pi(R_\theta)\partial_\phi \psi(r, \phi+ \theta) = \pi(R_\theta) \partial_\phi \psi(r, \phi + \theta) = \pi(R_\theta) \partial_{\phi+\theta} \psi(r, \phi + \theta) = \partial_\phi \psi(r, \phi)$ for all $\psi \in L^2(\RR^2)$ i.e. $(\partial_\phi)^{R_\theta} = \partial_\phi$, then we have that $L^{R_\theta} = L$ and so, since $[P_\Lambda, \pi'(R_\theta)] = 0$, that
+we will call this transformation rule for operators $U \in \acal_\Lambda^1$ and $D \in \acal_\Lambda^{-1}$ \emph{a contravariant transformation of the operators $U, D$}.
+
+Now, on $\RR^2$, $\pi(R_\theta)\partial_\phi \pi(R_\theta)*\psi(r, \phi) = \pi(R_\theta)\partial_\phi \psi(r, \phi+ \theta) = \pi(R_\theta) \partial_\phi \psi(r, \phi + \theta) = \pi(R_\theta) \partial_{\phi+\theta} \psi(r, \phi + \theta) = \partial_\phi \psi(r, \phi)$ for all $\psi \in L^2(\RR^2)$ i.e. $(\partial_\phi)^{R_\theta} = \partial_\phi$, then we have that $L^{R_\theta} = L$ and so, since $[P_\Lambda, \pi'(R_\theta)] = 0$, that
 \begin{equation}
     (\cut L)^{R_\theta} = \cut L.
 \end{equation}
@@ -1082,29 +1084,83 @@ Now, notice that since $\chi^i = \frac{\cut{x^i}}{a(k)}$, then $\chi^\pm$ has th
     (\chi^\pm)^F &= \chi^\mp.
 \end{eqnsplit}
 
-Finally, the operators $L^\pm$ defined in proposition \ref{propositionThereAreFunctionsfpmD2} also have a contravariant transformation law under $O(2)$. To see this, first notice that we may write $L^\pm = \sum_m (f^\chi_\pm)^{-1}(\cut L) x^\pm$, where $(f^\chi_\pm)^{-1}(\cut L)$ is the polynomial such that $(f^\chi_\pm)^{-1}(m) \equiv (f^\chi_\pm)^{-1}(\cut L)\psi^m = \frac{1}{f^\chi_\pm}$. Also notice that $\pi'(g) (f^\chi_\pm)^{-1}(\cut L) \pi'(g)^* = (f^\chi_\pm)^{-1}(\pi'(g)\cut L \pi'(g)^*)$ for all $g \in O(2)$, so $\pi'(R_\theta) (f^\chi_\pm)^{-1}(\cut L) \pi'(R_\theta)^* = (f^\chi_\pm)^{-1}(\cut L)$ and 
+Similarly, the operators $L^\pm$ defined in proposition \ref{propositionThereAreFunctionsfpmD2} also have a contravariant transformation law under $O(2)$. To see this, first notice that we may write $L^\pm =  (f^\chi_\pm)^{-1}(\cut L) x^\pm$, where $(f^\chi_\pm)^{-1}(\cut L)$ is the polynomial such that $(f^\chi_\pm)^{-1}(m) := (f^\chi_\pm)^{-1}(\cut L)\psi^m = \frac{1}{f^\chi_\pm(m)}$. Also notice that $\pi'(g) (f^\chi_\pm)^{-1}(\cut L) \pi'(g)^* = (f^\chi_\pm)^{-1}(\pi'(g)\cut L \pi'(g)^*)$ for all $g \in O(2)$, so $\pi'(R_\theta) (f^\chi_\pm)^{-1}(\cut L) \pi'(R_\theta)^* = (f^\chi_\pm)^{-1}(\cut L)$ and 
 $\pi'(F) (f^\chi_\pm)^{-1}(\cut L) \pi'(F)^* = (f^\chi_\pm)^{-1}(-\cut L) = (f^\chi_\mp)^{-1}(\cut L)$, where the last equation follows from the fact that, as polynomials in $\cut L$, $\tilde P_m(-\cut L) = \tilde P_{\cut L}(\cut L)$ and from the equation $f^\chi_\pm(-m) = f^\chi_\mp(m)$. Thus,
-\begin{align*}
-    \pi'(R_\theta) L^\pm \pi'(R_\theta)^* &= \sum_m \pi(R_\theta)(f^\chi_\pm)^{-1}(\cut L)\pi(R_\theta)^* \pi'(R_\theta) \chi^\pm \pi'(R_\theta)^*\\
-    &= \sum_m (f^\chi_\pm)^{-1}(\cut L) e^{\mp i \theta} \chi^\pm\\
+\begin{eqnsplit}\label{equationTransformationLawLpmD21}
+    \pi'(R_\theta) L^\pm \pi'(R_\theta)^* &= \pi(R_\theta)(f^\chi_\pm)^{-1}(\cut L)\pi(R_\theta)^* \pi'(R_\theta) \chi^\pm \pi'(R_\theta)^*\\
+    &= (f^\chi_\pm)^{-1}(\cut L) e^{\mp i \theta} \chi^\pm\\
     &= e^{\mp i \theta} L^\pm,
-\end{align*} and
-\begin{align*}
-    \pi'(F) L^\pm \pi'(F)^* &= \sum_m \pi(F)(f^\chi_\pm)^{-1}(\cut L)\pi(F)^* \pi'(F) \chi^\pm \pi'(F)^*\\
-    &= \sum_m (f^\chi_\mp)^{-1}(\cut L) \chi^\mp\\
+\end{eqnsplit} and
+\begin{eqnsplit}\label{equationTransformationLawLpmD22}
+    \pi'(F) L^\pm \pi'(F)^* &=  \pi'(F)(f^\chi_\pm)^{-1}(\cut L)\pi'(F)^* \pi'(F) \chi^\pm \pi'(F)^*\\
+    &= (f^\chi_\mp)^{-1}(\cut L) \chi^\mp\\
     &= L^\mp.
-\end{align*}
+\end{eqnsplit}
+
 
 \lin
 
-We will now see that the algebras $\acal_{\Lambda}$ developed in this chapter can be more concisely understood as the algebras of endomorphisms of irreducible representation spaces of $SO(3)$, just like the even-indexed elements of the fuzzy sphere. Recall that $\hat \pi_\Lambda$ denotes the representation of both $SO(3)$ on the representation spaces of $SU(2)$ $V_{\Lambda} \cong \CC^{2\Lambda + 1}$, which is induced by the representation $\pi_\Lambda$ of $SU(2)$. Let us also denote by $\hat \pi$ the algebra presentation of $U(\soth)$ induced by the group representation $\hat \pi$.
+We will now see that the algebras $\acal_{\Lambda}$ developed in this chapter can be more concisely understood as the algebras of endomorphisms of irreducible representation spaces of $SO(3)$, just like the even-indexed elements of the fuzzy sphere. Recall that $\hat \pi_\Lambda$ denotes the representation of both $SO(3)$ on the representation spaces of $SU(2)$ $V_{\Lambda} \cong \CC^{2\Lambda + 1}$, which is induced by the representation $\pi_\Lambda$ of $SU(2)$. Let us also denote by $\hat \pi$ the algebra representation of $U(\soth)$ induced by the group representation $\hat \pi$, and recall that $i\hat J^k \in U(\soth)$, $k = 1, 2, 3$, is the infinitesimal rotation in $\RR^3$ about the $i$-th axis.
 
-Identify $O(2)$ as a subgroup of $SO(3)$ by
-$R_\theta \mapsto \tilde R_\theta$ and $F \mapsto $. It was shown in proposition \ref{propositionMadoreCoordinatesAreSO3ContravariantCovariant} that 
+Since $V_\Lambda$ is a representation space of $SO(3)$, by identifying $O(2)$ as a subgroup of $SO(3)$ we can then restrict $\hat \pi$ to $O(2)$ to get a representation of it on $V_\Lambda$, and therefore a left action of $O(2)$ on $\acal_\Lambda$. Let us make the following identifications
+\begin{align*}
+    O(2) && \hookrightarrow && SO(3)\\
+    R_\theta && \mapsto && \begin{pmatrix} R_\theta & 0 \\ 0 & 1 \end{pmatrix} = e^{i\theta \hat J^3}\\
+    F && e^{i\pi \hat J^1};
+\end{align*}
+we can see that the subgroup of $SO(3)$ generated by the elements of the form $e^{i\theta \hat J^3}$ and $e^{i\pi \hat J^3}$ is isomorphic to $O(2)$, by realizing that it acts on the plane $x^1-x^2$ in $\RR^3$ precisely as $O(2)$ acts on $\RR^2$.
 
-Theorem: isomorphic
+\begin{theorem}\label{theoremUso3ViewAlternativeAlgebraO2IsomorphismD2}
+For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to V_\Lambda$ be the isomorphism of the Hilbert spaces $\hcal_\Lambda \subset L^2(\RR^2)$ and $V_\Lambda \equiv \CC^{2\Lambda + 1}$ generated by the mapping $\psi^m \mapsto |\Lambda, m\rangle$, $m \in \{-\Lambda, \dots, \Lambda\}$. Then, $T$ induces an isomorphism $\tilde T$ of the $C^*$-algebra $\acal_\Lambda = End(\hcal_)$, with the operator norm, is a $C^*$-algebra isomorphic to $\hat \pi_\Lambda(U(\soth)) = End(V_\Lambda)$ with the operator norm, and this isomorphism is $O(2)$-equivariant. Furthermore, the tuples of operators $(\tilde T(\cut{x^1}), \tilde T(\cut{x^2}))$ and $(\tilde T(\chi^1), \tilde T(\chi^2))$ transform $O(2)$-contravariantly.\todo{SO far I have used this contravariant transformation thing applied to not just position operators, but vectors of operators, so I should amplify the definition}
+\end{theorem}
+\begin{proof}
+First notice that $T: \hcal_\Lambda \to V_\Lambda$ is an isomorphism of Hilbert spaces since $\{\psi^m\}_{|m| \leq \Lambda} \subset \hcal_\Lambda$ and $\{|\Lambda, m\rangle\}_{|m| \leq \Lambda}$ are orthonormal basis of their respective space. The invertible mapping $\tilde T: \acal_\Lambda \to End(V_\Lambda)$ is defined as $A \mapsto T \circ A \circ T^{-1}$, and it clearly respects the algebra operations, i.e. it is an algebra isomorphism. This mapping is such that $\langle 
+\psi^m | A | \psi^n \rangle = \langle \Lambda, m | \tilde T(A) | \Lambda, n\rangle$, for all $n, m \in \{-\Lambda, \dots, \Lambda\}$, and so $\tilde T$ respects adjoints, i.e. it is a $*$-isomorphism. Since $V_\Lambda \neq \{0\}$, for any $A \in \acal_\Lambda$:
+\begin{align*}
+    ||\tilde T (A)|| &= \sup_{v \in V_\Lambda} \{||\tilde T(A)(v)||\,:\, ||v|| = 1\} \\
+    &= \sup_{\psi \in \hcal_\Lambda} \{||\tilde T(A)(T(\psi))||\,:\, ||T(\psi)|| = 1\} \\
+    &= \sup_{\psi \in \hcal_\Lambda} \{||T(A(\psi))||\,:\, ||\psi|| = 1\} \\
+    &= \sup_{\psi \in \hcal_\Lambda} \{||A(\psi)||\,:\, ||\psi|| = 1\}\\
+    &= ||A||;
+\end{align*}
+hence $\tilde T$ respects the norm, so it is a Banach algebra isomorphism; notice that this boils down to the fact that $T$ is a normed vector space isomorphism, which itself is a consequence of the fact that $T$ maps an orthonormal basis to an orthonormal basis.
 
+We now prove the $O(2)$-equivariance of $\tilde T$. Notice that 
+\begin{equation}
+    \tilde T(L^\pm) = \hat J^\pm,
+\end{equation}
+where $\hat J^\pm = \hat J^1 \pm i \hat J^2$, and $L^\pm$ are the algebra generators defined in proposition \ref{propositionThereAreFunctionsfpmD2}; this follows from the equation $\langle \Lambda, n| \hat J^\pm |\Lambda, m = \delta_{n, m \pm 1} \sqrt{\Lambda(\Lambda + 1) - m(m \pm 1)} = \langle \psi^n | L^\pm | \psi^m \rangle$, for all $n, m \in \{-\Lambda, \dots, \Lambda\}$. Define the operators $L^1 = \frac{1}{2}(L^+ + L^-)$ and $L^2 = \frac{1}{2i}(L^+ - L^-)$; they satisfy that $\tilde T(L^k) = \hat J^k$, for $k = 1, 2$, and since $L^\pm$ generates $\acal_\Lambda$, then $L^1, L^2$ also generate it. Finally, the transformation laws \eqref{equationTransformationLawLpmD21, equationTransformationLawLpmD22} of $L^\pm$ imply that the operators $L^1$, $L^2$ transform contravariantly under $O(2)$, and so do $\hat J^1$, $\hat J^2$ under $O(2) \subset SO(3)$ as stated in proposition \ref{propositionMadoreCoordinatesAreSO3ContravariantCovariant}, recalling that $O(2) \subset SO(3)$ leaves invariant the third coordinate. Since $L^1, L^2$ generate $\acal\Lambda$, the action of $O(2)$ on $\acal_\Lambda$ is completely determined by its action on $L^1$ and $L^2$; hence, that the mapping $L^k \mapsto \hat J^k$ is $O(2)$-covariant implies that $\tilde T$ is $O(2)$-equivariant, as desired.
 
+The last part of the theorem follows from the $O(2)$-equivariance of $\tilde T$, together with the $O(2)$-contravariant transformations of $\cut{x^1}, \cut{x^2}$, and of $\chi^1, \chi^2$.
+\end{proof}
+
+\lin
+
+Another $O(2)$-equivariant manifestation of the algebras $\acal_\Lambda$ can be achieved through $L^2(S^1)$:
+\begin{definition}
+For $\Lambda \in \NN$, let $\tilde\hcal_\Lambda \subset L^2(S^1)$ be the Hilbert space generated by the orthonormal set $\{e^{im\phi}\}_{|m|\leq \Lambda}$ with the inherited inner product, and let $\tilde \acal_\Lambda := End(\tilde \hcal_\Lambda)$. By abuse of notation, denote by $L$ and $x^\pm$ the restriction to $\tilde \hcal_\Lambda$ of the operators $L$ and $x^\pm$ on $L^2(S^1)$.
+\end{definition}
+
+Since $S^1 \subset \RR^2$, $O(2)$ acts naturally on each $\tilde \hcal_\Lambda$. Explicitly, 
+\begin{eqnsplit}\label{equationTransformationO2OfeimphiHarmonicsCircled1}
+    R_\theta \cdot e^{im\phi} &= e^{im(\phi - \theta)},\\
+    F\cdot e^{im\phi} = e^{-im\phi},
+\end{eqnsplit}
+where $R_\theta$ is the anticlockwise rotation by $\theta \in [0, 2\pi]$ on $\RR^2$, and $\cdot$ denotes the (right) action of $O(2)$ on $\tilde \hcal_\Lambda$. Now, recall that $\psi^m \in \hcal_\Lambda$ has the form $\psi^m(\rho, \phi) = \tilde f(\rho) e^{im\phi}$, therefore
+\begin{eqnsplit}\label{equationTransformationO2OfpsimhcalBasisD2}
+    R_\theta \cdot \psi^m(\rho, \phi) &= \psi^m(\rho, \phi - \theta),\\
+    F\cdot \psi^m(\rho, \phi) = \psi^m(\rho, -\phi),
+\end{eqnsplit}
+due to the fact that the radial coordinate is not affected by a $O(2)$ transformation, since, by definition, $O(2)$ doesn't change the metric in $\RR^2$. Thus, we can define the following alternative view of $\acal_\Lambda$:
+\begin{theorem}
+For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to \tilde \hcal_\Lambda$ be defined by $\psi^m \mapsto e^{im\phi}$, for $m \in \{-\Lambda, \dots, \Lambda\}$. $T$ induces an isomorphism between the $C^*$-algebra $\acal_\Lambda$ is isomorphic to $\tilde \acal_\Lambda$ in an $O(2)$-equivariant way
+\end{theorem}
+\begin{proof}
+The isomorphism $T: \hcal_\Lambda \to \tilde \hcal_\Lambda$ takes an orthonormal basis of $\hcal_\Lambda$ to an orthonormal basis of $\tilde \hcal_\Lambda$, hence, as seen in the proof of theorem \ref{theoremUso3ViewAlternativeAlgebraO2IsomorphismD2} this implies that the induced map on the algebras of endomorphisms in a $C^*$-algebra isomorphism.
+
+The $O(2)$-equivariance follows from the equivalence of the transformation laws of the basis of these Hilbert spaces, stated in equations \eqref{equationTransformationO2OfeimphiHarmonicsCircled1} and \eqref{equationTransformationO2OfpsimhcalBasisD2}.
+
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
