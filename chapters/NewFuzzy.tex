@@ -528,8 +528,8 @@ Finally, this expansion in $k$ of $V_0$ induces the following expansion of the e
 
 The final step to build the Hilbert space $\hcal_{\cut E}$ and $\acal_{\cut E}$ given a cutoff energy $\cut E \geq 0$, is to make sure that $k$ is steep enough to ensure that $E_{1, 0}$ is above $\cut E$, and this is expressed by the inequality
 \begin{align}\label{equationConditionCompatibilityCutoffEandK}
-    \cut E < E_{1, 0} \approx 2 \sqrt{2k} - 2.
-\end{align}\todo{perhaps the $o(1/\sqrt{k})$ term is negative?}
+    \cut E < E_{1, 0} \lesssim 2 \sqrt{2k} - 2.
+\end{align}\todo{perhaps the $O(1/\sqrt{k})$ term is negative?}
 In that case, renaming $\psi_{0, m}$ and $E_{0, m}$ as $\psi_m$ and $E_m$ for $m \in \ZZ$, we define the spaces
 \begin{eqnsplit} \label{equationDefinitionOFHandEHilbertAndAlgebraGivenCutoff}
     \hcal_{\cut E} &:= span\{ \psi_m(\rho, \phi) \,:\, E_m \leq \cut E \}\\
@@ -887,7 +887,20 @@ With the help of the software Mathematica, and having in mind the remark \ref{re
 \end{eqnsplit}\todo{In the last papers the $\pm$ ones include a factor of $\sqrt{2}$ in front, but I don't think it is important}
 \end{definition}
 
-The normalization constant $a$ is simply the factor that extracts the $m$ independent terms in the series expansion of the action of $\cut{x^\pm}$ on each $\psi_m$. $a$ rapidly converges to $1$ with increasing $k$, as shown in the graph \ref{}.
+The normalization constant $a$ is simply the factor that extracts the $m$ independent terms in the series expansion of the action of $\cut{x^\pm}$ on each $\psi_m$. $a$ rapidly converges to $1$ with increasing $k$, as shown in the graph \ref{fig:asolo}; graph \ref{fig:acomparados} shows the some approximate values of $a$ plotted besides the theoretical value of $a$.
+\begin{figure}
+    \centering
+    \includegraphics{images/a o DivFactor solo.jpg}
+    \caption{Caption}
+    \label{fig:asolo}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{images/a o DivFactor comparados.jpg}
+    \caption{Caption}
+    \label{fig:acomparados}
+\end{figure}
 
 \begin{proposition}\todo{the notation for $m$ is bad, but it is for me to remember that perhaps something should be said about how the powers of $m$ increase with the powers of $k$} Up to second order of powers in $\frac{1}{\sqrt{k}}$ in the coefficients the following relations hold:
 \begin{align}\label{equationActionChiD2WithoutOO}
