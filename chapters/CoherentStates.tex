@@ -15,6 +15,144 @@
 
 \lin
 
-
-
 }
+
+
+As previously mentioned in the introduction, coherent states of an algebraic space associated to a Hilbert space \todo{Asegurarme de hablar de la importancia de estados coherentes en la introduccion!} are concrete objects with defined properties that enable the application of these spaces. In this chapter we describe some families of coherent states on the new fuzzy circle $S^1_\Lambda$, and study their localization properties for both position and angular momentum. 
+
+Coherent states are vectors of the underlying Hilbert spaces, and so they induce states of the algebra. Our purpose will be to eventually study the distance between the family of states described in this document.
+
+Throughout this chapter let $\hcal_\Lambda$ and $\acal_\Lambda$ be defined as in definition \ref{definitionHLambdaALambdaD2} for some $\Lambda \in \NN$ and some appropriate function $k = k(\Lambda)$ satisfying the inequality \eqref{inequationInequalityNeededforKasFunctionLambdaD2}, where $\{\psi_m\}_{|m| \leq \Lambda}$ given in \eqref{equationDefinitionPsimD2BasisOfHCutE} are an orthonormal basis of $\hcal_\Lambda$ composed of eigenvalues of $\cut L \in \acal_\Lambda$. Additionally, let the observables $\cut L$ and $\chi^\pm \in \acal_\Lambda$ be defined as in section \ref{chNewFuzzySectionObservables}. 
+
+% \section{Localization}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Given vector $\psi \in \hcal_\Lambda$, we will use the following measure of the localization of the vector in configuration space:
+\begin{equation}
+    (\Delta \vec x)^2 = \sum_{i = 1}^D (\Delta x^i)^2 = \langle (\vec x - \langle \vec x \rangle)^2 \rangle = \langle \vec x^2 \rangle - \langle \vec x \rangle ^2,
+\end{equation}
+where the expectation value for any observable $A$ is
+\begin{equation}
+    \langle A \rangle = \langle \psi | A | \psi \rangle.
+\end{equation}
+
+Similarly, for localization on momentum space the measure will be:
+\begin{equation}
+    (\Delta \cut L)^2 = \langle (\cut L - \langle L \rangle )^2 \rangle = \langle L^2 \rangle - \langle L \rangle ^2.
+\end{equation};
+from now on we will denote $\cut L \in \acal_{\Lambda}$ simply by $L$.
+
+\section{Angular Momentum Saturating Coherent States}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The orthonormal basis $\{\psi_m\}_{|m| \leq \Lambda}$ is our first family of coherent states. 
+
+The group 
+\begin{equation}
+    G = \{S^n e^{i(aL + b)} \,:\, (a, b, n) \in \RR^2 \times \ZZ_{2\Lambda + 1}\} \cong U(1) \times U(1) \rtimes \ZZ_{2\Lambda + 1}
+\end{equation}
+where $S$ is the ladder operator defined in \ref{definitionLadderOperatorsHLambda}, with operation
+\begin{equation*}
+    S^n e^{i(aL+b)}\, S^{n'}e^{i(a'L+b')} = S^{n + n'} e^{i[(a+a')L + (b + b' + an')]},
+\end{equation*}
+acts unitarily, transitively and irreducibly on $\{\psi_m\}_{|m|\Lambda}$, and the isotropy subgroup $H$ of all $\psi_m$ under this group action is clearly
+\begin{equation}
+    H = \{e^{i(aL+b)} \,:\, (a, b) \in \RR^2 \} \cong [U(1)]^2.
+\end{equation}
+Hence 
+\begin{equation}
+    G/H = \{S^n \,:\, n \in \ZZ_{2\Lambda + 1}\} \cong \ZZ_{2\Lambda + 1},
+\end{equation}
+is the label space for the basis $\{\psi_m\}_{|m|\leq \Lambda}$. \todo{Do they maximize the isotropy subgroup? Is there an uncertainty relation, perhaps related to the Casimir (is this a Lie group? Semisimple?), that is minimized by this system of coherent states?}
+
+Additionally, the fact that they are a basis means that we have the resolution of the identity
+\begin{eqnsplit}\label{resolutionIdentityPsimHcalLambda}
+    1_{\hcal_\Lambda} &= \sum_{ m = -\Lambda}^\Lambda \tilde P_m \\
+    &= \int_{G/H} \tilde P_m \, d\mu(m),
+\end{eqnsplit}
+where $\mu$ is the counting measure on $G/H$, induced by the Haar measure on the Lie group $G$. Hence $\{\psi_m\}_{|m| \leq \Lambda}$ is a strong system of coherent states \ref{definitionSystemCoherentStates}.
+
+Now, let's study the localization of these vectors. Since each $\psi_m$ is an eigenvalue of $L$, $(L - \langle L\rangle ) \psi_m = 0$, hence 
+\begin{equation}
+    (\Delta L)^2 = 0.
+\end{equation}
+Similarly, $\langle \psi_m | \chi^i | \psi_m \rangle = 0$, i.e. $\langle \chi^i \rangle = 0$ for each $i = 1, 2$, and therefore $(\Delta \chi^i)^2 = \langle (\chi^i)^2 \rangle$, and so
+\begin{align}
+    (\Delta \chi^i)^2 &= \begin{cases} \frac{1}{2} \left( 1 + \frac{m^2}{k} \right) & \text{if } |m| \leq \Lambda\\
+    \frac{1}{4} \left[ 1 + \frac{\Lambda(\Lambda - 1)}{k} \right] & |m| \leq \Lambda \end{cases} &
+    (\Delta \vec \chi)^2 &= \begin{cases} \left( 1 + \frac{m^2}{k} \right) & \text{if } |m| \leq \Lambda\\
+    \frac{1}{2} \left[ 1 + \frac{\Lambda(\Lambda - 1)}{k} \right] & |m| \leq \Lambda \end{cases},
+\end{align}
+up to fourth order in powers of $1 / \sqrt{k}$.
+
+This system of coherent states can be characterized by a system of uncertainty relations. The commutation relations \eqref{equationOperatorFormulaCommutatorsChiD2} have as consequence the following uncertainty relations:
+\begin{align}\label{equationUncertaintyRelationsMomentumSpaceCharacterizeBasisPsimD2}
+    (\Delta L)^2 (\Delta \chi^i)^2 &\geq \frac{1}{4}\langle \chi^i \rangle ^2,& (\Delta L)^2 (\Delta \vec \chi)^2 &\geq \frac{1}{4} \langle \vec \chi \rangle ^2.
+\end{align}
+The fact that $\langle \chi^i \rangle = (\Delta L)^2 = 0$ means that the system $\{\psi_m\}$ saturates these inequalities. In fact, more is true, as proven in \cite{FioreCoherent2020}:
+
+\begin{proposition}
+The basis $\{\psi_m\}_{|m|\leq \Lambda}$ is a system of coherent states that minimize the uncertainty relation \eqref{equationUncertaintyRelationsMomentumSpaceCharacterizeBasisPsimD2}.
+\end{proposition}
+
+
+Family saturating $13_1$. IFF?\todo{}
+
+\section{$SO(2)$-invariant Families of Strong Coherent States}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let us now construct some families of strong coherent states by action of the compact group $SO(2)$ on each $\hcal_\Lambda$. Start with a unit vector $\omega = \sum_{m = -\Lambda}^\Lambda \omega_m \psi_m$. Acting on it with $e^{i \alpha L } \in  SO(2)$, for $\alpha \in [0, 2\pi)$
+produces the unit vector
+\begin{equation}
+    \omega_\alpha := e^{i \alpha L} \omega = \sum_{m = -\Lambda}^\Lambda e^{im\alpha} \omega_m \psi_m,
+\end{equation}
+and associated to this vector define the orthogonal projection
+$\tilde P_\alpha := | \omega_\alpha \rangle \langle \omega_\alpha|$. Define the operator $B \in \acal_{\Lambda}$ by $B := \int_0^{2\pi} d\alpha P_{\alpha}$, and notice that
+\begin{equation*}
+    B \psi_m = \int_{0}^{2\pi} d\alpha \, \omega_\alpha \overline{\omega_m} e^{-im\alpha} = \overline{\omega_m} \sum_{|n| \leq \Lambda} \omega_n \psi_n \int_0^{2\pi}d\alpha\, e^{i\alpha(n-m)} = 2 \pi |\omega_m|^2 \psi_m.
+\end{equation*}
+Hence, $B$ is proportional to the identity if and only if the norms $|\omega_m|$ are independent of $m$; since $\omega$ is unitary, this means that all $|\omega_m|^2$ have to be equal to $\frac{1}{2\Lambda + 1}$, and so
+\begin{equation*}
+    \omega_m = \frac{e^{i \beta_m}}{\sqrt{2\Lambda + 1}}
+\end{equation*}
+for some $\beta_m \in \RR/2\pi \ZZ$. 
+
+In summary, all unit vectors $\omega$ for which their orbit under the action of $SO(3)$ generate a strong system of coherent states are parametrized by tuples $\beta \in (\RR/2\pi\ZZ)^{2\Lambda + 1}$:
+\begin{equation}
+    \omega^\beta := \sum_{m = -\Lambda}^\Lambda \frac{e^{i \beta_m}}{\sqrt{2\Lambda + 1}} \psi_m,
+\end{equation}
+and the resulting system of coherent states
+\begin{align}
+    \mathcal S^\beta_\alpha &:= \{\omega_\alpha^\beta\}_{\alpha \in [0, 2\pi)}, & 
+    \omega^\beta_\alpha &= e^{i\alpha L} \omega^\beta = \sum_{m = -\Lambda}^\Lambda \frac{e^{i \beta_m + m \alpha}}{\sqrt{2\Lambda + 1}} \psi_m
+\end{align}
+induces the resolution of the identity
+\begin{align}
+    1_{\hcal_\Lambda} &= \frac{2\Lambda + 1}{2\pi} \int_0^{2\pi} d\alpha \, P^\beta_\alpha &
+    P_\alpha^\beta := |\omega^\beta_\alpha \rangle\langle \omega^\beta_\alpha|.
+\end{align}
+
+For the strong system of coherent states $\{\omega^\beta_\alpha\}_{\alpha \in \RR/2\pi\ZZ}$ to further be $O(2)$-invariant, recall from  \eqref{equationTransformationO2OfeimphiHarmonicsCircled1} that the action of the inversion $F$ with respect to the $x^1$-axis transforms $\psi_m$ into $\psi_{-m}$, hence we may choose
+\begin{align}\label{equationConditionBetasO2Invariant}
+    \beta_{-m} &= \beta_m & \text{for all } m \in \ZZ_{2\Lambda + 1}
+\end{align}
+to get an $O(2)$-invariant system of coherent states.
+
+With respect to the localization of the $SO(2)$-invariant coherent states first notice that $\langle L \rangle = 0$, and also that, since $x^+ = x^1 + i x^2$, $\langle x\rangle ^2 = |\langle x^+ \rangle|^2$, it can be shown that 
+\begin{equation*}
+    \langle x^+ \rangle = \frac{e^{-i\alpha}}{2\Lambda + 1} \sum_{m} e^{i( \beta_{m-1} - \beta_m)} \sqrt{1 + \frac{m(m-1)}{k}},
+\end{equation*} 
+and so it is shown in \cite{FioreCoherent2020} that:
+\begin{align}\label{equationLocalizationAllStrongSystemsCoherentD2}
+    (\Delta L)^2 &= \langle L^2 \rangle = \frac{\Lambda(\Lambda + 1)}{3},&
+    (\Delta \vec x)^2 = \frac{2 \Lambda}{2 \Lambda + 1} + \frac{2(\Lambda - 1)\Lambda (\Lambda + 1)}{3(2\Lambda + 1)k},
+\end{align}
+up to second order in $1/\sqrt{k}$. This means that $(\Delta \vec x)^2 = \langle x^2 \rangle - \langle x \rangle ^2$ is minimal when $\langle x \rangle ^2 = |\langle x^+ \rangle |^2$ is maximal, and this happens when all $\beta$ is constant; in that case it is shown in \cite{FioreCoherent2020} that
+\begin{equation}
+    (\Delta \vec x)^2 < \frac{1}{\Lambda + 1} \left( \frac{1}{2} + \frac{1}{3\Lambda} \right) \overset{\Lambda \geq 2}{\leq } \frac{2}{3(\Lambda + 1)}.
+\end{equation}
+
+Finally, notice that the unitary vectors $\omega^\beta_\alpha$ have no limit in $L^2(S^1)$ as $\Lambda \to \infty$ since their components with respect to the basis $\{\psi_m\}$ go to $0$; however, the vectors $\sqrt{2\Lambda + 1}\omega^0_\alpha$ have the limit $\delta_{\phi = \alpha}$ as a distribution, where these are vectors are multiples of the elements of a system of a $O(2)$-invariant system of coherent states that minimize, within this family, the spacial dispersion.
+
+\section{Coherent States Minimizing the Square Distance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

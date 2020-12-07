@@ -562,12 +562,13 @@ This means that the energies of the basis elements of $\hcal_\Lambda$ are all th
 \begin{equation}\label{inequationInequalityNeededforKasFunctionLambdaD2}
     k(\Lambda) \geq  \left( \frac{\Lambda^2 + 2}{8} \right)^2\leq \Lambda^2 (\Lambda + 1)^2.
 \end{equation}
-Although the value of $k(\Lambda)$ isn't relevant for the study of a single algebra $\acal_\Lambda$ within the fuzzy space, it does play an important role in the study of the convergence of this sequence of algebras to other algebras, namely to the commutative algebra of continuous functions $C(S^2)$ on $S^2$ and to the algebra of operators $\bcal(\hcal)$.
+Although the precise value of $k(\Lambda)$ isn't relevant for the study of a single algebra $\acal_\Lambda$, it plays an important role in the convergence of the sequence of algebras within a fuzzy sphere to the commutative algebra of continuous functions $C(S^2)$ on $S^2$.% and to the algebra of operators $\bcal(\hcal)$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Important Observables and their Commutation Relations}
+\label{chNewFuzzySectionObservables}
 
 % {
 %     \color{gray}
@@ -594,7 +595,7 @@ Although the value of $k(\Lambda)$ isn't relevant for the study of a single alge
      
 % }
 
-\linea
+% \linea
 
 % Grading of $\hcal$ and of $\bcal(\hcal)$ through the action of $L$. An element $A^h$ raises by $h$ the basis elements.
 
@@ -743,7 +744,7 @@ To prove the second statement, notice that any $A \in \acal^0_\Lambda$ satisfies
 which is a polynomial in $L$ of degree at most $2\Lambda$.
 \end{proof}
 
-\begin{definition}
+\begin{definition}\label{definitionLadderOperatorsHLambda}
 Let $S^\pm \in \acal_{\Lambda}$ be operators such that
 \begin{align}
     S^\pm \psi^m &= \psi^{m\pm 1}, & \text{for }m \in \{-\Lambda, \dots, \Lambda\} \subset \ZZ \text{ such that } |m \pm 1| \leq \Lambda;
@@ -1152,7 +1153,7 @@ where $R_\theta$ is the anticlockwise rotation by $\theta \in [0, 2\pi]$ on $\RR
     F\cdot \psi^m(\rho, \phi) = \psi^m(\rho, -\phi),
 \end{eqnsplit}
 due to the fact that the radial coordinate is not affected by a $O(2)$ transformation, since, by definition, $O(2)$ doesn't change the metric in $\RR^2$. Thus, we can define the following alternative view of $\acal_\Lambda$:
-\begin{theorem}
+\begin{theorem}\label{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2}
 For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to \tilde \hcal_\Lambda$ be defined by $\psi^m \mapsto e^{im\phi}$, for $m \in \{-\Lambda, \dots, \Lambda\}$. $T$ induces an isomorphism between the $C^*$-algebra $\acal_\Lambda$ is isomorphic to $\tilde \acal_\Lambda$ in an $O(2)$-equivariant way
 \end{theorem}
 \begin{proof}
@@ -1180,6 +1181,8 @@ The $O(2)$-equivariance follows from the equivalence of the transformation laws 
 }
 
 \linea
+
+$\cut L$ will be used to represent the angular momentum observable.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
