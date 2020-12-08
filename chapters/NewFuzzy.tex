@@ -2,17 +2,17 @@
     %--- Move some of this to the introduction, perhaps, or to the chapter on fuzzy spheres. However, I think all what is related to an energy cutoff might be better placed here.
     
     
-    Why does it make sense to have an energy cutoff? At least $2$ reasons:
+    % Why does it make sense to have an energy cutoff? At least $2$ reasons:
         
-            \begin{enumerate}
+    %         \begin{enumerate}
                 
-            \item Where neither we nor the environment can bring a state to higher energies. This gives an effective description of the system which is, in principle, sufficient for determining all physical predictions \& is \textbf{simpler to work with}: \cite{FioreTheCase2020} ``yield a simpler low-energy approximation $\cut {\mathcal T}$ of a well-defined quantum theory $\mathcal T$''
+    %         \item Where neither we nor the environment can bring a state to higher energies. This gives an effective description of the system which is, in principle, sufficient for determining all physical predictions \& is \textbf{simpler to work with}: \cite{FioreTheCase2020} ``yield a simpler low-energy approximation $\cut {\mathcal T}$ of a well-defined quantum theory $\mathcal T$''
             
-            \item We might add $\cut E$ as a point where higher energy physics is unknown. MINE: This means that the theory where no cutoff is introduced is not complete, and instead that we have to work with NC space to begin with to come up with a theory for energies above the cutoff.: \cite{FioreTheCase2020}``help in figuring out from the projected theory a new theory valid also at higher energies''
+    %         \item We might add $\cut E$ as a point where higher energy physics is unknown. MINE: This means that the theory where no cutoff is introduced is not complete, and instead that we have to work with NC space to begin with to come up with a theory for energies above the cutoff.: \cite{FioreTheCase2020}``help in figuring out from the projected theory a new theory valid also at higher energies''
             
-            \item \cite{FioreTheCase2020} Regularization procedure of a QFT theory: an energy cutoff $\cut E$ may allow to make sense of the theory if it is originally ill-defined due to UV divergences. More details in the intro of the paper: \cite{2020}``make sense of the original theory $\mathcal T$ if $\cut {\mathcal T}$ is well defined while $\mathcal T$ is not''
+    %         \item \cite{FioreTheCase2020} Regularization procedure of a QFT theory: an energy cutoff $\cut E$ may allow to make sense of the theory if it is originally ill-defined due to UV divergences. More details in the intro of the paper: \cite{2020}``make sense of the original theory $\mathcal T$ if $\cut {\mathcal T}$ is well defined while $\mathcal T$ is not''
                 
-            \end{enumerate}
+    %         \end{enumerate}
             
     % \cite{FioreTheCase2020}The following important observations may stem from the same energy cutoff procedure: introducing an energy cutoff $\cut E$ in a quantum theory on a commutative space(time) $M$, i.e. projecting the theory on the Hilbert subspace with energy below $\cut E$, directly induces a \rtext{noncommutative deformation of the latter [the Q. theory]} and \rtext{lower bounds for the space(time) locallyzability}. Moreover, adding a confining potential well $V$ with a very sharp minimum on a submanifold $N$ of $M$ may induce a dimensional \rtext{reduction to a noncommutative quantum theory on $N$} \rtext{\textbf{\Huge [Here the NC Quantum Theory is obtained from the energy cutoff, and that the resulting NC Theory is a NC approximation of Q. Theory on $N$ comes from the sharp potential; this last one is a \textit{dimensional reduction mechanism}!!}} ].
     %         \begin{enumerate}
@@ -27,115 +27,115 @@
     
     % \cite{FioreTheCase2020} First example of NC spacetime: Snyner in [6]: hope that \rtext{nontrivial commutation relations could cure ultraviolet divergences in QFT} But shortly after regularization introducing energy cutoff was introduced for QED, although not Poincare covariant.
     
-    \cite{FioreTheCase2020} Projecting a quantum theory onto the Hilbert subspace of states with energies below a cutoff $\cut E$ may\todo{why may? Do they simply refer to the possibility of this not being a general result?} \rtext{lead to an effective [quantum] theory with modified observables, including noncommutative space(time)}. 
+%     \cite{FioreTheCase2020} Projecting a quantum theory onto the Hilbert subspace of states with energies below a cutoff $\cut E$ may\todo{why may? Do they simply refer to the possibility of this not being a general result?} \rtext{lead to an effective [quantum] theory with modified observables, including noncommutative space(time)}. 
     
-        \begin{itemize}
+%         \begin{itemize}
             
-        \item Let $S$ be a quantum system with algebra of observables $\acal = \bcal(\hcal)/Lin(\hcal)$ of bounded operators (with dense domain) over the Hilbert space $\hcal$ and hamiltonian $H$. e.g. \lbtext{low-energy effective approximation} of the QM of a system: $\cut \hcal$ is spanned by eigenvectors of energies below a cutoff $\cut E$ e.g. (prototypical example) Peierls projection applied to the Landau model of a charged particle in a plane subject to a perpendicular magnetic field $B$; in that case, if $\cut E = E_0$ the ground state, then $[\cut x_1, \cut x_2] = \frac{i\hbar c}{ie B}$
+%         \item Let $S$ be a quantum system with algebra of observables $\acal = \bcal(\hcal)/Lin(\hcal)$ of bounded operators (with dense domain) over the Hilbert space $\hcal$ and hamiltonian $H$. e.g. \lbtext{low-energy effective approximation} of the QM of a system: $\cut \hcal$ is spanned by eigenvectors of energies below a cutoff $\cut E$ e.g. (prototypical example) Peierls projection applied to the Landau model of a charged particle in a plane subject to a perpendicular magnetic field $B$; in that case, if $\cut E = E_0$ the ground state, then $[\cut x_1, \cut x_2] = \frac{i\hbar c}{ie B}$
         
-        \item Associated to any finite dimensional $\cut \hcal \subset \hcal$, let its \emph{algebra of observables} be defined as $\lbtext{\cut \acal} := End(\cut \hcal)$. Let $\cut P$ be the projection $\cut P : \hcal = \cut \hcal \oplus \cut H^\perp \to \cut \hcal$.
+%         \item Associated to any finite dimensional $\cut \hcal \subset \hcal$, let its \emph{algebra of observables} be defined as $\lbtext{\cut \acal} := End(\cut \hcal)$. Let $\cut P$ be the projection $\cut P : \hcal = \cut \hcal \oplus \cut H^\perp \to \cut \hcal$.
         
-        \begin{proposition}
-        \hfill
-        \begin{itemize}
+%         \begin{proposition}
+%         \hfill
+%         \begin{itemize}
             
-            \item Let $\cut{\acal}'$ be the subset of $\acal$ for which, if $\psi \notin \cut \hcal$, then $\cut \acal' \psi = 0$ and such that $Im(\cut \acal') \subset \cut \hcal$. Then $\acal'$ is a C$^*$-algebra isomorphic to $\cut \acal$ through the mappint $': \cut \acal \to \cut \acal'$ that extends an element on $\cut \acal$ to be $0$ in the orthogonal complement of $\acal'$.
+%             \item Let $\cut{\acal}'$ be the subset of $\acal$ for which, if $\psi \notin \cut \hcal$, then $\cut \acal' \psi = 0$ and such that $Im(\cut \acal') \subset \cut \hcal$. Then $\acal'$ is a C$^*$-algebra isomorphic to $\cut \acal$ through the mappint $': \cut \acal \to \cut \acal'$ that extends an element on $\cut \acal$ to be $0$ in the orthogonal complement of $\acal'$.
             
-            \item Let $\overline{\quad}: \acal \to \cut \acal$, $A \mapsto \cut P A \cut P$. Then it is true that:
-            \begin{equation}
-                (\cut A \cut B)' = \cut A' \cut B',
-            \end{equation}
-            for all $A, B \in \acal$.
+%             \item Let $\overline{\quad}: \acal \to \cut \acal$, $A \mapsto \cut P A \cut P$. Then it is true that:
+%             \begin{equation}
+%                 (\cut A \cut B)' = \cut A' \cut B',
+%             \end{equation}
+%             for all $A, B \in \acal$.
             
-        \end{itemize}
-        \end{proposition}
-        \begin{notation}
-        This proposition allows us to think of $\cut \acal$ as $\cut \acal' \subset \acal$, and to operate elements $\cut A, \cut B \in \cut \acal$ that correspond to observables $A, B \in \acal$ using its corresponding elements in $\cut \acal' \subset \acal$. From now on we will ommit the $'$ notation and we will indistinctively let $\cut A$ be either an element of $\cut \acal$ and of $\cut \acal'$.
-        \end{notation}
+%         \end{itemize}
+%         \end{proposition}
+%         \begin{notation}
+%         This proposition allows us to think of $\cut \acal$ as $\cut \acal' \subset \acal$, and to operate elements $\cut A, \cut B \in \cut \acal$ that correspond to observables $A, B \in \acal$ using its corresponding elements in $\cut \acal' \subset \acal$. From now on we will ommit the $'$ notation and we will indistinctively let $\cut A$ be either an element of $\cut \acal$ and of $\cut \acal'$.
+%         \end{notation}
          
         
-        For the low energy effective theories, given an observable $A$, e.g. $A = x_1$ in the Landau model, \rtext{$\cut A$ will % measure the SAME PHYSICAL QUANTITY with an uncertantiy compatible with $E \cut E$} here we find the corresponding commutation relations between ``position observables'']\todo{Although I'm not convinced that $\cut x$ is a good alternative version of $x$ in the projected theory, since it involves the action of $x$ itself which involves the creation of high energy eigenstates (), and THEN projecting... but I believe there might be a better notion of position measurement, although I do think that $\cut x$ might be an approximation. D'Andrea \cite{DAndrea2014} might have something to say about this.}
-        be a first approximation of the corresponding observable}
+%         For the low energy effective theories, given an observable $A$, e.g. $A = x_1$ in the Landau model, \rtext{$\cut A$ will % measure the SAME PHYSICAL QUANTITY with an uncertantiy compatible with $E \cut E$} here we find the corresponding commutation relations between ``position observables'']\todo{Although I'm not convinced that $\cut x$ is a good alternative version of $x$ in the projected theory, since it involves the action of $x$ itself which involves the creation of high energy eigenstates (), and THEN projecting... but I believe there might be a better notion of position measurement, although I do think that $\cut x$ might be an approximation. D'Andrea \cite{DAndrea2014} might have something to say about this.}
+%         be a first approximation of the corresponding observable}
         
-        \item If $\cut \hcal$ is such that:
+%         \item If $\cut \hcal$ is such that:
         
-            \begin{enumerate}[(i)]
+%             \begin{enumerate}[(i)]
             
-            \item $\cut P H = H \cut P$
+%             \item $\cut P H = H \cut P$
             
-            \item $\cut A$ \todo{is this our case? This } contains all the observables corresponding to measurements that we can \textit{really} perform with the apparati at our disposal.
+%             \item $\cut A$ \todo{is this our case? This } contains all the observables corresponding to measurements that we can \textit{really} perform with the apparati at our disposal.
                 
-            \end{enumerate}
+%             \end{enumerate}
             
-        Then, if the initial state belongs to $\hcal$ / the density matrix belongs to $\cut \acal$ then neither the dynamical evolution (generated by $H$) nor any measurement (due to (ii)) can map it out of $\cut \hcal$, and so \rtext{we can describe the effective theory of $S$ based on $\cut \hcal$, $\cut \acal$ and $\cut H = H|_{\cut \hcal}$}.
+%         Then, if the initial state belongs to $\hcal$ / the density matrix belongs to $\cut \acal$ then neither the dynamical evolution (generated by $H$) nor any measurement (due to (ii)) can map it out of $\cut \hcal$, and so \rtext{we can describe the effective theory of $S$ based on $\cut \hcal$, $\cut \acal$ and $\cut H = H|_{\cut \hcal}$}.
         
-        \item If $\hcal$ and $H$ (under the induced adjoint action on operators, equivalent to saying that this operator commuts with the group action) are invariant under some group $G$,then so are $\cut P$, $\cut \acal$ (within $\acal$), $\cut H$.
+%         \item If $\hcal$ and $H$ (under the induced adjoint action on operators, equivalent to saying that this operator commuts with the group action) are invariant under some group $G$,then so are $\cut P$, $\cut \acal$ (within $\acal$), $\cut H$.
         
-        \rtext{Consequence}: if in the complete quantum theory of the system the coordinates $x_i$ commute (``commutative space''), this will not be in true, in general, for the effective theory: $[\cut x_i, \cut x_j] \neq 0$.
+%         \rtext{Consequence}: if in the complete quantum theory of the system the coordinates $x_i$ commute (``commutative space''), this will not be in true, in general, for the effective theory: $[\cut x_i, \cut x_j] \neq 0$.
         
-        \end{itemize}
+%         \end{itemize}
         
         
         
-    \cite{FioreTheCase2020} Adding a confining potential well $V$ with a very sharp minimum on a submanifold $N$ of the original space(time) $M$ may\todo{perhaps here the may refers to whether that is a correct interpretation of what is being done, since it might not be correct to say that we are doing $QM$ on $N$?} \rtext{induce a dimensional reduction to a \textbf{noncommutative quantum theory} on $N$} [the noncommutative quantum theory part, just as in the theory of Chakraborty and Scholtz, seems to mean that not only do the coordinates of phase space commute, but also that the space coordinates themselves do not commute.]
+%     \cite{FioreTheCase2020} Adding a confining potential well $V$ with a very sharp minimum on a submanifold $N$ of the original space(time) $M$ may\todo{perhaps here the may refers to whether that is a correct interpretation of what is being done, since it might not be correct to say that we are doing $QM$ on $N$?} \rtext{induce a dimensional reduction to a \textbf{noncommutative quantum theory} on $N$} [the noncommutative quantum theory part, just as in the theory of Chakraborty and Scholtz, seems to mean that not only do the coordinates of phase space commute, but also that the space coordinates themselves do not commute.]
     
     
     
     
-    \lin   
+%     \lin   
     
-    $O(D)$-equivariance/covariance?
+%     $O(D)$-equivariance/covariance?
     
-        \begin{itemize}
+%         \begin{itemize}
             
-        \item \rtext{My best guess:} $O(2)$ acts by diffeomorphisms on the NC space.
+%         \item \rtext{My best guess:} $O(2)$ acts by diffeomorphisms on the NC space.
             
-            \begin{itemize}
+%             \begin{itemize}
                 
-            \item The action of $G$ makes things fall again in $\mathcal H_{\cut E}$, since it even makes an eigenvalue of $H$ fall again into an eigenvalue of $H$ with the same energy.
-$\Rightarrow$ $O(2)$ acts on $\mathcal H_{\cut E}$ $\Rightarrow$ $O(2)$ acts on $\mathcal A_{\cut E}$ by inner automorphisms, i.e. \rtext{$O(2)$ acts by diffeomorphisms on the NC space}.    
-            \item The time evolution of a ``rotated'' vector is simply given at any time as the rotation of the evolution of the orignal vector. Alternatively, $H^g = H$, so the time evolution of the a rotated vector is given by the same Hamiltonian.
+%             \item The action of $G$ makes things fall again in $\mathcal H_{\cut E}$, since it even makes an eigenvalue of $H$ fall again into an eigenvalue of $H$ with the same energy.
+% $\Rightarrow$ $O(2)$ acts on $\mathcal H_{\cut E}$ $\Rightarrow$ $O(2)$ acts on $\mathcal A_{\cut E}$ by inner automorphisms, i.e. \rtext{$O(2)$ acts by diffeomorphisms on the NC space}.    
+%             \item The time evolution of a ``rotated'' vector is simply given at any time as the rotation of the evolution of the orignal vector. Alternatively, $H^g = H$, so the time evolution of the a rotated vector is given by the same Hamiltonian.
             
-            \item The two above things imply that the evolution of a vector in $\mathcal H_{\cut E}$ is given by the same $H$, and that \rtext{this evolution is invariant under $O(2)$}
+%             \item The two above things imply that the evolution of a vector in $\mathcal H_{\cut E}$ is given by the same $H$, and that \rtext{this evolution is invariant under $O(2)$}
             
                 
-            \end{itemize}
+%             \end{itemize}
             
-        %\item Why make so much emphasis on ``the commutation relations (satisfied by the algebra generators) are $G$-invariant?'' And what does it even mean? {\tiny It can't be simply that $[A, B]^g = [A^g, B^g]$ since that is trivial to see given that $g$ acts by inner isomorphisms, and so it wouldn't be necessary to say that this is true since the commutation relations and $H$ (and hence) $P_{\cut E}$ are so... \rtext{but I think that's what makes sense since it would mean that the generated algebra is ``the same''}. It can't mean that $[A, B]^g = [A, B]$, since not even for the generators $\cut{x^\pm}$ that is true, since under reflections $\cut L$ does change.        }  
+%         %\item Why make so much emphasis on ``the commutation relations (satisfied by the algebra generators) are $G$-invariant?'' And what does it even mean? {\tiny It can't be simply that $[A, B]^g = [A^g, B^g]$ since that is trivial to see given that $g$ acts by inner isomorphisms, and so it wouldn't be necessary to say that this is true since the commutation relations and $H$ (and hence) $P_{\cut E}$ are so... \rtext{but I think that's what makes sense since it would mean that the generated algebra is ``the same''}. It can't mean that $[A, B]^g = [A, B]$, since not even for the generators $\cut{x^\pm}$ that is true, since under reflections $\cut L$ does change.        }  
         
-        \item Fiore and Pisacane 2020: ``$O(D)$-covariance of the theory [$\mathcal T$ or $\cut{\mathcal T}$] means that for any orthogonal matrix $g \in O(D)$ there is a unitary transformation $U(g)$ of the [corresponding] Hilbert space $\hcal$ or $\cut \hcal$ such that $g^i_j v_j = U^\dagger(g) v_i U(g)$ for all vectors $\vec v$, and similary for other $O(D)$-tensors''. This, in the $D = 2$ case I have seen this to be satisfies for the $\vec{\cut x}$ observables, in which case it comes the commutation of the projection ($\rightarrow$ of $H$) with the $O(2)$-action.
+%         \item Fiore and Pisacane 2020: ``$O(D)$-covariance of the theory [$\mathcal T$ or $\cut{\mathcal T}$] means that for any orthogonal matrix $g \in O(D)$ there is a unitary transformation $U(g)$ of the [corresponding] Hilbert space $\hcal$ or $\cut \hcal$ such that $g^i_j v_j = U^\dagger(g) v_i U(g)$ for all vectors $\vec v$, and similary for other $O(D)$-tensors''. This, in the $D = 2$ case I have seen this to be satisfies for the $\vec{\cut x}$ observables, in which case it comes the commutation of the projection ($\rightarrow$ of $H$) with the $O(2)$-action.
         
-        \item For ``\lbtext{covariance}'': $G$ is a symmetry of the theory:
+%         \item For ``\lbtext{covariance}'': $G$ is a symmetry of the theory:
             
-            \begin{itemize}
+%             \begin{itemize}
                 
-            \item $[g\cdot , H] = 0$ implies \otext{$[g\cdot , P_{\cut E}] = 0$}
+%             \item $[g\cdot , H] = 0$ implies \otext{$[g\cdot , P_{\cut E}] = 0$}
             
-            \item That, in turn, implies that \otext{$\cut{A}^g = \cut{A^g}$}
+%             \item That, in turn, implies that \otext{$\cut{A}^g = \cut{A^g}$}
                 
-            \end{itemize}
+%             \end{itemize}
             
-        \end{itemize}
+%         \end{itemize}
     
     
-    \lin
+%     \lin
     
-    Results \cite{FioreTheCase2020}:
-        \begin{itemize}
+%     Results \cite{FioreTheCase2020}:
+%         \begin{itemize}
         
-        \item $\acal_\Lambda$ is a fuzzy approximation of the whole algebra of observables of the particle on $S^d$ (phase space algebra), and converges to the latter in the limit $\Lambda \to \infty$.
+%         \item $\acal_\Lambda$ is a fuzzy approximation of the whole algebra of observables of the particle on $S^d$ (phase space algebra), and converges to the latter in the limit $\Lambda \to \infty$.
         
-        \item $\{\mathcal C_\Lambda\}$ can be interpreted as the space of functions on fuzzy configuration space $S^2_\Lambda$; while Madore's $\{\acal_\Lambda\}$ should be interpreted only as the space (actually, the algebra) of functions on a \textit{fuzzy spin phase space $S^2_n$}
+%         \item $\{\mathcal C_\Lambda\}$ can be interpreted as the space of functions on fuzzy configuration space $S^2_\Lambda$; while Madore's $\{\acal_\Lambda\}$ should be interpreted only as the space (actually, the algebra) of functions on a \textit{fuzzy spin phase space $S^2_n$}
             
-        \end{itemize}
+%         \end{itemize}
     
 }
 
-\begin{definition}
+Fiore and Pisacane in \cite{Fiore2018} and \cite{Fiore2019} build new fuzzy spheres from the introduction of an energy cut-off to quantum mechanics on euclidean spaces in which there is a near-harmonic potential around the unit sphere $r = 1$. More precisely for a general dimension $D = d+1 \in \ZZ_{\geq 2}$, they first build a low energy effective theory for the quantum mechanics previously described given an arbitrary energy cutoff $\cut E \geq 0$. This procedure includes the study of operators that that might play the role of representing certain observables in these effective theories like position; the proposed vector of position operators have the characteristic of transforming covariantly under the group $O(D)$. 
 
-\end{definition}
+A sequence of such low-effective theories can be made with increasingly higher energy cutoffs, and in the cases $D = 2$ and $D = 3$ they show that, in some sense, these theories have as ``commutative limit'' the quantum mechanics of a free spin-less particle in $S^d$. Under some additional restrictions on how the steepness of the harmonic potential increases between the terms of the sequence, Fiore and Pisacane show that these sequence are a fuzzy space that approximate the spheres $S^d$.
 
-\linea
+In this chapter we follow their construction for the case $D = 2$, including the presentation of some alternative algebras that are $*$-isomorphic in an $O(2)$-equivariant way to the original construction.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -165,7 +165,6 @@ $\Rightarrow$ $O(2)$ acts on $\mathcal H_{\cut E}$ $\Rightarrow$ $O(2)$ acts on 
 \subsection{Construction of the Algebras}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\linea
 
 In dimension $D = d + 1 \in \ZZ_{\geq 2}$, let/the dynamics of a quantum spinless particle with wavefunction $\psi(\vec r) \in \hcal$, where $\hcal = L^2(\RR^D)$ is the Hilbert space of square integrable complex valued functions on $\RR^D$, be/is described by the Schr\"odinger equation:
 \begin{equation} \label{SchrodingerEquationFullGeneralD}
@@ -281,7 +280,6 @@ In particular, $\cut{x^i} \in \acal_{\cut E}$, $i, j = 1, \dots, D$ are candidat
     [\cut x^i, \cut x^j] \neq 0.
 \end{equation}
 
-\lin 
 
 \subsubsection{$O(D)$-Covariance}
 
@@ -414,9 +412,6 @@ On the elements of the fuzzy sphere $\acal_N$ indexed by even $N$, let $\hat x^i
  
  %and the group $O(3)$ acts naturally on $U(\sut) \cong U(\soth)$, and hence on $A_{2j} = \pi_j(U(\sut))$, and this action coincides with the expected action of $O(D) \ni g$ on coordinate functions: $g\, (x^1, \dots, x^D)^T = (g\cdot x^1 , \dots, g \cdot x^D)^T$, where $g \cdot x^i = \frac{1}{\sqrt{j(j+1)}}\pi_j(g J_i g^{-1})$. Similarly, we will see in \ref{} that this criteria will be satisfied for the new Fuzzy sphere with $d = 2$ if the operators chosen as position coordinates are $\chi^i = \frac{\sqrt{2}}{a} \cut x^i$ as defined in $\ref{}$.
 \end{proof}
-
-\lin 
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -661,9 +656,9 @@ L x^\pm &= x^\pm(L \pm 1) &  L \partial_\pm &= \partial_\pm (L \mp 1),
 \end{align}
 we see that
 \begin{align}\label{equationX+XPlusIncreasesDecreasesDegreeEigenvalueL}
-    x^\pm \psi^m &\in \hcal^{m \pm 1} & \partial_\pm \psi^{m} &\subset \hcal^{m \mp 1}, & \text{for any }\psi^m \in \hcal^m,
+    x^\pm \psi_m &\in \hcal^{m \pm 1} & \partial_\pm \psi^{m} &\subset \hcal^{m \mp 1}, & \text{for any }\psi_m \in \hcal^m,
 \end{align}
-when the applications of $x^\pm$ and $\partial_\pm$ can be made and the result falls into $\hcal$; this means that, for example, $x^\pm \psi^m$ is an eigenvector of $L$ for the eigenvalue $m \pm 1$, if $\psi^m$ is eivenvalue for $m \in \ZZ$.
+when the applications of $x^\pm$ and $\partial_\pm$ can be made and the result falls into $\hcal$; this means that, for example, $x^\pm \psi_m$ is an eigenvector of $L$ for the eigenvalue $m \pm 1$, if $\psi_m$ is eivenvalue for $m \in \ZZ$.
 
 
 
@@ -702,13 +697,13 @@ Applying the last item of proposition \ref{propositionGeneralResultsStatementsCu
 \begin{definition}\label{definitionGradingOperatorsD2Cut}
 Let $\acal^n_\Lambda$, for $n \in \{-2\Lambda, \dots, 2\Lambda\}$ be the subspace of $\acal_\Lambda$ for which, for any $A^n \in \acal^n_\Lambda$
 \begin{equation*}
-    A^n \psi^m \in 
+    A^n \psi_m \in 
     \begin{cases}
         A^{n+m},& \text{if } |n+m| \leq \Lambda\\
         0, & \text{otherwise}
     \end{cases},
 \end{equation*}
-where $m \in \{-\Lambda, \dots, \Lambda\}$ and $\psi^m \in \hcal^m$.
+where $m \in \{-\Lambda, \dots, \Lambda\}$ and $\psi_m \in \hcal^m$.
 \end{definition}
 
 We can see that an element $A \in \acal_\Lambda$ is in $\acal^n_\Lambda$ if and only if $[\cut L, A] = nA$, since this can be rewritten as $\cut L A = A(\cut L + n)$. In particular, 
@@ -747,16 +742,16 @@ which is a polynomial in $L$ of degree at most $2\Lambda$.
 \begin{definition}\label{definitionLadderOperatorsHLambda}
 Let $S^\pm \in \acal_{\Lambda}$ be operators such that
 \begin{align}
-    S^\pm \psi^m &= \psi^{m\pm 1}, & \text{for }m \in \{-\Lambda, \dots, \Lambda\} \subset \ZZ \text{ such that } |m \pm 1| \leq \Lambda;
+    S^\pm \psi_m &= \psi^{m\pm 1}, & \text{for }m \in \{-\Lambda, \dots, \Lambda\} \subset \ZZ \text{ such that } |m \pm 1| \leq \Lambda;
 \end{align}
-$S^+$ iscalled \emph{the raising operator on $\hcal_\Lambda$} with respect to the basis $\{\psi^m\}_{|m| \leq \Lambda}$,  $S^-$ is called \emph{the lowering operator}. Let $S^n \in \acal_\Lambda$, for $n \in \{-2\Lambda, \dots, 2\Lambda\} \subset \ZZ$ be
+$S^+$ iscalled \emph{the raising operator on $\hcal_\Lambda$} with respect to the basis $\{\psi_m\}_{|m| \leq \Lambda}$,  $S^-$ is called \emph{the lowering operator}. Let $S^n \in \acal_\Lambda$, for $n \in \{-2\Lambda, \dots, 2\Lambda\} \subset \ZZ$ be
 \begin{equation}
     S^n := \begin{cases}
     (S^+)^n & n \geq 0\\
     (S^-)^{-n} & n \leq 0;
     \end{cases}
 \end{equation}
-collectively, the operators $S^n$ are called \textit{the ladder operators on $\hcal_\Lambda$ with respect to the basis $\{\psi^m\}_{|m|\leq \Lambda}$}.
+collectively, the operators $S^n$ are called \textit{the ladder operators on $\hcal_\Lambda$ with respect to the basis $\{\psi_m\}_{|m|\leq \Lambda}$}.
 \end{definition}
 
 \begin{lemma}\label{lemmaLUDScalarAngularMomentumGenerateD2}
@@ -771,7 +766,7 @@ Let
     D^l, &   \text{if } -l \leq 0;
     \end{cases}
 \end{equation*}
-then $T^l \in \acal_N^l$ if $l \in \{-2\Lambda, \dots, 2\Lambda\}$. This operator works similarly to a ladder operator, but with some undesired coefficients appearing after its application. Concretely, the ladder operator with respect to the basis $\{\psi^m\}$ can be written as
+then $T^l \in \acal_N^l$ if $l \in \{-2\Lambda, \dots, 2\Lambda\}$. This operator works similarly to a ladder operator, but with some undesired coefficients appearing after its application. Concretely, the ladder operator with respect to the basis $\{\psi_m\}$ can be written as
 \begin{align}\label{equationFormulaGeneralLadderOperatorD2}
     S^l &= \sum_{m = -\Lambda}^\Lambda ST(l,m) T^l \tilde P_m, & \text{where }
     ST(l,m) =
@@ -969,25 +964,25 @@ Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_2$ and \eqref{equatio
 \section{Realization of $\acal_\Lambda$ through $U(\soth)$}
 
 {
-    \color{gray}
+    % \color{gray}
     
-    - $O(2)$ acts on $\hcal_\Lambda \subset L^2(\RR^2)$, and so \rtext{on $\acal_\Lambda$}, since $[H, O(2)\cdot ] = 0$. through the action induced in $\acal_\Lambda$ by its action on $\RR^2$. Furthermore, its action is the one expected on position coordinates:
-        \begin{itemize}
+    % - $O(2)$ acts on $\hcal_\Lambda \subset L^2(\RR^2)$, and so \rtext{on $\acal_\Lambda$}, since $[H, O(2)\cdot ] = 0$. through the action induced in $\acal_\Lambda$ by its action on $\RR^2$. Furthermore, its action is the one expected on position coordinates:
+    %     \begin{itemize}
             
-        \item \textit{Rotation} $R_\theta$: $\cut{x^\pm} \mapsto e^{\pm i \theta} \cut{x ^\pm}; \cut L \mapsto \cut L \in \acal_\Lambda$.
+    %     \item \textit{Rotation} $R_\theta$: $\cut{x^\pm} \mapsto e^{\pm i \theta} \cut{x ^\pm}; \cut L \mapsto \cut L \in \acal_\Lambda$.
         
-        \item \textit{Reflection}: $\cut{x^\pm} \mapsto -\cut{x^\mp}; \cut L \mapsto -\cut L$.
+    %     \item \textit{Reflection}: $\cut{x^\pm} \mapsto -\cut{x^\mp}; \cut L \mapsto -\cut L$.
         
-        \end{itemize}
+    %     \end{itemize}
     
-    - \rtext{We can consider \otext{$\acal_\Lambda \cong  M_N(\CC) = \pi_\Lambda(Uso(3))$} \textbf{as a $*$-algebra and representations of $O(2)$}}, where $\pi_\Lambda$ is the $\lbtext{N} := 2 \Lambda + 1$ dimensional representation. $SU(N) \ni g$ is the group of $*$-automorphisms of $M_N(\CC) \cong \acal_\Lambda$ acting by $a \mapsto g a g^{-1}$; $O(2)$ is then a subgroup. Comes from mapping:
-    \begin{align}
-        \rtext{\cut{x^\pm}} &\longleftrightarrow \rtext{f_\pm (J^0) J^\pm}, &
-        \rtext{\cut L }& \rtext{\longleftrightarrow J^0}
-    \end{align}
-    where $J^\pm, J^0$ is the Weyl-Cartan basis of $so(3)$, $\lbtext{f_\pm(s)} := \frac{1}{\sqrt{2}} \sqrt{\frac{1 + s(s-1)/k}{\Lambda (\Lambda + 1) - s(s-1)}} =: \lbtext{f_-(-s)}$%: $[J^+, J^-] = J^0; [J^\pm, J^0] = \pm J^\pm$
+    % - \rtext{We can consider \otext{$\acal_\Lambda \cong  M_N(\CC) = \pi_\Lambda(Uso(3))$} \textbf{as a $*$-algebra and representations of $O(2)$}}, where $\pi_\Lambda$ is the $\lbtext{N} := 2 \Lambda + 1$ dimensional representation. $SU(N) \ni g$ is the group of $*$-automorphisms of $M_N(\CC) \cong \acal_\Lambda$ acting by $a \mapsto g a g^{-1}$; $O(2)$ is then a subgroup. Comes from mapping:
+    % \begin{align}
+    %     \rtext{\cut{x^\pm}} &\longleftrightarrow \rtext{f_\pm (J^0) J^\pm}, &
+    %     \rtext{\cut L }& \rtext{\longleftrightarrow J^0}
+    % \end{align}
+    % where $J^\pm, J^0$ is the Weyl-Cartan basis of $so(3)$, $\lbtext{f_\pm(s)} := \frac{1}{\sqrt{2}} \sqrt{\frac{1 + s(s-1)/k}{\Lambda (\Lambda + 1) - s(s-1)}} =: \lbtext{f_-(-s)}$%: $[J^+, J^-] = J^0; [J^\pm, J^0] = \pm J^\pm$
 
-    - $O(2) \subset SO(3)$: \textit{Rotation}: $\pi_\Lambda(e^{i \theta J_0})$; \textit{Refl.}: $\pi_\Lambda(e^{i\pi (J^+ + J^-)/\sqrt{2}})$
+    % - $O(2) \subset SO(3)$: \textit{Rotation}: $\pi_\Lambda(e^{i \theta J_0})$; \textit{Refl.}: $\pi_\Lambda(e^{i\pi (J^+ + J^-)/\sqrt{2}})$
     
     \lin 
     
@@ -1013,17 +1008,17 @@ Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_2$ and \eqref{equatio
 Throughout this section let $\Lambda \in \NN$ and let $\acal_\Lambda$ and $\hcal_\Lambda$ be defined as in definition \ref{definitionHLambdaALambdaD2}.
 
 \begin{lemma}\label{lemmaExistsPolynomialInLTakingSameGradeToItD2}
-Let $A_1, A_2$ be elements of $\acal_\Lambda^n$, and suppose that $A_1 \psi^m = 0$ implies that $A_2\psi^m = 0$ for $m \in \{-\Lambda, \dots, \Lambda\}$.
-Then there is a polynomial $f(\cut L)$ in $\cut L$ such that $A_2 = f(\cut L) A_1$. Furthermore, if $f'$ is another polynomial such that $f'(\cut L)\psi^m = f(\cut L)\psi^m$ whenever $A_1 \psi^m \neq 0$, then it is also satisfied that $A_2 = f'(\cut L) A_1$.
+Let $A_1, A_2$ be elements of $\acal_\Lambda^n$, and suppose that $A_1 \psi_m = 0$ implies that $A_2\psi_m = 0$ for $m \in \{-\Lambda, \dots, \Lambda\}$.
+Then there is a polynomial $f(\cut L)$ in $\cut L$ such that $A_2 = f(\cut L) A_1$. Furthermore, if $f'$ is another polynomial such that $f'(\cut L)\psi_m = f(\cut L)\psi_m$ whenever $A_1 \psi_m \neq 0$, then it is also satisfied that $A_2 = f'(\cut L) A_1$.
 \end{lemma}
 \begin{proof}
-Let $g_1, g_2$ be functions on $m \in \{-\Lambda, \dots, \Lambda\}\subset \ZZ$ such that $A_i = \sum_{m: \, |m+n| \leq \Lambda} g_i(m) S^{n-m} \tilde P_m$, where $S^{\pm 1}$ are ladder operators; notice that $g_i(m)$ is arbitrary when $A_i \psi^m = 0$, in particular on $m$ such that $|m+n| > \Lambda$, so we may choose the $g_i$ nowhere $0$. Define $f(m) = \frac{g_2(m-n)}{g_1(m-n)}$ if $|m+n| \leq \Lambda$, and choose it arbitrarily for the the remaining $m \in \{-\Lambda, \dots, \Lambda\}$. Thus, any polynomial $f(\cut L) := \sum_{m} f(m) \tilde P_m$ defined with such a function $f$ on $\{-\Lambda, \dots, \Lambda\}$ makes the equation $A_2 = f(\cut L) A_1$ be satisfied.
+Let $g_1, g_2$ be functions on $m \in \{-\Lambda, \dots, \Lambda\}\subset \ZZ$ such that $A_i = \sum_{m: \, |m+n| \leq \Lambda} g_i(m) S^{n-m} \tilde P_m$, where $S^{\pm 1}$ are ladder operators; notice that $g_i(m)$ is arbitrary when $A_i \psi_m = 0$, in particular on $m$ such that $|m+n| > \Lambda$, so we may choose the $g_i$ nowhere $0$. Define $f(m) = \frac{g_2(m-n)}{g_1(m-n)}$ if $|m+n| \leq \Lambda$, and choose it arbitrarily for the the remaining $m \in \{-\Lambda, \dots, \Lambda\}$. Thus, any polynomial $f(\cut L) := \sum_{m} f(m) \tilde P_m$ defined with such a function $f$ on $\{-\Lambda, \dots, \Lambda\}$ makes the equation $A_2 = f(\cut L) A_1$ be satisfied.
 \end{proof}
 
 \begin{proposition}\label{propositionThereAreFunctionsfpmD2}
 Let $L^\pm \in \acal_{\Lambda}$ be defined by
 \begin{align}
-    L^\pm \psi^m &:= \sqrt{\Lambda(\Lambda + 1) - m(m \pm 1)}& \text{for all }m \in \{-\Lambda, \dots, \Lambda\}\subset \ZZ.
+    L^\pm \psi_m &:= \sqrt{\Lambda(\Lambda + 1) - m(m \pm 1)}& \text{for all }m \in \{-\Lambda, \dots, \Lambda\}\subset \ZZ.
 \end{align}
 Then, $L^\pm$ generate $\acal_\Lambda$ and there are polynomials $f^x_\pm(L)$, $f^\chi_\pm$, $f_\pm$ in $\cut L$ such that
 \begin{align}
@@ -1032,9 +1027,9 @@ Then, $L^\pm$ generate $\acal_\Lambda$ and there are polynomials $f^x_\pm(L)$, $
 \end{align}
 any such polynomials have the property that, for $|m \pm 1| \leq \Lambda$, the functions
 \begin{align}\label{equationApproximatedfPolynomialLForVanillaX}
-    f^x_\pm(m) &:= f^x_\pm(L)\psi^m = \frac{1 + \frac{9\sqrt{2}}{8}\frac{1}{\sqrt{k}} + \frac{137 \pm 32(m \mp 1) + 32(m \mp 1)^2}{64}\frac{1}{k}}{\sqrt{\Lambda(\Lambda+1) - m(m \mp 1)}}\\
+    f^x_\pm(m) &:= f^x_\pm(L)\psi_m = \frac{1 + \frac{9\sqrt{2}}{8}\frac{1}{\sqrt{k}} + \frac{137 \pm 32(m \mp 1) + 32(m \mp 1)^2}{64}\frac{1}{k}}{\sqrt{\Lambda(\Lambda+1) - m(m \mp 1)}}\\
     \label{equationApproximatedfPolynomialLForChiWithoutOOs}
-    f^\chi_\pm(m)&:= f^\chi_\pm(L)\psi^m = \sqrt{\frac{1 + \frac{m(m\mp 1)}{k}}{\Lambda(\Lambda+1) - m(m \mp 1)}}
+    f^\chi_\pm(m)&:= f^\chi_\pm(L)\psi_m = \sqrt{\frac{1 + \frac{m(m\mp 1)}{k}}{\Lambda(\Lambda+1) - m(m \mp 1)}}
 \end{align}
 satisfy the equalities above up to second order in powers of $\frac{1}{\sqrt{k}}$. 
 
@@ -1043,7 +1038,7 @@ Similarly, if equations \eqref{equationActionChiD2WithoutOO} are used exactly to
 \begin{proof}
 That $L^\pm$ are generators of $\acal_\Lambda$ is a direct combination of lemmas \ref{lemmaLUDScalarAngularMomentumGenerateD2} and \ref{lemmaLIsPolynomialOfUpDownLaddersD2}.
 
-The rest of the statement is a corollary of lemma \ref{lemmaExistsPolynomialInLTakingSameGradeToItD2}, where the polynomial $f^x_\pm(\cut L)  \equiv \sum_m f^x(m) \tilde P_m$ in $\cut L$ are defined by the fact, $\cut{x^\pm} \psi^m = f^x_\pm(m) L^\pm \psi^m$ on those $m$ such that $|m \pm 1| \leq \Lambda$; there is no restriction on what $f^x_\pm(\pm \Lambda)$ should be, since the evaluation of the polynomial isn't ever done on $\psi^{\pm \Lambda}$. The same reasoning applies to $f^\chi_\pm$.
+The rest of the statement is a corollary of lemma \ref{lemmaExistsPolynomialInLTakingSameGradeToItD2}, where the polynomial $f^x_\pm(\cut L)  \equiv \sum_m f^x(m) \tilde P_m$ in $\cut L$ are defined by the fact, $\cut{x^\pm} \psi_m = f^x_\pm(m) L^\pm \psi_m$ on those $m$ such that $|m \pm 1| \leq \Lambda$; there is no restriction on what $f^x_\pm(\pm \Lambda)$ should be, since the evaluation of the polynomial isn't ever done on $\psi^{\pm \Lambda}$. The same reasoning applies to $f^\chi_\pm$.
 \end{proof}
 
 \lin 
@@ -1098,7 +1093,7 @@ Now, notice that since $\chi^i = \frac{\cut{x^i}}{a(k)}$, then $\chi^\pm$ has th
     (\chi^\pm)^F &= \chi^\mp.
 \end{eqnsplit}
 
-Similarly, the operators $L^\pm$ defined in proposition \ref{propositionThereAreFunctionsfpmD2} also have a contravariant transformation law under $O(2)$. To see this, first notice that we may write $L^\pm =  (f^\chi_\pm)^{-1}(\cut L) x^\pm$, where $(f^\chi_\pm)^{-1}(\cut L)$ is the polynomial such that $(f^\chi_\pm)^{-1}(m) := (f^\chi_\pm)^{-1}(\cut L)\psi^m = \frac{1}{f^\chi_\pm(m)}$. Also notice that $\pi'(g) (f^\chi_\pm)^{-1}(\cut L) \pi'(g)^* = (f^\chi_\pm)^{-1}(\pi'(g)\cut L \pi'(g)^*)$ for all $g \in O(2)$, so $\pi'(R_\theta) (f^\chi_\pm)^{-1}(\cut L) \pi'(R_\theta)^* = (f^\chi_\pm)^{-1}(\cut L)$ and 
+Similarly, the operators $L^\pm$ defined in proposition \ref{propositionThereAreFunctionsfpmD2} also have a contravariant transformation law under $O(2)$. To see this, first notice that we may write $L^\pm =  (f^\chi_\pm)^{-1}(\cut L) x^\pm$, where $(f^\chi_\pm)^{-1}(\cut L)$ is the polynomial such that $(f^\chi_\pm)^{-1}(m) := (f^\chi_\pm)^{-1}(\cut L)\psi_m = \frac{1}{f^\chi_\pm(m)}$. Also notice that $\pi'(g) (f^\chi_\pm)^{-1}(\cut L) \pi'(g)^* = (f^\chi_\pm)^{-1}(\pi'(g)\cut L \pi'(g)^*)$ for all $g \in O(2)$, so $\pi'(R_\theta) (f^\chi_\pm)^{-1}(\cut L) \pi'(R_\theta)^* = (f^\chi_\pm)^{-1}(\cut L)$ and 
 $\pi'(F) (f^\chi_\pm)^{-1}(\cut L) \pi'(F)^* = (f^\chi_\pm)^{-1}(-\cut L) = (f^\chi_\mp)^{-1}(\cut L)$, where the last equation follows from the fact that, as polynomials in $\cut L$, $\tilde P_m(-\cut L) = \tilde P_{\cut L}(\cut L)$ and from the equation $f^\chi_\pm(-m) = f^\chi_\mp(m)$. Thus,
 \begin{eqnsplit}\label{equationTransformationLawLpmD21}
     \pi'(R_\theta) L^\pm \pi'(R_\theta)^* &= \pi(R_\theta)(f^\chi_\pm)^{-1}(\cut L)\pi(R_\theta)^* \pi'(R_\theta) \chi^\pm \pi'(R_\theta)^*\\
@@ -1120,16 +1115,16 @@ Since $V_\Lambda$ is a representation space of $SO(3)$, by identifying $O(2)$ as
 \begin{align*}
     O(2) && \hookrightarrow && SO(3)\\
     R_\theta && \mapsto && \begin{pmatrix} R_\theta & 0 \\ 0 & 1 \end{pmatrix} = e^{i\theta \hat J^3}\\
-    F && e^{i\pi \hat J^1};
+    F && \mapsto && e^{i\pi \hat J^1};
 \end{align*}
 we can see that the subgroup of $SO(3)$ generated by the elements of the form $e^{i\theta \hat J^3}$ and $e^{i\pi \hat J^3}$ is isomorphic to $O(2)$, by realizing that it acts on the plane $x^1-x^2$ in $\RR^3$ precisely as $O(2)$ acts on $\RR^2$.
 
 \begin{theorem}\label{theoremUso3ViewAlternativeAlgebraO2IsomorphismD2}
-For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to V_\Lambda$ be the isomorphism of the Hilbert spaces $\hcal_\Lambda \subset L^2(\RR^2)$ and $V_\Lambda \equiv \CC^{2\Lambda + 1}$ generated by the mapping $\psi^m \mapsto |\Lambda, m\rangle$, $m \in \{-\Lambda, \dots, \Lambda\}$. Then, $T$ induces an isomorphism $\tilde T$ of the $C^*$-algebra $\acal_\Lambda = End(\hcal_)$, with the operator norm, is a $C^*$-algebra isomorphic to $\hat \pi_\Lambda(U(\soth)) = End(V_\Lambda)$ with the operator norm, and this isomorphism is $O(2)$-equivariant. Furthermore, the tuples of operators $(\tilde T(\cut{x^1}), \tilde T(\cut{x^2}))$ and $(\tilde T(\chi^1), \tilde T(\chi^2))$ transform $O(2)$-contravariantly.\todo{SO far I have used this contravariant transformation thing applied to not just position operators, but vectors of operators, so I should amplify the definition}
+For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to V_\Lambda$ be the isomorphism of the Hilbert spaces $\hcal_\Lambda \subset L^2(\RR^2)$ and $V_\Lambda \equiv \CC^{2\Lambda + 1}$ generated by the mapping $\psi_m \mapsto |\Lambda, m\rangle$, $m \in \{-\Lambda, \dots, \Lambda\}$. Then, $T$ induces an isomorphism $\tilde T$ of the $C^*$-algebra $\acal_\Lambda = End(\hcal_)$, with the operator norm, is a $C^*$-algebra isomorphic to $\hat \pi_\Lambda(U(\soth)) = End(V_\Lambda)$ with the operator norm, and this isomorphism is $O(2)$-equivariant. Furthermore, the tuples of operators $(\tilde T(\cut{x^1}), \tilde T(\cut{x^2}))$ and $(\tilde T(\chi^1), \tilde T(\chi^2))$ transform $O(2)$-contravariantly.\todo{SO far I have used this contravariant transformation thing applied to not just position operators, but vectors of operators, so I should amplify the definition}
 \end{theorem}
 \begin{proof}
-First notice that $T: \hcal_\Lambda \to V_\Lambda$ is an isomorphism of Hilbert spaces since $\{\psi^m\}_{|m| \leq \Lambda} \subset \hcal_\Lambda$ and $\{|\Lambda, m\rangle\}_{|m| \leq \Lambda}$ are orthonormal basis of their respective space. The invertible mapping $\tilde T: \acal_\Lambda \to End(V_\Lambda)$ is defined as $A \mapsto T \circ A \circ T^{-1}$, and it clearly respects the algebra operations, i.e. it is an algebra isomorphism. This mapping is such that $\langle 
-\psi^m | A | \psi^n \rangle = \langle \Lambda, m | \tilde T(A) | \Lambda, n\rangle$, for all $n, m \in \{-\Lambda, \dots, \Lambda\}$, and so $\tilde T$ respects adjoints, i.e. it is a $*$-isomorphism. Since $V_\Lambda \neq \{0\}$, for any $A \in \acal_\Lambda$:
+First notice that $T: \hcal_\Lambda \to V_\Lambda$ is an isomorphism of Hilbert spaces since $\{\psi_m\}_{|m| \leq \Lambda} \subset \hcal_\Lambda$ and $\{|\Lambda, m\rangle\}_{|m| \leq \Lambda}$ are orthonormal basis of their respective space. The invertible mapping $\tilde T: \acal_\Lambda \to End(V_\Lambda)$ is defined as $A \mapsto T \circ A \circ T^{-1}$, and it clearly respects the algebra operations, i.e. it is an algebra isomorphism. This mapping is such that $\langle 
+\psi_m | A | \psi^n \rangle = \langle \Lambda, m | \tilde T(A) | \Lambda, n\rangle$, for all $n, m \in \{-\Lambda, \dots, \Lambda\}$, and so $\tilde T$ respects adjoints, i.e. it is a $*$-isomorphism. Since $V_\Lambda \neq \{0\}$, for any $A \in \acal_\Lambda$:
 \begin{align*}
     ||\tilde T (A)|| &= \sup_{v \in V_\Lambda} \{||\tilde T(A)(v)||\,:\, ||v|| = 1\} \\
     &= \sup_{\psi \in \hcal_\Lambda} \{||\tilde T(A)(T(\psi))||\,:\, ||T(\psi)|| = 1\} \\
@@ -1143,7 +1138,7 @@ We now prove the $O(2)$-equivariance of $\tilde T$. Notice that
 \begin{equation}
     \tilde T(L^\pm) = \hat J^\pm,
 \end{equation}
-where $\hat J^\pm = \hat J^1 \pm i \hat J^2$, and $L^\pm$ are the algebra generators defined in proposition \ref{propositionThereAreFunctionsfpmD2}; this follows from the equation $\langle \Lambda, n| \hat J^\pm |\Lambda, m = \delta_{n, m \pm 1} \sqrt{\Lambda(\Lambda + 1) - m(m \pm 1)} = \langle \psi^n | L^\pm | \psi^m \rangle$, for all $n, m \in \{-\Lambda, \dots, \Lambda\}$. Define the operators $L^1 = \frac{1}{2}(L^+ + L^-)$ and $L^2 = \frac{1}{2i}(L^+ - L^-)$; they satisfy that $\tilde T(L^k) = \hat J^k$, for $k = 1, 2$, and since $L^\pm$ generates $\acal_\Lambda$, then $L^1, L^2$ also generate it. Finally, the transformation laws \eqref{equationTransformationLawLpmD21, equationTransformationLawLpmD22} of $L^\pm$ imply that the operators $L^1$, $L^2$ transform contravariantly under $O(2)$, and so do $\hat J^1$, $\hat J^2$ under $O(2) \subset SO(3)$ as stated in proposition \ref{propositionMadoreCoordinatesAreSO3ContravariantCovariant}, recalling that $O(2) \subset SO(3)$ leaves invariant the third coordinate. Since $L^1, L^2$ generate $\acal\Lambda$, the action of $O(2)$ on $\acal_\Lambda$ is completely determined by its action on $L^1$ and $L^2$; hence, that the mapping $L^k \mapsto \hat J^k$ is $O(2)$-covariant implies that $\tilde T$ is $O(2)$-equivariant, as desired.
+where $\hat J^\pm = \hat J^1 \pm i \hat J^2$, and $L^\pm$ are the algebra generators defined in proposition \ref{propositionThereAreFunctionsfpmD2}; this follows from the equation $\langle \Lambda, n| \hat J^\pm |\Lambda, m = \delta_{n, m \pm 1} \sqrt{\Lambda(\Lambda + 1) - m(m \pm 1)} = \langle \psi^n | L^\pm | \psi_m \rangle$, for all $n, m \in \{-\Lambda, \dots, \Lambda\}$. Define the operators $L^1 = \frac{1}{2}(L^+ + L^-)$ and $L^2 = \frac{1}{2i}(L^+ - L^-)$; they satisfy that $\tilde T(L^k) = \hat J^k$, for $k = 1, 2$, and since $L^\pm$ generates $\acal_\Lambda$, then $L^1, L^2$ also generate it. Finally, the transformation laws \eqref{equationTransformationLawLpmD21, equationTransformationLawLpmD22} of $L^\pm$ imply that the operators $L^1$, $L^2$ transform contravariantly under $O(2)$, and so do $\hat J^1$, $\hat J^2$ under $O(2) \subset SO(3)$ as stated in proposition \ref{propositionMadoreCoordinatesAreSO3ContravariantCovariant}, recalling that $O(2) \subset SO(3)$ leaves invariant the third coordinate. Since $L^1, L^2$ generate $\acal\Lambda$, the action of $O(2)$ on $\acal_\Lambda$ is completely determined by its action on $L^1$ and $L^2$; hence, that the mapping $L^k \mapsto \hat J^k$ is $O(2)$-covariant implies that $\tilde T$ is $O(2)$-equivariant, as desired.
 
 The last part of the theorem follows from the $O(2)$-equivariance of $\tilde T$, together with the $O(2)$-contravariant transformations of $\cut{x^1}, \cut{x^2}$, and of $\chi^1, \chi^2$.
 \end{proof}
@@ -1160,14 +1155,14 @@ Since $S^1 \subset \RR^2$, $O(2)$ acts naturally on each $\tilde \hcal_\Lambda$.
     R_\theta \cdot e^{im\phi} &= e^{im(\phi - \theta)},\\
     F\cdot e^{im\phi} = e^{-im\phi},
 \end{eqnsplit}
-where $R_\theta$ is the anticlockwise rotation by $\theta \in [0, 2\pi]$ on $\RR^2$, and $\cdot$ denotes the (right) action of $O(2)$ on $\tilde \hcal_\Lambda$. Now, recall that $\psi^m \in \hcal_\Lambda$ has the form $\psi^m(\rho, \phi) = \tilde f(\rho) e^{im\phi}$, therefore
+where $R_\theta$ is the anticlockwise rotation by $\theta \in [0, 2\pi]$ on $\RR^2$, and $\cdot$ denotes the (right) action of $O(2)$ on $\tilde \hcal_\Lambda$. Now, recall that $\psi_m \in \hcal_\Lambda$ has the form $\psi_m(\rho, \phi) = \tilde f(\rho) e^{im\phi}$, therefore
 \begin{eqnsplit}\label{equationTransformationO2OfpsimhcalBasisD2}
-    R_\theta \cdot \psi^m(\rho, \phi) &= \psi^m(\rho, \phi - \theta),\\
-    F\cdot \psi^m(\rho, \phi) = \psi^m(\rho, -\phi),
+    R_\theta \cdot \psi_m(\rho, \phi) &= \psi_m(\rho, \phi - \theta),\\
+    F\cdot \psi_m(\rho, \phi) = \psi_m(\rho, -\phi),
 \end{eqnsplit}
 due to the fact that the radial coordinate is not affected by a $O(2)$ transformation, since, by definition, $O(2)$ doesn't change the metric in $\RR^2$. Thus, we can define the following alternative view of $\acal_\Lambda$:
 \begin{theorem}\label{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2}
-For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to \tilde \hcal_\Lambda$ be defined by $\psi^m \mapsto e^{im\phi}$, for $m \in \{-\Lambda, \dots, \Lambda\}$. $T$ induces an isomorphism between the $C^*$-algebra $\acal_\Lambda$ is isomorphic to $\tilde \acal_\Lambda$ in an $O(2)$-equivariant way
+For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to \tilde \hcal_\Lambda$ be defined by $\psi_m \mapsto e^{im\phi}$, for $m \in \{-\Lambda, \dots, \Lambda\}$. $T$ induces an isomorphism between the $C^*$-algebra $\acal_\Lambda$ is isomorphic to $\tilde \acal_\Lambda$ in an $O(2)$-equivariant way
 \end{theorem}
 \begin{proof}
 The isomorphism $T: \hcal_\Lambda \to \tilde \hcal_\Lambda$ takes an orthonormal basis of $\hcal_\Lambda$ to an orthonormal basis of $\tilde \hcal_\Lambda$, hence, as seen in the proof of theorem \ref{theoremUso3ViewAlternativeAlgebraO2IsomorphismD2} this implies that the induced map on the algebras of endomorphisms in a $C^*$-algebra isomorphism.
@@ -1180,32 +1175,105 @@ The $O(2)$-equivariance follows from the equivalence of the transformation laws 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Convergence}
 
-{
-    \color{gray}
+% {
+%     \color{gray}
     
-    - \textbf{$\psi_m$ as fuzzy analogues of $e^{i m \phi} \in \hcal$}: $O(2)$-covariant embedding $\hcal_\Lambda \hookrightarrow \otext{\hcal = L^2(S^1)}$, $\psi_m \mapsto e^{im\phi}$; \hfill \\then $\hcal_\Lambda \to \hcal$ as $\Lambda \to \infty$ in the sense that $\forall \phi \in \hcal$, $\lbtext{\phi_\Lambda} := \sum_{|m| \leq \Lambda} \phi_m e^{im\phi} \to \phi$ in the $L^2$-norm.
+%     - \textbf{$\psi_m$ as fuzzy analogues of $e^{i m \phi} \in \hcal$}: $O(2)$-covariant embedding $\hcal_\Lambda \hookrightarrow \otext{\hcal = L^2(S^1)}$, $\psi_m \mapsto e^{im\phi}$; \hfill \\then $\hcal_\Lambda \to \hcal$ as $\Lambda \to \infty$ in the sense that $\forall \phi \in \hcal$, $\lbtext{\phi_\Lambda} := \sum_{|m| \leq \Lambda} \phi_m e^{im\phi} \to \phi$ in the $L^2$-norm.
     
-    - Induces, \rtext{embedding $\acal_\Lambda \hookrightarrow \otext{\acal = \mathcal B(\hcal)}$ and limit $\acal_\Lambda \to \acal$} as $\Lambda \to \infty$.
+%     - Induces, \rtext{embedding $\acal_\Lambda \hookrightarrow \otext{\acal = \mathcal B(\hcal)}$ and limit $\acal_\Lambda \to \acal$} as $\Lambda \to \infty$.
     
-    - \textbf{Fuzzy analogue of $B(S^1)$ of (bounded) functions on $S^1$} as subalgebra (act by mult.) of $\mathcal B(\hcal)$: $\lbtext{C_\Lambda} := \left\{ \sum_{h = -2\Lambda}^\Lambda f_h \eta^h \,|\, f_h \in \CC\right\}$ where $\eta^\pm  = \frac{\sqrt{2}}{a}x^\pm$ (so $\eta^\pm \to e^{\pm i \phi}$ as operators).
+%     - \textbf{Fuzzy analogue of $B(S^1)$ of (bounded) functions on $S^1$} as subalgebra (act by mult.) of $\mathcal B(\hcal)$: $\lbtext{C_\Lambda} := \left\{ \sum_{h = -2\Lambda}^\Lambda f_h \eta^h \,|\, f_h \in \CC\right\}$ where $\eta^\pm  = \frac{\sqrt{2}}{a}x^\pm$ (so $\eta^\pm \to e^{\pm i \phi}$ as operators).
     
-    - Choosing $k(\Lambda) \geq 2 \Lambda(\Lambda + 1)(w\Lambda+1)^2$, then \rtext{$C_\Lambda \to C(S^1) \subset B(\hcal)$ as operators} due to the strong limits: $\hat f_\Lambda \to f\cdot$, $\hat{(fg)}_\Lambda \to fg\cdot $, $\hat f_\Lambda \hat g_\Lambda \to fg\cdot$, where $\lbtext{\hat f_\Lambda} := \sum_{h = -2\Lambda}^{2\Lambda} f_h \eta^h$ is ``truncation'' of $f \in B(S^1)$.
+%     - Choosing $k(\Lambda) \geq 2 \Lambda(\Lambda + 1)(w\Lambda+1)^2$, then \rtext{$C_\Lambda \to C(S^1) \subset B(\hcal)$ as operators} due to the strong limits: $\hat f_\Lambda \to f\cdot$, $\hat{(fg)}_\Lambda \to fg\cdot $, $\hat f_\Lambda \hat g_\Lambda \to fg\cdot$, where $\lbtext{\hat f_\Lambda} := \sum_{h = -2\Lambda}^{2\Lambda} f_h \eta^h$ is ``truncation'' of $f \in B(S^1)$.
     
-}
+% }
 
-\linea
+% \linea
 
-$\cut L$ will be used to represent the angular momentum observable.
+\subsection{To quantum mechanics in $S^1$}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions and Outlook}
+In \cite{Fiore2018} the following type of convergence of a sequence of low energy effective theories with observable algebras $\{\acal_\Lambda\}_{\Lambda \in \NN}$ where each $\acal_\Lambda$ is as in definition \ref{definitionHLambdaALambdaD2}:
 
-{\color{gray}
+Consider the $O(2)$-equivariant embedding $T: \hcal_\Lambda \to \tilde \hcal_\Lambda$ of theorem \ref{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2}, as an identification of the two Hilbert spaces. We may say that we are considering the basis elements \textit{$\psi_m \in \hcal_\Lambda$ as the fuzzy analogs of $e^{im\phi}$}, when understood as elements of the Hilbert space $\hcal = L^2(S^1)$. For every $\varphi \in L^2(S^2)$, let $\varphi_\Lambda = \sum_{m = -\Lambda}^\Lambda \varphi_m e^{im\phi}$ where $\varphi_m$ are the Fourier coefficients of $\varphi$; $\varphi_\Lambda$ is identified via $T$ with $\sum_{m = -\Lambda}^\Lambda \varphi_m \psi_m$. Clearly $\phi_\Lambda \to \phi$ in the $L^2$-norm as $\Lambda \to 0$. In this sense Fiore and Pisacane in \cite{Fiore2018} then say that $\hcal_\Lambda$ \emph{invades} $\hcal$ as $\Lambda \to \infty$. 
 
-    By introducing a cutoff, we obtained a low energy effective of the quantum theory of a spinless particle on $S^d$.
+Now, the identification $T$ induces an identification $\acal_\Lambda$ within $\bcal(L^2(S^1))$ as the algebra that annihilates $\tilde \hcal_\Lambda^\perp$ and whose application produces elements of $\tilde \hcal_\Lambda$. 
+
+\begin{theorem}\label{theoremConvergesToQMD2}
+Let $k(\Lambda)$ be any function satisfying inequality \eqref{inequationInequalityNeededforKasFunctionLambdaD2}. Under the identification $T: \hcal_\Lambda \to \tilde \hcal_\Lambda \subset \hcal$, then $\acal_\Lambda \subset \acal = \bcal (\hcal)$. Then the operators $\cut L $ converges strongly
+\footnote{Ignoring domain issues, a sequence of operators $\{T_n\}_{n \in \NN}$ in a Banach space $V$ converges strongly to the operator $T$ with if, for all $v \in V$, $\lim_{n \to \infty} ||T_n v - T v|| \to 0$.}
+ to $L$, and both $\chi^\pm$ and $\cut{x^\pm}$ converge strongly to $e^{\pm i\phi}$.
+
+Since $L$ and $e^{\pm i \phi}$ generate the algebra of observables of a quantum particle in $S^1$, we then say that \emph{the limit of the low-energy effective theories $\{(\hcal_\Lambda, \acal_\Lambda)\}$ is the quantum mechanics of a spinless particle in $S^1$}.
+
+\end{theorem}
+
+\begin{proof}
+Suppose that $\varphi$ is in the domain of $L$, i.e. $\sum_{m \in \ZZ} m^2 |\phi_m|^2 \leq \infty$, then
+\begin{align*}
+    ||(L - \cut L)\varphi|| = \sum_{|m| > \Lambda} m^2 |\phi_m|^2 \overset{\Lambda \to 0}{\longrightarrow} 0.
+\end{align*}
+
+Similarly, Let $\varphi = \sum_{m \in \ZZ} \varphi_m e^{i \phi}$. Then
+\begin{align*}
+    ||(\chi^\pm - e^{\pm i \phi})\varphi||^2 &= \sum_{m = - \Lambda}^{\Lambda-1} \left[ \sqrt{1 + \frac{m(m \pm 1)}{k}} - 1 + O\left(\frac{m^3}{k^{3/2}} \right)\right] \varphi_m e^{i(m \pm 1)} - \sum_{m < \Lambda, m \geq \Lambda} \varphi_m e^{i(m \pm 1)}\\
+    &\leq \sum_{m = -\Lambda}^{\Lambda-1} \left[\frac{m^2(m\pm 1)^2}{4k^2} + O\left(\frac{\Lambda^6}{k^{3}} \right)\right] |\varphi_m|^2 + \sum_{m < \Lambda, m \geq \Lambda} |\varphi_m|^2 \\
+    &\leq \frac{\Lambda^2(\Lambda+1)^2}{4k^2} ||\varphi||^2 + \sum_{|m|\geq \Lambda} |\varphi_m|^2
+\end{align*}
+and this goes to $0$ when $\Lambda \to 0$ thanks to the inequality \eqref{inequationInequalityNeededforKasFunctionLambdaD2}. A similar argument follows for $\cut{x^\pm}$ since $\langle\psi_{m\pm 1} | \cut{x^\pm} | \psi_m\rangle - 1 = O\left(\frac{m}{k^{1/2}}\right) = O\left(\frac{\Lambda}{\Lambda^2} \right)$.
+\end{proof}
+
+Notice that $\chi^\pm$ nor $\cut{x^\pm}$ can converge in operator norm to $e^{\pm i\phi}$. Take for example $e^{i \lambda + 1} \in \hcal_\Lambda^\perp$, then $||(\chi^\pm -e^{\pm i m \phi})e^{i(\Lambda+1)\phi} || = ||0 - e^{i (\Lambda + 1 \pm 1) \phi}|| = 1$, meaning that $||\chi^\pm - e^{\pm i \phi}|| \geq 1$.
+
+Notice that the transformation relations \eqref{equationTransformationO2OfpsimhcalBasisD2} imply that the spaces $W_{|m|} := span{\psi_m, \psi_{-m}}$, for $m \in \{-\Lambda, \dots, \Lambda\}$, are irreducible under the action of $O(2)$, and so
+\begin{equation}
+    \hcal_\Lambda = \bigoplus_{m = 0}^{\Lambda} W_m
+\end{equation}
+is the decomposition of $\hcal_\Lambda$ in irreducible representations of $O(2)$. Thus each $\hcal_\Lambda$ can be seen as the truncation of the decomposition
+\begin{equation}
+    L^2(S^1) = \bigoplus_{m  \in \ZZ}^{\Lambda} W_m.
+\end{equation}
+
+% As an $O(2)$-representation, $C_\Lambda$ has the decomposition
+% \begin{equation}
+%     C_\Lambda = \bigoplus_{m=0}^{2\Lambda} W_m,
+% \end{equation}
+% where $W_m = span\{\psi_m, \psi_{-m}\}$ for $m \in \{0, \dots, 2\Lambda\}$ given $\Lambda \in \NN$. This is a truncation of the decomposition
+% \begin{equation}
+%     \bcal(L^2(S^1)) = \bigoplus_{m=0}^{2\Lambda} W_m,
+% \end{equation}
+
+\subsection{To commutative algebra $C(S^1)$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Recall that in the canonical Dirac triple of a commutative space $X$, the commutative algebra $C(X)$ of continuous functions on $X$ has the role to act by multiplication on the Hilbert space of spinor fields. Since $S^1$ is a manifold or rank $1$, the fermionic Fock space has dimension $2^{\lfloor \frac{1}{2}\rfloor} = 1$, and the fact that $S^1$ is a compact simple Lie group means that its spinor bundle is a trivial\todo{DAndrea is the one who seems to say this} complex vector bundle\cite{}, hence it is simply $\hcal = L^2(S^1)$. Under some assumptions on the function $k(\Lambda)$, the identification of $\hcal_\Lambda$ with $\tilde \hcal_\Lambda$ through the $O(2)$-equivariant $*$-isomorphism $T$ of theorem \ref{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2} will make that the sequence of algebras $\{\acal_\Lambda\}_{\Lambda \in \NN}$ converge, in the sense soon to be specified, to the commutative subalgebra of $\bcal(\hcal)$ that the space $C(S^1)$ is.
+
+In theorem \ref{theoremConvergesToQMD2} it was shown that $\chi^\pm$ and $\cut{x^\pm}$ converge strongly to the operator $e^{\pm i\phi}$, so let $x^\pm$ be either $\chi^\pm$ or $\cut{x^\pm}$; we might say that $x^\pm \in \acal_\Lambda$ are the fuzzy analogs of $e^{\pm i\phi}$, but as operators on $L^2(S^1)$. This suggests \cite{Fiore2018} the space (not an algebra)
+\begin{equation}
+    C_\Lambda := \left\{ \sum_{h = -2\Lambda}^{2\Lambda} f_h x^h \right\} \subset \acal_\lambda \subset \bcal(\hcal),
+\end{equation}
+where $x^h = (x^+)^h$ if $h \geq 0$ and $x^h = (x^-)^h$ if $h \leq 0$, as the fuzzy analog of $C(S^1)$, and in fact of the space of bounded functions $B(S^1)$, since they are the functions that have a Fourier series expansion that converges almost everywhere. For $f \in B(S^1)$, let $f = sum_{h \in \ZZ} f_h e^{ih\phi}$ be its Fourier series, and define
+\begin{equation}
+    \hat f_\Lambda := \sum_{h = -2\Lambda}^{2\Lambda} f_h x^h;
+\end{equation}
+then it shown in \cite{Fiore2018} the following:
+
+\begin{theorem}
+Suppose that $k(\Lambda) \geq 2\Lambda(\Lambda+1)(2\Lambda+1)^2$. Then, for all $f, g \in B(S^1)$ the following strong limits hold:
+\begin{align}
+    \hat f_\Lambda \to f\cdot && \hat{(fg)}_\Lambda \to fg\cdot && \hat f_\Lambda \hat g_\Lambda \to fg \cdot\,,
+\end{align}
+where the notation $f\cdot$ emphasizes $f$ as an operator on $\hcal$.
+\end{theorem}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Conclusions and Outlook}
+
+% % {\color{gray}
+
+% %     By introducing a cutoff, we obtained a low energy effective of the quantum theory of a spinless particle on $S^d$.
     
-    We can use this construction to produce fuzzy spaces that approximate the classical configuration space $S^1$.
+% %     We can use this construction to produce fuzzy spaces that approximate the classical configuration space $S^1$.
     
-    If I do $D = 3$, I will be able to compare it with the traditional Fuzzy Sphere, and perhaps conclude (as they do) that this one is better.
-}
+% %     If I do $D = 3$, I will be able to compare it with the traditional Fuzzy Sphere, and perhaps conclude (as they do) that this one is better.
+% % }

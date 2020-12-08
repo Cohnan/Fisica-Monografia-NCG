@@ -1,28 +1,28 @@
 
-{ \color{gray}
+% { \color{gray}
 
-\lin
+% \lin
 
 
-\cite{FioreTheCase2020}
--- Coherent states are, apparently, crucial if we want these spaces to have applications
+% \cite{FioreTheCase2020}
+% -- Coherent states are, apparently, crucial if we want these spaces to have applications
 
--- The weak system of coherent states $\mathcal W^d$ is made of the states minimizing $(\Delta \vec x)^2$: they are related to the diagonalization of the coordinates $x_i$; they are $O(D)$-invariant.
+% -- The weak system of coherent states $\mathcal W^d$ is made of the states minimizing $(\Delta \vec x)^2$: they are related to the diagonalization of the coordinates $x_i$; they are $O(D)$-invariant.
 
--- A class of $O(D)$-invariant strong SCS are introduced, and in particular an interesting one is $\mathcal S^d$ which minimizes, within this class of CS, $(\Delta \vec x)^2$
+% -- A class of $O(D)$-invariant strong SCS are introduced, and in particular an interesting one is $\mathcal S^d$ which minimizes, within this class of CS, $(\Delta \vec x)^2$
 
--- The diagonalization of the position observables seems to be improved on their last paper
+% -- The diagonalization of the position observables seems to be improved on their last paper
 
-\lin
+% \lin
 
-}
+% }
 
 
 As previously mentioned in the introduction, coherent states of an algebraic space associated to a Hilbert space \todo{Asegurarme de hablar de la importancia de estados coherentes en la introduccion!} are concrete objects with defined properties that enable the application of these spaces. In this chapter we describe some families of coherent states on the new fuzzy circle $S^1_\Lambda$, and study their localization properties for both position and angular momentum. 
 
 Coherent states are vectors of the underlying Hilbert spaces, and so they induce states of the algebra. Our purpose will be to eventually study the distance between the family of states described in this document.
 
-Throughout this chapter let $\hcal_\Lambda$ and $\acal_\Lambda$ be defined as in definition \ref{definitionHLambdaALambdaD2} for some $\Lambda \in \NN$ and some appropriate function $k = k(\Lambda)$ satisfying the inequality \eqref{inequationInequalityNeededforKasFunctionLambdaD2}, where $\{\psi_m\}_{|m| \leq \Lambda}$ given in \eqref{equationDefinitionPsimD2BasisOfHCutE} are an orthonormal basis of $\hcal_\Lambda$ composed of eigenvalues of $\cut L \in \acal_\Lambda$. Additionally, let the observables $\cut L$ and $\chi^\pm \in \acal_\Lambda$ be defined as in section \ref{chNewFuzzySectionObservables}. 
+Throughout this chapter let $\hcal_\Lambda$ and $\acal_\Lambda$ be defined as in definition \ref{definitionHLambdaALambdaD2} for some $\Lambda \in \NN$ and some appropriate function $k = k(\Lambda)$ satisfying the inequality \eqref{inequationInequalityNeededforKasFunctionLambdaD2}, where $\{\psi_m\}_{|m| \leq \Lambda}$ given in \eqref{equationDefinitionPsimD2BasisOfHCutE} are an orthonormal basis of $\hcal_\Lambda$ composed of eigenvalues of $\cut L \in \acal_\Lambda$. Additionally, let the operators $\cut L$ and $\chi^\pm \in \acal_\Lambda$ be defined as in section \ref{chNewFuzzySectionObservables}, but let us use $L$ instead of $\cut L$. We will call $L$ the angular momentum observable and $\chi^1 = \frac{1}{2}(\chi^+ + \chi^-)$ and $\chi^2 = \frac{1}{2i}(\chi^+ - \chi^-)$ the position observables.
 
 % \section{Localization}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -157,9 +157,9 @@ Finally, notice that the unitary vectors $\omega^\beta_\alpha$ have no limit in 
 \section{Coherent States Minimizing the Square Distance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Let $\mathcal{W}^1 \subset \hcal_\Lambda$ that minimize the spacial disperson $(\Delta \vec x)^2$. We can observe that since $\vec x^2$ and $\langle \vec x \rangle^2$ are $O(2)$-invariant, then $\mathcal W^1$ is invariant under $O(2)$ transformations. POR ALGUNA RAZON es u\todo{No lo veo, y es importante}n sistema completo, es tambien un conjunto que puedo generar a partir de un vector, y ademas lo puedo generar a partir de solo $SO(2)$, y además lo puedo generar a partir de un vector $\xi$ tal que $\langle \chi^1 \rangle = 0$.
+Let $\mathcal{W}^1 \subset \hcal_\Lambda$ be theset of vectors that minimize the spacial dispersion $(\Delta \vec \chi)^2$. We can observe that since $\vec \chi^2$ and $\langle \vec x \rangle^2$ are $O(2)$-invariant, then $\mathcal W^1$ is invariant under $O(2)$ transformations. To give a more concrete description, first notice that equations \eqref{equationTransformationO2OfpsimhcalBasisD2} show that the spaces $W_m := \text{span}\{\psi_m\}$ for fixed $m \in \{-\Lambda, \dots, \Lambda\}$ are the irreducible subspaces of $\hcal_\Lambda$ under $SO(2)$, and that $\tilde W_{|m|} := \text{span}\{\psi_m, \psi_{-m}\}$ are the irreducible subspaces under the action of $O(2)$; \todo{Since the representation is not irreducible, I do not see why a single vector should generate all the set, i.e. there might be ``disconnected'' families within $W$}therefore, if we take a vector $\psi \in $ POR ALGUNA RAZON es u\todo{No lo veo, y es importante: ES Sistema de Estados Coherentes??}n sistema completo, es tambien un conjunto que puedo generar a partir de un vector, y ademas lo puedo generar a partir de solo $SO(2)$, y además lo puedo generar a partir de un vector $\xi$ tal que $\langle \chi^1 \rangle = 0$.
 
-However, closed formulas for this coherent states might not be possible, in particular, because $\vec \chi^2 \neq 1$ unlike in quantum mechanics on a circle or on the fuzzy sphere. Instead, it is only true that $\vec \chi^2  = 1 + O(1/\Lambda^2)$ according to inequality \ref{inequationInequalityNeededforKasFunctionLambdaD2}; therefore, the minimization of $ (\Delta \vec \chi)^2 = \langle \vec \chi^2 \rangle - \langle \vec \chi \rangle ^2$ necessarily involves a simultaneous process of minimizing $\vec \chi^2 \rangle$ and maximizing $\langle \vec \chi\rangle ^2$. However, from the fact that $\vec \chi ^2 \psi_m  = (1 + O(1/\Lambda^2) )\psi_m$ (except for $m = \pm \Lambda$), it is \textit{expected \cite{FioreCoherent2020} that the eigenvectors of $\chi^1$ of highest eigenvalue in absolute value approximate $\psi$ at order $O(1/\Lambda^2)$}. However, from the graph \ref{fig:R2Chi} we observe that $\vec \chi^2$ is slightly greater the greater $m$ is, and the smaller $\Lambda$ is, so this approximation might not work for very small $\Lambda$'s, but for $k(\Lambda) \geq \Lambda^2(\Lambda+1)^2$, although the difference between them is less than $2\%$ for $\Lambda \gtrsim 5$.
+However, closed formulas for this coherent states might not be possible, in particular, because $\vec \chi^2 \neq 1$ unlike in quantum mechanics on a circle or on the fuzzy sphere. Instead, it is only true that $\vec \chi^2  = 1 + O(1/\Lambda^2)$ according to inequality \ref{inequationInequalityNeededforKasFunctionLambdaD2}; therefore, the minimization of $ (\Delta \vec \chi)^2 = \langle \vec \chi^2 \rangle - \langle \vec \chi \rangle ^2$ necessarily involves a simultaneous process of minimizing $\vec \chi^2 \rangle$ and maximizing $\langle \vec \chi\rangle ^2$. However, from the fact that $\vec \chi ^2 \psi_m  = (1 + O(1/\Lambda^2) )\psi_m$ (except for $m = \pm \Lambda$) and from the $O(2)$-equivariance of the spectrums of the position observables, it is \textit{expected \cite{FioreCoherent2020} that the eigenvectors $\tilde \psi$ of $\chi^1$ of highest eigenvalue, in absolute value, approximate $\psi$ at order $O(1/\Lambda^2)$}. However, from the graph \ref{fig:R2Chi} we observe that $\vec \chi^2$ is slightly greater the greater $m$ is and the smaller $\Lambda$ is, so this approximation might not work for very small $\Lambda$'s, but for $k(\Lambda) \geq \Lambda^2(\Lambda+1)^2$, although the difference between them is less than $2\%$ for $\Lambda \gtrsim 5$.
 
 \begin{figure}
     \centering
@@ -198,9 +198,14 @@ each vector with norm $\Lambda + 1$, and with $\tilde \alpha_{\Lambda} > \tilde 
     \label{fig:bn}
 \end{figure}
 
+A good estimate, then, of the minimum dispersion is the dispersion of the eigenvector of $S^1$ with maximum absolute value eigenvalue $\tilde \alpha_{\pm \Lambda} = \cos{[pi/(2\Lambda+2)]}$; in \cite{FioreCoherent2020} it is shown that for this vectors:
+\begin{equation}
+    (\Delta \vec \chi)^2 < \frac{3.5}{(\Lambda+1)^2} \overset{\Lambda \to \infty}{\longrightarrow} 0.
+\end{equation}
+
 The spectrum of $S^1$ satisfies that between any two subsequence eigenvalues in its spectrum for $\Lambda + 1$, $\Lambda_0^{\Lambda + 1}$, there is exactly one in $\Sigma_0^\Lambda$, and, furthermore, $\Sigma_0^\Lambda$ becomes uniformly dense in $[-1, 1]$ as $\Lambda \to \infty$. A similar result \cite{FioreXi2020, FioreTheCase2020} can be obtained for the spectrum of $\chi^1$:
 \begin{theorem}
-For all $\Lambda \in \NN$, denote the spectrum of $\chi^1$ for $\Lambda$ by $\Sigma^\Lambda_{\chi^1} = \{\alpha_k^\Lambda\}_{n = -\Lambda, \dots, \Lambda }$ ordered decreasingly. Then:
+For all $\Lambda \in \NN$, denote the spectrum of $\chi^1$ for $\Lambda$ by $\Sigma^\Lambda_{\chi^1} = \{\alpha_k^\Lambda\}_{n = -\Lambda, \dots, \Lambda }$ ordered in increasing order with $n$. Then:
 \begin{enumerate}
     \item If $\alpha$ belongs to $\Sigma^\Lambda_{\chi^1}$, then so does $-\alpha$.
     
@@ -213,4 +218,6 @@ For all $\Lambda \in \NN$, denote the spectrum of $\chi^1$ for $\Lambda$ by $\Si
 \end{enumerate}
 \end{theorem}
 
-In analogy with the study of distances in the fuzzy sphere, we expect this interlacing relation to be useful in the study of the relation between distances for subsequent $\Lambda$'s and for the study of the asymptotic behavior of the distance.
+In analogy with the study of distances in the fuzzy sphere, we expect this interlacing relation to be useful in the study of the relation between distances for contiguous $\Lambda$'s and for the study of the asymptotic behavior of the distance between this family of vectors.
+
+The special case in which $\Lambda = 1$ can be studied exactly \cite{FioreCoherent2020}. 

@@ -1,6 +1,5 @@
-The $2$-sphere $S^2$ as a metric space is $SU(2)$-invariant. This invariance will be seen to give rise to a series decomposition of the canonical Dirac operator on $S^2$. We will see how truncating this $SU(2)$-decomposition of the Dirac operator will give rise to equivariant spectral triples on the fuzzy sphere which inherit some of the nice properties of the canonical spectral triple and which allow the convergence of the fuzzy sphere to $S^2$ also as a metric space, in a precise sense to make precise in section \ref{FSsec:convergence}.
+The $2$-sphere $S^2$ as a metric space and as a manifold is rotationally invariant. Since the group $SU(2)$ is the universal cover of the group of rotations $SO(3)$, we can translate this invariance to be a $SU(2)$-invariance. We will see that this invariance induces a decomposition of the canonical Dirac operator on $S^2$ compatible with the action of $SU(2)$. Truncating this $SU(2)$-decomposition will give rise to equivariant spectral triples on the fuzzy sphere of Madore and Hoppe \cite{Madore}, defined in section \ref{ch2sectFuzzySphere}, which inherit some of the important properties of the canonical spectral triple as seen in \ref{CHFSSectionSpectralTriples}. A family of states studied in \ref{ChFSSectCoherentStates} called the \textit{spin coherent states} have some properties, including a $SU(2)$-equivariant bijective correspondence with the points in $S^2$, that motivate us to think of them as each one of the as a fuzzy analog of the points of $S^2$, and which allow us to say that the convergence of the fuzzy sphere to $S^2$ occurs as a metric space.
 
-\dbtext{Physical applications of the Fuzzy sphere.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,7 +19,7 @@ The $2$-sphere $S^2$ as a metric space is $SU(2)$-invariant. This invariance wil
 % - The canonical spectral triple, which is \textbf{$SU(2)$-equivariant} can be seen to come from a purely algebraic element $\lbtext{\mathcal D} \in U(\mathfrak g) \otimes U(\mathfrak g)$:
 %     \begin{align*}
 %         U(\mathfrak g) \otimes U(\mathfrak g) &\to& U(\mathfrak g) \otimes Cl(\mathfrak g, -K) &\to& \mathcal B(L^2(G/U, \Sigma G/U)) \\
-%         1 \otimes 1 + 2 \sum_{k = 1}^3 J_k \otimes J_k &\mapsto& 1 \otimes 1 + \sum_k J_k \otimes \sigma_k &\mapsto& \rtext{\left( \bigoplus_{l\in \bb N} \pi_l \right) \otimes \pi_{1/2}(\mathcal D)}
+%         1 \otimes 1 + 2 \sum_{k = 1}^3 J^k \otimes J^k &\mapsto& 1 \otimes 1 + \sum_k J^k \otimes \sigma_k &\mapsto& \rtext{\left( \bigoplus_{l\in \bb N} \pi_l \right) \otimes \pi_{1/2}(\mathcal D)}
 %     \end{align*}
     
 % (- In Sanchez: $\mu = 1, 2$
@@ -28,34 +27,33 @@ The $2$-sphere $S^2$ as a metric space is $SU(2)$-invariant. This invariance wil
 %  $\slashed D = -i \frac{q}{2} \sigma^\mu \nabla_\mu)$)
 
 % - So $\lbtext{\slashed D} = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3$ where $\partial_H = -i \partial_\phi$, $\partial_F = e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right)$, $\partial_E = -\partial_F% = e^{-i\phi} \left( \partial_\theta - i cot\,\theta \partial_\phi \right)
-% $ are the actions of $J_3$, $J^\pm \in i\,su(2)$ on $L^2(S^2)$ respectively. \textit{Eig. vectors}: orth. basis of $\hcal$; \textit{Spectrum} $= \{\pm l\} = \ZZ - 0$ with multiplicities $2l$. (The tensor with $2x\times 2$ matrices means that we are looking at spinors as column vectors $\psi = \begin{pmatrix} \cdot \\ \cdot \end{pmatrix}$)%: L^2(S^2) \otimes \CC^2 \to L^2(S^2) \otimes \CC^2 = \oplus_{l \in \bb N} (\pi_l \otimes \pi_{1/2})(\mathcal D)$
+% $ are the actions of $J^3$, $J^\pm \in i\,su(2)$ on $L^2(S^2)$ respectively. \textit{Eig. vectors}: orth. basis of $\hcal$; \textit{Spectrum} $= \{\pm l\} = \ZZ - 0$ with multiplicities $2l$. (The tensor with $2x\times 2$ matrices means that we are looking at spinors as column vectors $\psi = \begin{pmatrix} \cdot \\ \cdot \end{pmatrix}$)%: L^2(S^2) \otimes \CC^2 \to L^2(S^2) \otimes \CC^2 = \oplus_{l \in \bb N} (\pi_l \otimes \pi_{1/2})(\mathcal D)$
 
 % ( - The eigenvectors (spinor harmonics) $Y^{'}_{lm}, Y^{''}_{lm}$, $l \in \NN + 1/2$, of $D$ make up an orthogonal basis of the spinor fields $\hcal$.
 %  - The eigenvalues are: of $Y'_{l\cdot}: (l + 1/2) \in \NN$, of $Y{''}_{l\cdot}: -(l + 1/2)$, with multiplicities $2l+1$)
 % }
-\linea
 
 Although there are several ways to describe the canonical spectral triple on \todo{of/on?} $S^2$, the one that will be useful to use to define the spectral triples on the fuzzy sphere will be from understanding $S^2$ as \ptext{compact Riemannian symmetric\footnote{Symmetric space; U} space} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$.
 
 Let $G$ be a compact semisimple Lie group $G$ with Lie algebra $\alg g$, where the semisiplicity means that the Killing form $K: \alg g \times \alg g \to \alg g$ of $\alg g$ is negative definite, giving $G$ a natural Riemannian manifold structure. For such a manifold $G$, and its symmetric spaces, the Dirac operator can be seen to arise \ref{} from an algebraic element $\lbtext{\dcal } \in U(\alg g)\times U(\alg g)$, where $\lbtext{U}(g)$ is \lbtext{the universal enveloping algebra} of the Lie algebra $\alg g$, i.e. the largest\todo{in what sense} \todo{complex?} unital, associative algebra containing $\alg g$ where the Lie bracket coincides with the commutator in $U(\alg g)$; it is important to remark that \otext{the representations of $\alg g$ are in a bijective correspondence with the modules over $U(\alg g)$}. In the explicit case where $G = SU(2)$,
 \begin{equation}
-    \lbtext{\dcal} := 1 \otimes 1 + 2 \sum_{k = 1}^3 J_k \otimes J_k \in U(\sut) \otimes U(\sut)
+    \lbtext{\dcal} := 1 \otimes 1 + 2 \sum_{k = 1}^3 J^k \otimes J^k \in U(\sut) \otimes U(\sut)
 \end{equation}
-where $J_k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such that 
+where $J^k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such that 
 \begin{equation}\label{equationCommutationRelationJs}
-    [J_i, J_j] = i \epsilon_{ijk} J_k
-\end{equation} (i.e. $J_k = \frac{\sigma_k}{2} = \pi_{1/2}(J_k)$). 
+    [J^i, J^j] = i \epsilon_{ijk} J^k
+\end{equation} (i.e. $J^k = \frac{\sigma_k}{2} = \pi_{1/2}(J^k)$). 
 
 \lin
 
-Let $\lbtext{\pi_j}: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ be the spin $j \in \frac{\NN}{2}$ representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J_3)(e_m) = m e_m$, where $\vec J^2$ is notation for $J_1^2 + J_2^2 + J_3^3 \in U(\sut)$.
+Let $\lbtext{\pi_j}: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ be the spin $j \in \frac{\NN}{2}$ representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J^3)(e_m) = m e_m$, where $\vec J^2$ is notation for $(J^1)^2 + (J^2)^2 + (J^3)^3 \in U(\sut)$.
 
 Recall that the every continuous / square integrable / smooth function on $S^2$ may be decomposed in terms of spherical harmonics $Y^l_m \in L^2(S^2)$, $l \in \NN$, $m \in \{-l, \dots, l-1, l\}$, and the spaces $\tilde V_l = span\{Y^l_m\}_{|m| \leq l}$ for fixed $l$ are the spaces of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$, which are precisely all the irreducible representation spaces of $SO(3)$, and another description of the spin-$l$ representations $V_l$ of $SU(2)$. 
 This decomposition of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$, inherited from the action on $S^2$, and which can be seen to be induced by the natural action of $\sut$ on $S^2$ as vector fields. In particular, 
 \begin{align}
-    \partial_H &:= - i \partial_\phi & \text{is the action of $\lbtext{H} := J_3$ in $L^2(S^2)$} \\
-    \partial_F &:= e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right) &\text{is the action of $\lbtext{F} := J_+ = J_1 + i J_2$ in $L^2(S^2)$}\\
-    \partial_E &:= - \partial_E &\text{is the action of $\lbtext{E} := J_- = J_1 - i J_2$ in $L^2(S^2)$}
+    \partial_H &:= - i \partial_\phi & \text{is the action of $\lbtext{H} := J^3$ in $L^2(S^2)$} \\
+    \partial_F &:= e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right) &\text{is the action of $\lbtext{F} := J^+ = J^1 + i J^2$ in $L^2(S^2)$}\\
+    \partial_E &:= - \partial_E &\text{is the action of $\lbtext{E} := J^- = J^1 - i J^2$ in $L^2(S^2)$}
 \end{align} where $\phi$ and $\theta$ are the azimuthal and polar angles in $S^2$, respectively.
 Hence, $L^2(S^2) \cong \bigoplus_{l = 0}^\infty V_l$ as representation spaces of $SU(2)$.
 
@@ -65,7 +63,7 @@ The spinor bundle of $S^2$ is trivial, so the space of spinor fields $\hcal = L^
 
 This decomposition of the spinor bundle induced by the action of $SU(2)$ correctly suggests that the Dirac operator can be seen as the operator
 \begin{equation}
-    \lbtext{\slashed D} = \rtext{ \bigoplus_{l\in \bb N} \pi_l  \otimes \pi_{1/2}(\dcal)} = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3 = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} ,
+    \lbtext{\slashed D} =  \bigoplus_{l\in \bb N} \pi_l  \otimes \pi_{1/2}(\dcal) = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3 = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} ,
 \end{equation} acting on $L^2(S^2)\otimes \CC^2$, where $\sigma^\pm = \sigma_1 \pm i \sigma_2$.
 
 The eigenvectors of $\slashed D$ $Y^{'}_{jm}, Y^{''}_{jm}$ $j \in \NN + 1/2$, $m = -j, \dots, j$, called the \textit{spinor harmonics}, make up an orthogonal basis of the spinor fields $\hcal$. The eigenvalue of the $Y'_{l\cdot}$ is $(j + 1/2) \in \NN$, and of the $Y{''}_{j\cdot}: -(l + 1/2)$, so the eigenvalue $j$ has multiplicity $2j+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is another Dirac operator in the Fuzzy sphere. 
@@ -76,29 +74,29 @@ The following aiding lemma will allow us to study the spectrum of the Dirac oper
 The operator $(\pi_0 \otimes \pi_{1/2})(\dcal^2): V_0 \otimes \CC^2 \to V_0 \otimes \CC^2$ has as unique eigenvalue $1$ with multiplicity $2$. For any $j \in \frac{\ZZ_{\geq 1}}{0}$, the $(\pi_j \otimes \pi_{1/2})(\dcal^2)$ has two eigenvalues: $j^2$ with multiplicity $2j$, and $(j+1)^2$ with multiplicity $2j+2$.
 \end{lemma}
 
-\linea
+% \linea
 
-{\color{gray} (The following was previously right after the paragraph about the representations of $SU(2)$, but may now be unnecesary)
+% {\color{gray} (The following was previously right after the paragraph about the representations of $SU(2)$, but may now be unnecesary)
 
-Now, to $\dcal \in U(\alg g) \otimes U(\alg g)$ corresponds an element $\dcal_S$ in the noncommutative Weil algebra\footnote{CCR algebra of $(\alg g, \omega?)$. } through the injection $\alg g \hookrightarrow Cl(g, K)$/$\alg g_\CC \hookrightarrow \CC l(G/U)?$\todo{not sure we want here the real algebra, and I even think we want instead the complex algebra since it is that one which acts on Fock space}\todo{not even sure if we want this CLifford algebra, of the one before, since it is that one which acts on the spinors on $S^2$, and so it is true that $\CC l_2 = M_2(\CC)$}\footnote{Clifford algebra}. It is known that, for a $3$ dimensional real vector space $V$ with positive definite metric with basis $\{v_k\}_{k = 1, \dots, 3}$, the real Clifford algebra $Cl(V, g) \cong gen\{\sigma_k\}_{k = 1, \dots, 3} = gen\{J_k\}_{k = 1, \dots, 3} = M_2(\CC)$ and $\CC l(V) \cong M_2(\CC) \oplus M_2(\CC)$ under the identification $v_k \Longleftrightarrow \sigma_k \in M_2(\CC)$, meaning, for our explicit example, that the algebra $Cl(\sut, -K) = M_2(\CC)$ 
-\todo{there is an $i$ which I don't like when saying this last sentence}, and so the injection can be seen to be simply $\pi_{1/2} = Id_2$:
-\begin{equation}
-    \dcal_S := (Id_2 \otimes \pi_{1/2})(\dcal) = 1 \otimes 1 + \sum_{k = 1}^3 J_k \otimes \sigma_k = \begin{pmatrix} 1 + H & F \\ E & 1 - H \end{pmatrix} \in U(\sut)\otimes M_2(\CC)
-\end{equation}
-where $H = J_3$, $E = J_1 + iJ_2$ and $F = E^* \in U(\sut)$
+% Now, to $\dcal \in U(\alg g) \otimes U(\alg g)$ corresponds an element $\dcal_S$ in the noncommutative Weil algebra\footnote{CCR algebra of $(\alg g, \omega?)$. } through the injection $\alg g \hookrightarrow Cl(g, K)$/$\alg g_\CC \hookrightarrow \CC l(G/U)?$\todo{not sure we want here the real algebra, and I even think we want instead the complex algebra since it is that one which acts on Fock space}\todo{not even sure if we want this CLifford algebra, of the one before, since it is that one which acts on the spinors on $S^2$, and so it is true that $\CC l_2 = M_2(\CC)$}\footnote{Clifford algebra}. It is known that, for a $3$ dimensional real vector space $V$ with positive definite metric with basis $\{v_k\}_{k = 1, \dots, 3}$, the real Clifford algebra $Cl(V, g) \cong gen\{\sigma_k\}_{k = 1, \dots, 3} = gen\{J^k\}_{k = 1, \dots, 3} = M_2(\CC)$ and $\CC l(V) \cong M_2(\CC) \oplus M_2(\CC)$ under the identification $v_k \Longleftrightarrow \sigma_k \in M_2(\CC)$, meaning, for our explicit example, that the algebra $Cl(\sut, -K) = M_2(\CC)$ 
+% \todo{there is an $i$ which I don't like when saying this last sentence}, and so the injection can be seen to be simply $\pi_{1/2} = Id_2$:
+% \begin{equation}
+%     \dcal_S := (Id_2 \otimes \pi_{1/2})(\dcal) = 1 \otimes 1 + \sum_{k = 1}^3 J^k \otimes \sigma_k = \begin{pmatrix} 1 + H & F \\ E & 1 - H \end{pmatrix} \in U(\sut)\otimes M_2(\CC)
+% \end{equation}
+% where $H = J^3$, $E = J^1 + iJ^2$ and $F = E^* \in U(\sut)$
 
 
-Equivariance of $\dcal$: $U(\alg g)$ is a Hopf algebra\footnote{} with coproduct $\nabla: U(\alg g) \to U(\alg g) \times U(\alg g)$ such that $A \mapsto A \otimes 1 + 1 \otimes A$ for $A \in \alg g$.}
+% Equivariance of $\dcal$: $U(\alg g)$ is a Hopf algebra\footnote{} with coproduct $\nabla: U(\alg g) \to U(\alg g) \times U(\alg g)$ such that $A \mapsto A \otimes 1 + 1 \otimes A$ for $A \in \alg g$.}
 
-\lin 
+% \lin 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Fuzzy Sphere}
-
-% {\color{gray} -- Change $x^i$ in $\RR^3$ by infinitesimal rotation $J_i$, acting on $\CC^{N+1} = span\{|j, m\rangle\}$.
+\label{ch2sectFuzzySphere}
+% {\color{gray} -- Change $x^i$ in $\RR^3$ by infinitesimal rotation $J^i$, acting on $\CC^{N+1} = span\{|j, m\rangle\}$.
 
 % Presentation:
 
@@ -111,15 +109,14 @@ Equivariance of $\dcal$: $U(\alg g)$ is a Hopf algebra\footnote{} with coproduct
 %     \textbf{Fuzzy Sphere}: Notice that $\acal = C(S^2) \cong \bigoplus_{l \in \bb N} V_l \cong L^2(S^2)$, where $V_l$ is the spin $l$ representation of $SO(3)$: homogeneous $l$-degree polynomials in $x^1, x^2, x^3$, with basis $\{Y^l_m\}_{|m| \leq l}$. 
 %     For $N = 2j \in \bb N$, 
 %     $\lbtext{\acal_N}= \bigoplus_{l = 0}^N V_l$ as $SU(2)$ representation. 
-%     As algebra: replacing $x^i \mapsto \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i)$, $[J_i, J_k] = i \epsilon_{ijk} J_k$, $\lbtext{\acal_N} := End(V_j) = M_{N+1}(\CC)$, understanding $V_j= \CC^{N+1} = span\{|j, m\ket\}_{|m| \leq j}$ as irrep. of $SU(2)$; this follows from  $\longrightarrow$ \rtext{$[x^i, x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} x_k$}, $\sum x_1^2 + x_2^2 + x_3^2 = 1$.
+%     As algebra: replacing $x^i \mapsto \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J^i)$, $[J^i, J^k] = i \epsilon_{ijk} J^k$, $\lbtext{\acal_N} := End(V_j) = M_{N+1}(\CC)$, understanding $V_j= \CC^{N+1} = span\{|j, m\ket\}_{|m| \leq j}$ as irrep. of $SU(2)$; this follows from  $\longrightarrow$ \rtext{$[x^i, x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} x^k$}, $\sum x^k^2 + x^2^2 + x^3^2 = 1$.
     
 %     With these Dirac Spectral Triples \cite{DAndrea2013} \rtext{approximates $S^2$ as: \textbf{1.} $C^*$-algebra $\acal$ acting on the spinor fields $\hcal$; \textbf{2.} Representation of $SU(2)$; \textbf{3.}  Metric space on which $SU(2)$ acts by isometries.}
     
-%     %. Under the adjoint action, which makes sense since R J_3 R^{-1} is rotation under rotated axis
+%     %. Under the adjoint action, which makes sense since R J^3 R^{-1} is rotation under rotated axis
     
 %     % This allows to define fuzzy spherical harmonics (changing x's by new x's) which make up a basis, good action under SU(2)
 % }    
-\linea
 
 A \lbtext{fuzzy space} is a sequence of finite dimensional $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ with increasing dimension which approximate, in some sense to be determined later/in the specific case \todo{is there a precise definition?}, a (commutative) $C^*$ algebra $\acal$ in the limit $N \to \infty$. When the commutative algebra encodes a topological space or a manifold with certain symmetry group $G$ that acts by homeomorphisms or diffeomorphisms, we require a fuzzy space to implement this symmetry, i.e. that $G$ acts on each $\acal_N$ by $*$-isomorphisms (the algebraic version of homeomorphisms\todo{be certain of this.}) and in a way compatible with the derivations of $\acal$ (algebraic version of diffeomorphisms).
 
@@ -137,22 +134,22 @@ With the full spectral triple defined below, the \textit{fuzzy sphere} will appr
 
 \lin 
 
-To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the decomposition of $\lbtext{\acal} = C(S^2) =  \bigoplus_{l \in \NN} \tilde V_l \cong L^2(S^2)$ \todo{different ``limits''} into irreducible representations of $SO(3)$, where, recall, $\tilde V_l$ is the vector space of homogeneous polynomials on the coordinates $x_1, x_2, x_3$ of $\RR^3$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: there is a clear way in which they approximate $\acal$; $SU(2)$ acts naturally on each $\acal_N'$.
+To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the decomposition of $\lbtext{\acal} = C(S^2) =  \bigoplus_{l \in \NN} \tilde V_l \cong L^2(S^2)$ \todo{different ``limits''} into irreducible representations of $SO(3)$, where, recall, $\tilde V_l$ is the vector space of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: there is a clear way in which they approximate $\acal$; $SU(2)$ acts naturally on each $\acal_N'$.
 
 However, an obvious problem with this definition is that $\acal_N'$ doesn't have a natural multiplication, so it isn't an algebra. From the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring that the radical\footnote{} of the algebra be zero, there are only two possibilities, and only one being noncommutative:
 \begin{align}
     x^i &\mapsto \hat x^i := \lambda \sigma_i & i = 1, 2, 3;
 \end{align}
-where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Notice that the identification $x^i \mapsto \hat x^i$ is $SU(2)$-equivariant since $\frac{\sigma_i}{2} \in U(\sut) \cong U(\alg{so}(3))$ corresponds to the generator of rotations with respect to the $x^i$-axis. The constant $\lambda$ is chosen such that ``radius of the sphere be $1$'', meaning that $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
+where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Notice that the identification $x^i \mapsto \hat x^i$ is $SU(2)$-equivariant since $\frac{\sigma_i}{2} \in U(\sut) \cong U(\alg{so}(3))$ corresponds to the generator of rotations with respect to the $x^i$-axis. The constant $\lambda$ is chosen such that ``radius of the sphere be $1$'', meaning that $(\hat x^1)^2 + (\hat x^2)^2 + \hat (x^3)^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
 
 Instead of insisting on defining a foreign multiplication in $\acal'_N$, the \lbtext{fuzzy sphere} is now defined by $\lbtext{\acal_N} :=  \pi_{j}(U(\sut)) \equiv End(V_j)$ which, when the irreducible representation $\pi_j$ of $SU(2)$ is understood as in the previous subsection, i.e. as $V_j = \CC^{N+1}$, is equal to $\acal_N \equiv M_{N+1}(\CC)$ for all $N \in \NN$, $j$ satisfying $N =: 2\lbtext{j}$, which arises from the following generalization of the $N = 1$ case studied above:
 \begin{align}\label{equationDefinitionGeneratorsFuzzySphere}
     \tilde V_1 \hookrightarrow \bigoplus_{l = 0}^N \tilde V_l &\to \acal_N\\
-    x^i &\mapsto \hat x^i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i) & i = 1, 2, 3;
-\end{align} that is, for each $N$, the coordinate $x^i$ is understood as the infinitesimal rotation with respect to the axis $x^i$ operator on the space $V_j = \CC^{N+1}$. The normalization constant guarantees again $\hat x_1^2 + \hat x_2^2 + \hat x_3^2 = 1$, and we now obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
+    x^i &\mapsto \hat x^i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J^i) & i = 1, 2, 3;
+\end{align} that is, for each $N$, the coordinate $x^i$ is understood as the infinitesimal rotation with respect to the axis $x^i$ operator on the space $V_j = \CC^{N+1}$. The normalization constant guarantees again $(\hat x^1)^2 + (\hat x^2)^2 + (\hat x^3)^2 = 1$, and we now obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
 \begin{align}
-    \rtext{[\hat x^i, \hat x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} \hat x_k}, && i, j, k \in \{1, 2, 3\},
-\end{align} where sum over repeated indices is understood, and $\epsilon_{ijk}$ is the Levi-Civita tensor.
+    [\hat x^i, \hat x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} \hat x^k, && i, j, k \in \{1, 2, 3\},
+\end{align} where the Einstein summation convention for implicit sums of repeated indices is understood, and where $\epsilon_{ijk}$ is the Levi-Civita tensor.
 
 \lin
 
@@ -166,12 +163,12 @@ A diffeomorphism of $S^2$ is equivalent to an automorphism of the algebra $C^\in
 
 \subsubsection{As $C^*$-algebra acting on spinors}
 
-The elements $\hat x^i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace-free as a tensor\todo{Not sure how to prove these two statements. Not even sure what the trace might mean if there are not even number of components. If $N=1$ it is easy to see that indeed ever $2x2$ matrix is combination of $1$ and Pauli}. Replacing the coordinates $x^i$ by $\hat x^i$  in the (symmetric) polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
+The elements $\hat x^i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x^{a_{\mu_1}}  \cdots \hat x^{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace-free as a tensor\todo{Not sure how to prove these two statements. Not even sure what the trace might mean if there are not even number of components. If $N=1$ it is easy to see that indeed ever $2x2$ matrix is combination of $1$ and Pauli}. Replacing the coordinates $x^i$ by $\hat x^i$  in the (symmetric) polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
 
 Define the linear, injective mapping
 \begin{eqnsplit}
     \acal_N &\to \acal'_N \subset \acal \\
-    \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x_{a_{\mu_1}}  \cdots \hat x_{a_{l}} &\mapsto \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} x_{a_{\mu_1}}  \cdots x_{a_{l}}.
+    \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x^{a_{\mu_1}}  \cdots \hat x^{a_{l}} &\mapsto \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} x^{a_{\mu_1}}  \cdots x^{a_{l}}.
 \end{eqnsplit}
 Then, the sequence of noncommutative $C^*$-algebras approximates the commutative algebra $A = C(S^2)$ in the limit $N \to \infty$ in the sense that the above map gets increasingly closer to being an algebra morphism and \textbf{the algebra $A$ can be considered as the image of the \textit{near-diagonal matrices} in $\acal_N$} i.e. matrices which commute within order $1$ or $\lambda = \frac{1}{\sqrt{j(j+1)}}$ (the normalizing factor in \ref{}); the proof can be found in \cite{Madore}.
 
@@ -182,7 +179,7 @@ This is what theorem \ref{theoremReducibleSpectralTripleDiracApproximation} and 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spectral Triples}
-
+\label{CHFSSectionSpectralTriples}
 % {\color{gray} --  Truncate the $SU(2)$-equivariant \textbf{decomposition} of the canonical spectral triple}
 
 The introduction of a spectral triple on each unital algebra $\acal_N$ that conforms the fuzzy sphere will introduce the notion of distance between states of the algebra, opening the door to the study of geometry on this spaces. Furthermore, we would like to introduce a spectral triple that somehow allows us to think of the fuzzy sphere as an approximation of $S^2$ also as metric spaces. 
@@ -233,7 +230,7 @@ One important property of the spectral triples that will be defined on the fuzzy
     \item The \textit{Dirac operator is equivariant}, i.e. the operator $[\dcal, h] = 0$ for all $h \in H$.
     
     \end{itemize}
-\ref{theoInvDistance}
+
 \textbf{For the spectral triples defined in this section, the $SU(2)$-equivariance reduces to the verification of the last two conditions}, since the first two ones are readily satisfied. The following theorem, which will apply to all the spectral triples defined in this chapter, illustrates how this notion of equivariance induces a notion of isometry on the respective noncommutative spaces.
 
 \begin{theorem} \label{theoGInvariantDistance}
@@ -247,7 +244,7 @@ we have denoted by $g^*\omega$ the action of $G$ on $\mathcal S(\acal)$, $g^* \o
 \begin{proof}
 The theorem follows once we show that 
 \begin{equation}\label{normEqualDiracAction}
-    \rtext{||[\dcal, a^g]|| = ||[\dcal, a]||},
+    ||[\dcal, a^g]|| = ||[\dcal, a]||,
 \end{equation} since, in that case,
 \begin{align*}
 d_\dcal(g_* \omega, g_* \omega') &= sup_{a \in \acal_N}\{ |\omega(a^g) - \omega'(a^g)|: ||[\dcal, a \otimes 1_2]|| \leq 1 \} \\
@@ -280,7 +277,7 @@ Now, denoting the action of $G \ni g$ on $\hcal$ by $g \cdot$:
 %     := (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2 \\
 %     = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
 %     = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
-% \end{multline} where $H = J_3$, $F = J_+$, $E = J_-$ are the actions of $J_3$, $J^\pm \in su(2)$ on $V_j$ respectively.
+% \end{multline} where $H = J^3$, $F = J^+$, $E = J^-$ are the actions of $J^3$, $J^\pm \in su(2)$ on $V_j$ respectively.
 
 % - The spectral triple \rtext{$(\acal_N, \lbtext{H_N} = V_j \otimes \CC^2, D_N)$}
 %     \begin{itemize}
@@ -292,7 +289,6 @@ Now, denoting the action of $G \ni g$ on $\hcal$ by $g \cdot$:
 %     \item Isn't compatible with a grading or a real structure.
 %     \end{itemize}
 % }    
-\linea
 
 This spectral triple, although unsatisfactory as an approximation of the canonical spectral triple of $S^2$ with respect to the first criteria stated at the beginning of the section, will turn out to be very useful for computations.
 
@@ -305,7 +301,7 @@ This spectral triple may be seen to come as a single term of the $SU(2)$-induced
     D_N = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
     = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
 \end{equation}
-where $H = J_3$, $F = J_+$, $E = J_-$ are the respective actions of $J_3$, $J_+, J_- \in U(\sut)$ on $V_j$.
+where $H = J^3$, $F = J^+$, $E = J^-$ are the respective actions of $J^3$, $J^+, J^- \in U(\sut)$ on $V_j$.
 
 We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense in the first place we need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, also called an action by \emph{inner automorphisms}:
 \begin{equation}
@@ -362,7 +358,7 @@ That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows fro
 %     \lbtext{\mathcal D_N} := (\textbf{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) = D = \begin{pmatrix} 1 + \text{ad}\pi_j(H) & \text{ad}\pi_j(F) \\ \text{ad}\pi_j(E) & 1 - \text{ad}\pi_j(H)\end{pmatrix} 
 %     = \text{ad}\pi_j(E) \otimes \sigma_1 + \text{ad}\pi_j(F) \otimes \sigma_2 + \text{ad}\pi_j(H) \otimes \sigma_3
 % \end{multline}
-% where, e.g. $\text{ad}\pi_j(H) = [\pi_J(H), \cdot ]$ is the action of $J_3 \in su(2)$ on $\mathcal A_N$.
+% where, e.g. $\text{ad}\pi_j(H) = [\pi_J(H), \cdot ]$ is the action of $J^3 \in su(2)$ on $\mathcal A_N$.
 
 %     \begin{itemize}
     
@@ -378,10 +374,9 @@ That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows fro
 
 % \rtext{It is a truncation of the canonical spectral triple}: The spectrum and the multiplicites 
 
-% - \rtext{\textbf{Theorem}}: the two spectral triples induce the same distance in $\acal_N$. Pf: $[\dcal, a]b \otimes v = \cdots = \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v = [D_N, a] \cdot b \otimes v$
+% - \rtext{\textbf{Theorem}}: the two spectral triples induce the same distance in $\acal_N$. Pf: $[\dcal, a]b \otimes v = \cdots = \sum_k [\pi_j(J^k), a]b \otimes \sigma_k v = [D_N, a] \cdot b \otimes v$
 % }
 
-\linea
 
 \begin{definition}
 For each $N \in \NN$, $j = N/2$, the \lbtext{full spectral triple} is $(\acal_N, \lbtext{\hcal_N} := \mathcal A_N \otimes \CC^2, \lbtext{\mathcal D_N} := (\text{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) )$, where $a \in \acal_N$ acts on the first factor of $\hcal_N$ via the commutator $[a, \cdot]$.
@@ -425,10 +420,10 @@ The irreducible and full spectral triple on $\acal_N$, for each $N \in \NN$, ind
 \begin{proof}
 Let $\omega, \omega'$ be states on $\acal_N$. Notice that distinct spectral triples induce different notions of distance only due to the condition $||[D, a]|| \leq 1$, which determines over which elements $a$ of the algebra the supremum of $|\omega(a) - \omega'(a)|$ is evaluated. However, for all $a \in \acal$, $||[\dcal_N, a]|| = ||[D_N, a]||$ as shown by the following calculation:
 \begin{align*}
-    [\dcal, a]b \otimes v &= \dcal_N(ab \otimes v) - a\left(b \otimes v + \sum_{k = 1}^3 [\pi_j(J_k), b] \otimes \sigma_k v\right)\\
-        &= ab \otimes v + \sum_{k = 1}^3[\pi_j(J_k), ab] \otimes \sigma_k v - ab \otimes v - \sum_{k = 1}^3 a[\pi_j(J_k), b]\otimes \sigma_k v\\
-        &= \sum_k [\pi_j(J_k), a]b \otimes \sigma_k v\\
-        &= [1_{N+1} \otimes 1_2 + \sum_{k = 1}^3 \pi_j(J_k)\otimes \sigma_k, a](b, v)\\
+    [\dcal, a]b \otimes v &= \dcal_N(ab \otimes v) - a\left(b \otimes v + \sum_{k = 1}^3 [\pi_j(J^k), b] \otimes \sigma_k v\right)\\
+        &= ab \otimes v + \sum_{k = 1}^3[\pi_j(J^k), ab] \otimes \sigma_k v - ab \otimes v - \sum_{k = 1}^3 a[\pi_j(J^k), b]\otimes \sigma_k v\\
+        &= \sum_k [\pi_j(J^k), a]b \otimes \sigma_k v\\
+        &= [1_{N+1} \otimes 1_2 + \sum_{k = 1}^3 \pi_j(J^k)\otimes \sigma_k, a](b, v)\\
         &= [D_N, a] \cdot b \otimes v.
 \end{align*}
 This tells us that $[\slashed D_N, a]: \hcal_N \to \hcal_N$ is the operator of left multiplication by the matrix $[D_N, a] \in \acal_N \otimes M_2(\CC)$, implying that its operator norm coincides with the norm of the matrix $[D_N, a]$.
@@ -437,6 +432,7 @@ This tells us that $[\slashed D_N, a]: \hcal_N \to \hcal_N$ is the operator of l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Coherent States}
+\label{ChFSSectCoherentStates}
  {\color{gray}
 % -- Fuzzy approximations of points in S2. In QM they are the closes thing to classical states we have (minimum uncertainty states for some observables).
 
@@ -520,7 +516,7 @@ where $d\mu'(g) = d\mu(g)/bh$, where $d\mu$ is the Haar measure of $G$; under th
 
 % What group used in Fiore? $O(D)$
 
-% - In Fiore2020 there is a simple introduction to Coherent states: group $G$ acting (irreducibly) on a Hilbert space. AND the example for $G = SU(2)$ is sketched, although there is a mistake for one of the $3$ characterizations, since it isn't true that the coherent states are eigenvectors of the ``annihilation operator'' $J_+$. D'Andrea mentions other sources.
+% - In Fiore2020 there is a simple introduction to Coherent states: group $G$ acting (irreducibly) on a Hilbert space. AND the example for $G = SU(2)$ is sketched, although there is a mistake for one of the $3$ characterizations, since it isn't true that the coherent states are eigenvectors of the ``annihilation operator'' $J^+$. D'Andrea mentions other sources.
 
 % \dbtext{WHY DO WE WANT TO STUDY DISTANCE BETWEEN COHERENT STATES???} Make this very explicit.
 
@@ -574,8 +570,8 @@ For all $E(\phi, \theta) \in S^2$ and any $a \in \acal_N$, for arbitrary $N \in 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Distance Between Famillies of Pure States}
-
+\section{Distance Between Families of Pure States}
+\label{ChFSSectionDistance}
 % {\color{gray}
 % Presentation:
 
@@ -609,9 +605,7 @@ For all $E(\phi, \theta) \in S^2$ and any $a \in \acal_N$, for arbitrary $N \in 
 % - \textbf{Behaviour with $N$}: Relate algebras and coherent states of subsequent $N$, finding relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$.
 % }
 
-\linea
-
-Due to theorem \ref{}, although the full spectral triple seems to be a better approximation of the canonical spectral triple due to the properties of the spectrum of $\dcal_N$, for $N$ any natural number, it suffices to study the distances using the irreducible spectral triple since it induces exactly the same notion of distance on each $\acal_N$. From now on we will stop writing the symbols $\pi_j$, $j = N/2$, denoting the unitary representation of $U(\sut) \ni H = J_3, E = J_-, F = J_+$ on $V_j$ unless confusion may arise; hence we will write the Dirac operator as
+Due to theorem \ref{}, although the full spectral triple seems to be a better approximation of the canonical spectral triple due to the properties of the spectrum of $\dcal_N$, for $N$ any natural number, it suffices to study the distances using the irreducible spectral triple since it induces exactly the same notion of distance on each $\acal_N$. From now on we will stop writing the symbols $\pi_j$, $j = N/2$, denoting the unitary representation of $U(\sut) \ni H = J^3, E = J^-, F = J^+$ on $V_j$ unless confusion may arise; hence we will write the Dirac operator as
 \begin{equation}
     D_N = \begin{pmatrix} 1 + H & F \\ E & 1 - H\end{pmatrix}.
 \end{equation}
@@ -671,7 +665,7 @@ If in the equation for $||[D_N, a]||$ instead of taking the supremum over all $v
 \end{align}
 and so the first inequalities follow.
 
-If $a \in \acal_N = M_{N+1}(\CC)$ is diagonal, then $[H, a] = 0$ since $H = \pi_j(J_3)$ is also diagonal, and so
+If $a \in \acal_N = M_{N+1}(\CC)$ is diagonal, then $[H, a] = 0$ since $H = \pi_j(J^3)$ is also diagonal, and so
 \begin{equation*}
     [D_N, a]^* [D_N, a] 
     = \begin{pmatrix}
@@ -710,12 +704,10 @@ The general procedure to find the distance between two states will be the follow
 % % \begin{equation}
 % %     d_N(\psi_{(0,0), \psi_{(0, \pi)}}) = \sum_{k = 1}^N \frac{1}{\sqrt{k(N-k+1)}}
 % % \end{equation}
-% \textit{Pf}: Recall that $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$ $\longrightarrow$ $\omega_m(a) - \omega_n(a) = \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle$; since $|\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, we get the upper bound. 
+% \textit{Pf}: Recall that $J^\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$ $\longrightarrow$ $\omega_m(a) - \omega_n(a) = \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle$; since $|\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, we get the upper bound. 
 
 % Define the diagonal hermitian operator $\hat a |j, m\rangle := - \left( \sum_{k = -j+1}^m  \right)|j, m\rangle$, $\longrightarrow$ $[E, \hat a] |j, k \rangle = |j, k+1\rangle$ ($k < j$), and so $\hat a$ saturates the inequality.
 % }
-
-\linea
 
 Another family of pure states on each $\acal_N = End(V_j)$, for $N = 2j \in \NN$  is the family of vector states $\lbtext{\omega_m} := \langle j, m | \cdot | j, m \rangle$, where $m = -j, \dots, j-1, j$. The study of this distance will be useful to the study of coherent states.
 
@@ -728,7 +720,7 @@ In particular, the distance between this family of states is additive.
 \end{theorem}
 
 \begin{proof}
-Recall that $E = J_+ = J_-^* \in U(\sut)$ and that, for $m \pm 1 = -j\pm 1, \dots, j$, $J_\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$. Therefore, 
+Recall that $E = J^+ = (J^-)^* \in U(\sut)$ and that, for $m \pm 1 = -j\pm 1, \dots, j$, $J^\pm|j,m\rangle = \sqrt{(j\mp m)(j\pm m + 1)}|j, m+1 \rangle$. Therefore, 
 \begin{align*}
     \langle j, m | [E, a] |j, m - 1 \rangle &= \sqrt{(j+m)(j-m+1)} \langle j, m-1| a | j, m-1\rangle \\
     & -\sqrt{(j-m+1)(j+m)} \langle j, m| a | j, m\rangle
@@ -756,7 +748,7 @@ For this $\hat a$, $[E, \hat a] |j, m \rangle = |j, m+1\rangle$ for all $m = -j,
  
 %  Presentation:
  
-% $\pi_{1/2}(J_k) = \sigma_k/2$
+% $\pi_{1/2}(J^k) = \sigma_k/2$
 
 % - Any hermitian element in $\acal_1 = M_2(\CC)$ can be written as
 % \begin{align*}
@@ -775,7 +767,6 @@ For this $\hat a$, $[E, \hat a] |j, m \rangle = |j, m+1\rangle$ for all $m = -j,
 % \textit{Pf}: $|\omega_{\vec x}(b) - \omega_{\vec y}(b)| = |(\vec x - \vec y)\cdot \vec b| \leq |\vec x - \vec y||\vec b|$; $i[D_1, a]$ is hermitian with max. eigenvalue/norm $=2 |\vec a|$ $\longrightarrow$ $a \in \acal_1$ hermitian with $\vec a$ parallel to $\vec x - \vec y$ st. $2|\vec a| = 1$ saturates the inequality.
 % }
 
-\linea
 
 Any hermitian element in $\acal_1 = M_2(\CC)$ can be written as
 \begin{align*}
@@ -784,14 +775,15 @@ Any hermitian element in $\acal_1 = M_2(\CC)$ can be written as
 
 Since very state $\omega: \acal_1 \to \CC$, in addition to its linearity over this $4$-dimensional vector space, must satisfy that $\omega(Id_2) = 1$ and $\omega(a^*a) \geq 0$, then, when evaluated on hermitian elements $a$ as above, every state must be of the form $\omega_{\vec x}(a) = a_0 + \vec x \cdot \vec a$, for $\vec x \in B^3 \subset \RR^3$.
 
-This form for the states identifies the convex combination $\alpha \omega_{\vec x} + \beta \omega_{\vec y}$, i.e. $\alpha, \beta \in \RR_{\geq 0}$ and $\alpha + \beta = 1$, of states $\omega_{\vec x}$ and $\omega_{\vec y}$, with the convex combination points $\alpha\vec x + \beta\vec y$ in $B^3$. Hence, all pure states on $\acal_1$, i.e. those that can not be written as a convex combination of more than one state, are of the form $\omega_{E(\phi, \theta)}$ for $E(\phi, \theta):= (\sin \theta \cos \phi, \sin \theta, \cos \theta) \in S^2$. Furthermore, $\omega_{E(\phi, \theta)} = \psi^1_{(\phi, \theta)}$.
+This form for the states identifies the convex combination $\alpha \omega_{\vec x} + \beta \omega_{\vec y}$, i.e. $\alpha, \beta \in \RR_{\geq 0}$ and $\alpha + \beta = 1$, of states $\omega_{\vec x}$ and $\omega_{\vec y}$, with the convex combination points $\alpha\vec x + \beta\vec y$ in $B^3$. Hence, all pure states on $\acal_1$, i.e. those that can not be written as a convex combination of more than one state, are of the form $\omega_{E(\phi, \theta)}$ for $E(\phi, \theta):= (\sin \theta \cos \phi, \sin \theta, \cos \theta) \in S^2$. Furthermore \cite{DAndrea2013}:
+%$\omega_{E(\phi, \theta)} = \psi^1_{(\phi, \theta)}$
 
 \begin{proposition}
 The set $\{\omega_{E(\phi, \theta)} \,|\, E(\phi, \theta)\}$ of pure states on $\acal_1$ coincides with the set of $SU(2)$-coherent states, under the equality $\omega_{E(\phi, \theta)} = \psi^1_{(\phi, \theta)}$.
 \end{proposition}
-\begin{proof}
-Shouldn't be too complicated once the correct framing is achieved...  AND IT CAN BE A GOOD WAY TO UNDERSTAND THE COHERENT STATES\todo{I would like to do this} $|j, j\rangle = \begin{pmatrix} 1&0 \end{pmatrix}$
-\end{proof}
+% \begin{proof}
+% Shouldn't be too complicated once the correct framing is achieved...  AND IT CAN BE A GOOD WAY TO UNDERSTAND THE COHERENT STATES\todo{I would like to do this} $|j, j\rangle = \begin{pmatrix} 1&0 \end{pmatrix}$
+% \end{proof}
 
 \begin{theorem}\label{N=1CaseDistance}
 For $N = 1$ all pure states are coherent states and 
@@ -807,7 +799,7 @@ As stated at the beginning of this section, we may restrict our search to hermit
         &\leq |\vec x - \vec y||\vec b|.
 \end{align*}
 
-Now, let $a_\pm = a_1 \pm i a_2$, so that $a = a_0 + a_+ \sigma_+ + a_- \sigma_- + a_3 \sigma_3$. Recall that $\pi_{1/2}(J_k) = \frac{\sigma_k}{2}$, $k = 1, 2, 3$, hence
+Now, let $a_\pm = a_1 \pm i a_2$, so that $a = a_0 + a_+ \sigma_+ + a_- \sigma_- + a_3 \sigma_3$. Recall that $\pi_{1/2}(J^k) = \frac{\sigma_k}{2}$, $k = 1, 2, 3$, hence
 \begin{equation*}
     [D_1, a] = 
     \begin{pmatrix}
@@ -855,7 +847,6 @@ Therefore, if we choose $a \in \acal_1$ hermitian with associated $\vec a$ paral
 % (Dibujito: $N=1$ en un color, other increasing $N's$ (equivalent paths), finally commutative distance).
 % }
 
-\linea
 
 In this subsection we will relate the coherent states and the algebras of subsequent $N$'s, which will then allow us to find a relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$ for any $N = 2j \in \NN$.
 
@@ -953,7 +944,7 @@ proves the desired upper bound.
 \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Auxiliary Distance and Limit}
-
+\label{ChFSSectionLimit}
 % {\color{gray} 
 %  - Study simpler subalgebra distance: lower bound whose behavior is understood and that encases the actual distance, allowing approximate study.
 
@@ -979,7 +970,6 @@ proves the desired upper bound.
 % \end{equation}
 % }
 
-\linea
 
 A final result, stating that the distance between any two coherent states associated to two points in the sphere is not only bounded by the euclidean distance between the points, but that in fact this is the limit distance when $N \to \infty$ can be shown. To do this, we use an auxiliary distance by limiting the algebra on which we maximize the norm of the difference of the evaluation of the states that appears in the definition of Connes' distance. By reducing the algebra the supremum over it will necessarily be a lower bound, but an exact formula for the distance will be possible.
 
