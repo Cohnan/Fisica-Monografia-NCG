@@ -507,7 +507,7 @@ Defining $\rho := \ln r$ and $f(\rho) := \tilde f(r)$, the radial equation \eqre
         \tilde \rho_m := \frac{E'_m}{k_m},\quad
         e_m = \frac{E'^2_m}{k_m} + E'_m - m^2.
 \end{equation} 
-When solving this equation, taking into account that $\psi = f(\rho) $ an additional label $n \in \ZZ_{\geq 0}$ appears to label the eigenvalues of the previous equation; these solutions are:
+When solving this equation, taking into account that $\psi = f(\rho)Y(\phi) $ an additional label $n \in \ZZ_{\geq 0}$ appears for the eigenvalues of the previous equation; these solutions are:
 \begin{eqnsplit}
     f_{n, m}(\rho) &= N_m \exp\left[ - \frac{(\rho - \tilde \rho_m \sqrt{k_m})}{2}\right] H_n\left[ (\rho - \rho_m)\right]\\
     e_{n, m} &= (2n+1) \sqrt{k_m},
@@ -522,27 +522,27 @@ by squaring both sides we obtain a quartic equation for $E'_{n,m}$ that makes it
 
 \lin
 
-As was mentioned in the previous section, in order to get simple eigenenergies we fix $V_0$ such that the ground energy $E_{0, 0}$ equals $0$. To do this we replace use the tags $m = n = 0$ in equation \eqref{equationAlmostQuarticDeterminesE'} and use $E_{0, 0} = 0$. From there, we deduce that $V_0$ has a quartic equation that determines it a function of $k$, which can be rewritten as
+As was mentioned in the previous section, in order to get simple eigenenergies we fix $V_0$ such that the ground energy $E_{0, 0}$ equals $0$. To do this we replace $m = n = 0$ in equation \eqref{equationAlmostQuarticDeterminesE'} and use $E_{0, 0} = 0$. From there, we deduce that $V_0$ has a quartic equation that determines it a function of $k$ that can be rewritten as:
 \begin{equation}\label{equationV0AlternativeNotQuartic}
     - \sqrt{\frac{1}{2k}}V_0 - \left( \sqrt{\frac{1}{2k}} \right)^3 V_0^2 = \left( 1 + \frac{V_0}{k} \right)^\frac{3}{2}.
 \end{equation}
-Although a closed formula for $V_0(k)$ is possible since it is determined by a quadratic equation, we opt for the use of its Taylor series expansion with respect to the variable $1/\sqrt{k}$, at $k = \infty$, by using the implicit formula \eqref{equationV0AlternativeNotQuartic}; the resulting expansion is:
+$V_0(k)$ has a unique solution root over the reals, although it is possible to find a closed formula for it since it is determined by a quadratic equation, we opt for the use of its Taylor series expansion with respect to the variable $1/\sqrt{k}$, at $k = \infty$, by using the implicit formula \eqref{equationV0AlternativeNotQuartic}; the resulting expansion is:
 \begin{equation}\label{equationFormulaExpansionV0functionOfK}
-    V_0(k) = - \sqrt{2k} + 2 - \frac{7}{2} \frac{1}{\sqrt{2k}} + O\left(\frac{1}{k}\right).
-\end{equation}\todo{check that $o$}
-Finally, this expansion in $k$ of $V_0$ induces the following expansion of the eigenenergies of the harmonic approximation of Schrodinger equation:
-\begin{equation}\label{equationEigenEnergies2DSchrodingerSolutionsHarmonicApproximation}
-    E_{n, m} = m^2 + 2n\sqrt{2k} - 2n + O\left(\frac{1}{\sqrt{k}}\right).
+    V_0(k) = - \sqrt{2k} + 2 - \frac{7}{2} \frac{1}{\sqrt{2k}} + \frac{5}{2k} + O\left(\frac{1}{k^{3/2}}\right).
 \end{equation}
+Finally, this expansion in $k$ of $V_0$ induces the following expansion of the eigenenergies of the harmonic approximation of Schrodinger equation:
+\begin{multline}\label{equationEigenEnergies2DSchrodingerSolutionsHarmonicApproximation}
+    E_{n, m} = (m^2 - 2 -8n -8n^2) +  \sqrt{2}(1+2n)\sqrt{k}\\+ \frac{(1+2n)(7-6m^2+28n+28n^2)}{2\sqrt{2k}}+  O\left(\frac{1}{k}\right).
+\end{multline}
 
 \lin 
 
-The final step to build the Hilbert space $\hcal_{\cut E}$ and $\acal_{\cut E}$ given a cutoff energy $\cut E \geq 0$, is to make sure that $k$ is steep enough to ensure that $E_{1, 0}$ is above $\cut E$, and this is expressed by the inequality
+The final step to build the Hilbert space $\hcal_{\cut E}$ and $\acal_{\cut E}$ given a cutoff energy $\cut E \geq 0$ is to make sure that $k$ is steep enough to ensure that $E_{1, 0}$ is above $\cut E$, and this is expressed by the inequality
 \begin{align}\label{equationConditionCompatibilityCutoffEandK}
-    \cut E < E_{1, 0} \lesssim 2 \sqrt{2k} - 2.
-\end{align}\todo{perhaps the $O(1/\sqrt{k})$ term is negative?}
+    \cut E < 3\sqrt{2k}-18 \lessapprox E_{1, 0}.
+\end{align}
 In that case, renaming $\psi_{0, m}$ and $E_{0, m}$ as $\psi_m$ and $E_m$ for $m \in \ZZ$, we define the spaces
-\begin{eqnsplit} \label{equationDefinitionOFHandEHilbertAndAlgebraGivenCutoff}
+\begin{eqnsplit} \label{equationDefinitionOFHcutEAndAcutECutoffD2}
     \hcal_{\cut E} &:= span\{ \psi_m(\rho, \phi) \,:\, E_m \leq \cut E \}\\
     \acal_{\cut E} &:= End(\hcal_{\cut E});
 \end{eqnsplit} where
@@ -556,12 +556,12 @@ In that case, renaming $\psi_{0, m}$ and $E_{0, m}$ as $\psi_m$ and $E_m$ for $m
 
 \begin{remark}
 Notice that, in principle, the definition of $\acal_{\cut E}$ is dependent on the chosen $k$ due to $k_m(k)$ and $\tilde \rho_m(k)$, so we may write instead $\psi_{n, m}(\rho, \phi)$ as $\psi_{n, m}(\rho, \phi; k)$; also notice that, for fixed $k$ and two cutoffs $\cut E_1$ and $\cut E_2 > \cut E_1$ compatible with this $k$, $\hcal_{\cut E_1}$ is a subspace of $\hcal_{\cut E_2}$ since its basis elements $\psi_m$ are also basis elements of the latter, but only due to the fixed choice of $k$ for both cutoffs. 
-Also notice that, since $k$ is chosen large, all $\psi_m$ essentially vanish outside the $k$ dependent region $\nu_{\cut E}$, for $m$ fixed, and, in fact, $\psi_m(\rho, \phi) \to e^{im\phi} \delta(\rho - 1)$ in probability\todo{creo que es este tipo de convergence} as $k \to \infty$. 
+Furthermore, since $k$ is chosen large, all $\psi_m$ essentially vanish outside the $k$ dependent region $\nu_{\cut E}$, for $m$ fixed, and, in fact, $\psi_m(\rho, \phi) \to e^{im\phi} \delta(r - 1)$ in probability\todo{creo que es este tipo de convergence} as $k \to \infty$. 
 However, \rtext{the dependence on $k$ of the definition of the $\psi_m$ and, in consequence, of $\acal_{\cut E}$ will not be relevant to its individual study as a noncommutative space}, since for that all we need is algebra structure and the action of the relevant symmetry space; concretely: the fact that it is an endomorphism algebra over a finite dimensional Hilbert spaces\todo{eigenvectors of $L^2 \in \bcal(\hcal)$ also relevant?} i.e. it is a matrix algebra, and its behavior under the action of the group $O(2)$ induced by the action on the underlying Hilbert space\todo{perhaps also the algebra generators? I think not, except for interpretations, but we will get this anyways}. 
-Indeed, it is easy to see  that (since $O(2)$ doesn't affect the radial coordinate), for any compatible $k$, $\hcal_{\cut E}$ is isomorphic to $\hcal'_{\cut E} := span\{e^{i m \phi} \, : \, m \in \ZZ, \, m^2 \leq \cut E\}$ in an $O(2)$-equivariant way, and, hence, that \rtext{$\acal_{\cut E}$\todo{again, strictly speaking, I am assuming that the extra factor in the $k$-expansion of the energies is positive} is isomorphic to $\acal'_{\cut E} := End(\hcal'_{\cut E})$ as a $C^*$-algebra and as a representation space of $O(2)$}.
+Indeed, it is easy to see  that (since $O(2)$ doesn't affect the radial coordinate), for any compatible $k$, $\hcal_{\cut E}$ is isomorphic to $\hcal'_{\cut E} := span\{e^{i m \phi} \, : \, m \in \ZZ, \, m^2 \leq \cut E\}$ in an $O(2)$-equivariant way, and, hence, that \rtext{$\acal_{\cut E}$\todo{again, strictly speaking, I am assuming that the extra factor in the $k$-expansion of the energies is positive} is isomorphic to $\acal'_{\cut E} := End(\hcal'_{\cut E})$ as a $C^*$-algebra and as a representation space of $O(2)$} (theorem \ref{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2}).
 \end{remark}
 
-Now, to parametrize these algebras by $\Lambda \in \NN$ and obtain a fuzzy space, define:
+Now, to parametrize these algebras by $\Lambda \in \NN$ and obtain a sequence of approximations of quantum mechanics in $S^1$, define:
 \begin{definition}\label{definitionHLambdaALambdaD2} For $\Lambda \in \NN$, let
 \begin{eqnsplit}\label{equationDefinitionHilbertAndAlgebraObservablesGivenLambda}
     \hcal_\Lambda &:= \hcal_{\cut E  = \Lambda^2} \\
@@ -571,9 +571,11 @@ Now, to parametrize these algebras by $\Lambda \in \NN$ and obtain a fuzzy space
 
 This means that the energies of the basis elements of $\hcal_\Lambda$ are all those $m^2 \in \NN$, up to the constant term $\Lambda^2$, and are below the energies $E_{1,0}$; additionally, we also need to choose $k$ as a function on $\Lambda$ in such a way that it diverges with $\Lambda$ and such that $k(N)$ is compatible with the cutoff energy $\Lambda$; for this, the equation \eqref{equationConditionCompatibilityCutoffEandK} tells us that we may choose any function $k = k(\Lambda)$ such that
 \begin{equation}\label{inequationInequalityNeededforKasFunctionLambdaD2}
-    k(\Lambda) \geq  \left( \frac{\Lambda^2 + 2}{8} \right)^2\leq \Lambda^2 (\Lambda + 1)^2.
+    k(\Lambda) \geq  \frac{\left( {\Lambda^2+18}\right)^2}{18}\overset{\Lambda \geq 2}{\leq} \Lambda^2 (\Lambda + 1)^2;
 \end{equation}
-Although the precise value of $k(\Lambda)$ isn't relevant for the study of a single algebra $\acal_\Lambda$, it plays an important role in the convergence of the sequence of algebras within a fuzzy sphere to the commutative algebra of continuous functions $C(S^2)$ on $S^2$.% and to the algebra of operators $\bcal(\hcal)$.
+that such a sequence of algebras do indeed approximate quantum mechanics in $S^1$ is made precise in theorem \ref{theoremConvergesToQMD2}. 
+
+Although the precise value of $k(\Lambda)$ once \eqref{inequationInequalityNeededforKasFunctionLambdaD2} holds isn't relevant for the study of a single algebra $\acal_\Lambda$, it plays an important role in the convergence of the sequence of algebras when the sequence is made into a fuzzy sphere; see \ref{theoremConvergesFuzzyCircleD2}. The value of $k(\Lambda)$ will determine the accuracy of the approximations of the operators that we will use in the next section, including that of the position operators.% and to the algebra of operators $\bcal(\hcal)$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1228,7 +1230,7 @@ Suppose that $\varphi$ is in the domain of $L$, i.e. $\sum_{m \in \ZZ} m^2 |\phi
     ||(L - \cut L)\varphi|| = \sum_{|m| > \Lambda} m^2 |\phi_m|^2 \overset{\Lambda \to 0}{\longrightarrow} 0.
 \end{align*}
 
-Similarly, Let $\varphi = \sum_{m \in \ZZ} \varphi_m e^{i \phi}$. Then
+Similarly, let $\varphi = \sum_{m \in \ZZ} \varphi_m e^{i \phi}$. Then
 \begin{align*}
     ||(\chi^\pm - e^{\pm i \phi})\varphi||^2 &= \sum_{m = - \Lambda}^{\Lambda-1} \left[ \sqrt{1 + \frac{m(m \pm 1)}{k}} - 1 + O\left(\frac{m^3}{k^{3/2}} \right)\right] \varphi_m e^{i(m \pm 1)} - \sum_{m < \Lambda, m \geq \Lambda} \varphi_m e^{i(m \pm 1)}\\
     &\leq \sum_{m = -\Lambda}^{\Lambda-1} \left[\frac{m^2(m\pm 1)^2}{4k^2} + O\left(\frac{\Lambda^6}{k^{3}} \right)\right] |\varphi_m|^2 + \sum_{m < \Lambda, m \geq \Lambda} |\varphi_m|^2 \\
@@ -1272,7 +1274,7 @@ where $x^h = (x^+)^h$ if $h \geq 0$ and $x^h = (x^-)^h$ if $h \leq 0$, as the fu
 \end{equation}
 then it shown in \cite{Fiore2018} the following:
 
-\begin{theorem}
+\begin{theorem}\label{theoremConvergesFuzzyCircleD2}
 Suppose that $k(\Lambda) \geq 2\Lambda(\Lambda+1)(2\Lambda+1)^2$. Then, for all $f, g \in B(S^1)$ the following strong limits hold:
 \begin{align}
     \hat f_\Lambda \to f\cdot && \hat{(fg)}_\Lambda \to fg\cdot && \hat f_\Lambda \hat g_\Lambda \to fg \cdot\,,
