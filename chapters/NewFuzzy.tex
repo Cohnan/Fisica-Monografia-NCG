@@ -211,9 +211,9 @@ for some $\tilde r$ function of $r$, $f(\tilde r) := \tilde f(r)$ and $\tilde k,
 
 \lin
 
-\begin{figure}[h]
+\begin{figure}[h][h]
     \centering
-    \includegraphics[width = \textwidth/2]{images/FioreEigenvalues.PNG}
+    \includegraphics[width = 2\textwidth/3/2]{images/FioreEigenvalues.PNG}
     \caption{Eigenvalues of the Hamiltonian for steep enough potential for $D = 2$. The cutoff energy $\cut E$ can be chosen so that the energies below it are the spectrum of the free Hamiltonian $L^2$ in $S^d$. Image extracted from \cite{Fiore2018}}
     \label{fig:D2EigenvaluesEigenEnergiesHarmonicCutoff}
 \end{figure}
@@ -247,7 +247,7 @@ Since the Hamiltonian operator is the generator of time evolution for a quantum 
 Hence, if $\psi_0 \in \hcal_{\cut E}$, it is a linear combination of eigenfunctions of $H$ of energy lower than $\cut E$ and, by applying the linear time-evolution operator $\exp[-itH] = 1 - itH - t^2 H^2 + \cdots$, $\psi(t) := U(t) \psi_0$ will once again be a linear combination of eigenfunctions of $H$ with low energy, i.e. $\psi(t)$ is also in $\hcal_{\cut E}$.
 \end{remark}
 
-\begin{remark}
+\begin{remark}\label{remarkODActsOnHCutE}
 The orthogonal group $O(D)$ is defined as the subset of the matrices $M_D(\RR)$ acting on the vectors of $\RR^D$ that respects the inner product of $\RR^d$, i.e. for any $\vec v, \vec w \in \RR^D$, every matrix $A \in O(D)$ satisfies $(A \vec v) \cdot (A \vec w) = \vec v \cdot \vec w$; it is easily shown that this condition is equivalent to $A^t A = 1_D$, where the subscript $\cdot ^t$ denotes the transpose matrix. This group contains not only all possible rotations on $\RR^D$, the group $SO(D) = \{A \,:\, det(A) = 1, \, A \in O(D)\}$, but also the reflections with respect to every hyperplane on $\RR^D$. 
 
 \noindent $O(D) \ni g$ acts naturally from the left on $\RR^D$, and so it also acts on functions $\psi$ of $\RR^D$, in particular on $\hcal = L^2(\RR^D)$, through the unitary representation $\pi$ defined by $\pi(g)\psi: \vec v \to \psi(g^{-1} \vec v)$. Actually, \rtext{$O(D)$ acts on $\hcal_{\cut E} \subset \hcal$, and, therefore, on $\acal_{\cut E}$ from the left by inner automorphisms}, meaning that the action of any $g \in O(D)$ on any function $\psi \in \hcal_{\cut E}$ produces again a function in $\hcal_{\cut E}$. This follows from the fact that the Hamiltonian \eqref{equationHamiltonianGeneralD}, being radially symmetric, is $O(D)$-invariant, and so $[H, \pi(g)] = 0 \in \bcal(\hcal)$ for the action of any $g \in O(D)$, which implies that, if $\psi_E$ is an eigenfunction of $H$ of energy $E \leq \cut E$, then $\pi(g) \psi_E$ is also an eigenfunction for the same energy.%; then, acting on any $\psi \in \hcal_{\cut E}$, being a linear combination of such eigenfunctions, $g\cdot \psi$ is also in $\hcal_{\cut E}$.
@@ -528,12 +528,12 @@ As was mentioned in the previous section, in order to get simple eigenenergies w
 \end{equation}
 $V_0(k)$ has a unique solution root over the reals, although it is possible to find a closed formula for it since it is determined by a quadratic equation, we opt for the use of its Taylor series expansion with respect to the variable $1/\sqrt{k}$, at $k = \infty$, by using the implicit formula \eqref{equationV0AlternativeNotQuartic}; the resulting expansion is:
 \begin{equation}\label{equationFormulaExpansionV0functionOfK}
-    V_0(k) = - \sqrt{2k} + 2 - \frac{7}{2} \frac{1}{\sqrt{2k}} + \frac{5}{2k} + O\left(\frac{1}{k^{3/2}}\right).
+    V_0(k) = - \sqrt{2k} + 2 - \frac{7}{2} \frac{1}{\sqrt{2k}} + \frac{5}{2k} + O\left(\frac{1}{k^{frac}}\right).
 \end{equation}
 Finally, this expansion in $k$ of $V_0$ induces the following expansion of the eigenenergies of the harmonic approximation of Schrodinger equation:
 \begin{multline}\label{equationEigenEnergies2DSchrodingerSolutionsHarmonicApproximation}
     E_{n, m} = (m^2 - 2 -8n -8n^2) +  \sqrt{2}(1+2n)\sqrt{k}\\+ \frac{(1+2n)(7-6m^2+28n+28n^2)}{2\sqrt{2k}}+  O\left(\frac{1}{k}\right).
-\end{multline}
+\end{multline}\todo{pretty sure above should appear $\sum m^i n^{1-i}$}
 
 \lin 
 
@@ -550,16 +550,19 @@ In that case, renaming $\psi_{0, m}$ and $E_{0, m}$ as $\psi_m$ and $E_m$ for $m
     \psi_m(\rho, \phi) = c_m e^{im\phi} \exp \left[ - \frac{(\rho - \tilde \rho_m) \sqrt{k_m}}{2} \right], \quad \text{where}
 \end{equation}
 \begin{align}\label{equationExpansionKDependentConstantsPsim}
-    k_m &= 2k \left( 1 - \frac{2}{\sqrt{2k}} + \frac{2-m^2}{k} + O\left( \frac{1}{k^{3/2}} \right) \right), &
-    \tilde \rho_m &= \frac{1}{\sqrt{2k}} + \frac{m^2}{2k} + O\left( \frac{1}{k^{3/2}} \right).
+    k_m &= 2k \left( 1 - \frac{2}{\sqrt{2k}} + \frac{2-m^2}{k} + O\left( \frac{1}{k^{\frac{3}{2}}} \right) \right), &
+    \tilde \rho_m &= \frac{1}{\sqrt{2k}} + \frac{m^2}{2k} + O\left( \frac{1}{k^{\frac{3}{2}}} \right).
 \end{align}
 
 \begin{remark}
 Notice that, in principle, the definition of $\acal_{\cut E}$ is dependent on the chosen $k$ due to $k_m(k)$ and $\tilde \rho_m(k)$, so we may write instead $\psi_{n, m}(\rho, \phi)$ as $\psi_{n, m}(\rho, \phi; k)$; also notice that, for fixed $k$ and two cutoffs $\cut E_1$ and $\cut E_2 > \cut E_1$ compatible with this $k$, $\hcal_{\cut E_1}$ is a subspace of $\hcal_{\cut E_2}$ since its basis elements $\psi_m$ are also basis elements of the latter, but only due to the fixed choice of $k$ for both cutoffs. 
 Furthermore, since $k$ is chosen large, all $\psi_m$ essentially vanish outside the $k$ dependent region $\nu_{\cut E}$, for $m$ fixed, and, in fact, $\psi_m(\rho, \phi) \to e^{im\phi} \delta(r - 1)$ in probability\todo{creo que es este tipo de convergence} as $k \to \infty$. 
-However, \rtext{the dependence on $k$ of the definition of the $\psi_m$ and, in consequence, of $\acal_{\cut E}$ will not be relevant to its individual study as a noncommutative space}, since for that all we need is algebra structure and the action of the relevant symmetry space; concretely: the fact that it is an endomorphism algebra over a finite dimensional Hilbert spaces\todo{eigenvectors of $L^2 \in \bcal(\hcal)$ also relevant?} i.e. it is a matrix algebra, and its behavior under the action of the group $O(2)$ induced by the action on the underlying Hilbert space\todo{perhaps also the algebra generators? I think not, except for interpretations, but we will get this anyways}. 
-Indeed, it is easy to see  that (since $O(2)$ doesn't affect the radial coordinate), for any compatible $k$, $\hcal_{\cut E}$ is isomorphic to $\hcal'_{\cut E} := span\{e^{i m \phi} \, : \, m \in \ZZ, \, m^2 \leq \cut E\}$ in an $O(2)$-equivariant way, and, hence, that \rtext{$\acal_{\cut E}$\todo{again, strictly speaking, I am assuming that the extra factor in the $k$-expansion of the energies is positive} is isomorphic to $\acal'_{\cut E} := End(\hcal'_{\cut E})$ as a $C^*$-algebra and as a representation space of $O(2)$} (theorem \ref{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2}).
+However, \rtext{the dependence on $k$ of the definition of the $\psi_m$ and, in consequence, of $\acal_{\cut E}$ will not be relevant to its individual study as a noncommutative space}, since for that all we need is algebra structure and the action of the relevant symmetry space%; concretely: the fact that it is an endomorphism algebra over a finite dimensional Hilbert spaces i.e. it is a matrix algebra, and its behavior under the action of the group $O(2)$ induced by the action on the underlying Hilbert space. 
+Indeed, in theorem \ref{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2} we prove that %(since $O(2)$ doesn't affect the radial coordinate), for any compatible $k$, $\hcal_{\cut E}$ is isomorphic to $\hcal'_{\cut E} := span\{e^{i m \phi} \, : \, m \in \ZZ, \, m^2 \leq \cut E\}$ in an $O(2)$-equivariant way, and, hence, that
+\emph{$\acal_{\cut E}$ is isomorphic to $\acal'_{\cut E} := End(\hcal'_{\cut E})$ as a $C^*$-algebra and as a representation space of $O(2)$}.
 \end{remark}
+
+\lin
 
 Now, to parametrize these algebras by $\Lambda \in \NN$ and obtain a sequence of approximations of quantum mechanics in $S^1$, define:
 \begin{definition}\label{definitionHLambdaALambdaD2} For $\Lambda \in \NN$, let
@@ -575,7 +578,7 @@ This means that the energies of the basis elements of $\hcal_\Lambda$ are all th
 \end{equation}
 that such a sequence of algebras do indeed approximate quantum mechanics in $S^1$ is made precise in theorem \ref{theoremConvergesToQMD2}. 
 
-Although the precise value of $k(\Lambda)$ once \eqref{inequationInequalityNeededforKasFunctionLambdaD2} holds isn't relevant for the study of a single algebra $\acal_\Lambda$, it plays an important role in the convergence of the sequence of algebras when the sequence is made into a fuzzy sphere; see \ref{theoremConvergesFuzzyCircleD2}. The value of $k(\Lambda)$ will determine the accuracy of the approximations of the operators that we will use in the next section, including that of the position operators.% and to the algebra of operators $\bcal(\hcal)$.
+Although the precise value of $k(\Lambda)$ once \eqref{inequationInequalityNeededforKasFunctionLambdaD2} holds isn't relevant for the study of a single algebra $\acal_\Lambda$, it plays an important role in the convergence of the sequence of algebras when the sequence is made into a fuzzy sphere; see theorem \ref{theoremConvergesFuzzyCircleD2}. The value of $k(\Lambda)$ will also determine the accuracy of the approximations of the operators that we will use in the next section, including that of the candidates for position operators.% and to the algebra of operators $\bcal(\hcal)$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -586,7 +589,7 @@ Although the precise value of $k(\Lambda)$ once \eqref{inequationInequalityNeede
 % {
 %     \color{gray}
     
-%     - Up to infinite, $1/k^{1/2}\dbtext{?}$ and $1/k^{3/2}$ orders, respectively
+%     - Up to infinite, $1/k^{1/2}\dbtext{?}$ and $1/k^{\frac{3}{2}}$ orders, respectively
 %     \begin{align}
 %     \label{projObs2D}
 %         \rtext{\cut L} \psi_m &= m \psi_m; & 
@@ -597,7 +600,7 @@ Although the precise value of $k(\Lambda)$ once \eqref{inequationInequalityNeede
 %                 0 & \text{otherwise}
 %             \end{cases}
 %     \end{align}
-%     - And so, up to terms of $1/k^{3/2}$
+%     - And so, up to terms of $1/k^{\frac{3}{2}}$
 %     \begin{align}
 %         \label{conmObs2D}
 %         \cut{x^+}^\dagger &= \cut{x^-}; &
@@ -713,7 +716,7 @@ Notice that $[\cut L, P_\Lambda] = 0$, so
 Applying the last item of proposition \ref{propositionGeneralResultsStatementsCutD2} to $A = x^\pm$ gives us a result analogous to equation \eqref{equationCommutationLXpmPartialPmD2}, and therefore, applying the second statement, an analog of equation \eqref{equationX+XPlusIncreasesDecreasesDegreeEigenvalueL}. In fact, the following useful generalization applies:
 
 \begin{definition}\label{definitionGradingOperatorsD2Cut}
-Let $\acal^n_\Lambda$, for $n \in \{-2\Lambda, \dots, 2\Lambda\}$ be the subspace of $\acal_\Lambda$ for which, for any $A^n \in \acal^n_\Lambda$
+Let $\acal^n_\Lambda$, for $n \in \{-2\Lambda, \dots, 2\Lambda\}$, be the subspace of $\acal_\Lambda$ for which, for any $A^n \in \acal^n_\Lambda$
 \begin{equation*}
     A^n \psi_m \in 
     \begin{cases}
@@ -726,7 +729,7 @@ where $m \in \{-\Lambda, \dots, \Lambda\}$ and $\psi_m \in \hcal^m$.
 
 We can see that an element $A \in \acal_\Lambda$ is in $\acal^n_\Lambda$ if and only if $[\cut L, A] = nA$, since this can be rewritten as $\cut L A = A(\cut L + n)$. In particular, 
 \begin{equation}\label{equationXPMGradeUpDownD2}
-    x^\pm \in \acal^{\pm 1}_\Lambda.
+    \cut{x^\pm} \in \acal^{\pm 1}_\Lambda.
 \end{equation}
 
 \lin
@@ -762,7 +765,7 @@ Let $S^\pm \in \acal_{\Lambda}$ be operators such that
 \begin{align}
     S^\pm \psi_m &= \psi^{m\pm 1}, & \text{for }m \in \{-\Lambda, \dots, \Lambda\} \subset \ZZ \text{ such that } |m \pm 1| \leq \Lambda;
 \end{align}
-$S^+$ iscalled \emph{the raising operator on $\hcal_\Lambda$} with respect to the basis $\{\psi_m\}_{|m| \leq \Lambda}$,  $S^-$ is called \emph{the lowering operator}. Let $S^n \in \acal_\Lambda$, for $n \in \{-2\Lambda, \dots, 2\Lambda\} \subset \ZZ$ be
+$S^+$ is called \emph{the raising operator on $\hcal_\Lambda$} with respect to the basis $\{\psi_m\}_{|m| \leq \Lambda}$,  $S^-$ is called \emph{the lowering operator}. Let $S^n \in \acal_\Lambda$, for $n \in \{-2\Lambda, \dots, 2\Lambda\} \subset \ZZ$ be
 \begin{equation}
     S^n := \begin{cases}
     (S^+)^n & n \geq 0\\
@@ -795,7 +798,7 @@ then $T^l \in \acal_N^l$ if $l \in \{-2\Lambda, \dots, 2\Lambda\}$. This operato
 \end{align}
 thus, the ladder operator is a polynomial in $U$, $D$ and $L$.
 
-Now, an arbitrary element $A$ of $\acal_\Lambda$ may be written as the polynomial in $U$, $D$ and $L$: $A =\sum_{m,n} A(m,n) S^{n-m} \tilde P_m$, for some function $A(m,n)$ defined on the discrete set $m,n \in \{-\Lambda, \dots, \Lambda\}$.
+Now, an arbitrary element $A$ of $\acal_\Lambda$ may be written as the polynomial in $U$, $D$ and $L$: $A =\sum_{m,n} A(m,n) S^{n-m} \tilde P_m$, for the function $A(m,n) = \langle \psi_n | A |\psi_m \rangle$ defined on the discrete set $m,n \in \{-\Lambda, \dots, \Lambda\}$.
 \end{proof}
 
 \begin{lemma}\label{lemmaLIsPolynomialOfUpDownLaddersD2}
@@ -808,7 +811,7 @@ Notice that $U^{\Lambda+m} D^{2\Lambda}U^{\Lambda-m} \in \acal^0_\Lambda$ for al
 \end{equation}
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{theoremRaisingAndLoweringAribtraryOperatorsGenerateD2}
 Let $U \in \acal^1_\Lambda$ and $D \in \acal^{-1}_\Lambda$ be arbitrary, e.g. $U = \cut {x^+}$ and $D = \cut{x^-}$. Then $U$ and $D$ generate $\acal_\Lambda$.
 \end{theorem}
 \begin{proof}
@@ -818,7 +821,7 @@ This follows directly from the combination of lemmas \ref{lemmaLUDScalarAngularM
 \subsection{Approximate Action of Effective Observables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We now find explicit values for the action of $\cut {x^\pm}$ and related observables by using the Proposition 6.1 in \cite{Fiore2018} by Fiore and Pisacane, stated below:
+We now find explicit values for the action of $\cut {x^\pm}$ and related observables by using the proposition 6.1 in \cite{Fiore2018} by Fiore and Pisacane:
 
 \begin{proposition}\label{propositionEquation69MatrixElementsGradedOperatorsD2}
 For every entire function $f(\rho)$ not depending on $k$, and $h \in \ZZ$, the matrix elements of the operator $f(\rho)e^{ih\phi}$ are:
@@ -828,41 +831,42 @@ For every entire function $f(\rho)$ not depending on $k$, and $h \in \ZZ$, the m
 with,
 \begin{eqnsplit}\label{equationsExtraVariables69D2}
     c_{m,m'}(k) &:= \frac{\sqrt{k_m} + \sqrt{k_{m'}}}{2} 
-        = \sqrt{2k} - 1 + \frac{3-m^2-m'^2}{2\sqrt{2}} \frac{1}{\sqrt{k}} - \frac{2+m^2+m'^2}{2}\frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right) \\
+        = \sqrt{2k} - 1 + \frac{3-m^2-m'^2}{2\sqrt{2}} \frac{1}{\sqrt{k}} \\
+        &\qquad \qquad \qquad \qquad\qquad\qquad\qquad\qquad- \frac{2+m^2+m'^2}{2}\frac{1}{k} + O\left(\frac{1}{k^{\frac{3}{2}}}\right) \\
     \rho_{m,m'}(k) &:= \frac{2 + \sqrt{k_m}\tilde \rho_m + \sqrt{k_{m'}}\tilde \rho_{m'}}{2 c_{m,m'}}
-        = \sqrt{2}\frac{1}{\sqrt{k}} + \frac{2+m^2 + m'^2}{4}\frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right)\\
+        = \sqrt{2}\frac{1}{\sqrt{k}} + \frac{2+m^2 + m'^2}{4}\frac{1}{k} + O\left(\frac{1}{k^{\frac{3}{2}}}\right)\\
     K_{m,m'}(k) &:= \sqrt{\frac{4 \pi^3}{c_{m,m'}}} N_m \overline{N_{m'}} e^{\frac{[2 + \sqrt{k_m}\tilde \rho_m + \sqrt{k_{m'}}\tilde \rho_{m'}]^2}{4c_{m,m'}} - \frac{\sqrt{k_m}\tilde \rho^2_{m} + \sqrt{k_{m'}}\tilde \rho^2_{m'}}{2}}
-        = 1 + O\left(\frac{1}{k^{3/2}}\right),
+        = 1 + O\left(\frac{1}{k^{\frac{3}{2}}}\right),
 \end{eqnsplit}
 where $k_m(k)$ and $\tilde \rho_m(k)$ were defined in \eqref{equationConstantsHarmonicApproximationRadialD2}
 \begin{equation}
-    N_m(k) = \sqrt[4]{\frac{\sqrt{k_m}}{4\pi^3}}e^{-\frac{1}{2\sqrt{k_m}} - \tilde \rho_m} = 1 - \frac{3}{2\sqrt{2}}\frac{1}{\sqrt{k}} + \frac{5-8m^2}{16} \frac{1}{k} + \frac{15}{32 \sqrt{2}}\frac{1}{k^{3/2}} + O(\frac{1}{k^2})
+    N_m(k) = \sqrt[4]{\frac{\sqrt{k_m}}{4\pi^3}}e^{-\frac{1}{2\sqrt{k_m}} - \tilde \rho_m} = 1 - \frac{3}{2\sqrt{2}}\frac{1}{\sqrt{k}} + \frac{5-8m^2}{16} \frac{1}{k} + \frac{15}{32 \sqrt{2}}\frac{1}{k^{\frac{3}{2}}} + O(\frac{1}{k^2})
 \end{equation} is the normalization factor of $\psi_m$ up to a phase.
 \end{proposition}
 
 \begin{remark}\label{remarkPowerSeries}
-Let $F(x)$ and $f(x)$ be functions with power series expansions around $f(x_0)$ and $x_0 \in \RR$ respectively, for non-zero radius of convergence. Then, to know the $n$th coefficient of the power expansion of $F \circ f$ around $f(x_0)$ (assuming the radius of convergence is non-zero) we only need know the first $n$ coefficients for both $f$ and $F$ of the previously mentioned power series. In our case this, using the power expansions of \eqref{equationsExtraVariables69D2} up to order $2$ in $\frac{1}{\sqrt{k}}$ we can calculate the matrix elements of operators $f(\rho) e^{ih\phi}$ up to the same order.
+Let $F(x)$ and $f(x)$ be functions with uniformly convergent power series expansions around $f(x_0)$ and $x_0 \in \RR$ respectively, for a non-zero radius of convergence. Then, to know the $n$th coefficient of the power expansion of $F \circ f$ around $f(x_0)$ (assuming the radius of convergence is non-zero) we only need know the first $n$ coefficients for both $f$ and $F$ of the previously mentioned power series. In our case this, using the power expansions of \eqref{equationsExtraVariables69D2} up to order $2$ in $\frac{1}{\sqrt{k}}$ we can calculate the matrix elements of operators $f(\rho) e^{ih\phi}$ up to the same order.
 \end{remark}
 
 \begin{proposition}
 \begin{align}
     \cut{x^\pm}  \psi_m
         &= \begin{cases}
-        \left(1 + \frac{9 \sqrt{2}}{8} \frac{1}{\sqrt{k}} + \frac{137 \pm 32m + 32m^2}{64} \frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
+        \left(1 + \frac{9 \sqrt{2}}{8} \frac{1}{\sqrt{k}} + \frac{137 \pm 32m + 32m^2}{64} \frac{1}{k} + O\left(\frac{1}{k^{\frac{3}{2}}}\right) \right) \psi_{m \pm 1} & \text{if } -\Lambda \leq \pm m \leq \Lambda -1
         \\
         0 & \text{otherwise}
         \end{cases}\\
     [\cut{x^+}, \cut{x^-}]  \psi_m
         &= \begin{cases}
-        \left( -\frac{2m}{k}  + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
+        \left( -\frac{2m}{k}  + O\left(\frac{1}{k^{\frac{3}{2}}}\right) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
         \\
-        \pm \left( 1 + \frac{9}{2\sqrt{2}} \frac{1}{\sqrt{k}} +  \frac{109-16\Lambda + 16\lambda^2}{16} \frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \pm \left( 1 + \frac{9}{2\sqrt{2}} \frac{1}{\sqrt{k}} +  \frac{109-16\Lambda + 16\lambda^2}{16} \frac{1}{k} + O\left(\frac{1}{k^{\frac{3}{2}}}\right) \right) \psi_{m} & \text{if } m = \pm \Lambda 
         \end{cases}\\
     R^2  \psi_m
         &= \begin{cases}
-        \left( 1+ \frac{9}{2\sqrt{2}} \frac{1}{\sqrt{k}} -\left(\frac{109}{16}+m^2\right) \frac{1}{k}  + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
+        \left( 1+ \frac{9}{2\sqrt{2}} \frac{1}{\sqrt{k}} -\left(\frac{109}{16}+m^2\right) \frac{1}{k}  + O\left(\frac{1}{k^{\frac{3}{2}}}\right) \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
         \\
-        \left( 1+ \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{109-16\Lambda+16\lambda^2}{32} \frac{1}{k} + O\left(\frac{1}{k^{3/2}}\right) \right) \psi_{m} & \text{if } m = \pm \Lambda 
+        \left( 1+ \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{109-16\Lambda+16\lambda^2}{32} \frac{1}{k} + O\left(\frac{1}{k^{\frac{3}{2}}}\right) \right) \psi_{m} & \text{if } m = \pm \Lambda 
         \end{cases}
 \end{align}
 where $R^2 := \cut{x^1}^2 + \cut{x^1}^2 = \frac{1}{2}(\cut{x^+}\cut{x^-} + \cut{x^-}\cut{x^+})$.
@@ -885,37 +889,40 @@ Now, proposition \ref{propositionEquation69MatrixElementsGradedOperatorsD2} impl
 With the help of the software Mathematica, and having in mind the remark \ref{remarkPowerSeries}, we found the power expansions for these expressions.
 \end{proof}
 
+The matrix elements $\langle \psi_{m\pm 1} | \cut{x^\pm}|\psi_m \rangle$ are visualized in figure \ref{fig:originalbn}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 2\textwidth/3]{images/xCoefsTwoks.jpg}
+    \caption{Matrix element $\langle \psi_{\Lambda} |\chi^+ | \psi_{\Lambda-1}\rangle = \langle \psi_{-\Lambda} |\chi^- | \psi_{1-\Lambda}\rangle$ as a function of $\Lambda$. Blue: for $k(\Lambda) = \frac{(\Lambda^2 + 18)^2}{18}$. Yellow: for $k(\Lambda) = \Lambda^2(\Lambda+1)^2$.}
+    \label{fig:originalbn}
+\end{figure}
+
 \begin{definition}\label{definitionChiPMChiiD2}
 \emph{The normalization constant of the position operators} is the function in $k$:
 \begin{eqnsplit}
     a(k) &:= %\sqrt{2}\langle \psi_1 | x^+ | \psi_0 \rangle = \sqrt{2}\langle \psi_{-1} | x^- | \psi_0 \rangle\\
     \langle \psi_1 | x^+ | \psi_0 \rangle = \langle \psi_{-1} | x^- | \psi_0 \rangle\\
     &= K_{0,1}(k) e^{\rho_{0,1}(k) + \frac{1}{4c_{0,1}(k)}}\\
-    &= 1 + \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{137}{64} \frac{1}{k} + \frac{715}{256 \sqrt{2}} \frac{1}{k^{3/2}} + O(\frac{1}{k^2})
+    &= 1 + \frac{9}{4\sqrt{2}} \frac{1}{\sqrt{k}} + \frac{137}{64} \frac{1}{k} + \frac{715}{256 \sqrt{2}} \frac{1}{k^{\frac{3}{2}}} + O(\frac{1}{k^2})
 \end{eqnsplit}
 \emph{The normalized position operators} are, for $i = 1, 2$:
 \begin{eqnsplit}
     \chi^i &:= \frac{\cut{x^i}}{a(k)}\\
     \chi^\pm &:= \frac{\cut{x^\pm}}{a(k)} = \chi^+ \pm i \chi^-.
-\end{eqnsplit}\todo{In the last papers the $\pm$ ones include a factor of $\sqrt{2}$ in front, but I don't think it is important}
+\end{eqnsplit}%\todo{In the last papers the $\pm$ ones include a factor of $\sqrt{2}$ in front, but I don't think it is important}
 \end{definition}
 
-The normalization constant $a$ is simply the factor that extracts the $m$ independent terms in the series expansion of the action of $\cut{x^\pm}$ on each $\psi_m$. $a$ rapidly converges to $1$ with increasing $k$, as shown in the graph \ref{fig:asolo}; graph \ref{fig:acomparados} shows the some approximate values of $a$ plotted besides the theoretical value of $a$.
-\begin{figure}
+The normalization constant $a$ is simply the factor that extracts the $m$ independent terms in the series expansion of the action of $\cut{x^\pm}$ on each $\psi_m$. $a$ rapidly converges to $1$ with increasing $k$, as shown in the figure \ref{fig:asolo}.% graph \ref{fig:acomparados} shows the some approximate values of $a$ plotted besides the theoretical value of $a$.
+\begin{figure}[h]
     \centering
-    \includegraphics[width = \textwidth]{images/a o DivFactor solo.jpg}
-    \caption{Normalizing factor $a$ as a function of $\Lambda$ using $k(\Lambda) = \Lambda^2(\Lambda+1)^2$}
+    \includegraphics[width = 2\textwidth/3]{images/asolo.jpg}
+    \caption{Normalizing factor $a$ as a function of $\Lambda$. Yellow: for $k(\Lambda) = \frac{(\Lambda^2 + 18)^2}{18}$. Blue: for $k(\Lambda) = \Lambda^2(\Lambda+1)^2$.}
     \label{fig:asolo}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width = \textwidth]{images/a o DivFactor comparados.jpg}
-    \caption{Comparison of approximations of normalizing factor $a$ using $k(\Lambda) = \Lambda^2(\Lambda+1)^2$.  }
-    \label{fig:acomparados}
-\end{figure}
-
-\begin{proposition}\todo{the notation for $m$ is bad, but it is for me to remember that perhaps something should be said about how the powers of $m$ increase with the powers of $k$} Up to second order of powers in $\frac{1}{\sqrt{k}}$ in the coefficients the following relations hold:
+\begin{proposition}%\todo{the notation for $m$ is bad, but it is for me to remember that perhaps something should be said about how the powers of $m$ increase with the powers of $k$}
+Up to second order of powers in $\frac{1}{\sqrt{k}}$ in the coefficients the following relations hold:
 \begin{align}\label{equationActionChiD2WithoutOO}
     \chi^\pm  \psi_m
         &= \begin{cases}
@@ -932,15 +939,31 @@ The normalization constant $a$ is simply the factor that extracts the $m$ indepe
         \pm \left( 1 + \frac{\Lambda(\Lambda-1)}{k} \right) \psi_{m} & \text{if } m = \pm \Lambda 
         \end{cases}\\
     \label{equationRChiD2}
-    \mathcal R^2  \psi_m
+    \vec \chi^2  \psi_m
         &= \begin{cases}
         \left( 1+ \frac{m^2}{k} \right) \psi_{m} & \text{if } |m| \leq \Lambda -1
         \\
         \frac{1}{2} \left( 1+ \frac{\Lambda(\Lambda-1)}{k} \right) \psi_{m} & \text{if } m = \pm \Lambda 
         \end{cases}
 \end{align}
-where $\mathcal R^2 := (\chi^1)^2 + (\chi^2)^2 = \frac{1}{2}(\chi^+\chi^- + \chi^-\chi^+)= R^2/a^2$.
+where $\vec \chi^2 := (\chi^1)^2 + (\chi^2)^2 = \frac{1}{2}(\chi^+\chi^- + \chi^-\chi^+)= R^2/a^2$.
 \end{proposition}
+The coefficient $\langle \psi_{m \pm 1} \chi^+ | \psi_{m}\rangle$ is visualized in figures \ref{fig:figureabnChiMinK} and \ref{fig:figureabnChiRecommendedK}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 2\textwidth/3]{images/divFactorwMinimumK.jpg}
+    \caption{Maximum value of coefficient $\langle \psi_{m \pm 1} |\chi^\pm | \psi_{m}\rangle$ as a function of $\Lambda$ for $k(\Lambda) = \frac{(\Lambda^2 + 18)^2}{18}$. Blue: exact value. Yellow: approximation $\sqrt{1 + \frac{\Lambda(\Lambda+1)}{k}}$.}
+    \label{fig:figureabnChiMinK}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 2\textwidth/3]{images/divFactorwRecommendedK.jpg}
+    \caption{Maximum value of coefficient $\langle \psi_{m \pm 1} |\chi^\pm | \psi_{m}\rangle$ as a function of $\Lambda$ for $k(\Lambda) = \Lambda^2(\Lambda+1)^2$. Blue: exact value. Yellow: approximation $\sqrt{1 + \frac{\Lambda(\Lambda+1)}{k}}$.}
+    \label{fig:figureabnChiRecommendedK}
+\end{figure}
+
 \begin{remark}
 Notice that if the action \eqref{equationActionChiD2WithoutOO} were used exactly to define operators $\chi^\pm$, then equations \eqref{equationCommutatorChiD2} and \eqref{equationRChiD2} would also be exact. This is thanks to the fact that, although the square root in \eqref{equationActionChiD2WithoutOO} is only valid up to the power $\frac{1}{k}$, i.e. it is only meaningful to say that it is equal to $ 1+\frac{m(m+1)}{2}$, when we use it to calculate the commutator and the radius it produces precisely the correct first order terms stated above.
 \end{remark}
@@ -960,7 +983,7 @@ $\chi^+$ and $\chi^-$ generate the $*$-algebra $\acal_\Lambda = End(\hcal_\Lambd
 \end{align}
 where the projections $\tilde P_m$ are polynomials in $\cut L$. Furthermore,
 \begin{equation}\label{equationOperatorFormulaRChiD2}
-    \mathcal R^2 = 1 + \frac{L^2}{k} - \left[ 1 + \frac{\Lambda(\Lambda+1)}{k}\right]\frac{\tilde P_\Lambda - \tilde P_\Lambda}{2}.
+    \vec \chi^2 = 1 + \frac{L^2}{k} - \left[ 1 + \frac{\Lambda(\Lambda+1)}{k}\right]\frac{\tilde P_\Lambda - \tilde P_\Lambda}{2}.
 \end{equation}
 Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_2$ and \eqref{equationOperatorFormulaRChiD2} are only valid up to second order in powers of $\frac{1}{\sqrt{k}}$; however, if the formulas \eqref{equationActionChiD2WithoutOO} are used as exact definitions of $\chi^\pm$, then all the equations in this theorem are satisfied exactly.
 \end{theorem}
@@ -1060,7 +1083,7 @@ The rest of the statement is a corollary of lemma \ref{lemmaExistsPolynomialInLT
 
 \lin 
 
-As we saw in Chapter \ref{chp:fuzzysphere}, an important component of a fuzzy space is its action under a symmetry group. In section \ref{} it was remarked that the left action of $O(2) \ni g$ on $\RR^2$ induced a unitary representation $\hat \pi: O(2) \to \bcal(L^2(\RR^2))$, which in turn induces a left action of $O(2)$ on $\acal_{\cut E} \ni A$ by inner isomorphisms $A^g = \pi'(g) A \pi'(g)^*$, for any cutoff energy $\cut E \geq 0$ and compatible $k$. It was further proved that the operators $\cut {x^i}$, $i = 1, 2$, transform contravariantly under $O(2)$. We will now see how this action looks for of the operators that we have used so far for the algebras $\acal_\Lambda$ for arbitrary $\Lambda \in \NN$ defined in \ref{ }, where we will call by $\hat \pi_\Lambda$ the representation of $O(2)$ on $\hcal_\Lambda$.%, as well as the induced algebra representation of $U()$
+As we saw in Chapter \ref{chp:fuzzysphere}, an important component of a fuzzy space is its action under a symmetry group. It was remarked \ref{remarkODActsOnHCutE} that the left action of $O(2) \ni g$ on $\RR^2$ induced a unitary representation $\hat \pi: O(2) \to \bcal(L^2(\RR^2))$, which in turn induces a left action of $O(2)$ on $\acal_{\cut E} \ni A$ by inner isomorphisms $A^g = \pi'(g) A \pi'(g)^*$, for any cutoff energy $\cut E \geq 0$ and compatible $k$. It was further proved in theorem \ref{theoremGeneralDEffectiveLowEnergyQuantumIsODCovariant} that the operators $\cut {x^i}$, $i = 1, 2$, transform contravariantly under $O(2)$. We will now see how this action looks for of the operators that we have used so far for the algebras $\acal_\Lambda$ for arbitrary $\Lambda \in \NN$, where we will call by $\hat \pi_\Lambda$ the representation of $O(2)$ on $\hcal_\Lambda$.%, as well as the induced algebra representation of $U()$
 
 First, recall that the group of rotations on $\RR^2$ is precisely the subgroup $SO(2) \subset O(2)$ of elements of determinant $1$, instead of $-1$. Furthermore, every rotation is determined by the angle $\theta \in [0, 2\pi]$ that the $x^1$-axis rotates in the anticlockwise direction; hence, every rotation is of the form
 \begin{equation}\label{equationGEneral2DRotationTheta}
@@ -1137,7 +1160,7 @@ Since $V_\Lambda$ is a representation space of $SO(3)$, by identifying $O(2)$ as
 we can see that the subgroup of $SO(3)$ generated by the elements of the form $e^{i\theta \hat J^3}$ and $e^{i\pi \hat J^3}$ is isomorphic to $O(2)$, by realizing that it acts on the plane $x^1-x^2$ in $\RR^3$ precisely as $O(2)$ acts on $\RR^2$.
 
 \begin{theorem}\label{theoremUso3ViewAlternativeAlgebraO2IsomorphismD2}
-For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to V_\Lambda$ be the isomorphism of the Hilbert spaces $\hcal_\Lambda \subset L^2(\RR^2)$ and $V_\Lambda \equiv \CC^{2\Lambda + 1}$ generated by the mapping $\psi_m \mapsto |\Lambda, m\rangle$, $m \in \{-\Lambda, \dots, \Lambda\}$. Then, $T$ induces an isomorphism $\tilde T$ of the $C^*$-algebra $\acal_\Lambda = End(\hcal_)$, with the operator norm, is a $C^*$-algebra isomorphic to $\hat \pi_\Lambda(U(\soth)) = End(V_\Lambda)$ with the operator norm, and this isomorphism is $O(2)$-equivariant. Furthermore, the tuples of operators $(\tilde T(\cut{x^1}), \tilde T(\cut{x^2}))$ and $(\tilde T(\chi^1), \tilde T(\chi^2))$ transform $O(2)$-contravariantly.\todo{SO far I have used this contravariant transformation thing applied to not just position operators, but vectors of operators, so I should amplify the definition}
+For all $\Lambda \in \NN$, let $T: \hcal_\Lambda \to V_\Lambda$ be the isomorphism of the Hilbert spaces $\hcal_\Lambda \subset L^2(\RR^2)$ and $V_\Lambda \equiv \CC^{2\Lambda + 1}$ generated by the mapping $\psi_m \mapsto |\Lambda, m\rangle$, $m \in \{-\Lambda, \dots, \Lambda\}$. Then, $T$ induces an isomorphism $\tilde T$ of the $C^*$-algebra $\acal_\Lambda = End(\hcal_)$, with the operator norm, is a $C^*$-algebra isomorphic to $\hat \pi_\Lambda(U(\soth)) = End(V_\Lambda)$ with the operator norm, and this isomorphism is $O(2)$-equivariant. Furthermore, the tuples of operators $(\tilde T(\cut{x^1}), \tilde T(\cut{x^2}))$ and $(\tilde T(\chi^1), \tilde T(\chi^2))$ transform $O(2)$-contravariantly.
 \end{theorem}
 \begin{proof}
 First notice that $T: \hcal_\Lambda \to V_\Lambda$ is an isomorphism of Hilbert spaces since $\{\psi_m\}_{|m| \leq \Lambda} \subset \hcal_\Lambda$ and $\{|\Lambda, m\rangle\}_{|m| \leq \Lambda}$ are orthonormal basis of their respective space. The invertible mapping $\tilde T: \acal_\Lambda \to End(V_\Lambda)$ is defined as $A \mapsto T \circ A \circ T^{-1}$, and it clearly respects the algebra operations, i.e. it is an algebra isomorphism. This mapping is such that $\langle 
@@ -1232,7 +1255,7 @@ Suppose that $\varphi$ is in the domain of $L$, i.e. $\sum_{m \in \ZZ} m^2 |\phi
 
 Similarly, let $\varphi = \sum_{m \in \ZZ} \varphi_m e^{i \phi}$. Then
 \begin{align*}
-    ||(\chi^\pm - e^{\pm i \phi})\varphi||^2 &= \sum_{m = - \Lambda}^{\Lambda-1} \left[ \sqrt{1 + \frac{m(m \pm 1)}{k}} - 1 + O\left(\frac{m^3}{k^{3/2}} \right)\right] \varphi_m e^{i(m \pm 1)} - \sum_{m < \Lambda, m \geq \Lambda} \varphi_m e^{i(m \pm 1)}\\
+    ||(\chi^\pm - e^{\pm i \phi})\varphi||^2 &= \sum_{m = - \Lambda}^{\Lambda-1} \left[ \sqrt{1 + \frac{m(m \pm 1)}{k}} - 1 + O\left(\frac{m^3}{k^{\frac{3}{2}}} \right)\right] \varphi_m e^{i(m \pm 1)} - \sum_{m < \Lambda, m \geq \Lambda} \varphi_m e^{i(m \pm 1)}\\
     &\leq \sum_{m = -\Lambda}^{\Lambda-1} \left[\frac{m^2(m\pm 1)^2}{4k^2} + O\left(\frac{\Lambda^6}{k^{3}} \right)\right] |\varphi_m|^2 + \sum_{m < \Lambda, m \geq \Lambda} |\varphi_m|^2 \\
     &\leq \frac{\Lambda^2(\Lambda+1)^2}{4k^2} ||\varphi||^2 + \sum_{|m|\geq \Lambda} |\varphi_m|^2
 \end{align*}

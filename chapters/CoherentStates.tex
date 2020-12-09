@@ -22,7 +22,7 @@ As previously mentioned in the introduction, coherent states of an algebraic spa
 
 Coherent states are vectors of the underlying Hilbert spaces, and so they induce states of the algebra. Our purpose will be to eventually study the distance between the family of states described in this document.
 
-Throughout this chapter let $\hcal_\Lambda$ and $\acal_\Lambda$ be defined as in definition \ref{definitionHLambdaALambdaD2} for some $\Lambda \in \NN$ and some appropriate function $k = k(\Lambda)$ satisfying the inequality \eqref{inequationInequalityNeededforKasFunctionLambdaD2}, where $\{\psi_m\}_{|m| \leq \Lambda}$ given in \eqref{equationDefinitionPsimD2BasisOfHCutE} are an orthonormal basis of $\hcal_\Lambda$ composed of eigenvalues of $\cut L \in \acal_\Lambda$. Additionally, let the operators $\cut L$ and $\chi^\pm \in \acal_\Lambda$ be defined as in section \ref{chNewFuzzySectionObservables}, but let us use $L$ instead of $\cut L$. We will call $L$ the angular momentum observable and $\chi^1 = \frac{1}{2}(\chi^+ + \chi^-)$ and $\chi^2 = \frac{1}{2i}(\chi^+ - \chi^-)$ the position observables.
+Throughout this chapter let $\hcal_\Lambda$ and $\acal_\Lambda$ be defined as in definition \ref{definitionHLambdaALambdaD2} for some $\Lambda \in \NN$ and some appropriate function $k = k(\Lambda)$ satisfying the inequality \eqref{inequationInequalityNeededforKasFunctionLambdaD2}, where $\{\psi_m\}_{|m| \leq \Lambda}$ given in \eqref{equationDefinitionPsimD2BasisOfHCutE} are an orthonormal basis of $\hcal_\Lambda$ composed of eigenvalues of $\cut L \in \acal_\Lambda$. Additionally, let the operators $\cut L$ and $\chi^\pm \in \acal_\Lambda$ be defined as in section \ref{chNewFuzzySectionObservables}, but let us use the symbol $L$ instead of $\cut L$. We will call $L$ the angular momentum observable and $\chi^1 = \frac{1}{2}(\chi^+ + \chi^-)$ and $\chi^2 = \frac{1}{2i}(\chi^+ - \chi^-)$ the position observables.
 
 % \section{Localization}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,8 +37,8 @@ where the expectation value for any observable $A$ is
 
 Similarly, for localization on momentum space the measure will be:
 \begin{equation}
-    (\Delta \cut L)^2 = \langle (\cut L - \langle L \rangle )^2 \rangle = \langle L^2 \rangle - \langle L \rangle ^2.
-\end{equation};
+    (\Delta \cut L)^2 = \langle (\cut L - \langle L \rangle )^2 \rangle = \langle L^2 \rangle - \langle L \rangle ^2;
+\end{equation}
 from now on we will denote $\cut L \in \acal_{\Lambda}$ simply by $L$.
 
 \section{Angular Momentum Saturating Coherent States}
@@ -71,11 +71,11 @@ Additionally, the fact that they are a basis means that we have the resolution o
 \end{eqnsplit}
 where $\mu$ is the counting measure on $G/H$, induced by the Haar measure on the Lie group $G$. Hence $\{\psi_m\}_{|m| \leq \Lambda}$ is a strong system of coherent states \ref{definitionSystemCoherentStates}.
 
-Now, let's study the localization of these vectors. Since each $\psi_m$ is an eigenvalue of $L$, $(L - \langle L\rangle ) \psi_m = 0$, hence 
+Now, let's study the localization of these vectors. Since each $\psi_m$ is an eigenvalue of $L$, $(L - \langle L\rangle ) \psi_m = 0$, 
 \begin{equation}
     (\Delta L)^2 = 0.
 \end{equation}
-Similarly, $\langle \psi_m | \chi^i | \psi_m \rangle = 0$, i.e. $\langle \chi^i \rangle = 0$ for each $i = 1, 2$, and therefore $(\Delta \chi^i)^2 = \langle (\chi^i)^2 \rangle$, and so
+Similarly, $\langle \psi_m | \chi^i | \psi_m \rangle = 0$, so. $\langle \chi^i \rangle = 0$ for each $i = 1, 2$, and therefore $(\Delta \chi^i)^2 = \langle (\chi^i)^2 \rangle$, and so
 \begin{align}
     (\Delta \chi^i)^2 &= \begin{cases} \frac{1}{2} \left( 1 + \frac{m^2}{k} \right) & \text{if } |m| \leq \Lambda\\
     \frac{1}{4} \left[ 1 + \frac{\Lambda(\Lambda - 1)}{k} \right] & |m| \leq \Lambda \end{cases} &
@@ -84,7 +84,7 @@ Similarly, $\langle \psi_m | \chi^i | \psi_m \rangle = 0$, i.e. $\langle \chi^i 
 \end{align}
 up to fourth order in powers of $1 / \sqrt{k}$.
 
-This system of coherent states can be characterized by a system of uncertainty relations. The commutation relations \eqref{equationOperatorFormulaCommutatorsChiD2} have as consequence the following uncertainty relations:
+This system of coherent states can be characterized by a system of uncertainty relations: the commutation relations \eqref{equationOperatorFormulaCommutatorsChiD2} have as consequence the following uncertainty relations:
 \begin{align}\label{equationUncertaintyRelationsMomentumSpaceCharacterizeBasisPsimD2}
     (\Delta L)^2 (\Delta \chi^i)^2 &\geq \frac{1}{4}\langle \chi^i \rangle ^2,& (\Delta L)^2 (\Delta \vec \chi)^2 &\geq \frac{1}{4} \langle \vec \chi \rangle ^2.
 \end{align}
@@ -208,7 +208,7 @@ each vector with norm $\Lambda + 1$, and with $\tilde \alpha_{\Lambda} > \tilde 
     \label{fig:bn}
 \end{figure}
 
-A good estimate, then, of the minimum dispersion is the dispersion of the eigenvector of $S^1$ with maximum absolute value eigenvalue $\tilde \alpha_{\pm \Lambda} = \cos{[pi/(2\Lambda+2)]}$; in \cite{FioreCoherent2020} it is shown that for this vectors:
+A good estimate, then, of the minimum dispersion is the dispersion of the eigenvector of $S^1$ with maximum absolute value eigenvalue $\tilde \alpha_{\pm \Lambda} = \cos{[\pi/(2\Lambda+2)]}$; in \cite{FioreCoherent2020} it is shown that for this vectors:
 \begin{equation}
     (\Delta \vec \chi)^2 < \frac{3.5}{(\Lambda+1)^2} \overset{\Lambda \to \infty}{\longrightarrow} 0.
 \end{equation}
