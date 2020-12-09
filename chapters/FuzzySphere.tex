@@ -140,16 +140,28 @@ However, an obvious problem with this definition is that $\acal_N'$ doesn't have
 \begin{align}
     x^i &\mapsto \hat x^i := \lambda \sigma_i & i = 1, 2, 3;
 \end{align}
-where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Notice that the identification $x^i \mapsto \hat x^i$ is $SU(2)$-equivariant since $\frac{\sigma_i}{2} \in U(\sut) \cong U(\alg{so}(3))$ corresponds to the generator of rotations with respect to the $x^i$-axis. The constant $\lambda$ is chosen such that ``radius of the sphere be $1$'', meaning that $(\hat x^1)^2 + (\hat x^2)^2 + \hat (x^3)^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
+where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Notice that the identification $x^i \mapsto \hat x^i$ is $SU(2)$-equivariant since $i\frac{\sigma_i}{2} \in \sut \cong \soth$ corresponds to the generator of rotations with respect to the $x^i$-axis. The constant $\lambda$ is chosen such that ``radius of the sphere be $1$'', meaning that $(\hat x^1)^2 + (\hat x^2)^2 + \hat (x^3)^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
 
-Instead of insisting on defining a foreign multiplication in $\acal'_N$, the \lbtext{fuzzy sphere} is now defined by $\lbtext{\acal_N} :=  \pi_{j}(U(\sut)) \equiv End(V_j)$ which, when the irreducible representation $\pi_j$ of $SU(2)$ is understood as in the previous subsection, i.e. as $V_j = \CC^{N+1}$, is equal to $\acal_N \equiv M_{N+1}(\CC)$ for all $N \in \NN$, $j$ satisfying $N =: 2\lbtext{j}$, which arises from the following generalization of the $N = 1$ case studied above:
+Instead of insisting on defining a foreign multiplication in $\acal'_N$, the fuzzy sphere is now defined by from the following generalization of the $N = 1$ case studied above:
+\begin{definition}\label{definitionFuzzySphere}
+\emph{The fuzzy sphere} is defined as the sequence of $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ where $\acal_N := \pi_j(U(\sut)) \equiv End(V_j)$ where $N =: 2j$. In addition, define the algebra generators $\hat x^i$ as
 \begin{align}\label{equationDefinitionGeneratorsFuzzySphere}
-    \tilde V_1 \hookrightarrow \bigoplus_{l = 0}^N \tilde V_l &\to \acal_N\\
-    x^i &\mapsto \hat x^i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J^i) & i = 1, 2, 3;
-\end{align} that is, for each $N$, the coordinate $x^i$ is understood as the infinitesimal rotation with respect to the axis $x^i$ operator on the space $V_j = \CC^{N+1}$. The normalization constant guarantees again $(\hat x^1)^2 + (\hat x^2)^2 + (\hat x^3)^2 = 1$, and we now obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
-\begin{align}
+    \hat x^i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J^i) && i = 1, 2, 3;
+\end{align}
+the number $\lambda_N := \frac{1}{\sqrt{j(j+1)}} = \frac{2}{\sqrt{N(N+2)}}$ is called the normalization factor.
+\end{definition}
+
+Notice that the normalization factor $\lambda_N$ guarantees that $(\hat x^1)^2 + (\hat x^2)^2 + (\hat x^3)^2 = 1$. Also notice that the following is a $SO(3)$-equivariant injective linear map:
+\begin{eqnsplit}\label{}
+    \acal_N &\to C(S^2) = \bigoplus_{l \in \NN}\tilde V_l\\
+    \hat x^i &\mapsto x^i;
+\end{eqnsplit}
+this is carefully proven in proposition \ref{propositionMadoreISSO3Covariant}. We might say that \emph{$\hat x^i$ is the fuzzy analog of the coordinate function $x^i$}, and so we obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
+\begin{align}\label{}
     [\hat x^i, \hat x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} \hat x^k, && i, j, k \in \{1, 2, 3\},
 \end{align} where the Einstein summation convention for implicit sums of repeated indices is understood, and where $\epsilon_{ijk}$ is the Levi-Civita tensor.
+
+In order to gain some intuition for the fuzzy sphere, recall that the operator representation of $J^i$ in each $V_j$ and in $L^2(S^2)$ is as the $i$-th component of the angular momentum operator. Another interpretation, at least for even-indexed elements of the sequence, comes from the fact that the lie algebra $\sut$ is isomorphic to $\soth$ under the $(SU(2), SO(3))$-equivariant mapping $J^i \mapsto \hat J^i$, where $iJ^i$ is the generator of rotation in $\RR^3$ about the $i$-th axis; hence, the fuzzy analog of the coordinate function $x^i \in C(S^2)$ is an element proportional to the infinitesimal rotation with respect to the $i$-th axis. 
 
 \lin
 
@@ -1041,9 +1053,9 @@ From the previous lemma, and joining for completeness some previous results, the
 \begin{theorem} \label{theoremdNWithRespectoTodS2}
 For all $N \in \NN$ and all points $E(\phi, \theta)$ and $E(\phi', \theta')$ in the sphere:
 $$
-    \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) d_{S^2}(E(\phi, \theta), E(\phi', \theta'))
+    \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{S^2}(E(\phi, \theta), E(\phi', \theta')),
 $$
-
+and 
 \begin{equation}
         \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{S^2}(E(\phi, \theta), E(\phi', \theta'))
 \end{equation}

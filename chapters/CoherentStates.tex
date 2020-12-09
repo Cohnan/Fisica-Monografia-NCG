@@ -95,7 +95,7 @@ The basis $\{\psi_m\}_{|m|\leq \Lambda}$ is a system of coherent states that min
 \end{proposition}
 
 
-Family saturating $13_1$. IFF?\todo{}
+%Family saturating $13_1$. IFF?\todo{}
 
 \section{$SO(2)$-invariant Families of Strong Coherent States}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,7 +116,10 @@ Hence, $B$ is proportional to the identity if and only if the norms $|\omega_m|$
 \end{equation*}
 for some $\beta_m \in \RR/2\pi \ZZ$. 
 
-In summary, all unit vectors $\omega$ for which their orbit under the action of $SO(3)$ generate a strong system of coherent states are parametrized by tuples $\beta \in (\RR/2\pi\ZZ)^{2\Lambda + 1}$:
+In summary:
+
+\begin{proposition}
+All unit vectors $\omega$ for which their orbit under the action of $SO(3)$ generate a strong system of coherent states are parametrized by tuples $\beta \in (\RR/2\pi\ZZ)^{2\Lambda + 1}$:
 \begin{equation}
     \omega^\beta := \sum_{m = -\Lambda}^\Lambda \frac{e^{i \beta_m}}{\sqrt{2\Lambda + 1}} \psi_m,
 \end{equation}
@@ -130,6 +133,7 @@ induces the resolution of the identity
     1_{\hcal_\Lambda} &= \frac{2\Lambda + 1}{2\pi} \int_0^{2\pi} d\alpha \, P^\beta_\alpha &
     P_\alpha^\beta := |\omega^\beta_\alpha \rangle\langle \omega^\beta_\alpha|.
 \end{align}
+\end{proposition}
 
 For the strong system of coherent states $\{\omega^\beta_\alpha\}_{\alpha \in \RR/2\pi\ZZ}$ to further be $O(2)$-invariant, recall from  \eqref{equationTransformationO2OfeimphiHarmonicsCircled1} that the action of the inversion $F$ with respect to the $x^1$-axis transforms $\psi_m$ into $\psi_{-m}$, hence we may choose
 \begin{align}\label{equationConditionBetasO2Invariant}
@@ -163,8 +167,8 @@ However, closed formulas for this coherent states might not be possible, in part
 
 \begin{figure}
     \centering
-    \includegraphics{images/R^2.jpg}
-    \caption{Square distance for various values of $m$ and $\Lambda$, for $k(\Lambda) = \Lambda^2(\Lambda+1)^2$.}
+    \includegraphics[width = \textwidth]{images/R^2.jpg}
+    \caption{Square distance for various values of $m$ as a function of $\Lambda$, for $k(\Lambda) = \Lambda^2(\Lambda+1)^2$.}
     \label{fig:R2Chi}
 \end{figure}
 
@@ -182,7 +186,13 @@ The operator $\chi^1$ has the following symmetric matrix representation
     0 & 0 & 0 &0 & \cdots & 0 & b_{1-\Lambda} & 0.
     \end{pmatrix}                                                                                                                           
 \end{equation}
-in the ordered basis $\{\psi_\Lambda, \psi_{\Lambda - 1}, \dots, \psi_{1-\Lambda}, \psi_{-\Lambda}\}$.
+in the ordered basis $\{\psi_\Lambda, \psi_{\Lambda - 1}, \dots, \psi_{1-\Lambda}, \psi_{-\Lambda}\}$, where $b_m := \langle \psi_m | \chi^+ | \psi_{m-1} \rangle = \langle \psi_{m-1} | \chi ^- | \psi_m\rangle$ and so
+\begin{equation}\label{equationbmD2}
+    b_m = \begin{cases}
+        \sqrt{1 + \frac{m(m-1)}{k}} + O\left( \frac{m^3}{k^{3/2}} \right), & \text{if } 1- \Lambda \leq m \leq \Lambda \\
+        0, & \text{otherwise}.
+    \end{cases}
+\end{equation}
 
 An additional approximation can be made by replacing the matrix $X^\Lambda$ by $X^\Lambda_0 = \lim_{\Lambda \to \infty} X^\Lambda$, which is the Toeplitz matrix where every nondiagonal entry of $X^\Lambda$ is replaced by a $1$; notice that the smallest value of $b_m$ is $1$ for $m = 0$ and it grows with the absolute value of $m$. Graph \ref{fig:bn} shows the value for the maximum $b_m$ as a function of $\Lambda$ assuming $k(\Lambda) = \Lambda^2(\Lambda+1)^2$. The eigenvectors and their corresponding eigenvalues of the operator $S^1 = \frac{S^+ + S^-}{2}$ represented by $X^\Lambda_0$ are:
 \begin{align}
@@ -193,8 +203,8 @@ each vector with norm $\Lambda + 1$, and with $\tilde \alpha_{\Lambda} > \tilde 
 
 \begin{figure}
     \centering
-    \includegraphics{images/bn.jpg}
-    \caption{Greatest $b_m$ as a function of $\Lambda$ for $k(\Lambda) = \Lambda^2(\Lambda+1)^2$.}
+    \includegraphics[width = \textwidth]{images/bn.jpg}
+    \caption{Greatest $b_m$ as a function of $\Lambda$, for $k(\Lambda) = \Lambda^2(\Lambda+1)^2$. Red: $b_\Lambda$, Blue: approximation $b_\Lambda \approx \sqrt{1 + \frac{\Lambda(\Lambda - 1)}{k}}$. }
     \label{fig:bn}
 \end{figure}
 
@@ -220,4 +230,4 @@ For all $\Lambda \in \NN$, denote the spectrum of $\chi^1$ for $\Lambda$ by $\Si
 
 In analogy with the study of distances in the fuzzy sphere, we expect this interlacing relation to be useful in the study of the relation between distances for contiguous $\Lambda$'s and for the study of the asymptotic behavior of the distance between this family of vectors.
 
-The special case in which $\Lambda = 1$ can be studied exactly \cite{FioreCoherent2020}. 
+%Recall that , then they also satisfy the criteria for position observables in $\acal_\Lambda$ given in section \ref{subsectionCriteriaGOodApproximationsOfPosition}, and in fact they also converge uniformly to the operators $e^{\pm i\phi}$ on $L^2(S^1)$ as specified in proposition \ref{theoremConvergesToQMD2}. Taking this definition, the special case in which $\Lambda = 1$ can be studied exactly \cite{FioreCoherent2020}. The eigenvectors of $\chi^1$ are:
