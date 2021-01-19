@@ -1,151 +1,163 @@
-The Preliminaries chapter on NC manifolds in DAndrea2013 seems to be taken mainly from Gracia-Bondia 2001.
+The introduction of energy cutoffs in Quantum Field Theory has allowed the regularization of ultraviolet divergences, serving as a first step toward the renormalization of the theories. Similarly, an energy cutoff is also expected in a sensible theory of quantum gravity, a cutoff on the local energy concentration associated to a lower bound on the localizability of the events, as suggested by Heisenberg's uncertainty principle. Doplicher, Fredenhagen and Roberts \cite{DFR} formalized this argument, and proposed that this lower bound could be a result of \textit{noncommutative coordinates}, suggesting that the underlying structure of spacetime might be that of a noncommutative space.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Physical Motivation}
+A particular type of noncommutative space that has found its way into varied areas of physics is that of a fuzzy space. These are in fact a sequence of finite dimensional noncommutative spaces that approximate better and a better a commutative space, while having the important property of preserving the continuous symmetries of the commutative space. They have found applications in quantum field theory, condensed matter physics, and  cosmology, among others.
 
-{ \color{gray}
+A noncommutative space is fundamentally an algebraic object. However, Connes \cite{Connes1994} paved a way to give geometry to this spaces by showing an algebraic formulation of a ``commutative'' metric space that can be easily extended to noncommutative ones. More precisely, he showed that the distance between points $p$ and $q$ in a commutative metric space $M$ has an algebraic formulation given by \textit{Connes' distance formula}: 
+\begin{equation}
+    d(p, q) := sup_{f \in \mathcal C^\infty(M)}\{ |\phi_p(f) - \phi_q(f)| \,:\,  ||\slashed D, f|| \leq 1 \};
+\end{equation}
+thus, the properties of the metric space (that admits a spin structure) are contained in its canonical spectral triple $(\mathcal A = C^\infty(M), \mathcal H = L^2(\Sigma M), \slashed D: \mathcal H \to \mathcal H)$ where $\acal$ is the commutative algebra of smooth functions on $M$, $\hcal$ is the Hilbert space of spinor fields on $M$ and $\slashed D$ is called the Dirac operator. Hence, by supplying a noncommutative space with a spectral triple we are providing it with a metric structure, with a geometry.
+
+This document has the purpose of providing some basic knowledge on the calculation of distances within noncommutative spaces, specially fuzzy spaces, in order to apply this understanding to the study of the metric properties of the new fuzzy spheres presented by Fiore and Pisacane in \cite{Fiore2018}. With this in mind, we first study in chapter \ref{chp:fuzzysphere} the highly used fuzzy sphere of Madore \cite{Madore} on which D'Andrea, et al. \cite{DAndrea2013} introduce two related spectral triples derived from the canonical spectral triple of the $2$-sphere. Then, in chapter \ref{chp:NewFuzzy} we study the definition, via introduction of energy cut-offs, of the new fuzzy circle of Fiore and Pisacane whose limit is the $1$-sphere, and which preserve the $O(2)$ symmetry of this commutative space. Finally, in chapter \ref{chp:CHNew} we review some systems of coherent states that will play the role of points between which we will want to calculate distances once a spectral triple has been proposed.
+
+% The Preliminaries chapter on NC manifolds in DAndrea2013 seems to be taken mainly from Gracia-Bondia 2001.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Physical Motivation}
+
+% { \color{gray}
  
-    QM's phase space is the seminal NC space: \rtext{noncommuting coordinates!}. The simplest case, a spinless quantum particle in $\RR^1$: Moyal plane.
+%     QM's phase space is the seminal NC space: \rtext{noncommuting coordinates!}. The simplest case, a spinless quantum particle in $\RR^1$: Moyal plane.
     
-    First example of NC spacetime:  Snyner in [6]:  hope that nontrivialcommutation relations could cure ultraviolet divergences in QFT But shortlyafter  regularization  introducing  energy  cutoff  was  introduced  for  QED,  although not Poincare covariant.
+%     First example of NC spacetime:  Snyner in [6]:  hope that nontrivialcommutation relations could cure ultraviolet divergences in QFT But shortlyafter  regularization  introducing  energy  cutoff  was  introduced  for  QED,  although not Poincare covariant.
     
-    Why NC? 
-    1. DFR:  concensus  that  any  mergint  of  QM  and  GR  should  lead  to  acutoff of local energy concentration (and an associated lower bound onlocalization of events).  DFR made this more precise, and proposed that \rtext{the bound on the localizability of events could follow from appropriate NC coordinates}.  (he cites a recent review:  10)
+%     Why NC? 
+%     1. DFR:  concensus  that  any  mergint  of  QM  and  GR  should  lead  to  acutoff of local energy concentration (and an associated lower bound onlocalization of events).  DFR made this more precise, and proposed that \rtext{the bound on the localizability of events could follow from appropriate NC coordinates}.  (he cites a recent review:  10)
     
-    Why NC?
-    2. Energy cutoff. Regularization procedure of a QFT theory: an energy cutoff $\cut E$ may allow to make sense of the theory if it is originally ill-defined due to UV divergences; more details in the intro of the paper:  \cite{FioreTheCase2020} make sense of the original theory if it isn't well defined but the projected projected theory (as defined in the beginning of chapter \ref{chp:NewFuzzy}) is. 
-    However,  introducing  an  energy  cutoff $\cut E$ in  a  quantum  theory  on  a  commutative  space(time) $M$,  i.e.   projecting  the  theory  on  the Hilbert  subspace  with  energy  below $\cut E$,  directly  \rtext{induces  a  noncommutative  deformation  of  the  quantum theory}, as shown in Chapter \ref{chp:NewFuzzy}, and  \rtext{lower  bounds  for  the space(time)  locallizability}.  
-    This might mean that the theory where no cutoff is introduced is not complete,  and instead that we have to work with NC space to begin with to come up with a theory for energies above the cutoff. Hence, studying this space \cite{FioreTheCase2020} ``helpin  figuring  out  from  the  projected  theory  a  new  theory  valid  also  athigher energies''.
+%     Why NC?
+%     2. Energy cutoff. Regularization procedure of a QFT theory: an energy cutoff $\cut E$ may allow to make sense of the theory if it is originally ill-defined due to UV divergences; more details in the intro of the paper:  \cite{FioreTheCase2020} make sense of the original theory if it isn't well defined but the projected projected theory (as defined in the beginning of chapter \ref{chp:NewFuzzy}) is. 
+%     However,  introducing  an  energy  cutoff $\cut E$ in  a  quantum  theory  on  a  commutative  space(time) $M$,  i.e.   projecting  the  theory  on  the Hilbert  subspace  with  energy  below $\cut E$,  directly  \rtext{induces  a  noncommutative  deformation  of  the  quantum theory}, as shown in Chapter \ref{chp:NewFuzzy}, and  \rtext{lower  bounds  for  the space(time)  locallizability}.  
+%     This might mean that the theory where no cutoff is introduced is not complete,  and instead that we have to work with NC space to begin with to come up with a theory for energies above the cutoff. Hence, studying this space \cite{FioreTheCase2020} ``helpin  figuring  out  from  the  projected  theory  a  new  theory  valid  also  athigher energies''.
     
-    \lin
+%     \lin
     
-    Why NC? 
-    3. Applications in Physics: 
+%     Why NC? 
+%     3. Applications in Physics: 
     
-    Fuzzy spaces:
+%     Fuzzy spaces:
             
-        \begin{itemize}
+%         \begin{itemize}
             
-        \item \cite{FioreTheCase2020}As a non-perturbative technique in QFT (orstring, or M-) theory based on finite-discretization of space(time) \textbf{altetnative to the lattice one}: they have the advantage that can carry representations of Lie groups (not only discrete ones)
+%         \item \cite{FioreTheCase2020}As a non-perturbative technique in QFT (orstring, or M-) theory based on finite-discretization of space(time) \textbf{altetnative to the lattice one}: they have the advantage that can \textbf{carry representations of Lie groups (not only discrete ones)}
         
-        \item In a \textbf{QFT on a fuzzy space} \textit{the cutoff $n$ works as a parameter regularizing UV divergences}, because integration over fields amounts to integrations over matrices of finite size, growing with $n$ (he cites specific examples.)
+%         \item In a \textbf{QFT on a fuzzy space} \textit{the cutoff $n$ works as a parameter regularizing UV divergences}, because integration over fields amounts to integrations over matrices of finite size, growing with $n$ (he cites specific examples.)
         
         
-        \item In QFT Enlarging spacetime $M$ by $M' = M \times S_n$ where $S_n$ is a fuzzy space reduces the number of massive Kaluza-Klein modes of a field theory on $M'$.
+%         \item In QFT Enlarging spacetime $M$ by $M' = M \times S_n$ where $S_n$ is a fuzzy space reduces the number of massive Kaluza-Klein modes of a field theory on $M'$.
         
-        \item In the matrix model formulations of $M$-theory and string theory, fuzzy spaces may arise as subalgebras giving rise to the leading order of path-integrals over larger matrix algebras
+%         \item In the matrix model formulations of $M$-theory and string theory, fuzzy spaces may arise as subalgebras giving rise to the leading order of path-integrals over larger matrix algebras
         
-        \item Hence $M$-theory they lead to quantized branes in $11$ dimensional spacetime, and in string theory in $10$ dimensional ST.
+%         \item Hence $M$-theory they lead to quantized branes in $11$ dimensional spacetime, and in string theory in $10$ dimensional ST.
             
-        \end{itemize}
+%         \end{itemize}
     
-    Particle physics: Yang-Mills-Higgs theories obtained, in particular the Standard Model.
+%     Particle physics: Yang-Mills-Higgs theories obtained, in particular the Standard Model.
             
-    Modelado de estrellas?
+%     Modelado de estrellas?
             
-    MORE
+%     MORE
     
-    \lin 
+%     \lin 
     
-    Why study Fiore-Pisacane? Physically sound appearance of fuzzy space that also presents an effective noncommutative quantum theory. It can be seen as a toy model to understand how to do geometry in NC spaces: matrices are well understood, should be easy to do calculations (trivial K-theory?). The (equivariant?) spectral triples on matrix algebras have been completely studied by Sitarz \cite{}.
-}
+%     Why study Fiore-Pisacane? Physically sound appearance of fuzzy space that also presents an effective noncommutative quantum theory. It can be seen as a toy model to understand how to do geometry in NC spaces: matrices are well understood, should be easy to do calculations (trivial K-theory?). The (equivariant?) spectral triples on matrix algebras have been completely studied by Sitarz \cite{}.
+% }
 
-\linea
+% \linea
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{(Commutative) $C^*$-algebras as topological spaces}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{(Commutative) $C^*$-algebras as topological spaces}
 
-{ \color{gray}
-    -- As manifold? What preserves differential structure
+% { \color{gray}
+%     -- As manifold? What preserves differential structure
     
-    %($A$ unital) States: (DAndrea 2013) $S(A)$ (norm completion of) set of states of $A$. Is an ``extended (allowing infinity) metric space'' under the Connes' metric / \lbtext{spectral distance}. The supremum is alwasy attaine don self-adjoint elements (noted in Iochum 2001). ... COMPACT QUANTUM METRIC SPACE $(A,  d_{D})$.
+%     %($A$ unital) States: (DAndrea 2013) $S(A)$ (norm completion of) set of states of $A$. Is an ``extended (allowing infinity) metric space'' under the Connes' metric / \lbtext{spectral distance}. The supremum is alwasy attaine don self-adjoint elements (noted in Iochum 2001). ... COMPACT QUANTUM METRIC SPACE $(A,  d_{D})$.
     
-    To space: cofunctor that assigns algebra of functions
+%     To space: cofunctor that assigns algebra of functions
     
-    To commutative algebra: cofunctor that assigns its spectrum: set of characters = set of multiplicative linear functionals <-> set of pure states.
+%     To commutative algebra: cofunctor that assigns its spectrum: set of characters = set of multiplicative linear functionals <-> set of pure states.
     
-    Gelfand transform
-}
+%     Gelfand transform
+% }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Serre-Swan theorem and Differential Structure?}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Serre-Swan theorem and Differential Structure?}
 
-{ \color{gray}
-    Assume $M$ compact (the fuzzy sphere will be a ``compact quantum metric space''). $\acal C^\infty(M)$ is not a $C^*$ algebra, but it is dense in $A = C(M)$: set of ``sufficiently regular elements of $A$''.
+% { \color{gray}
+%     Assume $M$ compact (the fuzzy sphere will be a ``compact quantum metric space''). $\acal C^\infty(M)$ is not a $C^*$ algebra, but it is dense in $A = C(M)$: set of ``sufficiently regular elements of $A$''.
     
-    Characters of $\acal$ are measures, which extend to characters of $A$.
-}
+%     Characters of $\acal$ are measures, which extend to characters of $A$.
+% }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spectral Triples $\Longleftrightarrow$ Metric $\Longrightarrow$ Geometry}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Spectral Triples $\Longleftrightarrow$ Metric $\Longrightarrow$ Geometry}
 
-{ \color{gray}
-     - Algebraic formulation of the metric (the notion seems to be bigger, $K$-cycle)
+% { \color{gray}
+%      - Algebraic formulation of the metric (the notion seems to be bigger, $K$-cycle)
     
-     - The Spectral Triple adds the final element to do geometry in noncommutative spaces: the metric (in gravitation, this is precisely the gravitational field).
+%      - The Spectral Triple adds the final element to do geometry in noncommutative spaces: the metric (in gravitation, this is precisely the gravitational field).
      
-     Equivariant spectral triple (for D'Andrea, at least): \textbf{isometries}: $D$ and $\acal$ commute with the group action. NOT DEFINE THIS
+%      Equivariant spectral triple (for D'Andrea, at least): \textbf{isometries}: $D$ and $\acal$ commute with the group action. NOT DEFINE THIS
      
-     - Real (even) spectral triple <-> a Spin geometry do define it.
+%      - Real (even) spectral triple <-> a Spin geometry do define it.
     
-    Meaning of the action and \textbf{the spectrum} of a Dirac operator (in our case I think we think of the spectrum (and the multiplicities) to be an indication of how similar my Dirac operator is to the commutative one: the full spectral triple's Dirac operator ``tends'' to it in this sense)
+%     Meaning of the action and \textbf{the spectrum} of a Dirac operator (in our case I think we think of the spectrum (and the multiplicities) to be an indication of how similar my Dirac operator is to the commutative one: the full spectral triple's Dirac operator ``tends'' to it in this sense)
     
-    Presentation:
+%     Presentation:
         
-        \textbf{Canonical Spectral Triple}: Leg $(M, g)$ be an $n$-dimensional compact oriented Riemannian manifold which admits a spin structure% $(Spin_n \to Spin\,M \to M, \eta: Spin\,M \to SO\,M)$
-        , and let $\Sigma M$ % = Spin\, M \times_\rho \Sigma_n$
-        be the associated spinor bundle. Then $(\acal = C^\infty(M), \hcal = L^2(M, \Sigma M), \slashed D = -i \gamma^\mu \nabla^g_\mu)$%, where $\Sigma_n$ is the $2^{\lfloor n/2 \rfloor}$-dim. fermionic Fock space.
+%         \textbf{Canonical Spectral Triple}: Leg $(M, g)$ be an $n$-dimensional compact oriented Riemannian manifold which admits a spin structure% $(Spin_n \to Spin\,M \to M, \eta: Spin\,M \to SO\,M)$
+%         , and let $\Sigma M$ % = Spin\, M \times_\rho \Sigma_n$
+%         be the associated spinor bundle. Then $(\acal = C^\infty(M), \hcal = L^2(M, \Sigma M), \slashed D = -i \gamma^\mu \nabla^g_\mu)$%, where $\Sigma_n$ is the $2^{\lfloor n/2 \rfloor}$-dim. fermionic Fock space.
         
-            \quad - The particle physics Dirac equation is $|p| = m$, where $|p| = \sqrt{E^2 - \vec p^2} = \sqrt{p^2} = \sqrt{\square} = \gamma_\mu p_\mu = -i \gamma^\mu \nabla_\mu$ is the Dirac operator
+%             \quad - The particle physics Dirac equation is $|p| = m$, where $|p| = \sqrt{E^2 - \vec p^2} = \sqrt{p^2} = \sqrt{\square} = \gamma_\mu p_\mu = -i \gamma^\mu \nabla_\mu$ is the Dirac operator
             
-            \quad - Where $\{\gamma^\mu\}_\mu$ is a basis of $\RR^n = T^*_x M \hookrightarrow Cl(M, g)$ as operators on the fermionic Fock space, so they satisfy $\{\gamma^\mu, \gamma^\nu\} = 2 g^{\mu \nu}$
+%             \quad - Where $\{\gamma^\mu\}_\mu$ is a basis of $\RR^n = T^*_x M \hookrightarrow Cl(M, g)$ as operators on the fermionic Fock space, so they satisfy $\{\gamma^\mu, \gamma^\nu\} = 2 g^{\mu \nu}$
             
-            \quad A connection $\nabla^\Sigma$ on the spinor bundle satisfies $\nabla^\Sigma = dx^\mu \otimes s_i + \psi^i \gamma^\mu \otimes A_i(E_\mu) = \gamma^\mu \otimes (E_\mu \psi - \psi^i A_i(E_\mu))$   ${E_\mu}_\mu$ is a local frame of $T M$ and $\{s_i\}_i$ is a basis of the spinor space / fermionic Fock space, and $A_\psi(X) = \psi^i A_i(X)$ where $A_i = \nabla^\Sigma s_i \in \Omega_U^1(TM) \otimes \Gamma_U(\Sigma_M)$ and $\Gamma_U(\Sigma M) = C^\infty(U, \Sigma_m)$.
+%             \quad A connection $\nabla^\Sigma$ on the spinor bundle satisfies $\nabla^\Sigma = dx^\mu \otimes s_i + \psi^i \gamma^\mu \otimes A_i(E_\mu) = \gamma^\mu \otimes (E_\mu \psi - \psi^i A_i(E_\mu))$   ${E_\mu}_\mu$ is a local frame of $T M$ and $\{s_i\}_i$ is a basis of the spinor space / fermionic Fock space, and $A_\psi(X) = \psi^i A_i(X)$ where $A_i = \nabla^\Sigma s_i \in \Omega_U^1(TM) \otimes \Gamma_U(\Sigma_M)$ and $\Gamma_U(\Sigma M) = C^\infty(U, \Sigma_m)$.
         
-        - \textbf{State of $C^*$-algebra} $\acal$ is an $\omega : \acal \to \CC$ linear, positive, of unit norm. \textbf{Pure}: can not be written as a convex combination of other states. Commutative: pure states $\Longleftrightarrow$ characters $\hat x$ $\Longleftrightarrow$ points $x$.
-            \quad - Interpretation: expected values
+%         - \textbf{State of $C^*$-algebra} $\acal$ is an $\omega : \acal \to \CC$ linear, positive, of unit norm. \textbf{Pure}: can not be written as a convex combination of other states. Commutative: pure states $\Longleftrightarrow$ characters $\hat x$ $\Longleftrightarrow$ points $x$.
+%             \quad - Interpretation: expected values
             
-            \quad - CM: measures: Dirac measures are points
+%             \quad - CM: measures: Dirac measures are points
             
-            \quad - Pure states: then, closer notion of point.
+%             \quad - Pure states: then, closer notion of point.
             
             
         
-        \textbf{Unital Spectral Triple} $(\acal , \hcal, D)$: $\hcal$ is a complex separable Hilbert space; $\acal$ is a complex associative involutive unital $C^*$-algebra with a faithful unital $*$-representation $\acal \hookrightarrow \mathcal B(\hcal)$; a self-adjoint (unbounded) operator $D: \hcal \to \hcal$ with compact resolvent, such that $[D, a] \in \mathcal B(\hcal)$ $\forall a \in \acal$.
+%         \textbf{Unital Spectral Triple} $(\acal , \hcal, D)$: $\hcal$ is a complex separable Hilbert space; $\acal$ is a complex associative involutive unital $C^*$-algebra with a faithful unital $*$-representation $\acal \hookrightarrow \mathcal B(\hcal)$; a self-adjoint (unbounded) operator $D: \hcal \to \hcal$ with compact resolvent, such that $[D, a] \in \mathcal B(\hcal)$ $\forall a \in \acal$.
         
-        - \textbf{Distance}: $d_D(\omega, \omega') := sup_{a \in \acal} \left\{|\omega(a) - \omega'(a)| \, | \, ||[D, a]||_{op} \leq 1 \right\}$
+%         - \textbf{Distance}: $d_D(\omega, \omega') := sup_{a \in \acal} \left\{|\omega(a) - \omega'(a)| \, | \, ||[D, a]||_{op} \leq 1 \right\}$
         
     
-    \textbf{Canonical: algebraic formulation of known facts (not in present.)}
+%     \textbf{Canonical: algebraic formulation of known facts (not in present.)}
     
-     - Conjugation $\iff$ \textbf{Real spectral triple / Spin geometry} $\iff$ Matter/Antimatter? $\iff$ ``admits spin structure'' $\to$ exists a unique Dirac operator (see Varilly formal)
+%      - Conjugation $\iff$ \textbf{Real spectral triple / Spin geometry} $\iff$ Matter/Antimatter? $\iff$ ``admits spin structure'' $\to$ exists a unique Dirac operator (see Varilly formal)
      
-     - If only $spin^\CC$ $\iff$ Dixmier-Doudary Check cohomology class $\delta = 0$ $\iff$ no obstruction to the existance of the B-A bimodule ``w/'' Morita equivalence $\alg s$: \textbf{Spinor Bundle}: irred. Clifford module of rank $2^m$, where $m = \lfloor rank(M)/2 \rfloor$
+%      - If only $spin^\CC$ $\iff$ Dixmier-Doudary Check cohomology class $\delta = 0$ $\iff$ no obstruction to the existance of the B-A bimodule ``w/'' Morita equivalence $\alg s$: \textbf{Spinor Bundle}: irred. Clifford module of rank $2^m$, where $m = \lfloor rank(M)/2 \rfloor$
      
-     - Grading $\gamma^5$: matter-antimatter distinction
+%      - Grading $\gamma^5$: matter-antimatter distinction
     
     
-    \textbf{Canonical: calculation}:
+%     \textbf{Canonical: calculation}:
     
-    - $[\slashed D, f]\psi = -i [(\partial_\mu f) \gamma^\mu] \cdot \psi = -i(df)\cdot \psi$
+%     - $[\slashed D, f]\psi = -i [(\partial_\mu f) \gamma^\mu] \cdot \psi = -i(df)\cdot \psi$
         
-        - $||[\slashed D, f]||^2 = sup_{x \in M} ||g_x^{-1}(df, d \cut f)||^2 =: ||grad(f) \in \Gamma(TM)||_\infty^2$ ($grad(f)$ is such that $g(grad(f), X) = X(f)$)
+%         - $||[\slashed D, f]||^2 = sup_{x \in M} ||g_x^{-1}(df, d \cut f)||^2 =: ||grad(f) \in \Gamma(TM)||_\infty^2$ ($grad(f)$ is such that $g(grad(f), X) = X(f)$)
     
-        - $d(x, y) := inf\{length(\gamma): \gamma:[0,1] \to M; \gamma(0) = x, \gamma(1) = y\}$
+%         - $d(x, y) := inf\{length(\gamma): \gamma:[0,1] \to M; \gamma(0) = x, \gamma(1) = y\}$
         
-        - Good upper bound for $d_D(\hat x, \hat y)$: $d(x, y)$: for all $\gamma$, $f(y) - f(x) = \int_0^1 \frac{d}{dt}[f(\gamma(t))]dt = \int_0^1 df_{\gamma(t)} (\dot \gamma(t)) = \int_0^1 g_{\gamma(t)}(grad(f), \dot \gamma) dt$, 
-        so
-        $|f(x) - f(y)| \leq \int_0^1 |grad(f)| |\dot \gamma(t)| dt \leq ||grad(f)||_
-        \infty \, length(\gamma) = ||[\slashed D, f]|| length(\gamma)$. 
-        Thus:
-        $d_D(\hat x, \hat y) = sup\{|f(x) - f(y)|: f \in C(M), ||[\slashed D, f]||\leq 1\} \leq inf \, length(\gamma) \equiv d(x, y)$
+%         - Good upper bound for $d_D(\hat x, \hat y)$: $d(x, y)$: for all $\gamma$, $f(y) - f(x) = \int_0^1 \frac{d}{dt}[f(\gamma(t))]dt = \int_0^1 df_{\gamma(t)} (\dot \gamma(t)) = \int_0^1 g_{\gamma(t)}(grad(f), \dot \gamma) dt$, 
+%         so
+%         $|f(x) - f(y)| \leq \int_0^1 |grad(f)| |\dot \gamma(t)| dt \leq ||grad(f)||_
+%         \infty \, length(\gamma) = ||[\slashed D, f]|| length(\gamma)$. 
+%         Thus:
+%         $d_D(\hat x, \hat y) = sup\{|f(x) - f(y)|: f \in C(M), ||[\slashed D, f]||\leq 1\} \leq inf \, length(\gamma) \equiv d(x, y)$
         
-        - Saturation of the upper bound: let $a_x \in C(M)$, $a_x(y) := d(x, y)$, %its continuity is simply the triangle inequality
-        $||[\slashed D, a_x]|| = ||grad(a_x)||_\infty = 1$ and $|a_x(y) - a_x(x)| = |d(x,y)| = d(x,y)$ saturates the inequality, meaning that $ d_D(\hat x, \hat y) = d(x, y)$.
-}
+%         - Saturation of the upper bound: let $a_x \in C(M)$, $a_x(y) := d(x, y)$, %its continuity is simply the triangle inequality
+%         $||[\slashed D, a_x]|| = ||grad(a_x)||_\infty = 1$ and $|a_x(y) - a_x(x)| = |d(x,y)| = d(x,y)$ saturates the inequality, meaning that $ d_D(\hat x, \hat y) = d(x, y)$.
+% }
 
-\linea
+% \linea

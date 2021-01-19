@@ -8,7 +8,14 @@
 \usepackage{hyperref} % Para poder tener hyperlinks
 \usepackage{enumerate}
 \usepackage{calligra} % Para dedicacion
-\usepackage[sorting=none]{biblatex} \addbibresource{bibliografia.bib}
+\usepackage[backend=bibtex,
+%style=abbrv,
+%style=numeric,
+%style=alphabetic,
+%style=reading,
+sorting=none,
+firstinits=true
+]{biblatex} \addbibresource{bibliografia.bib}
 \usepackage{csquotes}
 
 \usepackage[normalem]{ulem} % For strikethrough with command \sout
@@ -140,12 +147,13 @@
 
 \title 
 {
-	{New Fuzzy Spheres and their Metric Properties}\\
-	{\large Universidad de los Andes}\\
+	{Towards the Study of the Metric Properties of the New Fuzzy Spheres of Fiore and Pisacane}\\
+	%{\large Universidad de los Andes}\\
 	\vspace{1.5cm}
 	{\includegraphics[width = 0.6\textwidth]{logo.png}}	
 }
-\author{Sebastian Camilo Puerto Galindo\\[1cm]{\small Advised by: Prof. Andres Reyes-Lega Ph.D.}}
+\author{Sebastian Camilo Puerto Galindo\\[1cm]{\small Thesis submitted for the degree of Physicist}\\ {\small  Advisor: Prof. Andres Fernando Reyes-Lega Ph.D.}}
+\date{December 10, 2020}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,25 +171,27 @@
 \end{dedication}
 
 \begin{abstract}
-Hello
+Noncommutative spaces are strong candidates for the description of the underlying quantum structure of spacetime, and in this document we can see them arise through the introduction of energy cut-offs in a quantum theory. The purpose of this document is to develop a basic understanding of the geometry of noncommutative spaces that may arise in physically plausible situations such as those derived from the introduction of such cut-offs. We first develop a basic understanding of the geometry of noncommutative spaces, in particular their metric properties, through the study of the traditional fuzzy sphere of Madore\cite{Madore}. We then embark on the research of the geometry of the fuzzy spheres recently proposed by Fiore and Pisacane\cite{Fiore2018} through energy cut-offs by studying their definitions and alternative versions, as well as coherent states on them \cite{FioreCoherent2020, FioreXi2020} that play the role of points on these noncommutative spheres. %To do so, in the present text we first review the traditional fuzzy sphere\cite{Madore} and some spectral triples proposed on them\cite{DAndrea2013}. Then, we start the study of the fuzzy spheres proposed by Fiore and Pisacane through energy cut-offs, and present some families of coherent states that will play the role of the points on these spheres.
 \end{abstract}
 
 \begin{otherlanguage}{spanish}
 \begin{abstract}
-Hola
+Traducir la de ingles si es aceptada. \todo{}
 \end{abstract}
 \end{otherlanguage}
 
+
+
 \newpage
 
-\chapter*{Acknowledgements}
+% \chapter*{Acknowledgements}
 
-\section*{English}
-Hello
-\begin{otherlanguage}{spanish}
-\section*{Español}
-Hola
-\end{otherlanguage}
+% \section*{English}
+% Hello
+% \begin{otherlanguage}{spanish}
+% \section*{Español}
+% Hola
+% \end{otherlanguage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -232,6 +242,15 @@ Hola
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Final Remarks and Further Work}
 \input{chapters/remarks} \label{chp:remarks}
+
+The noncommutative algebras associated to the fuzzy spheres studied in this document may all be seen as square matrix algebras. Their finite dimension and the fact that we understand completely these algebras facilitate the study of the metric properties of the associated noncommutative spaces. This made fairly straighforward in chapter \ref{chp:fuzzysphere} the complete study of the distances between vector discrete basis states of the Madore fuzzy sphere, although this was not possible between the spin-, or $SU(2)$-, coherent states for matrix sizes beyond $2 \times 2$. However, an approximate study was possible by relating the $SU(2)$-coherent states of contiguous dimensions, revealing the relation between subsequent elements of the sequence conforming the fuzzy sphere, as well as its behavior in relation to the commutative space $S^2$ that it approximates. 
+
+The sequence of algebras comprising the fuzzy circle of Fiore and Pisacane studied in chapter \ref{chp:NewFuzzy} can be understood, both as a $C^*$-algebra and a representation space of $O(2)$, as the subsequence of matrix algebras of the fuzzy sphere of odd column and row number. This fuzzy space converges to the circle $S^1$ and is formed as a sequence of low energy effective quantum theories for the quantum mechanics on $S^1$ by introducing energy cut-offs, which naturally induces noncommuting position coordinates.
+Various systems of coherent states were proposed and partially studied in chapter \ref{chp:CHNew}, and a special emphasis was made on those with minimal position uncertainty in order to find states that may be associated to the points of the commutative space $S^1$.
+The next step to follow is to propose Dirac operators on the algebras conforming the fuzzy circle of Fiore and Pisacane. Although a complete characterization of the real spectral triples on semisimple finite dimensional algebras was achieved by Paschke and Sitarz in  \cite{PaschkeSitarz98}, we need both a spectral triple on each element of the sequence of the fuzzy circle, but also a sequence that approximates the spectral triple of the compact simple groups $S^1$\todo{apparently people talk about ``$2$-spinors'' on $S^1$ and there are two distinct Dirac operators in that case}; it remains to be seen if an approach resembling the one followed in chapter \ref{chp:fuzzysphere} based on the decomposition of the spinor bundle $\hcal \cong L^2(S^1)$ as a representation space of $O(2)$, the desired symmetry group, is possible. A related alternative method may come from the procedure proposed by D'Andrea et at. in \cite{DAndrea2014} to introduce spectral triples on a fuzzy space based on projections of the elements of the canonical spectral triple of the limit space as high momentum cut-offs. Yet another possible source of a Dirac triple may come from the formalism of Noncommutative Quantum Mechanics of Scholtz and Chakraborty \cite{}. Once a spectral triple on the fuzzy circle has been established, the study of the resulting metric properties may be possible to make following the general procedure outlined in \cite{ChaobaDevi2018}, although a more in depth analysis will depend on the nature of the Dirac operators previously proposed. 
+
+Additional to a fuzzy circle, Fiore and Pisacane have researched in \cite{Fiore2018, FioreXi2020, FioreCoherent2020} alternative descriptions and coherent states on the fuzzy sphere that results from the application of the energy cut-off procedure of section 3.1\ref{} when $D = 3$, instead of $D=2$, where the symmetry group is instead $O(4)$. The introduction of spectral triples on this fuzzy space has yet to be done, but the procedure done on the fuzzy circle may illustrate a path towards this objective, as well as that for the general $ D \in \ZZ_{\geq 2}$ case.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

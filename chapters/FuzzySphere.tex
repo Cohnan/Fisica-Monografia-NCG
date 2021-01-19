@@ -1,4 +1,6 @@
-The $2$-sphere $S^2$ as a metric space and as a manifold is rotationally invariant. Since the group $SU(2)$ is the universal cover of the group of rotations $SO(3)$, we can translate this invariance to be a $SU(2)$-invariance. We will see that this invariance induces a decomposition of the canonical Dirac operator on $S^2$ compatible with the action of $SU(2)$. Truncating this $SU(2)$-decomposition will give rise to equivariant spectral triples on the fuzzy sphere of Madore and Hoppe \cite{Madore}, defined in section \ref{ch2sectFuzzySphere}, which inherit some of the important properties of the canonical spectral triple as seen in \ref{CHFSSectionSpectralTriples}. A family of states studied in \ref{ChFSSectCoherentStates} called the \textit{spin coherent states} have some properties, including a $SU(2)$-equivariant bijective correspondence with the points in $S^2$, that motivate us to think of them as each one of the as a fuzzy analog of the points of $S^2$, and which allow us to say that the convergence of the fuzzy sphere to $S^2$ occurs as a metric space.
+In order to understand the formulation of spectral triples on a fuzzy space as well as their use to carry out distance calculations, in this chapter we review the study of the metric properties of the fuzzy sphere of Madore and Hoppe \cite{Madore} developed by D'Andrea, et al. in \cite{DAndrea2013}. 
+
+The $2$-sphere $S^2$ as a metric space and as a manifold is rotationally invariant. Since the group $SU(2)$ is the universal cover of the group of rotations $SO(3)$, we can translate this invariance to be a $SU(2)$-invariance. We will see that this invariance induces a decomposition of the canonical Dirac operator on $S^2$ compatible with the action of $SU(2)$. Truncating this $SU(2)$-decomposition will give rise to equivariant spectral triples on the fuzzy sphere of Madore and Hoppe, defined in section \ref{ch2sectFuzzySphere}, which inherit some of the important properties of the canonical spectral triple as seen in \ref{CHFSSectionSpectralTriples}. A family of states studied in \ref{ChFSSectCoherentStates} called the \textit{spin coherent states} have some properties, including a $SU(2)$-equivariant bijective correspondence with the points in $S^2$, that motivate us to think of them as each one of the as a fuzzy analog of the points of $S^2$, and which allow us to say that the convergence of the fuzzy sphere to $S^2$ occurs as a metric space.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,9 +35,9 @@ The $2$-sphere $S^2$ as a metric space and as a manifold is rotationally invaria
 %  - The eigenvalues are: of $Y'_{l\cdot}: (l + 1/2) \in \NN$, of $Y{''}_{l\cdot}: -(l + 1/2)$, with multiplicities $2l+1$)
 % }
 
-Although there are several ways to describe the canonical spectral triple on \todo{of/on?} $S^2$, the one that will be useful to use to define the spectral triples on the fuzzy sphere will be from understanding $S^2$ as \ptext{compact Riemannian symmetric\footnote{Symmetric space; U} space} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$.
+Although there are several ways to describe the canonical spectral triple on $S^2$, the one that will be useful to use to define the spectral triples on the fuzzy sphere will be from understanding $S^2$ as the \ptext{compact Riemannian symmetric} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$, and $U = SO(2)$ is the invariant subgroup under the complex conjugation involution.
 
-Let $G$ be a compact semisimple Lie group $G$ with Lie algebra $\alg g$, where the semisiplicity means that the Killing form $K: \alg g \times \alg g \to \alg g$ of $\alg g$ is negative definite, giving $G$ a natural Riemannian manifold structure. For such a manifold $G$, and its symmetric spaces, the Dirac operator can be seen to arise \cite{} from an algebraic element $\lbtext{\dcal } \in U(\alg g)\times U(\alg g)$, where $\lbtext{U}(g)$ is \lbtext{the universal enveloping algebra} of the Lie algebra $\alg g$, i.e. the largest\todo{in what sense} \todo{complex?} unital, associative algebra containing $\alg g$ where the Lie bracket coincides with the commutator in $U(\alg g)$; it is important to remark that \otext{the representations of $\alg g$ are in a bijective correspondence with the modules over $U(\alg g)$}. In the explicit case where $G = SU(2)$,
+Let $G$ be a compact semisimple Lie group $G$ with Lie algebra $\alg g$, where the semisiplicity means that the Killing form $K: \alg g \times \alg g \to \alg g$ of $\alg g$ is negative definite, giving $G$ a natural Riemannian manifold structure. For such a manifold $G$, and its symmetric spaces, the Dirac operator can be seen to arise \cite{Huang2007} from an algebraic element $\lbtext{\dcal } \in U(\alg g)\times U(\alg g)$, where $\lbtext{U}(g)$ is \lbtext{the universal enveloping algebra} of the Lie algebra $\alg g$, i.e. the largest unital, associative algebra containing $\alg g$ where the Lie bracket coincides with the commutator in $U(\alg g)$; it is important to remark that \otext{the representations of $\alg g$ are in a bijective correspondence with the modules over $U(\alg g)$}. In the explicit case where $G = SU(2)$,
 \begin{equation}
     \lbtext{\dcal} := 1 \otimes 1 + 2 \sum_{k = 1}^3 J^k \otimes J^k \in U(\sut) \otimes U(\sut)
 \end{equation}
@@ -46,7 +48,7 @@ where $J^k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such
 
 \lin
 
-Let $\lbtext{\pi_j}: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ be the spin $j \in \frac{\NN}{2}$ representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J^3)(e_m) = m e_m$, where $\vec J^2$ is notation for $(J^1)^2 + (J^2)^2 + (J^3)^3 \in U(\sut)$.
+Let $\lbtext{\pi_j}: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ be the spin $j \in \frac{\NN}{2}$ representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J^3)(e_m) = m e_m$, where $\vec J^2$ is notation for $(J^1)^2 + (J^2)^2 + (J^3)^2 \in U(\sut)$.
 
 Recall that the every continuous / square integrable / smooth function on $S^2$ may be decomposed in terms of spherical harmonics $Y^l_m \in L^2(S^2)$, $l \in \NN$, $m \in \{-l, \dots, l-1, l\}$, and the spaces $\tilde V_l = span\{Y^l_m\}_{|m| \leq l}$ for fixed $l$ are the spaces of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$, which are precisely all the irreducible representation spaces of $SO(3)$ and another description of the spin-$l$ representations $V_l$ of $SU(2)$. 
 This decomposition of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$, inherited from the action on $S^2$, and which can be seen to be induced by the natural action of $\sut$ on $S^2$ as vector fields. In particular, 
@@ -62,7 +64,7 @@ The spinor bundle of $S^2$ is trivial, so the space of spinor fields $\hcal = L^
 \lin
 
 This decomposition of the spinor bundle induced by the action of $SU(2)$ correctly suggests that the Dirac operator can be seen as the operator
-\begin{equation}
+\begin{equation}\label{equationSU2InducedSeriesDiracSlashedAndMatrix}
     \lbtext{\slashed D} =  \bigoplus_{l\in \bb N} \pi_l  \otimes \pi_{1/2}(\dcal) = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3 = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} ,
 \end{equation} acting on $L^2(S^2)\otimes \CC^2$, where $\sigma^\pm = \sigma_1 \pm i \sigma_2$.
 
@@ -118,7 +120,7 @@ The operator $(\pi_0 \otimes \pi_{1/2})(\dcal^2): V_0 \otimes \CC^2 \to V_0 \oti
 %     % This allows to define fuzzy spherical harmonics (changing x's by new x's) which make up a basis, good action under SU(2)
 % }    
 
-A \lbtext{fuzzy space} is a sequence of finite dimensional $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ with increasing dimension which approximate, in some sense to be determined later/in the specific case, a (commutative) $C^*$ algebra $\acal$ in the limit $N \to \infty$. When the commutative algebra encodes a topological space or a manifold with certain symmetry group $G$ that acts by homeomorphisms or diffeomorphisms, we require a fuzzy space to implement this symmetry, i.e. that $G$ acts on each $\acal_N$ by $*$-isomorphisms (the algebraic version of homeomorphisms and in a way compatible with the derivations of $\acal$ (algebraic version of diffeomorphisms).
+A \lbtext{fuzzy space} is a sequence of finite dimensional $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ with increasing dimension which approximate, in some sense to be determined in the specific case, a (commutative) $C^*$ algebra $\acal$ in the limit $N \to \infty$. When the commutative algebra encodes a topological space or a manifold with certain symmetry group $G$ that acts by homeomorphisms or diffeomorphisms, we require a fuzzy space to implement this symmetry, i.e. that $G$ acts on each $\acal_N$ by $*$-isomorphisms (the algebraic version of homeomorphisms and in a way compatible with the derivations of $\acal$ (algebraic version of diffeomorphisms).
 
 With the full spectral triple defined below, the \textit{fuzzy sphere} will approximate $S^2$ as:
     
@@ -134,9 +136,9 @@ With the full spectral triple defined below, the \textit{fuzzy sphere} will appr
 
 \lin 
 
-To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the decomposition of $\lbtext{\acal} = C(S^2) =  \bigoplus_{l \in \NN} \tilde V_l \cong L^2(S^2)$ \todo{different ``limits''} into irreducible representations of $SO(3)$, where, recall, $\tilde V_l$ is the vector space of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: there is a clear way in which they approximate $\acal$; $SU(2)$ acts naturally on each $\acal_N'$.
+To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the decomposition of $\lbtext{\acal} = C(S^2) \cong \bigoplus_{l \in \NN} \tilde V_l$ \todo{different ``limits''} into irreducible representations of $SO(3)$, where, recall, $\tilde V_l$ is the vector space of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$; recall that this is also the decomposition of the Hilbert space $L^2(S^2)$, dense within $C(S^2)$, into unitary irreducible reresentations of $SO(3)$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: there is a clear way in which they approximate $\acal$; $SU(2)$ acts naturally on each $\acal_N'$.
 
-However, an obvious problem with this definition is that $\acal_N'$ doesn't have a natural multiplication, so it isn't an algebra. From the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring that the radical\footnote{} of the algebra be zero, there are only two possibilities, and only one being noncommutative:
+However, an obvious problem with this definition is that $\acal_N'$ doesn't have a natural multiplication, so it isn't an algebra. From the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring that the radical of the algebra be zero, there are only two possibilities, and only one being noncommutative:
 \begin{align}
     x^i &\mapsto \hat x^i := \lambda \sigma_i & i = 1, 2, 3;
 \end{align}
@@ -153,7 +155,7 @@ the number $\lambda_N := \frac{1}{\sqrt{j(j+1)}} = \frac{2}{\sqrt{N(N+2)}}$ is c
 
 Notice that the normalization factor $\lambda_N$ guarantees that $(\hat x^1)^2 + (\hat x^2)^2 + (\hat x^3)^2 = 1$. Also notice that the following is a $SO(3)$-equivariant injective linear map:
 \begin{eqnsplit}\label{}
-    \acal_N &\to C(S^2) = \bigoplus_{l \in \NN}\tilde V_l\\
+    \acal_N &\to C(S^2)\\% = \bigoplus_{l \in \NN}\tilde V_l\\
     \hat x^i &\mapsto x^i;
 \end{eqnsplit}
 this is carefully proven in proposition \ref{propositionMadoreISSO3Covariant}. We might say that \emph{$\hat x^i$ is the fuzzy analog of the coordinate function $x^i$}, and so we obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
@@ -186,7 +188,7 @@ Then, the sequence of noncommutative $C^*$-algebras approximates the commutative
 
 \subsubsection{As metric space on which $SU(2)$ acts by isometries}
 
-This is what theorem \ref{theoremReducibleSpectralTripleDiracApproximation} and the remark that follows assert.
+As we will see, this is what theorem \ref{theoremReducibleSpectralTripleDiracApproximation} and the remark that follows assert.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -309,7 +311,7 @@ This spectral triple, although unsatisfactory as an approximation of the canonic
 For each $N \in \NN$ and $j = N/2$, define the \lbtext{irreducible spectral triple} as $(\acal_N, \lbtext{H_N} := V_j \otimes \CC^2, D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D))$, where $\acal_N = End(V_j)$ acts naturally on the first factor of $H_N$.
 \end{definition}
 
-This spectral triple may be seen to come as a single term of the $SU(2)$-induced expansion of $\slashed D$ \eqref{}, although we are also allowing  half integer spin representations in the current construction, which don't appear in the expansion of $\slashed \dcal$. The Dirac operators can also be written as
+This spectral triple may be seen to come as a single term of the $SU(2)$-induced expansion of $\slashed D$ \eqref{equationSU2InducedSeriesDiracSlashedAndMatrix}, although we are also allowing  half integer spin representations in the current construction, which don't appear in the expansion of $\slashed \dcal$. The Dirac operators can also be written as
 \begin{equation}
     D_N = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
     = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
@@ -707,7 +709,7 @@ The general procedure to find the distance between two states will be the follow
     \end{enumerate} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Distance Between (Vector) Discrete States $|j,m\rangle$ for Arbitrary $N$}
+\subsection{Distance Between (Vector) Discrete Basis States $|j,m\rangle$ for Arbitrary $N$}
 
 % {\color{gray} 
 % Presentation:
@@ -1052,13 +1054,13 @@ The following lemma is last piece of our puzzle. \cite{DAndrea2013}.
 
 From the previous lemma, and joining for completeness some previous results, the theorem follows.
 \begin{theorem} \label{theoremdNWithRespectoTodS2}
-For all $N \in \NN$ and all points $E(\phi, \theta)$ and $E(\phi', \theta')$ in the sphere:
+For all $N \in \NN$ and all points $E(\phi, \theta)$ and $E(\phi', \theta')$ in the $2$-sphere:
 $$
     \rho_N(\theta - \theta') \leq d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) \leq d_{S^2}(E(\phi, \theta), E(\phi', \theta')),
 $$
 and 
 \begin{equation}
-        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{S^2}(E(\phi, \theta), E(\phi', \theta'))
+        \lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{S^2}(E(\phi, \theta), E(\phi', \theta')).
 \end{equation}
 \end{theorem}
 
