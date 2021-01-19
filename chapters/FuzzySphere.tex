@@ -38,7 +38,7 @@ The $2$-sphere $S^2$ as a metric space and as a manifold is rotationally invaria
 Although there are several ways to describe the canonical spectral triple on $S^2$, the one that will be useful to use to define the spectral triples on the fuzzy sphere will be from understanding $S^2$ as the \ptext{compact Riemannian symmetric} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$, and $U = SO(2)$ is the invariant subgroup under the complex conjugation involution.
 
 Let $G$ be a compact semisimple Lie group $G$ with Lie algebra $\alg g$, where the semisiplicity means that the Killing form $K: \alg g \times \alg g \to \alg g$ of $\alg g$ is negative definite, giving $G$ a natural Riemannian manifold structure. For such a manifold $G$, and its symmetric spaces, the Dirac operator can be seen to arise \cite{Huang2007} from an algebraic element $\lbtext{\dcal } \in U(\alg g)\times U(\alg g)$, where $\lbtext{U}(g)$ is \lbtext{the universal enveloping algebra} of the Lie algebra $\alg g$, i.e. the largest unital, associative algebra containing $\alg g$ where the Lie bracket coincides with the commutator in $U(\alg g)$; it is important to remark that \otext{the representations of $\alg g$ are in a bijective correspondence with the modules over $U(\alg g)$}. In the explicit case where $G = SU(2)$,
-\begin{equation}
+\begin{equation}\label{equationALgebraicDiracOperatorDecomposition}
     \lbtext{\dcal} := 1 \otimes 1 + 2 \sum_{k = 1}^3 J^k \otimes J^k \in U(\sut) \otimes U(\sut)
 \end{equation}
 where $J^k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such that 
@@ -322,7 +322,7 @@ We have said before that this spectral triple is $SU(2)$-equivariant, but for th
 \begin{equation}
     a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*.
 \end{equation} 
-Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition \eqref{} of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
+Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action of $g \in SU(2)$ by $u_g := \pi_j(g) \otimes \pi_{1/2}(g) \in \mathcal B(H_n)$; notice that, when $j \in \NN$, this representation is one of the terms of the decomposition of the representation of $\hcal = L^2(S^2) \otimes \CC^2$ into representations of $SU(2)$.
 
 \begin{proposition}\label{propIrredSpectralTriple}
 For each $N \in \NN$, the associated irreducible spectral triple:
@@ -642,7 +642,7 @@ A state may be defined from its action on hermitian elements of the $C^*$-algebr
 
 The following lemma will also be a very helpful tool for our following  studies, and its proof exemplifies how the norm of the commutator $||[D, a]||$ appearing in the definition of Connes' distance, may be studied.
 
-\begin{lemma}
+\begin{lemma}\label{lemmaRelationOperatorsAndDirac}
 For any $a \in \acal_N$, the following inequalities about operators on $H_N$ are satisfied:
 \begin{equation} \label{ineqDN}
     ||[H, a]||, ||[E, a]||, ||[F, a]||  \leq ||[D_N, a]||;
@@ -726,7 +726,7 @@ The general procedure to find the distance between two states will be the follow
 
 Another family of pure states on each $\acal_N = End(V_j)$, for $N = 2j \in \NN$  is the family of vector states $\lbtext{\omega_m} := \langle j, m | \cdot | j, m \rangle$, where $m = -j, \dots, j-1, j$. The study of this distance will be useful to the study of coherent states.
 
-\begin{theorem}
+\begin{theorem}\label{theoremDistanceDiscreteStates}
 For any $N$:
 \begin{equation}
     d_N(\omega_m, \omega_n) = \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} = \sum_{k = m+1}^n d_N(\omega_{k-1}, \omega_k).
@@ -745,7 +745,7 @@ Hence,
     \omega_m(a) - \omega_n(a) &= \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle \\
     &= \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle
 \end{align*}
-Applying the triangle inequality on the norm of the above equation, and using proposition \ref{}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, so we get the distance formula in the statement as an upper bound. 
+Applying the triangle inequality on the norm of the above equation, and using lemma \ref{lemmaRelationOperatorsAndDirac}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, so we get the distance formula in the statement as an upper bound. 
 
 Define the diagonal hermitian operator 
 \begin{equation}\label{saturatingDiagonalADiscreteBasis}
@@ -867,13 +867,13 @@ In this subsection we will relate the coherent states and the algebras of subseq
 
 First define the linear injections, that respect the $SU(2)$ action,
 \begin{align*}
-    U^+_j : V_{j+\frac{1}{2}} &\to V_j \otimes V_{\frac{1}{2}} 
+    U^+_j : V_{j+\frac{1}{2}} &\to V_j \otimes V_{\frac{1}{2}}; 
     & U^-_j : V_{j-\frac{1}{2}} &\to V_j \otimes V_{\frac{1}{2}} \\
     \left|j + \frac{1}{2}, m + \frac{1}{2}\right\rangle &\mapsto |j, m\kket_+ &
-    \left|j - \frac{1}{2}, m + \frac{1}{2}\right\rangle &\mapsto |j, m\kket_-
+    \left|j - \frac{1}{2}, m + \frac{1}{2}\right\rangle &\mapsto |j, m\kket_-,
 \end{align*} where $|j, m\kket_\pm$ are the fuzzy spinors eigenvectors of $D_N$ defined in \ref{irreducibleDiracFuzzySpinorBasis}, and $m \pm 1 = -j \mp 1, \dots, j$ for $U_j^\pm$. 
 %Notice that $H_N = V_j \otimes V_{\frac{1}{2}}$ is the orthogonal direct sum of the ranges of $U_j^+$ and $U_j^-$.
-Then, using only the formula for the coherent states \ref{coherentStatesDefinitionRotation}, it can be easily shown that:
+Then, using only the formula for the coherent states \eqref{equationCOherentRotation}, it can be easily shown that:
 
 \begin{lemma}\label{relationCoherentVectorsDifferentN}
 $U_+|\phi, \theta)_{N+1} = |\phi, \theta)_N \otimes |\phi, \theta)_1$ for any $E(\phi, \theta) \in S^2$.
