@@ -2,37 +2,45 @@
 
 \begin{frame}{Definitions} % % % % % % % % % % % % % % % % % % %
     
-    - \textbf{Fuzzy Space}: %($C^*$? or simply $*$?) 
+    $\bullet$ \textbf{Fuzzy Space}: %($C^*$? or simply $*$?) 
     sequence $\acal_n$ parametrized that approximate the commutative algebra $\acal$. Why? \rtext{Keep continuous symmetries}.
     
-    - \textbf{Fuzzy Sphere}: Irrep. $\pi_j$ of $SU(2)$ of spin $\frac{N}{2} = j \in \frac{\mathbb N}{2}$: $V_j \equiv \CC^{2j+1} \ni |j, m\ket$. $\lbtext{\acal_N}:= End(V_j) \equiv M_N(\CC)$. $\hat x^i = \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i)$, $[J_i, J_k] = i \epsilon_{ijk} J_k$ \then \rtext{$[x^i, x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} x_k$}.
+    $\bullet$ \textbf{Fuzzy Sphere}: Irrep. $\pi_j$ of $SU(2)$ of spin $\frac{N}{2} = j \in \frac{\mathbb N}{2}$: $V_j \equiv \CC^{2j+1} \ni |j, m\ket$. $\lbtext{\acal_N}:= End(V_j) \equiv M_N(\CC)$. $\hat x^i = \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J_i)$, $[J_i, J_k] = i \epsilon_{ijk} J_k$ \then \rtext{$[x^i, x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} x_k$}.
     
-    - \rtext{It approximates $S^2$ as}: \rtext{1.} $C^*$-algebra $\acal$ acting on the spinors $\hcal$; \rtext{2.} Representation of $SU(2)$, acting by diffeomorphisms; \rtext{3.}  Metric space on which $SU(2)$ acts by isometries.
+    $\bullet$ \rtext{It approximates $S^2$ as}: \rtext{1.} $C^*$-algebra $\acal$ acting on the spinors $\hcal$; \rtext{2.} Representation of $SU(2)$, acting by diffeomorphisms; \rtext{3.}  Metric space on which $SU(2)$ acts by isometries.
     
-    - \textbf{$SU(2)$-coherent states}: minimum uncertainty states $\lbtext{|\phi, \theta)_N} := R_{(\phi, \theta)}|j, -j\rangle \in V_j$ \iff\ states \lbtext{$\psi^N_{(\phi, \theta)}$} \iff\ points of $S^2$ \rtext{$SU(2)$-equivariantly}, with \rtext{$SU(2)$-invariant distance}.
+    $\bullet$ \textbf{$SU(2)$-coherent states}: minimum uncertainty states $\lbtext{|\phi, \theta)_N} := R_{(\phi, \theta)}|j, -j\rangle \in V_j$ \iff\ states \lbtext{$\psi^N_{(\phi, \theta)}$} \rtext{\iff\ points of $S^2$ $SU(2)$-equivariantly}, with \rtext{$SU(2)$-invariant distance}.
     
 \end{frame}
 
 
 \begin{frame}{Spectral Triples} % % % % % % % % % % % % % % % % % % %
     
-     - Canonical
+     $\bullet$ \textbf{Canonical}: \rtext{Starting point: $SU(2)$-isometries}: $S^2$ as the symmetric space $S^3/S^1$. $\hcal = \bigoplus_{l \in \NN} V_l \otimes \CC^2$, $\lbtext{\slashed D} = \left( \bigoplus_{l \in \NN} \pi_l \right) \otimes \pi_{\frac{1}{2}}(1\otimes 1 + 2 J^k \otimes J^k).$ \underline{Eigenvectors}: orth. basis of $\hcal$. \underline{Spectrum} $= \{\pm l\} = \ZZ - 0$ with multiplicities $2l$.
      
-     - Irreducible
+     $\bullet$ \textbf{Irreducible}: $(\acal_N, \lbtext{H_N} = V_j \otimes \CC^2, \lbtext{D_N} 
+    := (\pi_j \otimes \pi_{1/2})(\mathcal D): V_j \otimes \CC^2 \to V_j \otimes \CC^2)$. \underline{Spectrum}: $= j+1, -j$ with multiplicities $2j+2$, $2j$. 
      
-     - Full
+     $\bullet$ \textbf{Full}: $(\acal_N, \lbtext{\hcal_N} := \mathcal A_N \otimes \CC^2 \cong \bigoplus_{l =1}^N H_l, \mathcal D_N = \bigoplus_{l =1}^N D_l)$. \underline{Spectrum}: $\{-N, \dots, N+1\}$. Real structure, no grading.
      
-     - Theorem
+     $\bullet$ \textbf{\rtext{Theorem}}: the two spectral triples induce the same distance function, and this is $SU(2)$-invariant: $d_N(g_* \omega, \omega') = d_N(g_* \omega, g_*\omega')$.
     
 \end{frame}
 
 
 \begin{frame}{Distance Calculation Procedure} % % % % % % % % % % % % % % % % % % %
     
-     - General facts
+     $\bullet$ \textbf{General facts}: Supremum always attained in hermitian elements.
      
-     - Perhaps isometry group or desired spectrum
+     $\bullet$ \textbf{Discrete Basis States}: In $\acal_N = End(V)$, study vector states of important basis, relating $\omega_m(a) - \omega_n(a)$ to $[D_N, a]$.
      
-     - Docs and ~Slide 17
+     $\bullet$ \textbf{Procedure}: Understand $||[D, a]||$; find upper limit for $|\omega(a) - \omega(a')|$ dependent on $||[D, a]||$; find hermitian algebra element that saturates the inequality (or sequence that gets close). 
+%Very similar procedure to calculate distances followed in Chakraborty Moyal Plane and Chakraborty Fuzzy Sphere.
+
+    $\bullet$ \textbf{$G$-invariance of distance}: simplify what needs to be proven.
+    
+    $\bullet$ \textbf{Auxiliary distance}: study simpler subset distance: lower bound whose behavior is understood and that encases the actual distance.
+    
+    $\bullet$ \textbf{Behaviour with $N$}: Relate algebras and coherent states of subsequent $N$, finding relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$.
     
 \end{frame}
