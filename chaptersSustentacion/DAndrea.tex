@@ -9,12 +9,12 @@
     
     $\bullet$ \rtext{It approximates $S^2$ as}: \rtext{1.} $C^*$-algebra $\acal$ acting on the spinors $\hcal$; \rtext{2.} Representation of $SU(2)$, acting by diffeomorphisms; \rtext{3.}  Metric space on which $SU(2)$ acts by isometries.
     
-    $\bullet$ \textbf{$SU(2)$-coherent states}: minimum uncertainty states $\lbtext{|\phi, \theta)_N} := R_{(\phi, \theta)}|j, -j\rangle \in V_j$ \iff\ states \lbtext{$\psi^N_{(\phi, \theta)}$} \rtext{\iff\ points of $S^2$ $SU(2)$-equivariantly}, with \rtext{$SU(2)$-invariant distance}.
+    $\bullet$ \textbf{$SU(2)$-coherent states}: minimum uncertainty, $(\Delta \vec L)^2=j$, states $\lbtext{|\phi, \theta)_N} := R_{(\phi, \theta)}|j, -j\rangle \in V_j$ \iff\ states \lbtext{$\psi^N_{(\phi, \theta)}$} \rtext{\iff\ points of $S^2$ $SU(2)$-equivariantly}, with \rtext{$SU(2)$-invariant distance}.
     
 \end{frame}
 
 
-\begin{frame}{Spectral Triples} % % % % % % % % % % % % % % % % % % %
+\begin{frame}{Spectral Triples*} % % % % % % % % % % % % % % % % % % %
     
      $\bullet$ \textbf{Canonical}: \rtext{Starting point: $SU(2)$-isometries}: $S^2$ as the symmetric space $S^3/S^1$. $\hcal = \bigoplus_{l \in \NN} V_l \otimes \CC^2$, $\lbtext{\slashed D} = \left( \bigoplus_{l \in \NN} \pi_l \right) \otimes \pi_{\frac{1}{2}}(1\otimes 1 + 2 J^k \otimes J^k).$ \underline{Eigenvectors}: orth. basis of $\hcal$. \underline{Spectrum} $= \{\pm l\} = \ZZ - 0$ with multiplicities $2l$.
      
@@ -28,13 +28,13 @@
 \end{frame}
 
 
-\begin{frame}{Distance Calculation Procedure} % % % % % % % % % % % % % % % % % % %
+\begin{frame}{Distance Calculation Procedure*} % % % % % % % % % % % % % % % % % % %
     
      $\bullet$ \textbf{General facts}: Supremum always attained in hermitian elements.
      
-     $\bullet$ \textbf{Discrete Basis States}: In $\acal_N = End(V)$, study vector states of important basis, relating $\omega_m(a) - \omega_n(a)$ to $||[D_N, a]||$.
+     $\bullet$ \textbf{Discrete Basis States}: in $V_j$, relate $\omega_m(a) - \omega_n(a)$ to $||[D_N, a]||$
      
-     $\bullet$ \textbf{Procedure}: Understand $||[D, a]||$; find upper limit for $|\omega(a) - \omega(a')|$ dependent on $||[D, a]||$; find hermitian algebra element that saturates the inequality (or sequence that gets close). 
+     $\bullet$ \textbf{Procedure}: Understand $||[D, a]||$; find upper limit for $|\omega(a) - \omega'(a)|$ dependent on $||[D, a]||$; find hermitian algebra element that saturates the inequality (or sequence that gets close). 
 %Very similar procedure to calculate distances followed in Chakraborty Moyal Plane and Chakraborty Fuzzy Sphere.
 
     $\bullet$ \textbf{$G$-invariance of distance}: simplify what needs to be proven.
@@ -43,4 +43,5 @@
     
     $\bullet$ \textbf{Behaviour with $N$}: Relate algebras and coherent states of subsequent $N$, finding relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$.
     
+    Concretely: $\lim_{N \to \infty} d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \theta')}) = d_{S^2}(E(\phi, \theta), E(\phi', \theta')).$
 \end{frame}
