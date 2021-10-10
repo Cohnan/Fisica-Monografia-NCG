@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  10 OCT 2021 12:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  10 OCT 2021 13:09
 entering extended mode
 **./monografia.tex
 (monografia.tex
@@ -2072,8 +2072,14 @@ LaTeX Info: Redefining \% on input line 63.
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 841DFE1C001D505FB6833E6731D39DDF;7497.
+
+Package rerunfilecheck Warning: File `monografia.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `monografia.out':
+(rerunfilecheck)             Before: 8A8105C92D85B74A916C3AD7A8A6D75D;7531
+(rerunfilecheck)             After:  841DFE1C001D505FB6833E6731D39DDF;7497.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                monografia
