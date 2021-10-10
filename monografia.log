@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  10 OCT 2021 15:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  10 OCT 2021 15:20
 entering extended mode
 **./monografia.tex
 (monografia.tex
@@ -2096,14 +2096,8 @@ LaTeX Info: Redefining \% on input line 63.
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `monografia.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `monografia.out':
-(rerunfilecheck)             Before: A7FC4AD633CF85190FECC769BE793674;8262
-(rerunfilecheck)             After:  1F68ADFC8A9026CB442222B9B8AE0149;8285.
+Package rerunfilecheck Info: File `monografia.out' has not changed.
+(rerunfilecheck)             Checksum: 1F68ADFC8A9026CB442222B9B8AE0149;8285.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                monografia
@@ -2149,7 +2143,7 @@ blic/amsfonts/euler/eufm10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/sebas/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/sebas/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on monografia.pdf (80 pages, 851500 bytes).
+Output written on monografia.pdf (80 pages, 851584 bytes).
 PDF statistics:
  1179 PDF objects out of 1200 (max. 8388607)
  388 named destinations out of 1000 (max. 500000)
