@@ -35,11 +35,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.1}Distance Between (Vector) Discrete Basis States $|j,m\rangle $ for Arbitrary $N$}{23}{subsection.2.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.2}The distance between $N=1$ coherent states}{24}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.2}The Distance between $N=1$ Coherent States}{24}{subsection.2.5.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.3}Relating Distinct $N$'s and Upper Bound}{25}{subsection.2.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.4}Auxiliary Distance and Limit}{27}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.4}Auxiliary Distance and the Commutative Limit}{27}{subsection.2.5.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}The New Fuzzy Spheres of Fiore and Pisacane}{31}{chapter.3}%
 \defcounter {refsection}{0}\relax 
