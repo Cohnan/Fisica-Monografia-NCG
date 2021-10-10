@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  10 OCT 2021 14:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  10 OCT 2021 15:06
 entering extended mode
 **./monografia.tex
 (monografia.tex
@@ -1229,12 +1229,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.48 ...ion of the Algebras}{32}{subsection.3.1.1}
+l.48 ...A}_{\overline {E}}$}{32}{subsection.3.1.1}
                                                   % [1
 
 ]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 68.
+Overfull \hbox (6.87648pt too wide) in paragraph at lines 50--50
+ [][] [][]\OT1/cmr/m/n/12 Low En-ergy Ef-fec-tive Quan-tum The-o-ries and their
+ Prop- 
+ []
 
+LaTeX Font Info:    Trying to load font information for U+euf on input line 68.
 
 (C:\Users\sebas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1460,6 +1464,22 @@ LaTeX Warning: Citation 'Fiore2018' on page 31 undefined on input line 134.
 
 LaTeX Warning: Citation 'Fiore2019' on page 31 undefined on input line 134.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@overline' on input line 166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 166.
+
 [31
 
 ] [32]
@@ -1467,7 +1487,7 @@ LaTeX Warning: Citation 'Fiore2019' on page 31 undefined on input line 134.
 LaTeX Warning: Citation 'Fiore2019' on page 33 undefined on input line 207.
 
 [33]
-<images/FioreEigenvalues.PNG, id=516, 357.58594pt x 401.24907pt>
+<images/FioreEigenvalues.PNG, id=519, 357.58594pt x 401.24907pt>
 File: images/FioreEigenvalues.PNG Graphic file (type png)
 <use images/FioreEigenvalues.PNG>
 Package pdftex.def Info: images/FioreEigenvalues.PNG  used on input line 217.
@@ -1480,6 +1500,10 @@ LaTeX Warning: Citation 'Fiore2018' on page 34 undefined on input line 218.
 LaTeX Warning: Citation 'Fiore2018' on page 34 undefined on input line 218.
 
 [34 <./images/FioreEigenvalues.PNG>] [35]
+Overfull \hbox (8.17285pt too wide) in paragraph at lines 258--258
+[]\OT1/cmr/bx/n/14.4 Low En-ergy Ef-fec-tive Quan-tum The-o-ries and their
+ []
+
 
 LaTeX Warning: Citation 'Fiore2018' on page 36 undefined on input line 263.
 
@@ -1711,7 +1735,7 @@ Overfull \hbox (52.45761pt too wide) detected at line 874
  []
 
 [51]
-<images/xCoefsTwoks.jpg, id=723, 397.485pt x 263.98625pt>
+<images/xCoefsTwoks.jpg, id=725, 397.485pt x 263.98625pt>
 File: images/xCoefsTwoks.jpg Graphic file (type jpg)
 <use images/xCoefsTwoks.jpg>
 Package pdftex.def Info: images/xCoefsTwoks.jpg  used on input line 899.
@@ -1721,7 +1745,7 @@ Package pdftex.def Info: images/xCoefsTwoks.jpg  used on input line 899.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [52]
-<images/asolo.jpg, id=736, 397.485pt x 263.98625pt>
+<images/asolo.jpg, id=738, 397.485pt x 263.98625pt>
 File: images/asolo.jpg Graphic file (type jpg)
 <use images/asolo.jpg>
 Package pdftex.def Info: images/asolo.jpg  used on input line 922.
@@ -1731,7 +1755,7 @@ Package pdftex.def Info: images/asolo.jpg  used on input line 922.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [53 <./images/xCoefsTwoks.jpg>]
-<images/divFactorwMinimumK.jpg, id=749, 397.485pt x 252.945pt>
+<images/divFactorwMinimumK.jpg, id=751, 397.485pt x 252.945pt>
 File: images/divFactorwMinimumK.jpg Graphic file (type jpg)
 <use images/divFactorwMinimumK.jpg>
 Package pdftex.def Info: images/divFactorwMinimumK.jpg  used on input line 958.
@@ -1741,7 +1765,7 @@ Package pdftex.def Info: images/divFactorwMinimumK.jpg  used on input line 958.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/divFactorwRecommendedK.jpg, id=750, 397.485pt x 252.945pt>
+<images/divFactorwRecommendedK.jpg, id=752, 397.485pt x 252.945pt>
 File: images/divFactorwRecommendedK.jpg Graphic file (type jpg)
 <use images/divFactorwRecommendedK.jpg>
 Package pdftex.def Info: images/divFactorwRecommendedK.jpg  used on input line 
@@ -1976,7 +2000,7 @@ LaTeX Warning: Citation 'FioreCoherent2020' on page 70 undefined on input line
 LaTeX Warning: Citation 'FioreCoherent2020' on page 71 undefined on input line 
 166.
 
-<images/R^2.jpg, id=928, 397.485pt x 245.91875pt>
+<images/R^2.jpg, id=930, 397.485pt x 245.91875pt>
 File: images/R^2.jpg Graphic file (type jpg)
 <use images/R^2.jpg>
 Package pdftex.def Info: images/R^2.jpg  used on input line 170.
@@ -1986,7 +2010,7 @@ Overfull \hbox (4.1955pt too wide) detected at line 201
 []
  []
 
-<images/bn.jpg, id=936, 505.89pt x 300.12125pt>
+<images/bn.jpg, id=938, 505.89pt x 300.12125pt>
 File: images/bn.jpg Graphic file (type jpg)
 <use images/bn.jpg>
 Package pdftex.def Info: images/bn.jpg  used on input line 206.
@@ -2073,16 +2097,13 @@ LaTeX Info: Redefining \% on input line 63.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
 Package rerunfilecheck Warning: File `monografia.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `monografia.out':
-(rerunfilecheck)             Before: E65C79572F38E75E0A788B50E16FF942;7596
-(rerunfilecheck)             After:  40272A75BC65EF53F8E1718A4E256A0F;7682.
+(rerunfilecheck)             Before: A7FC4AD633CF85190FECC769BE793674;8262
+(rerunfilecheck)             After:  1F68ADFC8A9026CB442222B9B8AE0149;8285.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                monografia
@@ -2095,7 +2116,7 @@ Package logreq Info: Writing requests to 'monografia.run.xml'.
 Here is how much of TeX's memory you used:
  31706 strings out of 478927
  602280 string characters out of 2852534
- 1326474 words of memory out of 3000000
+ 1326657 words of memory out of 3000000
  48608 multiletter control sequences out of 15000+600000
  424907 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2128,9 +2149,9 @@ blic/amsfonts/euler/eufm10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/sebas/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/sebas/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on monografia.pdf (80 pages, 849749 bytes).
+Output written on monografia.pdf (80 pages, 851500 bytes).
 PDF statistics:
- 1177 PDF objects out of 1200 (max. 8388607)
+ 1179 PDF objects out of 1200 (max. 8388607)
  388 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
