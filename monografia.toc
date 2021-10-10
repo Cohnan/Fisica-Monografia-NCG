@@ -5,9 +5,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Some Spectral Triples on the Fuzzy Sphere}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Spectral Triples on the Fuzzy Sphere and their Geometry}{4}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Canonical Spectral Triple of $S^2$}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.1}The Canonical Spectral Triple of $S^2$}{5}{section.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}The Fuzzy Sphere}{7}{section.2.2}%
 \defcounter {refsection}{0}\relax 
