@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  10 OCT 2021 15:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  10 OCT 2021 20:43
 entering extended mode
 **./monografia.tex
 (monografia.tex
@@ -1229,7 +1229,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.48 ...A}_{\overline {E}}$}{32}{subsection.3.1.1}
+l.48 ...A}_{\overline {E}}$}{33}{subsection.3.1.1}
                                                   % [1
 
 ]
@@ -1295,145 +1295,142 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 LaTeX Warning: Citation 'Huang2007' on page 5 undefined on input line 40.
 
-[5]
+[5] [6]
 
-LaTeX Warning: Citation 'DAndrea2013' on page 6 undefined on input line 73.
+LaTeX Warning: Citation 'DAndrea2013' on page 7 undefined on input line 72.
 
-[6]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 139.
+ine 138.
 
-Overfull \hbox (7.69681pt too wide) in paragraph at lines 139--139
+Overfull \hbox (7.69681pt too wide) in paragraph at lines 138--138
 [][][]\OT1/cmr/m/n/12 different 
  []
 
 
-Overfull \hbox (7.69681pt too wide) in paragraph at lines 139--139
+Overfull \hbox (7.69681pt too wide) in paragraph at lines 138--138
 [][][]\OT1/cmr/m/n/12 different 
  []
 
 [7]
 
-LaTeX Warning: Citation 'Madore' on page 8 undefined on input line 141.
+LaTeX Warning: Citation 'Madore' on page 8 undefined on input line 140.
 
 [8] [9]
 
-LaTeX Warning: Citation 'Madore' on page 10 undefined on input line 187.
+LaTeX Warning: Citation 'Madore' on page 10 undefined on input line 186.
 
 [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 212.
+(hyperref)                removing `math shift' on input line 211.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 212.
+(hyperref)                removing `math shift' on input line 211.
 
 
-LaTeX Warning: Citation 'Sitarz' on page 11 undefined on input line 235.
+LaTeX Warning: Citation 'Sitarz' on page 11 undefined on input line 234.
 
-
-Overfull \hbox (25.5637pt too wide) in paragraph at lines 248--249
+[11]
+Overfull \hbox (25.5637pt too wide) in paragraph at lines 247--248
 []\OT1/cmr/bx/n/12 For the spec-tral triples de-fined in this sec-tion, the $\O
 ML/cmm/m/it/12 SU\OT1/cmr/m/n/12 (2)$\OT1/cmr/bx/n/12 -equivariance
  []
 
-[11] [12]
-Overfull \hbox (14.60922pt too wide) in paragraph at lines 340--341
+[12] [13]
+Overfull \hbox (14.60922pt too wide) in paragraph at lines 339--340
 []\OT1/cmr/m/n/12 As stated at the be-gin-ning of the sec-tion, to proof the $\
 OML/cmm/m/it/12 SU\OT1/cmr/m/n/12 (2)$-equivariance
  []
 
-[13] [14] [15]
-Overfull \hbox (0.47783pt too wide) detected at line 443
+[14] [15]
+Overfull \hbox (0.47783pt too wide) detected at line 442
 []
  []
 
 [16]
 
-LaTeX Warning: Citation 'Perelomov' on page 17 undefined on input line 472.
+LaTeX Warning: Citation 'Perelomov' on page 17 undefined on input line 471.
 
-[17]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 516.
-
+[17] [18]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 516.
+(hyperref)                removing `math shift' on input line 515.
 
-[18]
 
-LaTeX Warning: Citation 'Arecchi' on page 19 undefined on input line 549.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 515.
+
+
+LaTeX Warning: Citation 'Arecchi' on page 19 undefined on input line 548.
 
 [19] [20]
 
-LaTeX Warning: Citation 'Iochum2001' on page 21 undefined on input line 633.
+LaTeX Warning: Citation 'Iochum2001' on page 21 undefined on input line 632.
 
 
-Overfull \hbox (7.67917pt too wide) in paragraph at lines 633--634
+Overfull \hbox (7.67917pt too wide) in paragraph at lines 632--633
 \OMS/cmsy/m/n/12 jj\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 D; a\OT1/cmr/m/n/12 ]\OMS/
 cmsy/m/n/12 jj  \OT1/cmr/m/n/12 1$, is al-ways at-tained in her-mi-tian $(\OML
 /cmm/m/it/12 a \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 )$ el-e-me
 nts [[]],
  []
 
-
-Overfull \hbox (1.44089pt too wide) detected at line 675
+[21]
+Overfull \hbox (1.44089pt too wide) detected at line 674
 \OT1/cmr/m/n/12 [\OML/cmm/m/it/12 D[]; a\OT1/cmr/m/n/12 ][][\OML/cmm/m/it/12 D[
 ]; a\OT1/cmr/m/n/12 ] = [] \OML/cmm/m/it/12 :
  []
 
-[21]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 712.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rangle' on input line 712.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 712.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 712.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 712.
-
 [22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 759.
+(hyperref)                removing `math shift' on input line 711.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 759.
+(hyperref)                removing `\rangle' on input line 711.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 711.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 711.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 711.
 
 [23]
 
-LaTeX Warning: Citation 'DAndrea2013' on page 24 undefined on input line 793.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 758.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 758.
+
+
+LaTeX Warning: Citation 'DAndrea2013' on page 24 undefined on input line 792.
 
 [24]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 838.
+(hyperref)                removing `math shift' on input line 837.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 838.
+(hyperref)                removing `math shift' on input line 837.
 
-[25]
-Overfull \hbox (54.64088pt too wide) detected at line 927
+[25] [26]
+Overfull \hbox (54.64088pt too wide) detected at line 926
 []
  []
 
-[26] [27]
-Overfull \hbox (1.97365pt too wide) in paragraph at lines 1006--1007
+[27] [28]
+Overfull \hbox (1.97365pt too wide) in paragraph at lines 1005--1006
 []$\OT1/cmr/m/n/12 0 \OMS/cmsy/m/n/12  \OML/cmm/m/it/12 []\OT1/cmr/m/n/12 (\O
 ML/cmm/m/it/12 \OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12  \OT1/cmr/m/n/12 1$. In par
 -tic-u-lar $\OML/cmm/m/it/12 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12  \OMS/cmsy/m
@@ -1445,24 +1442,24 @@ m/m/it/12 ; []\OT1/cmr/m/n/12 ))$.
  []
 
 
-Overfull \hbox (12.38167pt too wide) in paragraph at lines 1019--1021
+Overfull \hbox (12.38167pt too wide) in paragraph at lines 1018--1020
 \OT1/cmr/m/n/12 claimed dis-tance us-ing the tri-an-gle in-equal-ity and the bo
 und $\OMS/cmsy/m/n/12 jj  \OML/cmm/m/it/12 d[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/1
 2 ![]; ![]\OT1/cmr/m/n/12 ) =
  []
 
-[28]
+[29]
 
-LaTeX Warning: Citation 'DAndrea2013' on page 29 undefined on input line 1041.
+LaTeX Warning: Citation 'DAndrea2013' on page 30 undefined on input line 1040.
 
-[29]) [30]
+[30]) [31]
 Chapter 3.
 (chapters/NewFuzzy.tex
 
-LaTeX Warning: Citation 'Fiore2018' on page 31 undefined on input line 134.
+LaTeX Warning: Citation 'Fiore2018' on page 32 undefined on input line 134.
 
 
-LaTeX Warning: Citation 'Fiore2019' on page 31 undefined on input line 134.
+LaTeX Warning: Citation 'Fiore2019' on page 32 undefined on input line 134.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1480,43 +1477,38 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 166.
 
-[31
+[32
 
-] [32]
+] [33]
 
-LaTeX Warning: Citation 'Fiore2019' on page 33 undefined on input line 207.
+LaTeX Warning: Citation 'Fiore2019' on page 34 undefined on input line 207.
 
-[33]
-<images/FioreEigenvalues.PNG, id=519, 357.58594pt x 401.24907pt>
+[34]
+<images/FioreEigenvalues.PNG, id=523, 357.58594pt x 401.24907pt>
 File: images/FioreEigenvalues.PNG Graphic file (type png)
 <use images/FioreEigenvalues.PNG>
 Package pdftex.def Info: images/FioreEigenvalues.PNG  used on input line 217.
 (pdftex.def)             Requested size: 130.0pt x 145.8761pt.
 
 
-LaTeX Warning: Citation 'Fiore2018' on page 34 undefined on input line 218.
+LaTeX Warning: Citation 'Fiore2018' on page 35 undefined on input line 218.
 
 
-LaTeX Warning: Citation 'Fiore2018' on page 34 undefined on input line 218.
+LaTeX Warning: Citation 'Fiore2018' on page 35 undefined on input line 218.
 
-[34 <./images/FioreEigenvalues.PNG>] [35]
+[35 <./images/FioreEigenvalues.PNG>] [36]
 Overfull \hbox (8.17285pt too wide) in paragraph at lines 258--258
 []\OT1/cmr/bx/n/14.4 Low En-ergy Ef-fec-tive Quan-tum The-o-ries and their
  []
 
 
-LaTeX Warning: Citation 'Fiore2018' on page 36 undefined on input line 263.
+LaTeX Warning: Citation 'Fiore2018' on page 37 undefined on input line 263.
 
 
-LaTeX Warning: Marginpar on page 36 moved.
+LaTeX Warning: Marginpar on page 37 moved.
 
 
-LaTeX Warning: Citation 'Fiore2018' on page 36 undefined on input line 266.
-
-
-Overfull \hbox (2.14825pt too wide) in paragraph at lines 266--266
-\OT1/cmr/m/n/12 namely 
- []
+LaTeX Warning: Citation 'Fiore2018' on page 37 undefined on input line 266.
 
 
 Overfull \hbox (2.14825pt too wide) in paragraph at lines 266--266
@@ -1524,14 +1516,19 @@ Overfull \hbox (2.14825pt too wide) in paragraph at lines 266--266
  []
 
 
-LaTeX Warning: Marginpar on page 36 moved.
+Overfull \hbox (2.14825pt too wide) in paragraph at lines 266--266
+\OT1/cmr/m/n/12 namely 
+ []
 
-[36]
 
-LaTeX Warning: Citation 'FioreTheCase2020' on page 37 undefined on input line 3
+LaTeX Warning: Marginpar on page 37 moved.
+
+[37]
+
+LaTeX Warning: Citation 'FioreTheCase2020' on page 38 undefined on input line 3
 01.
 
-[37] [38]
+[38] [39]
 Overfull \hbox (1.63002pt too wide) in paragraph at lines 343--346
 \OT1/cmr/m/n/12 in-vert the re-la-tion $(\OML/cmm/m/it/12 g[]x\OT1/cmr/m/n/12 )
 [] = [][] \OML/cmm/m/it/12 g[]x[]$ \OT1/cmr/m/n/12 in $\U/msb/m/n/12 R[]$ \OT1/
@@ -1544,7 +1541,7 @@ Overfull \hbox (14.18985pt too wide) detected at line 350
 []
  []
 
-[39]
+[40]
 Overfull \hbox (32.1654pt too wide) in paragraph at lines 378--379
 []\OT1/cmr/m/n/12 That $\OML/cmm/m/it/12 SU\OT1/cmr/m/n/12 (2)$ is the dou-ble 
 cover of $\OML/cmm/m/it/12 SO\OT1/cmr/m/n/12 (3)$ im-plies that there is an $(\
@@ -1552,9 +1549,9 @@ OML/cmm/m/it/12 SU\OT1/cmr/m/n/12 (2)\OML/cmm/m/it/12 ; SO\OT1/cmr/m/n/12 (3))$
 -
  []
 
-[40]
+[41]
 
-LaTeX Warning: Citation 'FioreXi2020' on page 41 undefined on input line 409.
+LaTeX Warning: Citation 'FioreXi2020' on page 42 undefined on input line 409.
 
 
 Overfull \hbox (2.84225pt too wide) in paragraph at lines 409--411
@@ -1562,7 +1559,7 @@ Overfull \hbox (2.84225pt too wide) in paragraph at lines 409--411
 al-ge-bras $\OMS/cmsy/m/n/12 fA[]g[]$\OT1/cmr/m/n/12 ,
  []
 
-[41]
+[42]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 437.
@@ -1587,17 +1584,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 437.
 
-[42]
-Overfull \hbox (25.9744pt too wide) in paragraph at lines 501--501
-\OT1/cmr/m/n/12 Schrodinger 
- []
-
-
-Overfull \hbox (25.9744pt too wide) in paragraph at lines 501--501
-\OT1/cmr/m/n/12 Schrodinger 
- []
-
 [43]
+Overfull \hbox (25.9744pt too wide) in paragraph at lines 501--501
+\OT1/cmr/m/n/12 Schrodinger 
+ []
+
+
+Overfull \hbox (25.9744pt too wide) in paragraph at lines 501--501
+\OT1/cmr/m/n/12 Schrodinger 
+ []
+
+[44]
 Overfull \hbox (14.87401pt too wide) in paragraph at lines 537--537
 [] \OML/cmm/m/it/12 m[]n[]$[]  
  []
@@ -1607,7 +1604,7 @@ Overfull \hbox (14.87401pt too wide) in paragraph at lines 537--537
 [] \OML/cmm/m/it/12 m[]n[]$[]  
  []
 
-[44] [45]
+[45] [46]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 638.
@@ -1690,7 +1687,7 @@ Overfull \hbox (2.47464pt too wide) in paragraph at lines 645--645
 \OT1/cmr/m/n/12 algebra 
  []
 
-[46]
+[47]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 690.
@@ -1707,7 +1704,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 690.
 
-[47] [48]
+[48] [49]
 Overfull \hbox (3.46626pt too wide) in paragraph at lines 759--760
 \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 )\OML/cmm/
 m/it/12  []$ \OT1/cmr/m/n/12 for some com-plex val-ued func-tion $\OML/cmm/m/it
@@ -1716,15 +1713,15 @@ m/m/it/12 m \OMS/cmsy/m/n/12 2 f \OT1/cmr/m/n/12 \OML/cmm/m/it/12 ; [] ; \OT1/
 cmr/m/n/12 \OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 .
  []
 
-[49]
+[50]
 Overfull \hbox (2.80948pt too wide) detected at line 801
 []
  []
 
 
-LaTeX Warning: Citation 'Fiore2018' on page 50 undefined on input line 827.
+LaTeX Warning: Citation 'Fiore2018' on page 51 undefined on input line 827.
 
-[50]
+[51]
 Overfull \hbox (9.66682pt too wide) detected at line 843
 []
  []
@@ -1734,8 +1731,8 @@ Overfull \hbox (52.45761pt too wide) detected at line 874
 []
  []
 
-[51]
-<images/xCoefsTwoks.jpg, id=725, 397.485pt x 263.98625pt>
+[52]
+<images/xCoefsTwoks.jpg, id=729, 397.485pt x 263.98625pt>
 File: images/xCoefsTwoks.jpg Graphic file (type jpg)
 <use images/xCoefsTwoks.jpg>
 Package pdftex.def Info: images/xCoefsTwoks.jpg  used on input line 899.
@@ -1744,8 +1741,8 @@ Package pdftex.def Info: images/xCoefsTwoks.jpg  used on input line 899.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[52]
-<images/asolo.jpg, id=738, 397.485pt x 263.98625pt>
+[53]
+<images/asolo.jpg, id=742, 397.485pt x 263.98625pt>
 File: images/asolo.jpg Graphic file (type jpg)
 <use images/asolo.jpg>
 Package pdftex.def Info: images/asolo.jpg  used on input line 922.
@@ -1754,8 +1751,8 @@ Package pdftex.def Info: images/asolo.jpg  used on input line 922.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[53 <./images/xCoefsTwoks.jpg>]
-<images/divFactorwMinimumK.jpg, id=751, 397.485pt x 252.945pt>
+[54 <./images/xCoefsTwoks.jpg>]
+<images/divFactorwMinimumK.jpg, id=755, 397.485pt x 252.945pt>
 File: images/divFactorwMinimumK.jpg Graphic file (type jpg)
 <use images/divFactorwMinimumK.jpg>
 Package pdftex.def Info: images/divFactorwMinimumK.jpg  used on input line 958.
@@ -1765,7 +1762,7 @@ Package pdftex.def Info: images/divFactorwMinimumK.jpg  used on input line 958.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/divFactorwRecommendedK.jpg, id=752, 397.485pt x 252.945pt>
+<images/divFactorwRecommendedK.jpg, id=756, 397.485pt x 252.945pt>
 File: images/divFactorwRecommendedK.jpg Graphic file (type jpg)
 <use images/divFactorwRecommendedK.jpg>
 Package pdftex.def Info: images/divFactorwRecommendedK.jpg  used on input line 
@@ -1784,7 +1781,7 @@ Overfull \hbox (9.32874pt too wide) in paragraph at lines 975--975
 \OT1/cmr/m/n/12 braically 
  []
 
-[54 <./images/asolo.jpg>]
+[55 <./images/asolo.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1007.
@@ -1809,7 +1806,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1007.
 
-[55 <./images/divFactorwMinimumK.jpg>] [56 <./images/divFactorwRecommendedK.jpg
+[56 <./images/divFactorwMinimumK.jpg>] [57 <./images/divFactorwRecommendedK.jpg
 >]
 Overfull \hbox (1.62598pt too wide) in paragraph at lines 1084--1085
 \OT1/cmr/m/n/12 mial $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 ([]) \OMS/cmsy/m/n/12
@@ -1819,7 +1816,7 @@ Overfull \hbox (1.62598pt too wide) in paragraph at lines 1084--1085
 cmm/m/it/12 L[] []$
  []
 
-[57]
+[58]
 Overfull \hbox (6.26012pt too wide) in paragraph at lines 1124--1125
 []\OT1/cmr/m/n/12 Now, on $\U/msb/m/n/12 R[]$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/1
 2 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 @[]\
@@ -1843,14 +1840,14 @@ OT1/cmr/m/n/12 )[]([])\OML/cmm/m/it/12 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]
 \OT1/cmr/m/n/12 )[] = (\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 )[]([])$
  []
 
-[58] [59] [60]
+[59] [60] [61]
 Overfull \hbox (4.87697pt too wide) in paragraph at lines 1193--1194
 []\OT1/cmr/m/n/12 Another $\OML/cmm/m/it/12 O\OT1/cmr/m/n/12 (2)$-equivariant m
 an-i-fes-ta-tion of the al-ge-bras $\OMS/cmsy/m/n/12 A[]$ \OT1/cmr/m/n/12 can b
 e achieved
  []
 
-[61]
+[62]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1238.
@@ -1864,17 +1861,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1238.
 
 
-LaTeX Warning: Citation 'Fiore2018' on page 62 undefined on input line 1240.
+LaTeX Warning: Citation 'Fiore2018' on page 63 undefined on input line 1240.
 
 
-LaTeX Warning: Citation 'Fiore2018' on page 62 undefined on input line 1242.
+LaTeX Warning: Citation 'Fiore2018' on page 63 undefined on input line 1242.
 
-[62]
+[63]
 Overfull \hbox (77.34007pt too wide) detected at line 1266
 []
  []
 
-[63]
+[64]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1290.
@@ -1898,13 +1895,13 @@ Overfull \hbox (23.19388pt too wide) in paragraph at lines 1293--1293
  []
 
 
-LaTeX Warning: Citation 'Fiore2018' on page 64 undefined on input line 1295.
+LaTeX Warning: Citation 'Fiore2018' on page 65 undefined on input line 1295.
 
-[64]
+[65]
 
-LaTeX Warning: Citation 'Fiore2018' on page 65 undefined on input line 1303.
+LaTeX Warning: Citation 'Fiore2018' on page 66 undefined on input line 1303.
 
-) [65]
+) [66]
 Chapter 4.
 (chapters/CoherentStates.tex
 Overfull \hbox (26.3619pt too wide) in paragraph at lines 21--21
@@ -1917,17 +1914,17 @@ Overfull \hbox (26.3619pt too wide) in paragraph at lines 21--21
  []
 
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 66 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 67 undefined on input line 
 21.
 
 
-LaTeX Warning: Citation 'FioreXi2020' on page 66 undefined on input line 21.
+LaTeX Warning: Citation 'FioreXi2020' on page 67 undefined on input line 21.
 
 
-LaTeX Warning: Citation 'FioreTheCase2020' on page 66 undefined on input line 2
+LaTeX Warning: Citation 'FioreTheCase2020' on page 67 undefined on input line 2
 1.
 
-[66
+[67
 
 ]
 Overfull \hbox (6.45654pt too wide) in paragraph at lines 65--65
@@ -1959,13 +1956,13 @@ Overfull \hbox (11.67871pt too wide) in paragraph at lines 65--65
 \OT1/cmr/m/n/12 Semisim- 
  []
 
-[67]
+[68]
 Overfull \hbox (17.30933pt too wide) detected at line 84
 []
  []
 
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 68 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 69 undefined on input line 
 91.
 
 
@@ -1976,9 +1973,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 100.
 
-[68] [69]
+[69] [70]
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 70 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 71 undefined on input line 
 148.
 
 
@@ -1988,49 +1985,49 @@ Overfull \hbox (7.19302pt too wide) in paragraph at lines 147--149
  []
 
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 70 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 71 undefined on input line 
 153.
 
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 70 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 71 undefined on input line 
 164.
 
-[70]
+[71]
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 71 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 72 undefined on input line 
 166.
 
-<images/R^2.jpg, id=930, 397.485pt x 245.91875pt>
+<images/R^2.jpg, id=934, 397.485pt x 245.91875pt>
 File: images/R^2.jpg Graphic file (type jpg)
 <use images/R^2.jpg>
 Package pdftex.def Info: images/R^2.jpg  used on input line 170.
 (pdftex.def)             Requested size: 260.0pt x 160.86218pt.
-[71 <./images/R^2.jpg>]
+[72 <./images/R^2.jpg>]
 Overfull \hbox (4.1955pt too wide) detected at line 201
 []
  []
 
-<images/bn.jpg, id=938, 505.89pt x 300.12125pt>
+<images/bn.jpg, id=942, 505.89pt x 300.12125pt>
 File: images/bn.jpg Graphic file (type jpg)
 <use images/bn.jpg>
 Package pdftex.def Info: images/bn.jpg  used on input line 206.
 (pdftex.def)             Requested size: 260.0pt x 154.2459pt.
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 72 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 73 undefined on input line 
 211.
 
 
-LaTeX Warning: Citation 'FioreXi2020' on page 72 undefined on input line 216.
+LaTeX Warning: Citation 'FioreXi2020' on page 73 undefined on input line 216.
 
 
-LaTeX Warning: Citation 'FioreTheCase2020' on page 72 undefined on input line 2
+LaTeX Warning: Citation 'FioreTheCase2020' on page 73 undefined on input line 2
 16.
 
-[72]) [73 <./images/bn.jpg>]
+[73]) [74 <./images/bn.jpg>]
 Chapter 5.
 (chapters/remarks.tex)
 
-LaTeX Warning: Citation 'PaschkeSitarz1998' on page 74 undefined on input line 
+LaTeX Warning: Citation 'PaschkeSitarz1998' on page 75 undefined on input line 
 250.
 
 
@@ -2054,29 +2051,29 @@ Overfull \hbox (7.17459pt too wide) in paragraph at lines 250--250
  []
 
 
-LaTeX Warning: Citation 'DAndrea2014' on page 74 undefined on input line 250.
+LaTeX Warning: Citation 'DAndrea2014' on page 75 undefined on input line 250.
 
 
-LaTeX Warning: Citation 'Scholtz2009' on page 74 undefined on input line 250.
+LaTeX Warning: Citation 'Scholtz2009' on page 75 undefined on input line 250.
 
 
-LaTeX Warning: Citation 'Scholtz2013' on page 74 undefined on input line 250.
+LaTeX Warning: Citation 'Scholtz2013' on page 75 undefined on input line 250.
 
 
-LaTeX Warning: Citation 'ChaobaDevi2018' on page 74 undefined on input line 250
+LaTeX Warning: Citation 'ChaobaDevi2018' on page 75 undefined on input line 250
 .
 
-[74
+[75
 
 ]
 
-LaTeX Warning: Citation 'Fiore2018' on page 75 undefined on input line 252.
+LaTeX Warning: Citation 'Fiore2018' on page 76 undefined on input line 252.
 
 
-LaTeX Warning: Citation 'FioreXi2020' on page 75 undefined on input line 252.
+LaTeX Warning: Citation 'FioreXi2020' on page 76 undefined on input line 252.
 
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 75 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 76 undefined on input line 
 252.
 
 
@@ -2088,7 +2085,7 @@ rched in [[],
 
 LaTeX Warning: Empty bibliography on input line 257.
 
-[75] (monografia.aux
+[76] (monografia.aux
 LaTeX Info: Redefining \sptext on input line 63.
 LaTeX Info: Redefining \. on input line 63.
 LaTeX Info: Redefining \% on input line 63.
@@ -2108,9 +2105,9 @@ Package logreq Info: Writing requests to 'monografia.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31706 strings out of 478927
- 602280 string characters out of 2852534
- 1326657 words of memory out of 3000000
+ 31707 strings out of 478927
+ 602287 string characters out of 2852534
+ 1326663 words of memory out of 3000000
  48608 multiletter control sequences out of 15000+600000
  424907 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2143,9 +2140,9 @@ blic/amsfonts/euler/eufm10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/sebas/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/sebas/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on monografia.pdf (80 pages, 851822 bytes).
+Output written on monografia.pdf (81 pages, 854222 bytes).
 PDF statistics:
- 1179 PDF objects out of 1200 (max. 8388607)
- 388 named destinations out of 1000 (max. 500000)
+ 1183 PDF objects out of 1200 (max. 8388607)
+ 389 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,68 +17,68 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{As metric space on which $SU(2)$ acts by isometries}{10}{section*.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Spectral Triples}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Spectral Triples}{11}{section.2.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}$SU(2)$-equivariance}{11}{subsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}The Irreducible Spectral Triple}{13}{subsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}The Full Spectral Triple}{14}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.3}The Full Spectral Triple}{15}{subsection.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Coherent States}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Coherent States}{17}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}General Theory}{16}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.1}General Theory}{17}{subsection.2.4.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.2}$SU(2)$-Coherent States}{19}{subsection.2.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Distance Between Families of Pure States}{20}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Distance Between Families of Pure States}{21}{section.2.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.1}Distance Between (Vector) Discrete Basis States $|j,m\rangle $ for Arbitrary $N$}{23}{subsection.2.5.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.2}The Distance between $N=1$ Coherent States}{24}{subsection.2.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.3}Relating Distinct $N$'s and Upper Bound}{25}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.3}Relating Distinct $N$'s and Upper Bound}{26}{subsection.2.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.4}Auxiliary Distance and the Commutative Limit}{27}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.4}Auxiliary Distance and the Commutative Limit}{28}{subsection.2.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}The New Fuzzy Spheres of Fiore and Pisacane}{31}{chapter.3}%
+\contentsline {chapter}{\numberline {3}The New Fuzzy Spheres of Fiore and Pisacane}{32}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Quantum Mechanics with near-harmonic Potential and an Energy Cutoff}{32}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Quantum Mechanics with near-harmonic Potential and an Energy Cutoff}{33}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Algebras of Effective Observables $\mathcal {A}_{\overline {E}}$}{32}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.1}Algebras of Effective Observables $\mathcal {A}_{\overline {E}}$}{33}{subsection.3.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}Low Energy Effective Quantum Theories and their Properties}{36}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Low Energy Effective Quantum Theories and their Properties}{37}{subsection.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Projected Observables}{36}{section*.8}%
+\contentsline {subsubsection}{Projected Observables}{37}{section*.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{$O(D)$-Covariance}{37}{section*.12}%
+\contentsline {subsubsection}{$O(D)$-Covariance}{38}{section*.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Criteria for Position Observables}{41}{section*.14}%
+\contentsline {subsubsection}{Criteria for Position Observables}{42}{section*.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Construction of $\mathcal A_{\overline {E}}$ for $D = 2$}{43}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Construction of $\mathcal A_{\overline {E}}$ for $D = 2$}{44}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Important Observables and their Commutation Relations}{46}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Important Observables and their Commutation Relations}{47}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Quantum Mechanics in $\ensuremath {\mathbb {R}} ^2$}{46}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Quantum Mechanics in $\ensuremath {\mathbb {R}} ^2$}{47}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}General Facts about $\mathcal A_{\Lambda }$}{47}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.2}General Facts about $\mathcal A_{\Lambda }$}{48}{subsection.3.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Approximate Action of Effective Observables}{51}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.3}Approximate Action of Effective Observables}{52}{subsection.3.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Realization of $\mathcal A_\Lambda $ through $U(\mathfrak {so}(3))$}{55}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Realization of $\mathcal A_\Lambda $ through $U(\mathfrak {so}(3))$}{56}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Convergence}{62}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Convergence}{63}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}To Quantum Mechanics on $S^1$}{62}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.1}To Quantum Mechanics on $S^1$}{63}{subsection.3.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}To the Commutative Algebra $C(S^1)$}{64}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.2}To the Commutative Algebra $C(S^1)$}{65}{subsection.3.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Systems of Coherent States on the New Fuzzy Spheres}{66}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Systems of Coherent States on the New Fuzzy Spheres}{67}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Angular Momentum Saturating Coherent States}{67}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Angular Momentum Saturating Coherent States}{68}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}$SO(2)$-invariant Families of Strong Coherent States}{68}{section.4.2}%
+\contentsline {section}{\numberline {4.2}$SO(2)$-invariant Families of Strong Coherent States}{69}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Coherent States Minimizing the Square Distance}{70}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Coherent States Minimizing the Square Distance}{71}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Final Remarks and Further Work}{74}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Final Remarks and Further Work}{75}{chapter.5}%

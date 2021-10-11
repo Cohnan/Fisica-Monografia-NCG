@@ -1,6 +1,6 @@
 In order to understand the formulation of spectral triples on a fuzzy space as well as their use to carry out distance calculations, in this chapter we review the study of the metric properties of the fuzzy sphere of Madore and Hoppe \cite{Madore} developed by D'Andrea, et al. in \cite{DAndrea2013}. 
 
-The $2$-sphere $S^2$ as a metric space and as a manifold is rotationally invariant. Since the group $SU(2)$ is the universal cover of the group of rotations $SO(3)$, we can translate this invariance to be a $SU(2)$-invariance. We will see that this invariance induces a decomposition of the canonical Dirac operator on $S^2$ compatible with the action of $SU(2)$. Truncating this $SU(2)$-decomposition will give rise to equivariant spectral triples on the fuzzy sphere of Madore and Hoppe, defined in section \ref{ch2sectFuzzySphere}, which inherit some of the important properties of the canonical spectral triple as seen in \ref{CHFSSectionSpectralTriples}. A family of states studied in \ref{ChFSSectCoherentStates} called the \textit{spin coherent states} have some properties, including a $SU(2)$-equivariant bijective correspondence with the points in $S^2$, that motivate us to think of them as each one of the as a fuzzy analog of the points of $S^2$, and which allow us to say that the convergence of the fuzzy sphere to $S^2$ occurs as a metric space.
+Recall that the \emph{$2$-sphere}, denoted by $S^2$, is the set of points in $\RR^3$ located at an euclidean distance of $1$ unit from the origin. As a metric space and as a manifold it is rotationally invariant, that is, $SO(3)$-invariant. Since the group $SU(2)$ is the universal cover of the group of rotations $SO(3)$, we can translate this invariance to be a $SU(2)$-invariance. We will see that this invariance induces a decomposition of the canonical Dirac operator on $S^2$ that is compatible with the action of $SU(2)$. Truncating this $SU(2)$-decomposition will give rise to equivariant spectral triples on the fuzzy sphere of Madore and Hoppe, defined in Section \ref{ch2sectFuzzySphere}, which inherit some of the important properties of the canonical spectral triple as seen in Section \ref{CHFSSectionSpectralTriples}. A family of states studied in Section \ref{ChFSSectCoherentStates} called the \textit{spin coherent states} have some properties, including a $SU(2)$-equivariant bijective correspondence with the points in $S^2$, that motivate us to think of them as each one of the as a fuzzy analog of the points of $S^2$, and which allow us to say that the convergence of the fuzzy sphere to $S^2$ occurs as a metric space, on which $SU(2)$ acts by ``isometries''.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,9 +35,9 @@ The $2$-sphere $S^2$ as a metric space and as a manifold is rotationally invaria
 %  - The eigenvalues are: of $Y'_{l\cdot}: (l + 1/2) \in \NN$, of $Y{''}_{l\cdot}: -(l + 1/2)$, with multiplicities $2l+1$)
 % }
 
-Although there are several ways to describe the canonical spectral triple on $S^2$, the one that will be useful to use to define the spectral triples on the fuzzy sphere will be from understanding $S^2$ as the \ptext{compact Riemannian symmetric} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$, and $U = SO(2)$ is the invariant subgroup under the complex conjugation involution.
+Although there are several ways to describe the canonical spectral triple on $S^2$, the one that will be useful later to define the spectral triples on the fuzzy sphere comes from understanding $S^2$ as the \ptext{compact Riemannian symmetric} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$, where we take $U = SO(2)$ as the invariant subgroup under the complex conjugation involution.
 
-Let $G$ be a compact semisimple Lie group $G$ with Lie algebra $\alg g$, where the semisiplicity means that the Killing form $K: \alg g \times \alg g \to \alg g$ of $\alg g$ is negative definite, giving $G$ a natural Riemannian manifold structure. For such a manifold $G$, and its symmetric spaces, the Dirac operator can be seen to arise \cite{Huang2007} from an algebraic element $\lbtext{\dcal } \in U(\alg g)\times U(\alg g)$, where $\lbtext{U}(g)$ is \lbtext{the universal enveloping algebra} of the Lie algebra $\alg g$, i.e. the largest unital, associative algebra containing $\alg g$ where the Lie bracket coincides with the commutator in $U(\alg g)$; it is important to remark that \otext{the representations of $\alg g$ are in a bijective correspondence with the modules over $U(\alg g)$}. In the explicit case where $G = SU(2)$,
+Let $G$ be a compact semisimple Lie group $G$ with (real) Lie algebra $\alg g$, where the semisiplicity means that the Killing form $K: \alg g \times \alg g \to \alg g$ of $\alg g$ is non-degenerate, and the compactness that $K$ is negative-definite giving $G$ a natural Riemannian manifold structure. For such a manifold $G$, and its symmetric spaces, the canonical Dirac operator can be seen to arise \cite{Huang2007} from an algebraic element $\lbtext{\dcal } \in U(\alg g)\times U(\alg g)$, where $\lbtext{U}(\alg g)$ is \lbtext{the universal enveloping complex algebra} of the Lie algebra $\alg g$, i.e. the largest unital, associative complex algebra containing $\alg g$ where the Lie bracket coincides with the commutator in $U(\alg g)$; it is important to remark that \otext{the representations of $\alg g$ are in a bijective correspondence with the modules over $U(\alg g)$}. In the explicit case where $G = SU(2)$,
 \begin{equation}\label{equationALgebraicDiracOperatorDecomposition}
     \lbtext{\dcal} := 1 \otimes 1 + 2 \sum_{k = 1}^3 J^k \otimes J^k \in U(\sut) \otimes U(\sut)
 \end{equation}
@@ -48,18 +48,17 @@ where $J^k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such
 
 \lin
 
-Let $\lbtext{\pi_j}: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ be the spin $j \in \frac{\NN}{2}$ representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J^3)(e_m) = m e_m$, where $\vec J^2$ is notation for $(J^1)^2 + (J^2)^2 + (J^3)^2 \in U(\sut)$.
-
-Recall that the every continuous / square integrable / smooth function on $S^2$ may be decomposed in terms of spherical harmonics $Y^l_m \in L^2(S^2)$, $l \in \NN$, $m \in \{-l, \dots, l-1, l\}$, and the spaces $\tilde V_l = span\{Y^l_m\}_{|m| \leq l}$ for fixed $l$ are the spaces of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$, which are precisely all the irreducible representation spaces of $SO(3)$ and another description of the spin-$l$ representations $V_l$ of $SU(2)$. 
-This decomposition of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$, inherited from the action on $S^2$, and which can be seen to be induced by the natural action of $\sut$ on $S^2$ as vector fields. In particular, 
+Let us denote by $\lbtext{\pi_j}: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ the spin $j \in \frac{\NN}{2}$ (irreducible) representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J^3)(e_m) = m e_m$, where $\vec J^2$ is notation for $(J^1)^2 + (J^2)^2 + (J^3)^2 \in U(\sut)$. 
+Recall that the every continuous / square integrable / smooth function on $S^2$ may be decomposed in terms of spherical harmonics $Y^l_m \in L^2(S^2)$, $l \in \NN$, $m \in \{-l, \dots, l-1, l\}$, and the spaces $\tilde V_l = span\{Y^l_m\}_{|m| \leq l}$ for fixed $l$ are the spaces of homogeneous complex polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$, which are precisely all the irreducible representation spaces of $SO(3)$ and another description of the spin-$l$ representation spaces $V_l = \CC^{2l+1}$ of $SU(2)$. 
+This decomposition of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$ (i.e. each $\tilde V_l$ is an invariant subspace), inherited from the action on $S^2$, and which can be seen to be induced by the natural action of $\sut$ on $S^2$ as vector fields of infinitesimal rotations. In particular, it can be shown that
 \begin{align}
-    \partial_H &:= - i \partial_\phi & \text{is the action of $\lbtext{H} := J^3$ in $L^2(S^2)$} \\
-    \partial_F &:= e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right) &\text{is the action of $\lbtext{F} := J^+ = J^1 + i J^2$ in $L^2(S^2)$}\\
-    \partial_E &:= - \partial_E &\text{is the action of $\lbtext{E} := J^- = J^1 - i J^2$ in $L^2(S^2)$}
+    \partial_H &:= - i \partial_\phi & \text{is the action of $\lbtext{H} := J^3$ on $L^2(S^2)$} \\
+    \partial_F &:= e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right) &\text{is the action of $\lbtext{F} := J^+ = J^1 + i J^2$ on $L^2(S^2)$}\\
+    \partial_E &:= - \partial_E &\text{is the action of $\lbtext{E} := J^- = J^1 - i J^2$ on $L^2(S^2)$}
 \end{align} where $\phi$ and $\theta$ are the azimuthal and polar angles in $S^2$, respectively.
-Hence, $L^2(S^2) \cong \bigoplus_{l = 0}^\infty V_l$ as representation spaces of $SU(2)$.
+Hence, $L^2(S^2) \cong \bigoplus_{l = 0}^\infty V_l$ as representation space of $SU(2)$.
 
-The spinor bundle of $S^2$ is trivial, so the space of spinor fields $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the spinor bundle of $S^2$ decomposes as representation of $SU(2)$ as $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}; \ptext{we will understand from now on the separable Hilbert space $\lbtext{\hcal} = L^2(S^2)\otimes \CC^2$ as the space of spinor fields on the 2-sphere}.
+The spinor bundle $\Sigma S^2$ of $S^2$ is trivial, so the space of \emph{spinor fields} $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a $C^\infty(S^2)$-module, and hence a $\CC$-vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the space of spinor fields of $S^2$ decomposes as a representation of $SU(2)$ into $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}; \ptext{we will understand from now on the separable Hilbert space $\lbtext{\hcal} = L^2(S^2)\otimes \CC^2$ as the space of spinor fields on the 2-sphere}.
 
 \lin
 
@@ -68,9 +67,9 @@ This decomposition of the spinor bundle induced by the action of $SU(2)$ correct
     \lbtext{\slashed D} =  \bigoplus_{l\in \bb N} \pi_l  \otimes \pi_{1/2}(\dcal) = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3 = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} ,
 \end{equation} acting on $L^2(S^2)\otimes \CC^2$, where $\sigma^\pm = \sigma_1 \pm i \sigma_2$.
 
-The eigenvectors of $\slashed D$ $Y^{'}_{jm}, Y^{''}_{jm}$ $j \in \NN + 1/2$, $m = -j, \dots, j$, called the \textit{spinor harmonics}, make up an orthogonal basis of the spinor fields $\hcal$. The eigenvalue of the $Y'_{j\cdot}$ is $(j + 1/2) \in \NN$, and of the $Y{''}_{j\cdot}$ vector it is $-(j + 1/2)$, so the eigenvalue $j$ has multiplicity $2j+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is another Dirac operator in the Fuzzy sphere. 
+Using the spherical harmonics we can construct spinor fields $Y^{'}_{jm}, Y^{''}_{jm} \in \hcal$ eigenvectors of $\slashed D$, with $j \in \NN + 1/2$, $m = -j, \dots, j$, called the \textit{spinor harmonics}, which make up an orthogonal basis of $\hcal$. The eigenvalue of the $Y'_{j\cdot}$ is $(j + 1/2) \in \NN$, and for the $Y{''}_{j\cdot}$ spinor field it is $-(j + 1/2)$, hence the eigenvalue $j$ has multiplicity $2j+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is a Dirac operator on the fuzzy sphere. 
 
-The following aiding lemma \cite{DAndrea2013} will allow us to study the spectrum of the Dirac operators of the Dirac triples that will be defined on the fuzzy sphere.
+The following aiding lemma extracted from \cite{DAndrea2013} will allow us to study the spectrum of the Dirac triples that will be defined on the fuzzy sphere using its spectrum.
 
 \begin{lemma}\label{lemmaSpectrumAlgebraic}
 The operator $(\pi_0 \otimes \pi_{1/2})(\dcal^2): V_0 \otimes \CC^2 \to V_0 \otimes \CC^2$ has as unique eigenvalue $1$ with multiplicity $2$. For any $j \in \frac{\ZZ_{\geq 1}}{0}$, the $(\pi_j \otimes \pi_{1/2})(\dcal^2)$ has two eigenvalues: $j^2$ with multiplicity $2j$, and $(j+1)^2$ with multiplicity $2j+2$.
@@ -120,17 +119,17 @@ The operator $(\pi_0 \otimes \pi_{1/2})(\dcal^2): V_0 \otimes \CC^2 \to V_0 \oti
 %     % This allows to define fuzzy spherical harmonics (changing x's by new x's) which make up a basis, good action under SU(2)
 % }    
 
-A \lbtext{fuzzy space} is a sequence of finite dimensional $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ with increasing dimension which approximate, in some sense to be determined in the specific case, a (commutative) $C^*$ algebra $\acal$ in the limit $N \to \infty$. When the commutative algebra encodes a topological space or a manifold with certain symmetry group $G$ that acts by homeomorphisms or diffeomorphisms, we require a fuzzy space to implement this symmetry, i.e. that $G$ acts on each $\acal_N$ by $*$-isomorphisms (the algebraic version of homeomorphisms and in a way compatible with the derivations of $\acal$ (algebraic version of diffeomorphisms).
+A \lbtext{fuzzy space} is a sequence of finite dimensional $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ with increasing dimension which approximate, in some sense to be determined in the specific case, a (commutative) $C^*$ algebra $\acal$ in the limit $N \to \infty$. When the commutative algebra encodes a topological space or a manifold with certain symmetry group $G$ that acts by homeomorphisms or diffeomorphisms, we require a fuzzy space to implement this symmetry, i.e. that $G$ acts on each $\acal_N$ by $*$-isomorphisms (the algebraic version of homeomorphisms) and in a way compatible with the derivations of $\acal$ (the algebraic version of diffeomorphisms).
 
-With the full spectral triple defined below, the \textit{fuzzy sphere} will approximate $S^2$ as:
+With the full spectral triple defined below, the \textit{fuzzy sphere} will approximate $S^2$ in the following loose ways, whose precise statements will be clear soon:
     
     \begin{enumerate}
     
     \item A $C^*$-algebra acting on the Hilbert space of spinors.
     
-    \item $SU(2)$ acts by ``diffeomorphisms'' on the space.
+    \item A smooth space on which $SU(2)$ acts by diffeomorphisms.
     
-    \item A metric space on which $SU(2)$ acts by ``isometries''.
+    \item A metric space on which $SU(2)$ acts by isometries.
     
     \end{enumerate}
 
