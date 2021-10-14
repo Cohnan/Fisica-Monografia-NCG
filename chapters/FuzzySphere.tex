@@ -58,14 +58,15 @@ This decomposition of $L^2(S^2)$ is in fact the one induced by the action of $SU
 \end{align} where $\phi$ and $\theta$ are the azimuthal and polar angles in $S^2$, respectively.\todo{Fix $\partial E$}
 Hence, $L^2(S^2) \cong \bigoplus_{l = 0}^\infty V_l$ as representation space of $SU(2)$.
 
-The spinor bundle $\Sigma S^2$ of $S^2$ is trivial, so the space of \emph{spinor fields} $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a $C^\infty(S^2)$-module, and hence a $\CC$-vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the space of spinor fields of $S^2$ decomposes as a representation of $SU(2)$ into $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}; \ptext{we will understand from now on the separable Hilbert space $\lbtext{\hcal} = L^2(S^2)\otimes \CC^2$ as the space of spinor fields on the 2-sphere}.
+The spinor bundle $\Sigma S^2$ of $S^2$ is trivial, so the space of \emph{spinor fields} $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a $C^\infty(S^2)$-module, and hence a $\CC$-vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the space of spinor fields of $S^2$ as a representation space of $SU(2)$ decomposes as $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}; \ptext{we will understand from now on the separable Hilbert space $\lbtext{\hcal} = L^2(S^2)\otimes \CC^2$ as the space of spinor fields on the 2-sphere}.
 
 \lin
 
-This decomposition of the spinor bundle induced by the action of $SU(2)$ correctly suggests that the Dirac operator can be seen as the operator
+This decomposition of the spinor bundle induced by the action of $SU(2)$ correctly suggests that the canonical Dirac operator $\slashed D: L^2(S^2)\otimes \CC^2 \to L^2(S^2)\otimes \CC^2$ on $S^2$ has the following form:
 \begin{equation}\label{equationSU2InducedSeriesDiracSlashedAndMatrix}
     \lbtext{\slashed D} =  \bigoplus_{l\in \bb N} \pi_l  \otimes \pi_{1/2}(\dcal) = 1 + \partial_F \otimes \sigma_+ + \partial_E \otimes \sigma_- + \partial_H \otimes \sigma_3 = \begin{pmatrix} 1 + \partial_H & \partial_F \\ \partial_E & 1 - \partial_H\end{pmatrix} ,
-\end{equation} acting on $L^2(S^2)\otimes \CC^2$, where $\sigma^\pm = \sigma_1 \pm i \sigma_2$.
+\end{equation}
+where $\sigma_\pm = \sigma_1 \pm i \sigma_2$.
 
 Using the spherical harmonics we can construct \todo{Reference} spinor fields $Y^{'}_{jm}, Y^{''}_{jm} \in \hcal$ eigenvectors of $\slashed D$, with $j \in \NN + 1/2$, $m = -j, \dots, j$, called the \textit{spinor harmonics}, which make up an orthogonal basis of $\hcal$. The eigenvalue of the $Y'_{j\cdot}$ is $(j + 1/2) \in \NN$, and for the $Y{''}_{j\cdot}$ spinor field it is $-(j + 1/2)$, hence the eigenvalue $j$ has multiplicity $2j+1$. The spectrum of $\slashed D$ (and the respective multiplicities) will be an indication of how good of an approximation is a Dirac operator on the fuzzy sphere. 
 
