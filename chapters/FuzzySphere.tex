@@ -48,17 +48,29 @@ where $J^k \in U(\sut), k = 1, \dots, 3$ are the basis of $\sut\otimes \CC$ such
 
 \lin
 
-Let us denote by $\lbtext{\pi_j}: U(\sut) \to M_{2j+1} = End(\CC^{2j+1})$ the spin $j \in \frac{\NN}{2}$ (irreducible) representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J^3)(e_m) = m e_m$, where $\vec J^2$ is notation for $(J^1)^2 + (J^2)^2 + (J^3)^2 \in U(\sut)$. 
-Recall that the every continuous / square integrable / smooth function on $S^2$ may be decomposed in terms of spherical harmonics $Y^l_m \in L^2(S^2)$, $l \in \NN$, $m \in \{-l, \dots, l-1, l\}$, and the spaces $\tilde V_l = span\{Y^l_m\}_{|m| \leq l}$ for fixed $l$ are the spaces of homogeneous complex polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$, which are precisely all the irreducible representation spaces of $SO(3)$ and another description of the spin-$l$ representation spaces $V_l = \CC^{2l+1}$ of $SU(2)$. 
-This decomposition of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$ (i.e. each $\tilde V_l$ is an invariant subspace), inherited from the action on $S^2$, and which can be seen to be induced by the natural action of $\sut$ on $S^2$ as vector fields of infinitesimal rotations. In particular, it can be shown that
+\begin{notation} \label{notRepSu2}
+Let us denote by $\lbtext{\pi_j}: U(\sut) \to M_{2j+1}(\CC) = End(V_j)$, with $V_j := \CC^{2j+1}$, the spin $j \in \frac{\NN}{2}$ representation of $\sut$ where each element of the canonical basis $e_m \in \CC^{2j+1}$, $m = -j, \dots, j-1, j$ satisfies $\pi_j(\vec J^2)(e_m) = j(j+1) e_m$ and $\pi_j(J^3)(e_m) = m e_m$, where $\vec J^2$ is notation for $(J^1)^2 + (J^2)^2 + (J^3)^2 \in U(\sut)$. Recall each of these representations is unitary, and induces a unitary representation of $SU(2)$.
+\end{notation}
+ 
+Let $Y^l_m \in C^\infty (S^2)$, $l \in \NN$, $m \in \{-l, \dots, l-1, l\}$ be the spherical harmonics, and recall that, for each fixed $l$, they are an orthonormal basis for the Hilbert spaces $\tilde V_l := span\{Y^l_m\}_{|m| \leq l}$ which are simply the spaces of homogeneous complex polynomials on the coordinate variables $x^1, x^2, x^3$ restricted to $S^2$ (i.e. polynomials under the relation $(x^1)^2 + (x^2)^2 + (x^3)^2 = 1$). Hence, every continuous/smooth/square integrable function is the limit of linear combinations of spherical harmonics of increasing polynomial degree\footnote{More precisely, the vector space $\bigoplus_{l = 0}^\infty \tilde V_l$ is the space of polynomials restricted to the compact space $S^2$, and so the Stone-Weierstrass theorem implies that this subalgebra is dense in $C(S^2)$ under the uniform convergence norm topology, and hence also dense in $C^\infty(S^2) \subset C(S^2)$. Now, the compactness of $S^2$ also implies that $C(S^2)$ (and even $C^\infty(S^2)$, due to the existence of smooth bump functions) is dense in $L^2(S^2)$ with the L$2$ norm topology, thus the vector space of polynomials is also dense in $L^2(S^2)$ under this topology.}; 
+in particular, 
+\begin{equation} \label{decompL2S2}
+L^2(S^2) = \bigoplus_{l = 0}^\infty \tilde V_l,
+\end{equation}
+where the direct sum is to be understood as the one for Hilbert spaces.
+The spaces $\tilde V_l$ are precisely all the irreducible unitary representation spaces of $SO(3)$ (acting naturally on the coordinate variables), and so they are another description of the spin-$l$ representation spaces $V_l$ of $SU(2)$. This decomposition (into invariant, irreducible subrepresentation spaces) of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$, inherited from the action on the base space $S^2$, and which can be seen to be induced by the natural action of $\soth \cong \sut$ on $S^2$ as vector fields of infinitesimal rotations. In particular, it can be shown that
 \begin{align}
     \partial_H &:= - i \partial_\phi & \text{is the action of $\lbtext{H} := J^3$ on $L^2(S^2)$} \\
-    \partial_F &:= e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right) &\text{is the action of $\lbtext{F} := J^+ = J^1 + i J^2$ on $L^2(S^2)$}\\
-    \partial_E &:= - \partial_E &\text{is the action of $\lbtext{E} := J^- = J^1 - i J^2$ on $L^2(S^2)$}
-\end{align} where $\phi$ and $\theta$ are the azimuthal and polar angles in $S^2$, respectively.\todo{Fix $\partial E$}
-Hence, $L^2(S^2) \cong \bigoplus_{l = 0}^\infty V_l$ as representation space of $SU(2)$.
+    \partial_E &:= e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right) &\text{is the action of $\lbtext{E} := J^+ = J^1 + i J^2$ on $L^2(S^2)$}\\
+    \partial_F &:= - \partial_E &\text{is the action of $\lbtext{F} := J^- = J^1 - i J^2$ on $L^2(S^2)$}
+\end{align} where $\phi$ and $\theta$ are the azimuthal and polar angles on $S^2$, respectively.
+Thus, equation \eqref{decompL2S2} is the decomposition of $L^2(S^2)$ not only as a Hilbert space, but also as a representation space of $SU(2)$.
 
-The spinor bundle $\Sigma S^2$ of $S^2$ is trivial, so the space of \emph{spinor fields} $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a $C^\infty(S^2)$-module, and hence a $\CC$-vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the space of spinor fields of $S^2$ as a representation space of $SU(2)$ decomposes as $L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2}$}; \ptext{we will understand from now on the separable Hilbert space $\lbtext{\hcal} = L^2(S^2)\otimes \CC^2$ as the space of spinor fields on the 2-sphere}.
+The spinor bundle $\Sigma S^2$ of $S^2$ is trivial, so the space of \emph{spinor fields} $\hcal = L^2(S^2, \Sigma S^2)$ of $S^2$ is isomorphic (as a $C^\infty(S^2)$-module, and hence a $\CC$-vector space) to $L^2(S^2) \otimes \CC^2$, where $\CC^2$ is understood as the \textit{fermionic Fock space} associated to the tangent spaces of $S^2$, i.e. the unique irreducible representation of the Clifford algebra $\CC l_2 = M_2(\CC) = \pi_{1/2}(U(\sut))$. Therefore, \rtext{the space of spinor fields of $S^2$ as a representation space of $SU(2)$ decomposes as }
+\begin{equation}
+L^2(S^2, \Sigma S^2) \cong \bigoplus_{l = 1}^\infty V_l \otimes V_{1/2};
+\end{equation} 
+\ptext{we will understand from now on the separable Hilbert space $\lbtext{\hcal} = L^2(S^2)\otimes \CC^2$ as the space of spinor fields on the 2-sphere.}
 
 \lin
 
