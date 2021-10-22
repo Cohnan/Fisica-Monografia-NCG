@@ -148,14 +148,14 @@ With the full spectral triple defined below, the fuzzy sphere will approximate $
 
 \lin 
 
-The action of $SU(2)$ on the commutative $C^*$-algebra $\acal = C(S^2)$ is the one induced by its action on $S^2$ as the double cover of the rotation group, i.e. for any $f \in C(S^2)$ and any $\vec x \in S^2$ it is given by $g\cdot f(\vec x) := f(g^{-1} \cdot \vec x)$, where $g^{-1} \cdot $ is the image of $g$ under the covering map $SU(2) \to SO(3)$. To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the 
+The action of $SU(2)$ on the commutative $C^*$-algebra $\acal = C(S^2)$ is the one induced by its action on $S^2$ as the double cover of the rotation group, i.e. for any $f \in C(S^2)$ and any $\vec x \in S^2$ it is given by $g\cdot f(\vec x) := f(g^{-1} \cdot \vec x)$, where $g^{-1} \cdot $ is the image of $g$ under the covering map $SU(2) \twoheadrightarrow SO(3)$. To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the 
 previously mentioned fact that any element $f \in = \acal$ is such that $\{f_N\}_{N \in \NN} \to f$ uniformly, for some sequence of polynomials $f_N \in \bigoplus_{l = 0}^N \tilde V_l$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: they are unitary representation spaces of $SU(2)$, and there is a clear way in which they approximate $\acal$.
 
-However, an obvious problem with this definition is that the representation spaces $\acal_N'$ are not closed under their natural multiplication, so they are not algebras. But, from the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring the radical of the algebra is zero, there are only two possibilities, and only one being noncommutative:
+However, an obvious problem with this definition is that the representation spaces $\acal_N'$ are not closed under their natural multiplication, so they are not algebras. But, from the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring that the radical of the algebra is zero, there are only two possibilities, and only one being noncommutative:
 \begin{align}
     x^i &\mapsto \hat x^i := \lambda \sigma_i & i = 1, 2, 3;
 \end{align}
-where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Notice that the identification $x^i \mapsto \hat x^i$ is $SU(2)$-equivariant since $i\frac{\sigma_i}{2} \in \sut \cong \soth$ corresponds to the generator of rotations with respect to the $x^i$-axis. The constant $\lambda$ is chosen such that ``radius of the sphere be $1$'', meaning that $(\hat x^1)^2 + (\hat x^2)^2 + \hat (x^3)^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
+where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Having $SU(2)$ act on $\acal_1$ with the the natural representation on linear operators of representation spaces, \emph{the adjoint representation}, i.e. the action of $g \in SU(2)$ on $a \in \acal_1$ is $gag^{-1}$, notice that the identification $x^i \mapsto \hat x^i$ is $SU(2)$-equivariant since the image of $i\frac{\sigma_i}{2} \in \sut$ under the isomorphism $\sut \cong \soth$ corresponds to the generator of rotations with respect to the $x^i$-axis, and the adjoint action on these generators represents a change of rotation axis. The constant $\lambda$ is chosen such that ``radius of the fuzzy sphere is $1$'', meaning that $(\hat x^1)^2 + (\hat x^2)^2 + (\hat  x^3)^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
 
 Instead of insisting on defining a foreign multiplication in $\acal'_N$, the fuzzy sphere is now defined by from the following generalization of the $N = 1$ case studied above:
 \begin{definition}\label{definitionFuzzySphere}
@@ -163,20 +163,20 @@ Instead of insisting on defining a foreign multiplication in $\acal'_N$, the fuz
 \begin{align}\label{equationDefinitionGeneratorsFuzzySphere}
     \hat x^i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J^i) && i = 1, 2, 3;
 \end{align}
-the number $\lambda_N := \frac{1}{\sqrt{j(j+1)}} = \frac{2}{\sqrt{N(N+2)}}$ is called the normalization factor.
+the number $\lambda_N := \frac{1}{\sqrt{j(j+1)}} = \frac{2}{\sqrt{N(N+2)}}$ is called \emph{the normalization factor}. The algebra generators $\hat x^i$ of each $\acal_N$ will be usually referred to as \emph{the fuzzy coordinates}.
 \end{definition}
 
-Notice that the normalization factor $\lambda_N$ guarantees that $(\hat x^1)^2 + (\hat x^2)^2 + (\hat x^3)^2 = 1$. Also notice that the following is a $SO(3)$-equivariant injective linear map:
+The normalization factor $\lambda_N$ is such that $(\hat x^1)^2 + (\hat x^2)^2 + (\hat x^3)^2 = 1$. The elements $\hat x^i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x^{a_{\mu_1}}  \cdots \hat x^{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace-free as a tensor \cite{Madore}\todo{Not sure how to prove these two statements. Not even sure what the trace might mean if there are not even number of components. If $N=1$ it is easy to see that indeed ever $2x2$ matrix is combination of $1$ and Pauli}.  Thus, the following is an injective, but also $SO(3)$-equivariant linear map:
 \begin{eqnsplit}\label{}
     \acal_N &\to C(S^2)\\% = \bigoplus_{l \in \NN}\tilde V_l\\
     \hat x^i &\mapsto x^i;
 \end{eqnsplit}
-this is carefully proven in proposition \ref{propositionMadoreISSO3Covariant}. We might say that \emph{$\hat x^i$ is the fuzzy analog of the coordinate function $x^i$}, and so we obtain in general the \rtext{nonzero commutation relation ``of the coordinates''}:
+its equivariance is carefully proven in Proposition \ref{propositionMadoreISSO3Covariant}. We might say that \emph{$\hat x^i$ is the fuzzy analog of the coordinate function $x^i$}, and so we obtain in general the \rtext{nonzero commutation relation of the \emph{fuzzy coordinates}}:
 \begin{align}\label{}
     [\hat x^i, \hat x^j] = \frac{1}{\sqrt{j(j+1)}} i \epsilon_{ijk} \hat x^k, && i, j, k \in \{1, 2, 3\},
-\end{align} where the Einstein summation convention for implicit sums of repeated indices is understood, and where $\epsilon_{ijk}$ is the Levi-Civita tensor.
+\end{align} where the Einstein summation convention for implicit sums of repeated indices is understood, and where $\epsilon_{ijk}$ denotes the Levi-Civita tensor.
 
-In order to gain some intuition for the fuzzy sphere, recall that the operator representation of $J^i$ in each $V_j$ and in $L^2(S^2)$ is as the $i$-th component of the angular momentum operator. Another interpretation, at least for even-indexed elements of the sequence, comes from the fact that the lie algebra $\sut$ is isomorphic to $\soth$ under the $(SU(2), SO(3))$-equivariant mapping $J^i \mapsto \hat J^i$, where $iJ^i$ is the generator of rotation in $\RR^3$ about the $i$-th axis; hence, the fuzzy analog of the coordinate function $x^i \in C(S^2)$ is an element proportional to the infinitesimal rotation with respect to the $i$-th axis. 
+In order to gain some intuition for the fuzzy sphere, recall that the operator representation of $J^i$ in each $V_j$ and in $L^2(S^2)$ is as the $i$-th component of the angular momentum operator, in the corresponding quantum theory. Another interpretation, at least for even-indexed elements of the sequence, comes from the fact that the Lie algebra $\sut$ is isomorphic to $\soth \subset M_3(\CC)$ under the $(SU(2), SO(3))$-equivariant mapping $iJ^i \mapsto i \hat J^i$, where $i \hat J^i$ is the generator of rotation in $\RR^3$ about the $i$-th axis; hence, the fuzzy analog of the coordinate function $x^i \in C(S^2)$ is an element proportional to the infinitesimal rotation with respect to the $i$-th axis. 
 
 \lin
 
@@ -184,13 +184,13 @@ This \textit{fuzzy} version of the sphere is, so far, good in two of the three w
 
 \subsubsection{$SU(2)$ acts by diffeomorphisms}
 
-From the $SU(2)$-equivariance of the identifications $x^i \to \hat x^i$, we see that $\acal_N \cong \acal'_N \cong \bigoplus_{l=0}^N V_l$ as representation space of $SU(2)$, where the action of $g \in SU(2)$ is the one induced in $\acal_N$ seen as $End(V_j)$, namely by the inner automorphism $B  \mapsto \pi_j(g)B \pi_j(g)^{-1}$, where $\pi_j(g) \in SU(N+1)$ since $\pi_j$ is an unitary representation. That $(\pi_j(g)B \pi_j(g)^{-1})^* = \pi_j(g)B^* \pi_j(g)^{-1}$, where $B^*$ is the adjoint of $B \in M_{N+1}(\CC)$, shows that \rtext{$SU(2)$ acts by $*$-automorphisms on $\acal_N$}.
+From the $SU(2)$-equivariance of the identifications $x^i \to \hat x^i$, we see that $\acal_N \cong \acal'_N \cong \bigoplus_{l=0}^N V_l$ as representation spaces of $SU(2)$, where the action of $g \in SU(2)$ is the adjoint action on $\acal_N$ seen as $End(V_j)$, namely by the inner automorphism $B  \mapsto \pi_j(g)B \pi_j(g)^{-1}$, where $\pi_j(g) \in SU(N+1)$ since $\pi_j$ is an unitary representation. That $(\pi_j(g)B \pi_j(g)^{-1})^* = \pi_j(g)B^* \pi_j(g)^{-1}$, where $B^*$ is the adjoint of $B \in M_{N+1}(\CC)$, shows that \rtext{$SU(2)$ acts by $*$-automorphisms on $\acal_N$}.
 
-A diffeomorphism of $S^2$ is equivalent to an automorphism of the algebra $C^\infty(S^2)$ (dense subalgebra of $\acal$) that respects the complex conjugation $*$. In the matrix algebras $M_{N+1}(\CC)$, since they are simple, all $*$-automorphisms are precisely of the form $B \mapsto C B C^{-1}$ for some $C \in SU(N+1)$. Furthermore, all such automorphisms also respect the derivations of $\acal_N$, which are the noncommutative analogues of vector fields. Hence, all $*$-automorphisms of $\acal_N$ are good analogues of diffeomorphisms of $S^2$, and so \rtext{$SU(2)$ {is acting by diffeomorphisms on the fuzzy sphere}}.
+A diffeomorphism of $S^2$ is equivalent to an automorphism of the algebra $C^\infty(S^2)$ (dense subalgebra of $\acal$) that respects the complex conjugation $*$, thus giving us an alternative algebraic definition of a diffeomorphism. In the matrix algebras $M_{N+1}(\CC)$, since they are simple, all $*$-automorphisms are precisely of the form $B \mapsto C B C^{-1}$ for some $C \in SU(N+1)$. Furthermore, all such automorphisms also respect the derivations of $\acal_N$, which are the algebraic analogues of vector fields. Hence, all $*$-automorphisms of $\acal_N$ are good analogues of diffeomorphisms of $S^2$, and so we may say that \rtext{$SU(2)$ {is acting by diffeomorphisms on the fuzzy sphere}}.
 
 \subsubsection{As $C^*$-algebra acting on spinors}
 
-The elements $\hat x^i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x^{a_{\mu_1}}  \cdots \hat x^{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace-free as a tensor\todo{Not sure how to prove these two statements. Not even sure what the trace might mean if there are not even number of components. If $N=1$ it is easy to see that indeed ever $2x2$ matrix is combination of $1$ and Pauli}. Replacing the coordinates $x^i$ by $\hat x^i$  in the (symmetric) polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
+Replacing the coordinates $x^i$ by $\hat x^i$  in the (symmetric) polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
 
 Define the linear, injective mapping
 \begin{eqnsplit}
@@ -199,9 +199,8 @@ Define the linear, injective mapping
 \end{eqnsplit}
 Then, the sequence of noncommutative $C^*$-algebras approximates the commutative algebra $A = C(S^2)$ in the limit $N \to \infty$ in the sense that the above map gets increasingly closer to being an algebra morphism and \textbf{the algebra $A$ can be considered as the image of the \textit{near-diagonal matrices} in $\acal_N$} i.e. matrices which commute within order $1$ of the normalizing factor $\lambda_N = \frac{1}{\sqrt{j(j+1)}}$; the details may be found in \cite{Madore}.
 
-\subsubsection{As metric space on which $SU(2)$ acts by isometries}
 
-As we will see, this is what theorem \ref{theoremReducibleSpectralTripleDiracApproximation} and the remark that follows assert.
+Finally, we are yet to see how the fuzzy sphere approximates $S^2$ as metric space on which $SU(2)$ acts by isometries, but this will be consequences of Theorem \ref{theoremReducibleSpectralTripleDiracApproximation} and the Remark that follows.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
