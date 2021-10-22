@@ -257,7 +257,7 @@ One important property of the spectral triples that will be defined on the fuzzy
     
     \end{itemize}
 
-\textbf{For the spectral triples defined in this section, the $SU(2)$-equivariance reduces to the verification of the last two conditions}, since the first two ones are readily satisfied. The following theorem, which will apply to all the spectral triples defined in this chapter, illustrates how this notion of equivariance induces a notion of isometry on the respective noncommutative spaces.
+\textbf{For the spectral triples defined in this section, the $SU(2)$-equiva- riance reduces to the verification of the last two conditions}, since the first two ones are readily satisfied. The following theorem, which will apply to all the spectral triples defined in this chapter, illustrates how this notion of equivariance induces a notion of isometry on the respective noncommutative spaces.
 
 \begin{theorem} \label{theoGInvariantDistance}
 Let $(\acal, \hcal, \dcal)$ be a spectral triple. Let $G$ be a group, let $\hcal$ and $\acal$ be representation spaces of $G$, with $G$ acting unitarily on $H$. Then, if for all $g \in G$, $[D, g\cdot] = 0$ and the action on $A$ coincides / interwines with the induced action on $A$ as subalgebra of operators on $H$, then $SU(2)$ acts by isometries on the state space $\mathcal S(\acal)$. That is, for all $g \in G$:
@@ -349,7 +349,7 @@ For each $N \in \NN$, the associated irreducible spectral triple:
 \end{proposition}
 
 \begin{proof}
-As stated at the beginning of the section, to proof the $SU(2)$-equivariance follows from $[D_N, u_g] = 0$ and $u_g  a  u_g^* \equiv u_g \circ (a \otimes 1) \circ u_g^* = a^g \otimes 1 \equiv a_g$.
+As stated at the beginning of the section, to proof the $SU(2)$-equiva- riance follows from $[D_N, u_g] = 0$ and $u_g  a  u_g^* \equiv u_g \circ (a \otimes 1) \circ u_g^* = a^g \otimes 1 \equiv a_g$.
 
 That those are the eigenvalues and their multiplicities follows from finding eigenvectors 
 \begin{align}\label{irreducibleDiracFuzzySpinorBasis}
@@ -929,8 +929,8 @@ For any $N \geq 1$, the distance $d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \
 \end{theorem}
 \begin{proof}
 \begin{align*}
-    d_{N+1}(\psi^{N+1}_{(\phi, \theta)}, \psi^{N+1}_{(\phi', \theta')}) 
-        &= sup_{a \in \acal_{N+1}} \{|\psi^{N+1}_{(\phi, \theta)}(a) - \psi^{N+1}_{(\phi', \theta')}(a)| : ||[D_{N+1}, a]|| \leq 1\} \\
+    d_{N+1}(&\psi^{N+1}_{(\phi, \theta)}, \psi^{N+1}_{(\phi', \theta')}) 
+        = sup_{a \in \acal_{N+1}} \{|\psi^{N+1}_{(\phi, \theta)}(a) - \psi^{N+1}_{(\phi', \theta')}(a)| : ||[D_{N+1}, a]|| \leq 1\} \\
         &\geq sup_{a = \eta_N^+(b) \in \acal_{N+1}} \{|\psi^{N+1}_{(\phi, \theta)}(a) - \psi^{N+1}_{(\phi', \theta')}(a)| : ||[D_{N+1}, a]|| \leq 1\}\\
         &= sup_{a \in \acal_{N}} \{|\psi^{N+1}_{(\phi, \theta)}\circ \eta_N^+(a) - \psi^{N+1}_{(\phi', \theta')}\circ \eta_N^+(a)| : ||[D_{N+1},  \eta_N^+(a)]|| \leq 1\} \\
         &= sup_{a \in \acal_{N}} \{|\psi^{N}_{(\phi, \theta)}(a) - \psi^{N}_{(\phi', \theta')}(a)| : ||[D_{N+1}, \eta_N^+(a)]|| \leq 1\}\\
@@ -963,9 +963,9 @@ It can be shown that $\psi^N_{(\phi, \theta)}([H, a]) = -i \frac{\partial}{\part
     |\psi^N_{(\phi, \frac{\pi}{2})} - \psi^N_{(0, \frac{\pi}{2})}| 
         &= \left|i \int_0^\phi \psi^N_{(\alpha, \frac{\pi}{2})}([H, a]) d\alpha \right|  \\
         &\leq \left| \int_0^\phi d\alpha \right| \left| \psi^N_{(\alpha, \theta)}([H, a]) \right|\\
-        &\leq |\phi|\,||[H, a]|| 
+        &\leq |\phi|\,||[H, a]||, 
         & |\omega(a)| \leq ||a||,\,\forall\omega: \acal \ni a \to \CC\\
-        &\leq |\phi|\, ||[D_N, a]||    & \text{Theorem \ref{ineqDN}}
+        &\leq |\phi|\, ||[D_N, a]||,    & \text{Theorem \ref{ineqDN}},
 \end{align*}
 proves the desired upper bound.
 \end{proof}
@@ -1042,16 +1042,16 @@ where, recall, $[E, \hat a]$ is the ladder operator on $V_j$.
 
 Since for every state $\omega$ is is true that $|\omega(a)| \leq ||a||$ for every $a$, we get the following inequality:
 \begin{equation*}
-    |\rho_N'(\theta)| = |\psi^N_{(0, \theta)}([E, \hat a])| \leq ||[E, a]|| \leq 1
+    |\rho_N'(\theta)| = |\psi^N_{(0, \theta)}([E, \hat a])| \leq ||[E, a]|| \leq 1,
 \end{equation*}
 recalling that $[E, \hat a]$ is the ladder operator on $V_j$, of unit norm. From expanding the formula $\rho_N'(\theta) = (0, \theta| [E, \hat a] |0, \theta)_N$ and using the equation \eqref{equationCOherentRotation} for the spin coherent states, the lower bound $0$ then follows by noticing that every term in the expansion is positive since $\theta \in [0, \pi]$.
 
-(iii) This follows from adapting the proof of \ref{nondecreasingDistanceRelatingNCoherent}, but where we need to take into account that $\eta^+_N(\bcal_N) \subset \acal_{N+1}$ might not be contained in the diagonal subalgebra $\bcal_{N+1}$, but it is contained in an algebra $\bcal_{N+1}'$ conjugate to $\bcal_{N+1}$ through a unitary operator commuting with the $SU(2)$ action on $\acal_{N+1}$ ($\pi_{j + \frac{1}{2}}$); this equates to rotating the basis vectors of $V_{j + \frac{1}{2}}$ in a way that leaves invariant the $\psi^{N+1}_{(\phi, \theta)}$ unchanged. This allows us to write the first equation of the proof of \ref{nondecreasingDistanceRelatingNCoherent} by changing $\acal_{N+1}$ by $\bcal'_N$, and from then on simply changing $\acal_N$ by $\bcal_N$.
+(iii) This follows from adapting the proof of Theorem \ref{nondecreasingDistanceRelatingNCoherent}, but where we need to take into account that $\eta^+_N(\bcal_N) \subset \acal_{N+1}$ might not be contained in the diagonal subalgebra $\bcal_{N+1}$, but it is contained in an algebra $\bcal_{N+1}'$ conjugate to $\bcal_{N+1}$ through a unitary operator commuting with the $SU(2)$ action on $\acal_{N+1}$ ($\pi_{j + \frac{1}{2}}$); this equates to rotating the basis vectors of $V_{j + \frac{1}{2}}$ in a way that leaves invariant the $\psi^{N+1}_{(\phi, \theta)}$ unchanged. This allows us to write the first equation of the proof of \ref{nondecreasingDistanceRelatingNCoherent} by changing $\acal_{N+1}$ by $\bcal'_N$, and from then on simply changing $\acal_N$ by $\bcal_N$.
 \end{proof}
 
 
 The following lemma is last piece of our puzzle. \cite{DAndrea2013}.
-\begin{lemma}: For all $N$ and $\theta \in [0, \pi]$, the sequence $\rho_N(\theta)$ converges uniformly to $\theta = d_{S^2}(E(0, 0), E(0, \theta))$ as $N\to \infty$. 
+\begin{lemma} For all $N$ and $\theta \in [0, \pi]$, the sequence $\rho_N(\theta)$ converges uniformly to $\theta = d_{S^2}(E(0, 0), E(0, \theta))$ as $N\to \infty$. 
 \end{lemma}
 
 \begin{proof}
@@ -1060,7 +1060,7 @@ The following lemma is last piece of our puzzle. \cite{DAndrea2013}.
  By using the formula for $\rho_N(\pi)$ given in the first part of Lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, 
  \begin{align*}
      \rho_N(\pi) &= 2 \sum_{k = 1}^{\frac{1}{2}(N-1)} \frac{1}{k (N - k + 1)} + \frac{2}{\sqrt{N+1}} \\
-     &\geq \int_{1}^{\frac{1}{2}} \frac{dx}{\sqrt{x(N-x+1)}} = 2 &\arcsin \frac{N-1}{N+1},
+     &\geq \int_{1}^{\frac{1}{2}} \frac{dx}{\sqrt{x(N-x+1)}} = 2 \arcsin \frac{N-1}{N+1},
  \end{align*} since the function $\frac{1}{\sqrt{x(N-x+1)}}$ is positive for $1 \leq x \leq $ and symmetric about $x = \frac{1}{2}(N+1)$ and monotonically decreasing\todo{...} for $1 \leq x \leq \frac{1}{2}(N+1)$. The sequence $2 \arcsin \frac{N-1}{N+1}$ converges monotonically to $\pi$ as $N \to \infty$ if we restrict to the subsequence of odd $N$'s, but this suffices to prove that $\lim_{N \to \infty} \rho_N(\theta) = \pi$.
 \end{proof}
 
