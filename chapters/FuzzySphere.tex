@@ -364,7 +364,7 @@ That those are the eigenvalues and their multiplicities follows from finding eig
     \sqrt{\frac{j+m+1}{2j+1}} |j, m+1 \rangle
     \end{pmatrix}
 \end{align}
-for $|m| \leq j$ with the mentioned eigenvectors, and deducing that there are no more eigenvectors thanks to the lemma \ref{lemmaSpectrumAlgebraic}.
+for $|m| \leq j$ with the mentioned eigenvectors, and deducing that there are no more eigenvectors thanks to the Lemma \ref{lemmaSpectrumAlgebraic}.
 
 If the spectral triple had a grading, the Dirac operator would have a symmetric spectrum about $0$, hence this can't be the case.
 
@@ -432,7 +432,7 @@ Under the adjoint action of $SU(2)$ on the algebra $\acal_N$ and the action of $
 \begin{proof}
 It is straightforward to verify that: $\mathcal J_N$ is antilinear and antiunitary, $\mathcal J_N^2 = - 1$, $\mathcal J_N (\acal_N \mathcal\otimes 1) J_N^{-1} \subset (\acal_N \mathcal\otimes 1)' \subset \bcal(\hcal_N)$ (the $\acal '$ denotes the algebra that commutes with the algebra $\acal \subset \bcal(\hcal_N)$), and $\mathcal J_N \dcal_N = \dcal_N \mathcal J_N$; hence $\mathcal J_N$ is a real structure.
 
-From the $SU(2)$-decomposition \eqref{reducibleDiracDecomposition} of the Dirac operator, results (ii) and (iii) follow from the application of proposition \ref{reducibleDiracDecomposition} to each of the terms.
+From the $SU(2)$-decomposition \eqref{reducibleDiracDecomposition} of the Dirac operator, results (ii) and (iii) follow from the application of Proposition\ref{reducibleDiracDecomposition} to each of the terms.
 
 Once again, a grading can't exist since the spectrum of $\dcal_N$ isn't symmetric.
 \end{proof}
@@ -469,7 +469,7 @@ This tells us that $[\slashed D_N, a]: \hcal_N \to \hcal_N$ is the operator of l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{General Theory}
 
-We now define the Bloch spin coherent states, also called or $SU(2)$-coherent states in each $\acal_N$ of the fuzzy sphere. Given $N \in \NN$, each coherent state is labeled by a point in $S^2 = SU(2) / S^1$, allowing us to interpret each coherent state as a ``fuzzy approximation'' of a point in $S^2$. Furtheremore, the ``fuzzyness'' of this approximation decreases as $N \to \infty$ since theorem \ref{theoremdNWithRespectoTodS2} shows that the distance between coherent states corresponding to two points in $S^2$ tends to the respective distance in $S^2$.
+We now define the Bloch spin coherent states, also called or $SU(2)$-coherent states in each $\acal_N$ of the fuzzy sphere. Given $N \in \NN$, each coherent state is labeled by a point in $S^2 = SU(2) / S^1$, allowing us to interpret each coherent state as a ``fuzzy approximation'' of a point in $S^2$. Furtheremore, the ``fuzzyness'' of this approximation decreases as $N \to \infty$ since Theorem \ref{theoremdNWithRespectoTodS2} shows that the distance between coherent states corresponding to two points in $S^2$ tends to the respective distance in $S^2$.
 
 In quantum mechanics, coherent states were first introduced for the quantum version of the simple harmonic oscillator, as minimum uncertainty states for position and momentum, making them states whose time evolution is the closest to that of the corresponding classical evolution. Since then, many generalizations have emerged, using mainly one of the following properties of the system of coherent states $\{|\alpha\rangle\}_{\CC}$ of the simple harmonic oscillator:
     \begin{enumerate}
@@ -549,7 +549,7 @@ where $d\mu'(g) = d\mu(g)/bh$, where $d\mu$ is the Haar measure of $G$; under th
 
 % }
 
-So far, the systems of coherent states derived from the procedure previously followed only generalize property $(3)$. However, when we apply the procedure to $G = SU(2)$ we can obtain a system of coherent states that generalize also property ($1$), and they are called the \emph{spin coherent states} or \emph{Bloch coherent states} of \emph{$SU(2)$-coherent states}. Let $\hcal = V_j$ be, as usual, the unitary irreducible representation space of $SU(2)$ of spin $j$, and suppose that $\phi_0$ maximizes the (dimension of the) Lie algebra $\alg h$ of the isotropry group $H$ within the complexification $\alg g_\CC - \alg{sl}(2, \CC)$ of the Lie algebra $\sut$ of $G = SU(2)$, and also that $\phi_0$ minimizes the $SU(2)$-invariant square dispersion $(\Delta \vec L)^2$; this is satisfied by both $|j, j\rangle$ and $|j, -j\rangle$, since their isotropy group is $H = \{e^{iJ^3 \alpha} \, : \, \alpha \in \RR\} \cong SO(2)$ hax maximal isotropy algebra in $\alg{sl}(2, \CC)$, and they both satisfy 
+So far, the systems of coherent states derived from the procedure previously followed only generalize property $(3)$ of the canonical coherent states. However, when we apply the procedure to $G = SU(2)$ we can obtain a system of coherent states that generalize also property ($1$), and they are called the \emph{spin coherent states} or \emph{Bloch coherent states} of \emph{$SU(2)$-coherent states}. Let $\hcal = V_j$ be, as usual, the unitary irreducible representation space of $SU(2)$ of spin $j$, and suppose that $\phi_0$ maximizes the (dimension of the) Lie algebra $\alg h$ of the isotropry group $H$ within the complexification $\alg g_\CC - \alg{sl}(2, \CC)$ of the Lie algebra $\sut$ of $G = SU(2)$, and also that $\phi_0$ minimizes the $SU(2)$-invariant square dispersion $(\Delta \vec L)^2$; this is satisfied by both $|j, j\rangle$ and $|j, -j\rangle$, since their isotropy group is $H = \{e^{iJ^3 \alpha} \, : \, \alpha \in \RR\} \cong SO(2)$ hax maximal isotropy algebra in $\alg{sl}(2, \CC)$, and they both satisfy 
 \begin{equation}
     (\Delta \vec L)^2 = (\Delta \vec L)^2_{min} = \langle \vec L^2 \rangle - \langle \vec L \rangle ^2 = l(l+1) - l^2 = l.
 \end{equation}
@@ -632,7 +632,7 @@ For all $E(\phi, \theta) \in S^2$ and any $a \in \acal_N$, for arbitrary $N \in 
 % - \textbf{Behaviour with $N$}: Relate algebras and coherent states of subsequent $N$, finding relation between $||[D_{N+1}, \cdot]||$ and $||[D_N, \cdot]||$.
 % }
 
-Due to theorem \ref{theoremIrreducibleAndFUllSpectralTripleSameDistance}, although the full spectral triple seems to be a better approximation of the canonical spectral triple due to the properties of the spectrum of $\dcal_N$, for $N$ any natural number, it suffices to study the distances using the irreducible spectral triple since it induces exactly the same notion of distance on each $\acal_N$. From now on we will stop writing the symbols $\pi_j$, $j = N/2$, denoting the unitary representation of $U(\sut) \ni H = J^3, E = J^-, F = J^+$ on $V_j$ unless confusion may arise; hence we will write the Dirac operator as
+Due to Theorem \ref{theoremIrreducibleAndFUllSpectralTripleSameDistance}, although the full spectral triple seems to be a better approximation of the canonical spectral triple due to the properties of the spectrum of $\dcal_N$, for $N$ any natural number, it suffices to study the distances using the irreducible spectral triple since it induces exactly the same notion of distance on each $\acal_N$. From now on we will stop writing the symbols $\pi_j$, $j = N/2$, denoting the unitary representation of $U(\sut) \ni H = J^3, E = J^-, F = J^+$ on $V_j$ unless confusion may arise; hence we will write the Dirac operator as
 \begin{equation}
     D_N = \begin{pmatrix} 1 + H & F \\ E & 1 - H\end{pmatrix}.
 \end{equation}
@@ -757,7 +757,7 @@ Hence,
     \omega_m(a) - \omega_n(a) &= \sum_{k = m+1}^n \langle j, k-1 |a|j, k-1 \rangle - \langle j, k |a| j, k \rangle \\
     &= \sum_{k = m+1}^n \frac{1}{\sqrt{(j+k)(j-k+1)}} \langle j, k| [E, a] |j, k-1 \rangle
 \end{align*}
-Applying the triangle inequality on the norm of the above equation, and using lemma \ref{lemmaRelationOperatorsAndDirac}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, so we get the distance formula in the statement as an upper bound. 
+Applying the triangle inequality on the norm of the above equation, and using Lemma \ref{lemmaRelationOperatorsAndDirac}$, |\langle j, k |[E, a]|j, k-1 \rangle|  \leq ||[E, a]|| \leq ||[D_N, a]|| \leq 1$, so we get the distance formula in the statement as an upper bound. 
 
 Define the diagonal hermitian operator 
 \begin{equation}\label{saturatingDiagonalADiscreteBasis}
@@ -906,7 +906,7 @@ For any $a \in \acal_N$,
 \begin{proof}
 This is a direct consequence of the definitions of $U_J^\pm$ and $\eta_N^+$, since
 \begin{align*}
-    (\phi, \theta| \eta^+_N(a) |\phi, \theta)_{N+1} &= (\phi, \theta|a|\phi, \theta)_N (\phi, \theta| \phi, \theta), & \text{lemma \ref{relationCoherentVectorsDifferentN}}\\
+    (\phi, \theta| \eta^+_N(a) |\phi, \theta)_{N+1} &= (\phi, \theta|a|\phi, \theta)_N (\phi, \theta| \phi, \theta), & \text{Lemma \ref{relationCoherentVectorsDifferentN}}\\
         &= (\phi, \theta| a | \phi, \theta)_N.
 \end{align*}
 \end{proof}
@@ -936,7 +936,7 @@ For any $N \geq 1$, the distance $d_N(\psi^N_{(\phi, \theta)}, \psi^N_{(\phi', \
         &= sup_{a \in \acal_{N}} \{|\psi^{N}_{(\phi, \theta)}(a) - \psi^{N}_{(\phi', \theta')}(a)| : ||[D_{N+1}, \eta_N^+(a)]|| \leq 1\}\\
         &\geq sup_{a \in \acal_{N}} \{|\psi^{N}_{(\phi, \theta)}(a) - \psi^{N}_{(\phi', \theta')}(a)| : ||[D_{N}, a]|| \leq 1\} \\
         &= d_N(\psi^{N}_{(\phi, \theta)}, \psi^{N}_{(\phi', \theta')});
-\end{align*} the fourth line is an application of lemma \ref{relationDifferentNCoherentStates}, and the fifth line of lemma \ref{normCommutatorsDiracDifferentNRelation}.
+\end{align*} the fourth line is an application of Lemma \ref{relationDifferentNCoherentStates}, and the fifth line of Lemma \ref{normCommutatorsDiracDifferentNRelation}.
 \end{proof}
 
 \lin
@@ -951,9 +951,9 @@ For all $N$, and for all $E(\phi, \theta), E(\phi', \theta') \in S^2$
 where $d_{S^2}$ is the usual distance within $S^2$, inherited from the metric $g = d\theta^2 + \sin^2 \theta \, d\phi^2$.
 \end{theorem}
 \begin{proof}
-The lower bound is a simple consequence of the $N = 1$ distance found in theorem \ref{N=1CaseDistance} and of the nondecrease of the distance with $N$ found in theorem \ref{nondecreasingDistanceRelatingNCoherent}.
+The lower bound is a simple consequence of the $N = 1$ distance found in Theorem \ref{N=1CaseDistance} and of the nondecrease of the distance with $N$ found in Theorem \ref{nondecreasingDistanceRelatingNCoherent}.
 
-To prove the upper bound, thanks to the $SU(2)$-invariance of the distance between states proven in theorem \ref{theoGInvariantDistance}, we only need to prove it within the great circle $\theta = \frac{\pi}{2}$, i.e. we only need to prove that 
+To prove the upper bound, thanks to the $SU(2)$-invariance of the distance between states proven in Theorem \ref{theoGInvariantDistance}, we only need to prove it within the great circle $\theta = \frac{\pi}{2}$, i.e. we only need to prove that 
 \begin{equation*}
     d_N(\psi^N_{(0, \frac{\pi}{2})}, \psi^N_{(\phi, \frac{\pi}{2})}) \leq |\phi|.
 \end{equation*}
@@ -1031,7 +1031,7 @@ For $N \in \NN$ fixed:
 \end{equation*}
 hence $|\psi^N_{(0, \theta)}(a) - \psi^N_{(0, 0)}(a)|$ over the diagonal elements can be bounded by the claimed distance using the triangle inequality and the bound $|| \leq d_N(\omega_m, \omega_{-j}) = \sum_{k = 1}^n \frac{1}{\sqrt{k(N - k+1)}}$. Using $\hat a$ to saturate the inequality, we obtain the desired formula.
 
-(ii) From the first formula of the first part of the lemma \ref{lemmaFormulaAuxiliaryDistanceAllN} we easily deduce that $\rho_N'(\theta) = \frac{d}{d\theta} \psi^N_{(0, \theta)} (\hat a)$. Furthermore, from the $SU(2)$-equivariance of the identification of coherent states and points in $S^2$, on the diagonal elements it follows that 
+(ii) From the first formula of the first part of the Lemma \ref{lemmaFormulaAuxiliaryDistanceAllN} we easily deduce that $\rho_N'(\theta) = \frac{d}{d\theta} \psi^N_{(0, \theta)} (\hat a)$. Furthermore, from the $SU(2)$-equivariance of the identification of coherent states and points in $S^2$, on the diagonal elements it follows that 
 \begin{equation}
     \rho_N'(\theta) 
         =\frac{d}{d\theta} \psi^N_{(0, \theta)} (\hat a) 
@@ -1055,9 +1055,9 @@ The following lemma is last piece of our puzzle. \cite{DAndrea2013}.
 \end{lemma}
 
 \begin{proof}
- Let $f_N(\theta) := \theta - \rho_N(\theta)$; since $f_N(0) = 0$ and, by the second part of the lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, $f_N'(\theta) \geq 0$, so for each $N$ the function $f_N(\theta)$ is nondecreasing and positive, so $|| \theta - f_N(\theta)||_\infty - sup_{\theta \in [0, \pi]} f_N(\theta) = f_N(\pi) = \pi - \rho_N(\pi)$. So, the uniform convergence follows if and only if $\lim_{N \to \infty} \rho_N(\pi) = \pi$. For fixed $\theta$, by the third part of lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, $\rho_N(\theta)$ is a nondecreasing sequence, and it is bounded above by $\pi$, so the sequence $\rho_N(\theta)$ is convergent and any subsequence has the same limit.
+ Let $f_N(\theta) := \theta - \rho_N(\theta)$; since $f_N(0) = 0$ and, by the second part of the Lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, $f_N'(\theta) \geq 0$, so for each $N$ the function $f_N(\theta)$ is nondecreasing and positive, so $|| \theta - f_N(\theta)||_\infty - sup_{\theta \in [0, \pi]} f_N(\theta) = f_N(\pi) = \pi - \rho_N(\pi)$. So, the uniform convergence follows if and only if $\lim_{N \to \infty} \rho_N(\pi) = \pi$. For fixed $\theta$, by the third part of Lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, $\rho_N(\theta)$ is a nondecreasing sequence, and it is bounded above by $\pi$, so the sequence $\rho_N(\theta)$ is convergent and any subsequence has the same limit.
  
- By using the formula for $\rho_N(\pi)$ given in the first part of lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, 
+ By using the formula for $\rho_N(\pi)$ given in the first part of Lemma \ref{lemmaFormulaAuxiliaryDistanceAllN}, 
  \begin{align*}
      \rho_N(\pi) &= 2 \sum_{k = 1}^{\frac{1}{2}(N-1)} \frac{1}{k (N - k + 1)} + \frac{2}{\sqrt{N+1}} \\
      &\geq \int_{1}^{\frac{1}{2}} \frac{dx}{\sqrt{x(N-x+1)}} = 2 &\arcsin \frac{N-1}{N+1},
