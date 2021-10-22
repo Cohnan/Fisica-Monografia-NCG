@@ -58,7 +58,7 @@ in particular,
 L^2(S^2) = \bigoplus_{l = 0}^\infty \tilde V_l,
 \end{equation}
 where the direct sum is to be understood as the one for Hilbert spaces.
-The spaces $\tilde V_l$ are precisely all the irreducible unitary representation spaces of $SO(3)$ (acting naturally on the coordinate variables), and so they are another description of the spin-$l$ representation spaces $V_l$ of $SU(2)$. This decomposition (into invariant, irreducible subrepresentation spaces) of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$, inherited from the action on the base space $S^2$, and which can be seen to be induced by the natural action of $\soth \cong \sut$ on $S^2$ as vector fields of infinitesimal rotations. In particular, it can be shown that
+The spaces $\tilde V_l$ are precisely all the irreducible unitary representation spaces of $SO(3)$, acting inversely on the coordinate variables, and so they are another description of the spin-$l$ representation spaces $V_l$ of $SU(2)$. This decomposition (into invariant, irreducible subrepresentation spaces) of $L^2(S^2)$ is in fact the one induced by the action of $SU(2)$, inherited from the action on the base space $S^2$, and which can be seen to be induced by the natural action of $\soth \cong \sut$ on $S^2$ as vector fields of infinitesimal rotations. In particular, it can be shown that
 \begin{align}
     \partial_H &:= - i \partial_\phi & \text{is the action of $\lbtext{H} := J^3$ on $L^2(S^2)$} \\
     \partial_E &:= e^{i\phi} \left( \partial_\theta + i cot\,\theta \partial_\phi \right) &\text{is the action of $\lbtext{E} := J^+ = J^1 + i J^2$ on $L^2(S^2)$}\\
@@ -132,9 +132,9 @@ The operator $(\pi_0 \otimes \pi_{1/2})(\dcal^2): V_0 \otimes \CC^2 \to V_0 \oti
 %     % This allows to define fuzzy spherical harmonics (changing x's by new x's) which make up a basis, good action under SU(2)
 % }    
 
-A \lbtext{fuzzy space} is a sequence of finite dimensional $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ with increasing dimension which approximate, in some sense to be determined in the specific case, a (commutative) $C^*$ algebra $\acal$ in the limit $N \to \infty$. When the commutative algebra encodes a topological space or a manifold with certain symmetry group $G$ that acts by homeomorphisms or diffeomorphisms, we require a fuzzy space to implement this symmetry, i.e. that $G$ acts on each $\acal_N$ by $*$-isomorphisms (the algebraic version of homeomorphisms) and in a way compatible with the derivations of $\acal$ (the algebraic version of diffeomorphisms).
+A \lbtext{fuzzy space} is a sequence of finite dimensional $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ with increasing dimension which approximate, in some sense to be determined in the specific case, a commutative $C^*$ algebra $\acal$ in the limit $N \to \infty$. When the commutative algebra encodes a topological space or a manifold with certain symmetry group $G$ that acts by homeomorphisms or diffeomorphisms, we require a fuzzy space to implement this symmetry, i.e. that $G$ acts on each $\acal_N$ by $*$-isomorphisms (the algebraic version of homeomorphisms) and in a way compatible with the derivations of $\acal$ (the algebraic version of diffeomorphisms).
 
-With the full spectral triple defined below, the \textit{fuzzy sphere} will approximate $S^2$ in the following loose ways, whose precise statements will be clear soon:
+With the full spectral triple defined below, the fuzzy sphere will approximate $S^2$ in the following loose ways, whose precise statements will be clear soon:
     
     \begin{enumerate}
     
@@ -148,9 +148,10 @@ With the full spectral triple defined below, the \textit{fuzzy sphere} will appr
 
 \lin 
 
-To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the decomposition of $\lbtext{\acal} = C(S^2) \cong \bigoplus_{l \in \NN} \tilde V_l$ \todo{different ``limits''} into irreducible representations of $SO(3)$, where, recall, $\tilde V_l$ is the vector space of homogeneous polynomials on the coordinates $x^1, x^2, x^3$ of $\RR^3$; recall that this is also the decomposition of the Hilbert space $L^2(S^2)$, dense within $C(S^2)$, into unitary irreducible reresentations of $SO(3)$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: there is a clear way in which they approximate $\acal$; $SU(2)$ acts naturally on each $\acal_N'$.
+The action of $SU(2)$ on the commutative $C^*$-algebra $\acal = C(S^2)$ is the one induced by its action on $S^2$ as the double cover of the rotation group, i.e. for any $f \in C(S^2)$ and any $\vec x \in S^2$ it is given by $g\cdot f(\vec x) := f(g^{-1} \cdot \vec x)$, where $g^{-1} \cdot $ is the image of $g$ under the covering map $SU(2) \to SO(3)$. To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the 
+previously mentioned fact that any element $f \in = \acal$ is such that $\{f_N\}_{N \in \NN} \to f$ uniformly, for some sequence of polynomials $f_N \in \bigoplus_{l = 0}^N \tilde V_l$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: they are unitary representation spaces of $SU(2)$, and there is a clear way in which they approximate $\acal$.
 
-However, an obvious problem with this definition is that $\acal_N'$ doesn't have a natural multiplication, so it isn't an algebra. From the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring that the radical of the algebra be zero, there are only two possibilities, and only one being noncommutative:
+However, an obvious problem with this definition is that the representation spaces $\acal_N'$ are not closed under their natural multiplication, so they are not algebras. But, from the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring the radical of the algebra is zero, there are only two possibilities, and only one being noncommutative:
 \begin{align}
     x^i &\mapsto \hat x^i := \lambda \sigma_i & i = 1, 2, 3;
 \end{align}
@@ -158,7 +159,7 @@ where $\lambda\in \CC$ is any constant; this means that we are defining the $N =
 
 Instead of insisting on defining a foreign multiplication in $\acal'_N$, the fuzzy sphere is now defined by from the following generalization of the $N = 1$ case studied above:
 \begin{definition}\label{definitionFuzzySphere}
-\emph{The fuzzy sphere} is defined as the sequence of $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ where $\acal_N := \pi_j(U(\sut)) \equiv End(V_j)$ where $N =: 2j$. In addition, define the algebra generators $\hat x^i$ as
+\emph{The fuzzy sphere} is defined as the sequence of $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ where $\acal_N := \pi_j(U(\sut)) \equiv End(V_j)$ where $N =: 2j$ and with $\pi_j$ as defined in Notation \ref{notRepSu2}. In addition, define the algebra generators $\hat x^i$ as
 \begin{align}\label{equationDefinitionGeneratorsFuzzySphere}
     \hat x^i := \frac{1}{\sqrt{j(j+1)}} \pi_{j}(J^i) && i = 1, 2, 3;
 \end{align}
