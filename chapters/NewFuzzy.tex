@@ -139,7 +139,7 @@ In this chapter we follow their construction for the case $D = 2$, including the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{General Setting}
+\section{Quantum Mechanics with near-harmonic Potential and an Energy Cutoff}
 \label{chNewFuzzySectionGeneralSeting}
 
 % {
@@ -163,7 +163,7 @@ In this chapter we follow their construction for the case $D = 2$, including the
 %     : \rtext{$\hcal_{\cut E} \approx $ solutions of Schrodinger Eq. of energy $\leq \cut E$, $\acal_{\cut E} = End(\hcal_{\cut E})$}.
 % }
 
-\subsection{Construction of the Algebras} 
+\subsection{Algebras of Effective Observables $\mathcal{A}_{\cut E}$} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In order to construct the new fuzzy spheres we need to develop a way to produce the individual algebras. These algebras will all be examples of the algebras $\acal_{\cut E}$ that we will now build.
@@ -255,7 +255,7 @@ The orthogonal group $O(D)$ is defined as the subset of the matrices $M_D(\RR)$ 
 Theorem \ref{theoremGeneralDEffectiveLowEnergyQuantumIsODCovariant} describes an additional property of the action of $\acal_{\cut E}$ under $O(2)$ when position observables are introduced.
 \end{remark}
 
-\subsection{Observables}
+\subsection{Low Energy Effective Quantum Theories and their Properties}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Projected Observables}
@@ -292,7 +292,7 @@ In particular, $\cut{x^i} \in \acal_{\cut E}$, $i, j = 1, \dots, D$ are candidat
 \begin{equation}
     [\cut x^i, \cut x^j] \neq 0.
 \end{equation}
-Other candidates for position operators will also be used, and the criteria of section \ref{subsectionCriteriaGOodApproximationsOfPosition} is used to decide whether some operators are acceptable as candidates position operators in a sequence of algebras that approximate a quantum theory.
+Other candidates for position operators will also be used, and the criteria of Section \ref{subsectionCriteriaGOodApproximationsOfPosition} is used to decide whether some operators are acceptable as candidates position operators in a sequence of algebras that approximate a quantum theory.
 
 \subsubsection{$O(D)$-Covariance}
 
@@ -353,7 +353,7 @@ proving that the momentum operators transform $O(D)$-covariantly.
 
 From the previous proposition, the following important property of the low energy effective quantum theories developed in this chapter follows:
 \begin{theorem}\label{theoremGeneralDEffectiveLowEnergyQuantumIsODCovariant}
-For any $\cut E \in \RR^+$, let $\hcal_{\cut E}$ and $\acal_{\cut E}$ define a low effective quantum theory according to definition \ref{definitionAcalHcalGeneralD}. Then, using $\cut {x^i}$ as position coordinate operators and $\cut {p_i}$ as momentum operators, this theory is $O(D)$-covariant
+For any $\cut E \in \RR^+$, let $\hcal_{\cut E}$ and $\acal_{\cut E}$ define a low effective quantum theory according to Definition \ref{definitionAcalHcalGeneralD}. Then, using $\cut {x^i}$ as position coordinate operators and $\cut {p_i}$ as momentum operators, this theory is $O(D)$-covariant
 \end{theorem}
 \begin{proof}
 This fact is a combination of proposition \ref{propositionQMIsODCovariantGeneralD} with the invariance of the Hamiltonian $H$ \eqref{equationHamiltonianGeneralD} under $O(D)$ that follows from its radial symmetry, i.e. $\pi(g)^* (-\frac{1}{2} \Delta + V(r)) \pi(g) = -\frac{1}{2} \Delta + V(r)$ for all $g \in O(D)$, where $\pi$ is the unitary representation of $O(D)$ on $\hcal = L^2(\RR^D)$. The invariance of $H$ can be rewritten as $[H, \pi(g)] = 0$ by composing the previous relation with $\pi(g)$ to the left. The last relation implies that if $\psi$ is such that $H \psi = E \psi$ for some $E \in \RR$, then $H(\pi(g)\psi) = E(\psi(g)\psi)$, meaning that acting with $O(D)$ keeps an eigenvector in its corresponding eigenspace, and so, in particular, that $[P_{\cut E}, \pi(g)] = 0$.
@@ -889,7 +889,7 @@ Now, proposition \ref{propositionEquation69MatrixElementsGradedOperatorsD2} impl
         &= K_{m-1,m} e^{\rho_{m-1,m} + \frac{1}{4 c_{m-1,m}}}.
 \end{align*}
 
-With the help of the software Mathematica, and having in mind the remark \ref{remarkPowerSeries}, we found the power expansions for these expressions.
+With the help of the software Mathematica, and having in mind the Remark\ref{remarkPowerSeries}, we found the power expansions for these expressions.
 \end{proof}
 
 The matrix elements $\langle \psi_{m\pm 1} | \cut{x^\pm}|\psi_m \rangle$ are visualized in figure \ref{fig:originalbn}.
@@ -1048,7 +1048,7 @@ Equations \eqref{equationOperatorFormulaCommutatorsChiD2}$_2$ and \eqref{equatio
 
 
 
-Throughout this section let $\Lambda \in \NN$ and let $\acal_\Lambda$ and $\hcal_\Lambda$ be defined as in definition \ref{definitionHLambdaALambdaD2}.
+Throughout this section let $\Lambda \in \NN$ and let $\acal_\Lambda$ and $\hcal_\Lambda$ be defined as in Definition \ref{definitionHLambdaALambdaD2}.
 
 \begin{lemma}\label{lemmaExistsPolynomialInLTakingSameGradeToItD2}
 Let $A_1, A_2$ be elements of $\acal_\Lambda^n$, and suppose that $A_1 \psi_m = 0$ implies that $A_2\psi_m = 0$ for $m \in \{-\Lambda, \dots, \Lambda\}$.
@@ -1081,7 +1081,7 @@ Similarly, if equations \eqref{equationActionChiD2WithoutOO} are used exactly to
 \begin{proof}
 That $L^\pm$ are generators of $\acal_\Lambda$ is a direct combination of lemmas \ref{lemmaLUDScalarAngularMomentumGenerateD2} and \ref{lemmaLIsPolynomialOfUpDownLaddersD2}.
 
-The rest of the statement is a corollary of lemma \ref{lemmaExistsPolynomialInLTakingSameGradeToItD2}, where the polynomial $f^x_\pm(\cut L)  \equiv \sum_m f^x(m) \tilde P_m$ in $\cut L$ are defined by the fact, $\cut{x^\pm} \psi_m = f^x_\pm(m) L^\pm \psi_m$ on those $m$ such that $|m \pm 1| \leq \Lambda$; there is no restriction on what $f^x_\pm(\pm \Lambda)$ should be, since the evaluation of the polynomial isn't ever done on $\psi^{\pm \Lambda}$. The same reasoning applies to $f^\chi_\pm$.
+The rest of the statement is a corollary of Lemma \ref{lemmaExistsPolynomialInLTakingSameGradeToItD2}, where the polynomial $f^x_\pm(\cut L)  \equiv \sum_m f^x(m) \tilde P_m$ in $\cut L$ are defined by the fact, $\cut{x^\pm} \psi_m = f^x_\pm(m) L^\pm \psi_m$ on those $m$ such that $|m \pm 1| \leq \Lambda$; there is no restriction on what $f^x_\pm(\pm \Lambda)$ should be, since the evaluation of the polynomial isn't ever done on $\psi^{\pm \Lambda}$. The same reasoning applies to $f^\chi_\pm$.
 \end{proof}
 
 \lin 
@@ -1235,9 +1235,9 @@ The $O(2)$-equivariance follows from the equivalence of the transformation laws 
 
 % \linea
 
-\subsection{To quantum mechanics in $S^1$}
+\subsection{To Quantum Mechanics on $S^1$}
 
-In \cite{Fiore2018} the following type of convergence of a sequence of low energy effective theories with observable algebras $\{\acal_\Lambda\}_{\Lambda \in \NN}$ where each $\acal_\Lambda$ is as in definition \ref{definitionHLambdaALambdaD2}:
+In \cite{Fiore2018} the following type of convergence of a sequence of low energy effective theories with observable algebras $\{\acal_\Lambda\}_{\Lambda \in \NN}$ where each $\acal_\Lambda$ is as in Definition \ref{definitionHLambdaALambdaD2}:
 
 Consider the $O(2)$-equivariant embedding $T: \hcal_\Lambda \to \tilde \hcal_\Lambda$ of theorem \ref{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2}, as an identification of the two Hilbert spaces. We may say that we are considering the basis elements \emph{$\psi_m \in \hcal_\Lambda$ as the fuzzy analogs of $e^{im\phi}$}, when understood as elements of the Hilbert space $\hcal = L^2(S^1)$. For every $\varphi \in L^2(S^2)$, let $\varphi_\Lambda = \sum_{m = -\Lambda}^\Lambda \varphi_m e^{im\phi}$ where $\varphi_m$ are the Fourier coefficients of $\varphi$; $\varphi_\Lambda$ is identified via $T$ with $\sum_{m = -\Lambda}^\Lambda \varphi_m \psi_m$. Clearly $\phi_\Lambda \to \phi$ in the $L^2$-norm as $\Lambda \to 0$. In this sense Fiore and Pisacane in \cite{Fiore2018} then say that $\hcal_\Lambda$ \emph{invades} $\hcal$ as $\Lambda \to \infty$. 
 
@@ -1246,7 +1246,7 @@ Now, the identification $T$ induces an identification $\acal_\Lambda$ within $\b
 \begin{theorem}\label{theoremConvergesToQMD2}
 Let $k(\Lambda)$ be any function satisfying inequality \eqref{inequationInequalityNeededforKasFunctionLambdaD2}. Under the identification $T: \hcal_\Lambda \to \tilde \hcal_\Lambda \subset \hcal$, then $\acal_\Lambda \subset \acal = \bcal (\hcal)$. Then the operators $\cut L $ converges strongly
 \footnote{Ignoring domain issues, a sequence of operators $\{T_n\}_{n \in \NN}$ in a Banach space $V$ converges strongly to the operator $T$ with if, for all $v \in V$, $\lim_{n \to \infty} ||T_n v - T v|| \to 0$.}
- to $L$, and both $\chi^\pm$ and $\cut{x^\pm}$ converge strongly to $e^{\pm i\phi}$. If the operators $\chi^\pm$ are defined not as in definition \ref{definitionChiPMChiiD2}, but via the exact action on the basis \eqref{equationActionChiD2WithoutOO}, the same convergence applies.
+ to $L$, and both $\chi^\pm$ and $\cut{x^\pm}$ converge strongly to $e^{\pm i\phi}$. If the operators $\chi^\pm$ are defined not as in Definition \ref{definitionChiPMChiiD2}, but via the exact action on the basis \eqref{equationActionChiD2WithoutOO}, the same convergence applies.
 
 \noindent Since $L$ and $e^{\pm i \phi}$ generate the algebra of observables of a quantum particle in $S^1$, we then say that \emph{the limit of the low energy effective theories $\{(\hcal_\Lambda, \acal_\Lambda)\}$ is the quantum mechanics of a spin-less particle in $S^1$}.
 
@@ -1287,7 +1287,7 @@ is the decomposition of $\hcal_\Lambda$ in irreducible representations of $O(2)$
 %     \bcal(L^2(S^1)) = \bigoplus_{m=0}^{2\Lambda} W_m,
 % \end{equation}
 
-\subsection{To commutative algebra $C(S^1)$}
+\subsection{To the Commutative Algebra $C(S^1)$}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Recall that in the canonical Dirac triple of a commutative space $X$, the commutative algebra $C(X)$ of continuous functions on $X$ has the role to act by multiplication on the Hilbert space of spinor fields. Since $S^1$ is a manifold or rank $1$, the fermionic Fock space has dimension $2^{\lfloor \frac{1}{2}\rfloor} = 1$, and the fact that $S^1$ is a compact simple Lie group means that its spinor bundle is a trivial\todo{DAndrea13 is the one who seems to say this} complex vector bundle\cite{}, hence it is simply $\hcal = L^2(S^1)$. Under some assumptions on the function $k(\Lambda)$, the identification of $\hcal_\Lambda$ with $\tilde \hcal_\Lambda$ through the $O(2)$-equivariant $*$-isomorphism $T$ of theorem \ref{theoremEquivalent*IsomorphismALgebraSphericaleimphiD2} will imply that the sequence of algebras $\{\acal_\Lambda\}_{\Lambda \in \NN}$ converge, in the sense soon to be specified, to the commutative subalgebra of $\bcal(\hcal)$ that the space $C(S^1)$ is.
