@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  22 OCT 2021 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.10)  22 OCT 2021 11:10
 entering extended mode
 **D:/pregrado/Fisica-Monografia-NCG/monografia.tex
 (D:/pregrado/Fisica-Monografia-NCG/monografia.tex
@@ -1996,12 +1996,12 @@ File: images/R^2.jpg Graphic file (type jpg)
 <use images/R^2.jpg>
 Package pdftex.def Info: images/R^2.jpg  used on input line 170.
 (pdftex.def)             Requested size: 260.0pt x 160.86218pt.
-[71 <./images/R^2.jpg>]
+[71]
 Overfull \hbox (4.1955pt too wide) detected at line 201
 []
  []
 
-<images/bn.jpg, id=938, 505.89pt x 300.12125pt>
+<images/bn.jpg, id=939, 505.89pt x 300.12125pt>
 File: images/bn.jpg Graphic file (type jpg)
 <use images/bn.jpg>
 Package pdftex.def Info: images/bn.jpg  used on input line 206.
@@ -2010,18 +2010,19 @@ Package pdftex.def Info: images/bn.jpg  used on input line 206.
 LaTeX Warning: Citation 'FioreCoherent2020' on page 72 undefined on input line 
 211.
 
+[72 <./images/R^2.jpg>]
 
-LaTeX Warning: Citation 'FioreXi2020' on page 72 undefined on input line 216.
+LaTeX Warning: Citation 'FioreXi2020' on page 73 undefined on input line 216.
 
 
-LaTeX Warning: Citation 'FioreTheCase2020' on page 72 undefined on input line 2
+LaTeX Warning: Citation 'FioreTheCase2020' on page 73 undefined on input line 2
 16.
 
-[72]) [73 <./images/bn.jpg>]
+[73 <./images/bn.jpg>]) [74]
 Chapter 5.
 (chapters/remarks.tex)
 
-LaTeX Warning: Citation 'PaschkeSitarz1998' on page 74 undefined on input line 
+LaTeX Warning: Citation 'PaschkeSitarz1998' on page 75 undefined on input line 
 250.
 
 
@@ -2045,29 +2046,29 @@ Overfull \hbox (7.17459pt too wide) in paragraph at lines 250--250
  []
 
 
-LaTeX Warning: Citation 'DAndrea2014' on page 74 undefined on input line 250.
+LaTeX Warning: Citation 'DAndrea2014' on page 75 undefined on input line 250.
 
 
-LaTeX Warning: Citation 'Scholtz2009' on page 74 undefined on input line 250.
+LaTeX Warning: Citation 'Scholtz2009' on page 75 undefined on input line 250.
 
 
-LaTeX Warning: Citation 'Scholtz2013' on page 74 undefined on input line 250.
+LaTeX Warning: Citation 'Scholtz2013' on page 75 undefined on input line 250.
 
 
-LaTeX Warning: Citation 'ChaobaDevi2018' on page 74 undefined on input line 250
+LaTeX Warning: Citation 'ChaobaDevi2018' on page 75 undefined on input line 250
 .
 
-[74
+[75
 
 ]
 
-LaTeX Warning: Citation 'Fiore2018' on page 75 undefined on input line 252.
+LaTeX Warning: Citation 'Fiore2018' on page 76 undefined on input line 252.
 
 
-LaTeX Warning: Citation 'FioreXi2020' on page 75 undefined on input line 252.
+LaTeX Warning: Citation 'FioreXi2020' on page 76 undefined on input line 252.
 
 
-LaTeX Warning: Citation 'FioreCoherent2020' on page 75 undefined on input line 
+LaTeX Warning: Citation 'FioreCoherent2020' on page 76 undefined on input line 
 252.
 
 
@@ -2079,7 +2080,7 @@ rched in [[],
 
 LaTeX Warning: Empty bibliography on input line 257.
 
-[75] (monografia.aux
+[76] (monografia.aux
 LaTeX Info: Redefining \sptext on input line 63.
 LaTeX Info: Redefining \. on input line 63.
 LaTeX Info: Redefining \% on input line 63.
@@ -2087,14 +2088,8 @@ LaTeX Info: Redefining \% on input line 63.
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `monografia.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `monografia.out':
-(rerunfilecheck)             Before: A27D484D513D69630C45430FD680E426;8319
-(rerunfilecheck)             After:  1F68ADFC8A9026CB442222B9B8AE0149;8285.
+Package rerunfilecheck Info: File `monografia.out' has not changed.
+(rerunfilecheck)             Checksum: 1F68ADFC8A9026CB442222B9B8AE0149;8285.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                monografia
@@ -2105,9 +2100,9 @@ Package logreq Info: Writing requests to 'monografia.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31708 strings out of 478927
- 602382 string characters out of 2852534
- 1326657 words of memory out of 3000000
+ 31709 strings out of 478927
+ 602389 string characters out of 2852534
+ 1330649 words of memory out of 3000000
  48608 multiletter control sequences out of 15000+600000
  424907 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2140,9 +2135,9 @@ blic/amsfonts/euler/eufm10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/sebas/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/sebas/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on monografia.pdf (80 pages, 851844 bytes).
+Output written on monografia.pdf (81 pages, 852665 bytes).
 PDF statistics:
- 1179 PDF objects out of 1200 (max. 8388607)
- 388 named destinations out of 1000 (max. 500000)
+ 1183 PDF objects out of 1200 (max. 8388607)
+ 389 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

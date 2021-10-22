@@ -77,8 +77,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Angular Momentum Saturating Coherent States}{67}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}$SO(2)$-invariant Families of Strong Coherent States}{68}{section.4.2}%
+\contentsline {section}{\numberline {4.2}$SO(2)$-invariant Families of Strong Coherent States}{69}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Coherent States Minimizing the Square Distance}{70}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Coherent States Minimizing the Square Distance}{71}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Final Remarks and Further Work}{74}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Final Remarks and Further Work}{75}{chapter.5}%
