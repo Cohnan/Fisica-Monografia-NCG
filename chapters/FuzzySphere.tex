@@ -35,7 +35,7 @@ Recall that the \emph{$2$-sphere}, denoted by $S^2$, is the set of points in $\R
 %  - The eigenvalues are: of $Y'_{l\cdot}: (l + 1/2) \in \NN$, of $Y{''}_{l\cdot}: -(l + 1/2)$, with multiplicities $2l+1$)
 % }
 
-Although there are several ways to describe the canonical spectral triple on $S^2$, the one that will be useful later to define the spectral triples on the fuzzy sphere comes from understanding $S^2$ as the \ptext{compact Riemannian symmetric} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$, where we take $U = SO(2)$ as the invariant subgroup under the complex conjugation involution.
+Although there are several ways to describe the canonical spectral triple on $S^2$, the one that will be useful later to define the spectral triples on the fuzzy sphere comes from understanding $S^2$ as the \ptext{compact Riemannian symmetric space} $S^2 \cong G/U$ of the compact semisimple Lie group $G = SU(2)$, where we take $U = SO(2)$ as the invariant subgroup under the complex conjugation involution.
 
 Let $G$ be a compact semisimple Lie group $G$ with (real) Lie algebra $\alg g$, where the semisiplicity means that the Killing form $K: \alg g \times \alg g \to \alg g$ of $\alg g$ is non-degenerate, and the compactness that $K$ is negative-definite giving $G$ a natural Riemannian manifold structure. For such a manifold $G$, and its symmetric spaces, the canonical Dirac operator can be seen to arise \cite{Huang2007} from an algebraic element $\lbtext{\dcal } \in U(\alg g)\times U(\alg g)$, where $\lbtext{U}(\alg g)$ is \lbtext{the universal enveloping complex algebra} of the Lie algebra $\alg g$, i.e. the largest unital, associative complex algebra containing $\alg g$ where the Lie bracket coincides with the commutator in $U(\alg g)$; it is important to remark that \otext{the representations of $\alg g$ are in a bijective correspondence with the modules over $U(\alg g)$}. In the explicit case where $G = SU(2)$,
 \begin{equation}\label{equationALgebraicDiracOperatorDecomposition}
@@ -148,16 +148,16 @@ With the full spectral triple defined below, the fuzzy sphere will approximate $
 
 \lin 
 
-The action of $SU(2)$ on the commutative $C^*$-algebra $\acal = C(S^2)$ is the one induced by its action on $S^2$ as the double cover of the rotation group, i.e. for any $f \in C(S^2)$ and any $\vec x \in S^2$ it is given by $g\cdot f(\vec x) := f(g^{-1} \cdot \vec x)$, where $g^{-1} \cdot $ is the image of $g$ under the covering map $SU(2) \twoheadrightarrow SO(3)$. To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the 
-previously mentioned fact that any element $f \in = \acal$ is such that $\{f_N\}_{N \in \NN} \to f$ uniformly, for some sequence of polynomials $f_N \in \bigoplus_{l = 0}^N \tilde V_l$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence conforming the fuzzy sphere. This definition seems appropriate in at least two ways: they are unitary representation spaces of $SU(2)$, and there is a clear way in which they approximate $\acal$.
+The action of $SU(2)$ on the commutative $C^*$-algebra $\acal = C(S^2)$ is the one induced by its action on $S^2$ as the double cover of the rotation group, i.e. for any $f \in C(S^2)$ and any $\vec x \in S^2$ it is given by $g\cdot f(\vec x) := f(g^{-1} \cdot \vec x)$, where $g^{-1} \cdot $ is the image of $g^{-1}$ under the covering map $SU(2) \twoheadrightarrow SO(3)$. To define the fuzzy sphere $\{\acal_N\}_{N \in \NN}$ we start with the 
+previously mentioned fact that any element $f \in \acal$ is such that $\{f_N\}_{N \in \NN} \to f$ uniformly, for some sequence of polynomials $f_N \in \bigoplus_{l = 0}^N \tilde V_l$. This suggest the definition of $\lbtext{\acal'_N} := \bigoplus_{l = 0}^N \tilde V_l$, for all $N \in \NN$, as the elements of the sequence composing the fuzzy sphere. This definition seems appropriate in at least two ways: they are unitary representation spaces of $SU(2)$, and there is a clear way in which they approximate $\acal$.
 
-However, an obvious problem with this definition is that the representation spaces $\acal_N'$ are not closed under their natural multiplication, so they are not algebras. But, from the case $N = 1$ there is a suggestion on how to define a multiplication\cite{Madore}: requiring that the radical of the algebra is zero, there are only two possibilities, and only one being noncommutative:
+However, an obvious problem with this definition is that the representation spaces $\acal_N'$ are not closed under their natural multiplication, so they are not algebras. But, from the case $N = 1$ there is a suggestion on how to define a multiplication \cite{Madore}: requiring that the radical of the algebra is zero, there are only two possibilities, and only one being noncommutative:
 \begin{align}
     x^i &\mapsto \hat x^i := \lambda \sigma_i & i = 1, 2, 3;
 \end{align}
 where $\lambda\in \CC$ is any constant; this means that we are defining the $N = 1$ element of the fuzzy sphere to be $\lbtext{\acal_1} := M_2(\CC)$. Having $SU(2)$ act on $\acal_1$ with the the natural representation on linear operators of representation spaces, \emph{the adjoint representation}, i.e. the action of $g \in SU(2)$ on $a \in \acal_1$ is $gag^{-1}$, notice that the identification $x^i \mapsto \hat x^i$ is $SU(2)$-equivariant since the image of $i\frac{\sigma_i}{2} \in \sut$ under the isomorphism $\sut \cong \soth$ corresponds to the generator of rotations with respect to the $x^i$-axis, and the adjoint action on these generators represents a change of rotation axis. The constant $\lambda$ is chosen such that ``radius of the fuzzy sphere is $1$'', meaning that $(\hat x^1)^2 + (\hat x^2)^2 + (\hat  x^3)^2 = 1$, hence $\lambda = \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{\frac{1}{2} (\frac{1}{2} + 1)}}$.
 
-Instead of insisting on defining a foreign multiplication in $\acal'_N$, the fuzzy sphere is now defined by from the following generalization of the $N = 1$ case studied above:
+Instead of insisting on defining a foreign multiplication in $\acal'_N$, the fuzzy sphere is now defined by the following generalization of the $N = 1$ case studied above:
 \begin{definition}\label{definitionFuzzySphere}
 \emph{The fuzzy sphere} is defined as the sequence of $C^*$-algebras $\{\acal_N\}_{N \in \NN}$ where $\acal_N := \pi_j(U(\sut)) \equiv End(V_j)$ where $N =: 2j$ and with $\pi_j$ as defined in Notation \ref{notRepSu2}. In addition, define the algebra generators $\hat x^i$ as
 \begin{align}\label{equationDefinitionGeneratorsFuzzySphere}
@@ -167,7 +167,7 @@ the number $\lambda_N := \frac{1}{\sqrt{j(j+1)}} = \frac{2}{\sqrt{N(N+2)}}$ is c
 \end{definition}
 
 The normalization factor $\lambda_N$ is such that $(\hat x^1)^2 + (\hat x^2)^2 + (\hat x^3)^2 = 1$. The elements $\hat x^i \in \acal_N$, $i = 1, 2, 3$ generate the algebra; furthermore, each element in $a \in \acal_N$ has a unique expansion $a = \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x^{a_{\mu_1}}  \cdots \hat x^{a_{l}}$, where $a_{\mu_1 \cdots a_l} \in \CC$ is symmetric and trace-free as a tensor \cite{Madore}\todo{Not sure how to prove these two statements. Not even sure what the trace might mean if there are not even number of components. If $N=1$ it is easy to see that indeed ever $2x2$ matrix is combination of $1$ and Pauli}.  Thus, the following is an injective, but also $SO(3)$-equivariant linear map:
-\begin{eqnsplit}\label{}
+\begin{eqnsplit}\label{injectionFuzzySphereIntoSphere}
     \acal_N &\to C(S^2)\\% = \bigoplus_{l \in \NN}\tilde V_l\\
     \hat x^i &\mapsto x^i;
 \end{eqnsplit}
@@ -192,7 +192,7 @@ A diffeomorphism of $S^2$ is equivalent to an automorphism of the algebra $C^\in
 
 Replacing the coordinates $x^i$ by $\hat x^i$  in the (symmetric) polynomial expansion of the spherical harmonics $Y^l_m$, $l = 0, \dots, N$ and $|m| \leq l$, we obtain the \lbtext{fuzzy harmonics} $\hat Y^l_m \in \acal_N$ that make up a basis of $\acal_N$.
 
-Define the linear, injective mapping
+Notice that the linear, injective mapping from \eqref{injectionFuzzySphereIntoSphe} satisfies the following:
 \begin{eqnsplit}
     \acal_N &\to \acal'_N \subset \acal \\
     \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} \hat x^{a_{\mu_1}}  \cdots \hat x^{a_{l}} &\mapsto \sum_{l = 0}^N \frac{1}{l!} a_{\mu_1 \cdots a_l} x^{a_{\mu_1}}  \cdots x^{a_{l}}.
@@ -200,7 +200,7 @@ Define the linear, injective mapping
 Then, the sequence of noncommutative $C^*$-algebras approximates the commutative algebra $A = C(S^2)$ in the limit $N \to \infty$ in the sense that the above map gets increasingly closer to being an algebra morphism and \textbf{the algebra $A$ can be considered as the image of the \textit{near-diagonal matrices} in $\acal_N$} i.e. matrices which commute within order $1$ of the normalizing factor $\lambda_N = \frac{1}{\sqrt{j(j+1)}}$; the details may be found in \cite{Madore}.
 
 
-Finally, we are yet to see how the fuzzy sphere approximates $S^2$ as metric space on which $SU(2)$ acts by isometries, but this will be consequences of Theorem \ref{theoremReducibleSpectralTripleDiracApproximation} and the Remark that follows.
+Finally, we are yet to see how the fuzzy sphere approximates $S^2$ as metric space on which $SU(2)$ acts by isometries, but this will be consequences of Theorem \ref{theoremReducibleSpectralTripleDiracApproximation} and the remark that follows.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -244,27 +244,27 @@ In this document, this will occur in the following senses:
 
 Rotating the 2-sphere leaves invariant not only its topological and differential properties, but it also leaves invariant the metric, $g = d\theta^2 + \sin^2(\theta) d\phi^2$, implying that the distance between any $2$ points is the same as the distance between the rotated points, under any rotation $h \in SO(3)$. Since $SU(2)$ is the double covering of $SO(3)$, there is a $2$-to-$1$ Lie group morphism $SU(2) \to SO(3)$ under which any rotation $h \in SO(3)$ corresponds to two distinct points $\pm \tilde h \in SU(2)$. From this it follows that each element of $SU(2)$ acts as a rotation on $S^2$, so that \rtext{$SU(2)$ is also a group of symmetries of $S^2$ that acts by diffeomorphisms and isometries}. Notice, however, that the most general symmetry group of $S^2$ is the orthogonal group $O(3)$, which includes reflections under planes on $\RR^3$ that pass through the origin.
 
-One important property of the spectral triples that will be defined on the fuzzy sphere is their equivariance under $SU(2)$, or more generally the Hopf algebra $U(\sut)$ as defined in \cite{Sitarz}, giving an analogous notion to the action of these symmetry spaces by isometries. The precise definition of a \textit{spectral triple $(\acal, \hcal, \dcal)$ equivariant under a symmetry space $H$}, $H$ being called \textit{the isometry of the spectral triple}, is fairly involved, but, ignoring some details, reduces to the following:
+One important property of the spectral triples that will be defined on the fuzzy sphere is their equivariance under $SU(2)$, or more generally under the Hopf algebra $U(\sut)$ as defined in \cite{Sitarz}, giving an analogous notion to the action of these symmetry spaces by isometries. The precise definition of a \textit{spectral triple $(\acal, \hcal, \dcal)$ equivariant under a symmetry space $H$}, $H$ being called \textit{the isometry of the spectral triple}, is fairly involved, but, ignoring some details, reduces to the following \cite{Sitarz}:
     \begin{itemize}
     
     \item $\acal$ is a representation of $H$.
     
     \item $\hcal $ is a representation of $H$.
     
-    \item The action of $H$ on $\acal$ coincides with the action $\acal$ as subalgebra of operators on $H$, i.e. the adjoint action $A \mapsto g \circ A \circ g^{-1}$. %there is a dense subspace $V$ of $\hcal$ on which the action induced on operators
+    \item The action of $H$ on $\acal$ coincides with the action of $\acal$ as subalgebra of operators on $\hcal$, i.e. the adjoint action $A \mapsto g \circ A \circ g^{-1}$. %there is a dense subspace $V$ of $\hcal$ on which the action induced on operators
     
-    \item The \textit{Dirac operator is equivariant}, i.e. the operator $[\dcal, h] = 0$ for all $h \in H$.
+    \item The \textit{Dirac operator is equivariant}, i.e. it satisfies that $[\dcal, h] = 0$ for all $h \in H$.
     
     \end{itemize}
 
-\textbf{For the spectral triples defined in this section, the $SU(2)$-equiva- riance reduces to the verification of the last two conditions}, since the first two ones are readily satisfied. The following theorem, which will apply to all the spectral triples defined in this chapter, illustrates how this notion of equivariance induces a notion of isometry on the respective noncommutative spaces.
+\textbf{For the spectral triples defined in this section, the $SU(2)$-equiva- riance reduces to the verification of the last two conditions}, since the first two are readily satisfied. The following theorem, which will apply to all the spectral triples defined in this chapter, illustrates how this notion of equivariance induces a notion of isometry on the respective noncommutative spaces.
 
 \begin{theorem} \label{theoGInvariantDistance}
-Let $(\acal, \hcal, \dcal)$ be a spectral triple. Let $G$ be a group, let $\hcal$ and $\acal$ be representation spaces of $G$, with $G$ acting unitarily on $H$. Then, if for all $g \in G$, $[D, g\cdot] = 0$ and the action on $A$ coincides / interwines with the induced action on $A$ as subalgebra of operators on $H$, then $SU(2)$ acts by isometries on the state space $\mathcal S(\acal)$. That is, for all $g \in G$:
+Let $(\acal, \hcal, \dcal)$ be a spectral triple. Let $G$ be a group, let $\hcal$ and $\acal$ be representation spaces of $G$, with $G$ acting unitarily on $\hcal$, with the action of $g \in G$ on $\hcal$ denoted by $g\cdot$. Then, if for all $g \in G$, $[D, g\cdot] = 0$ and the action on $\acal$ coincides with the induced action on $\acal$ as subalgebra of operators on $\hcal$, then $G$ acts by isometries on the state space $\mathcal S(\acal)$. That is, for all $g \in G$:
 \begin{align}
     d_\dcal(\omega, \omega') &= d_\dcal(g_* \omega, g_*\omega'), & \text{for all $\omega, \omega' \in \mathcal S(\acal)$};
 \end{align}
-we have denoted by $g^*\omega$ the action of $G$ on $\mathcal S(\acal)$, $g^* \omega: \acal \to \CC$, $a \mapsto \omega(a^g)$, induced from the action $a \mapsto a^g$ of $G$ on $\acal$.
+we have denoted by $g_*\omega$ the action of $G$ on $\mathcal S(\acal)$, $g_* \omega: \acal \to \CC$, $a \mapsto \omega(a^g)$, induced from the action $a \mapsto a^g$ of $G$ on $\acal$.
 \end{theorem}
 
 \begin{proof}
@@ -323,14 +323,14 @@ This spectral triple, although unsatisfactory as an approximation of the canonic
 For each $N \in \NN$ and $j = N/2$, define the \lbtext{irreducible spectral triple} as $(\acal_N, \lbtext{H_N} := V_j \otimes \CC^2, D_N = (\pi_j \otimes \pi_{1/2})(\mathcal D))$, where $\acal_N = End(V_j)$ acts naturally on the first factor of $H_N$.
 \end{definition}
 
-This spectral triple may be seen to come as a single term of the $SU(2)$-induced expansion of $\slashed D$ \eqref{equationSU2InducedSeriesDiracSlashedAndMatrix}, although we are also allowing  half integer spin representations in the current construction, which don't appear in the expansion of $\slashed \dcal$. The Dirac operators can also be written as
+This spectral triple may be seen to come as a single term of the $SU(2)$-induced expansion of $\slashed D$ in \eqref{equationSU2InducedSeriesDiracSlashedAndMatrix}, although we are also allowing  half integer spin representations in the current construction, which don't appear in the expansion of $\slashed \dcal$. The Dirac operators can also be written as
 \begin{equation}
     D_N = \begin{pmatrix} 1 + \pi_j(H) & \pi_j(F) \\ \pi_j(E) & 1 - \pi_j(H)\end{pmatrix} 
     = 1 + \pi_j(F) \otimes \sigma_+ + \pi_j(E) \otimes \sigma_- + \pi_j(H) \otimes \sigma_3
 \end{equation}
 where $H = J^3$, $F = J^+$, $E = J^-$ are the respective actions of $J^3$, $J^+, J^- \in U(\sut)$ on $V_j$.
 
-We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense in the first place we need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators, also called an action by \emph{inner automorphisms}:
+We have said before that this spectral triple is $SU(2)$-equivariant, but for this to make sense in the first place we need to define an action of $SU(2)$ on $\acal_N$ and $H_N$, both of which will be inherited from the untitary representation $\pi_j$ of $SU(2)$ on $V_j$. Since $\acal_N = End(V_j)$, the action of each $SU(2) \ni g$ induces the adjoint action on its operators by inner automorphisms:
 \begin{equation}
     a \mapsto \lbtext{a^g} := \pi_j(g) a \pi_j(g)^*.
 \end{equation} 
@@ -340,7 +340,7 @@ Similarly, on $H_N = V_j \otimes V_{1/2}$ we may define the unitary left action 
 For each $N \in \NN$, the associated irreducible spectral triple:
     \begin{enumerate}[(i)]
         
-    \item Is $SU(2)$-equivariant
+    \item Is $SU(2)$-equivariant.
     
     \item Has eigenvalues $j+1$ and $-j$ with multiplicities $2j+2$ and $2j$, where $j = N/2$.
         
@@ -368,7 +368,7 @@ for $|m| \leq j$ with the mentioned eigenvectors, and deducing that there are no
 
 If the spectral triple had a grading, the Dirac operator would have a symmetric spectrum about $0$, hence this can't be the case.
 
-That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows from the fact that the commutant of $\acal_N$ is $2$, and so it can't contained $J \acal_N J^{-1}$.
+That a real structure $J_N: H_N \to H_N$ doesn't exist follows from the fact that the commutant of $\acal_N\otimes \CC^2$ has dimension $dim\, \CC^2 = 2$, and so it can't contain $J \acal_N J^{-1}$.
 
 \end{proof}
 
@@ -406,7 +406,7 @@ That a real structure $J_N: H_N \to H_N$ doesn't exist doesn't exist follows fro
 
 
 \begin{definition}
-For each $N \in \NN$, $j = N/2$, the \lbtext{full spectral triple} is $(\acal_N, \lbtext{\hcal_N} := \mathcal A_N \otimes \CC^2, \lbtext{\mathcal D_N} := (\text{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) )$, where $a \in \acal_N$ acts on the first factor of $\hcal_N$ via the commutator $[a, \cdot]$.
+For each $N \in \NN$, the \lbtext{full spectral triple} is $(\acal_N, \lbtext{\hcal_N} := \mathcal A_N \otimes \CC^2, \lbtext{\mathcal D_N} := (\text{ad}\pi_j \otimes \pi_{1/2})(\mathcal D) )$, for $j = N/2$, where $a \in \acal_N$ acts on the first factor of $\hcal_N$ via the commutator $[a, \cdot]$.
 \end{definition}
 
 Notice that the action of $\acal_N$ on itself as the first factor of $\hcal_N$ is simply the derivative of the adjoint action $B \mapsto \pi_j(g) B \pi_j(g)^{-1}$ of $SU(2) \ni g$ on $\acal_N = End(V_j)$. This action extends to an action $\text{ad}\pi_j \otimes \pi_{1/2}$ on $\hcal_N = \acal_N \otimes V_{1/2}$. Under the $SU(2)$-induced decomposition of $\acal_N$ into irreducible representations, the Hilbert space $\hcal_N$ is isomorphic to $\bigoplus_{l =1}^N H_l$, where the representation $\text{ad}\pi_j$ on one side then corresponds to the representation $\bigoplus_{l = 0}^N \pi_l$ on the other side, in which case the Dirac operator $\dcal_N$ corresponds to:
@@ -415,7 +415,7 @@ Notice that the action of $\acal_N$ on itself as the first factor of $\hcal_N$ i
 \end{equation}
 
 \begin{theorem}\label{theoremReducibleSpectralTripleDiracApproximation}
-Under the adjoint action of $SU(2)$ on the algebra $\acal_N$ and the action of $SU(2)$ defined in the previous paragraph, the full spectral triples satisfies:
+Under the adjoint action of $SU(2)$ on the algebra $\acal_N$ and the action of $SU(2)$ defined in the previous paragraph, the full spectral triple satisfies:
     \begin{enumerate}[(i)]
     
     \item It is $SU(2)$-equivariant.
@@ -437,15 +437,15 @@ From the $SU(2)$-decomposition \eqref{reducibleDiracDecomposition} of the Dirac 
 Once again, a grading can't exist since the spectrum of $\dcal_N$ isn't symmetric.
 \end{proof}
 
-\rtext{The third statement of the theorems says that we have found a spectral triple with the desired property of being a truncation of the canonical spectral triple of $S^2$}. { \color{gray}
+\rtext{The third statement of the theorem states that we have found a spectral triple with the desired property of being a truncation of the canonical spectral triple of $S^2$}. { \color{gray}
 %Furthermore, just like the eigenvectors of $\slashed D$ are vectors conformed by pairs of spherical harmonics, the eigenvectors of each $\dcal_N$ are pairs of fuzzy spherical harmonics $\hat Y^l_m$ (not sure if they can be the ones I defined before) for which the traditional spherical harmonics $Y^l_m$ may be considered ``symbols''.
-} Hence, this will be the spectral triple which we will assign the forming algebras of the fuzzy sphere, under which the metric properties are to be studied, since it \rtext{may be considered a sequence of spectral triple that approximate the metric of $S^2$ increasingly better with growing $N$}. However, the following theorem allows us to study instead the much simpler irreducible spectral triple.
+} Hence, this will be the spectral triple which we will assign the forming algebras of the fuzzy sphere, under which the metric properties are to be studied, since it \rtext{may be considered a sequence of spectral triples that approximate the metric of $S^2$ increasingly better with growing $N$}. However, the following theorem allows us to study instead the much simpler irreducible spectral triple.
 
 \begin{theorem}\label{theoremIrreducibleAndFUllSpectralTripleSameDistance}
 The irreducible and full spectral triple on $\acal_N$, for each $N \in \NN$, induce the same distance in the state space of $\acal_N$.
 \end{theorem}
 \begin{proof}
-Let $\omega, \omega'$ be states on $\acal_N$. Notice that distinct spectral triples induce different notions of distance only due to the condition $||[D, a]|| \leq 1$, which determines over which elements $a$ of the algebra the supremum of $|\omega(a) - \omega'(a)|$ is evaluated. However, for all $a \in \acal$, $||[\dcal_N, a]|| = ||[D_N, a]||$ as shown by the following calculation:
+Let $\omega, \omega'$ be states on $\acal_N$. Notice that distinct spectral triples induce different notions of distance only due to the condition $||[D, a]|| \leq 1$ in formula \eqref{ConnesDistanceFormula}, which determines over which elements $a$ of the algebra the supremum of $|\omega(a) - \omega'(a)|$ is evaluated. However, for all $a \in \acal$, $||[\dcal_N, a]|| = ||[D_N, a]||$ as shown by the following calculation:
 \begin{align*}
     [\dcal, a]b \otimes v &= \dcal_N(ab \otimes v) - a\left(b \otimes v + \sum_{k = 1}^3 [\pi_j(J^k), b] \otimes \sigma_k v\right)\\
         &= ab \otimes v + \sum_{k = 1}^3[\pi_j(J^k), ab] \otimes \sigma_k v - ab \otimes v - \sum_{k = 1}^3 a[\pi_j(J^k), b]\otimes \sigma_k v\\
